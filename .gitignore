@@ -1,0 +1,44 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated experiment state
+data/
+datasets/
+results/
+outputs/
+out/
+logs/
+cache/
+caches/
+checkpoints/
+models/
+vector_store/
+*.log
+*.jsonl
+*.csv
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.sqlite3
+*.npy
+*.npz
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Archive/build artifacts
+SA-Mem.tar.xz
+dist/
+build_artifacts/
+node_modules/

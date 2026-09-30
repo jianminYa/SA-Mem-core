@@ -1,0 +1,17 @@
+# No root lockfile was present in the source archive. This is a review-time
+# dependency inventory for the core Python path, not a replacement protocol.
+openai>=1.0
+tiktoken
+numpy
+scikit-learn
+pandas
+python-dateutil
+nltk
+regex
+tenacity
+tqdm
+
+# Optional graph and visualization/evaluation dependencies:
+# neo4j
+# matplotlib
+# seaborn

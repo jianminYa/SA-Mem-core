@@ -1,0 +1,16 @@
+{
+  "question_id": "synthetic-q1",
+  "question_type": "single-session",
+  "question": "What city did Alex mention visiting?",
+  "question_date": "2025-01-03",
+  "answer": "Oslo",
+  "answer_session_ids": ["synthetic-session-1"],
+  "haystack_dates": ["2025-01-01"],
+  "haystack_session_ids": ["synthetic-session-1"],
+  "haystack_sessions": [
+    [
+      {"role": "user", "content": "I may visit Oslo this spring."},
+      {"role": "assistant", "content": "That sounds exciting."}
+    ]
+  ]
+}
