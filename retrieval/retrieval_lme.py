@@ -813,10 +813,11 @@ class LMERetriever:
             ])
 
         # Collect all per-question JSON files from lme_data_dir.
-        # Accept only 8-char hex filenames (no _abs variants).
+        # LongMemEval-S cleaned also contains IDs with prefixes and `_abs`;
+        # accept every JSON question file produced by the adapter.
         lme_files = sorted(
             p for p in glob.glob(os.path.join(self.lme_data_dir, "*.json"))
-            if re.match(r"^[0-9a-f]{8}\.json$", os.path.basename(p))
+            if not os.path.basename(p).startswith("_")
         )
         mx.logger.info(
             "ℹ️ Found %d LME question files in %s", len(lme_files), self.lme_data_dir

@@ -758,6 +758,9 @@ class MemoryBuilder:
         for i, sample in enumerate(mx._tqdm(raw_list, total=len(raw_list), desc="BUILD haystack QA conversations")):
             user_id = user_id_start + i
             question_id = str((sample or {}).get("question_id", "") or "").strip()
+            # Sidecar-only metadata for construction token accounting.
+            self.worker._construction_user_id = user_id
+            self.worker._construction_question_id = question_id
 
             if mx._is_main_thread():
                 display_id = question_id or user_id
@@ -880,6 +883,9 @@ class MemoryBuilder:
         prev_msgs = [f"{m['role']}: {m['text']}" for m in prev_slice]
 
         curr_msg_str = f"{msg['role']}: {msg['text']}"
+        self.worker._construction_user_id = user_id
+        self.worker._construction_session_id = session_id
+        self.worker._construction_block_id = None
         res = self.worker.check_relation(prev_msgs, curr_msg_str, note=f"U{user_id}_Overhead_Split")
 
         mx.TraceLogger.log(
@@ -933,6 +939,9 @@ class MemoryBuilder:
             "persona_name": meta.get("persona_name", None),
         }
 
+        self.worker._construction_user_id = user_id
+        self.worker._construction_session_id = session_id
+        self.worker._construction_block_id = self.bid
         self.cluster.process_new_box(raw_box, user_id)
 
         content_text = self.cluster._get_content_str(raw_box)

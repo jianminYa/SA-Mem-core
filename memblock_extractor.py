@@ -428,6 +428,9 @@ class Config:
     GENERATION_RESULT_FILE = os.path.join(OUTPUT_DIR, "generation_results.jsonl")
     GENERATION_REPORT_CSV = os.path.join(OUTPUT_DIR, "report_generation_qa.csv")
     TOKEN_LOG_FILE = os.path.join(OUTPUT_DIR, "token_stream.jsonl")
+    # Optional sidecar for phase-1 construction token accounting. This is
+    # intentionally write-only instrumentation; it is never sent to a model.
+    CONSTRUCTION_CALLS_FILE = os.environ.get("CONSTRUCTION_CALLS_FILE", "")
     BUILD_TRACE_FILE = os.path.join(OUTPUT_DIR, "trace_build_process.jsonl")
     TIME_TRACE_FILE = os.path.join(OUTPUT_DIR, "time_traces.jsonl")
     TRACE_PROMPT_LOG_FILE = os.path.join(OUTPUT_DIR, "trace_prompts.jsonl")
@@ -992,6 +995,10 @@ class LLMWorker:
         self.embedding_fallback_dims = 1536
         self.ollama_num_ctx = getattr(Config, "OLLAMA_NUM_CTX", None)
         self.ollama_num_predict = getattr(Config, "OLLAMA_NUM_PREDICT", None)
+        self._construction_call_index = 0
+        self._construction_question_id = None
+        self._construction_session_id = None
+        self._construction_block_id = None
 
         self.client = OpenAI(base_url=self.base_url, api_key=self.api_key)
         try:
@@ -1001,6 +1008,82 @@ class LLMWorker:
 
     def count_tokens(self, text: str) -> int:
         return len(self.encoding.encode(text or ""))
+
+    @staticmethod
+    def _construction_stage(note: str, extra: Dict[str, Any] | None, followup: bool = False) -> str | None:
+        note_s = str(note or "")
+        if extra and extra.get("stage") not in (None, "build"):
+            return None
+        if "Overhead_Split" in note_s:
+            stage = "split_check"
+        elif "NotePS1_Extract" in note_s:
+            stage = "pass1_extract"
+        elif "NotePS2_Classify" in note_s:
+            stage = "pass2_classify"
+        elif "NotePS_Merged" in note_s:
+            stage = "merged_extract"
+        elif extra and extra.get("stage") == "build":
+            stage = "construction_other"
+        else:
+            return None
+        if followup:
+            return "pass1_tool_followup" if stage == "pass1_extract" else f"{stage}_tool_followup"
+        return stage
+
+    def _log_construction_call(
+        self,
+        *,
+        note: str,
+        extra: Dict[str, Any] | None,
+        stage: str | None,
+        response: Any = None,
+        latency_sec: float = 0.0,
+        success: bool,
+        retry_index: int = 0,
+        error: Exception | None = None,
+    ) -> None:
+        path = getattr(Config, "CONSTRUCTION_CALLS_FILE", "")
+        if not path or not stage:
+            return
+        usage = getattr(response, "usage", None) if response is not None else None
+
+        def _usage_value(name: str):
+            value = getattr(usage, name, None) if usage is not None else None
+            return int(value) if value is not None else None
+
+        prompt_tokens = _usage_value("prompt_tokens")
+        completion_tokens = _usage_value("completion_tokens")
+        total_tokens = _usage_value("total_tokens")
+        cached_tokens = None
+        prompt_details = getattr(usage, "prompt_tokens_details", None) if usage is not None else None
+        if prompt_details is not None:
+            cached_tokens = getattr(prompt_details, "cached_tokens", None)
+            if cached_tokens is not None:
+                cached_tokens = int(cached_tokens)
+        self._construction_call_index += 1
+        row = {
+            "system": "samem",
+            "question_id": self._construction_question_id,
+            "user_id": getattr(self, "_construction_user_id", None),
+            "session_id": self._construction_session_id,
+            "block_id": self._construction_block_id,
+            "stage": stage,
+            "call_index": self._construction_call_index,
+            "model": self.chat_model,
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens,
+            "cached_tokens": cached_tokens,
+            "latency_sec": round(float(latency_sec), 6),
+            "success": bool(success),
+            "retry_index": int(retry_index),
+            "provider_usage_available": bool(usage is not None and prompt_tokens is not None and completion_tokens is not None),
+        }
+        if error is not None:
+            row["error_type"] = type(error).__name__
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
     def _create_chat_completion(self, *, messages: List[Dict[str, str]], json_mode: bool = False, timeout: float | None = None):
         kwargs: Dict[str, Any] = {
@@ -1057,6 +1140,7 @@ class LLMWorker:
             extra: Extra metadata for logging
             enable_functions: Whether to enable temporal resolution function calling
         """
+        construction_stage = self._construction_stage(note, extra)
         try:
             messages = [{"role": "user", "content": prompt}]
 
@@ -1086,7 +1170,16 @@ class LLMWorker:
                 }]
                 kwargs["tool_choice"] = "auto"
 
+            call_start = time.perf_counter()
             resp = self.client.chat.completions.create(**kwargs)
+            self._log_construction_call(
+                note=note,
+                extra=extra,
+                stage=construction_stage,
+                response=resp,
+                latency_sec=time.perf_counter() - call_start,
+                success=True,
+            )
 
             # Handle function calling
             if enable_functions and resp.choices[0].message.tool_calls:
@@ -1111,7 +1204,16 @@ class LLMWorker:
                 kwargs["messages"] = messages
                 kwargs.pop("tools", None)
                 kwargs.pop("tool_choice", None)
+                followup_start = time.perf_counter()
                 resp = self.client.chat.completions.create(**kwargs)
+                self._log_construction_call(
+                    note=note,
+                    extra=extra,
+                    stage=self._construction_stage(note, extra, followup=True),
+                    response=resp,
+                    latency_sec=time.perf_counter() - followup_start,
+                    success=True,
+                )
 
             extra_payload = {"prompt_tokens_est": self.count_tokens(prompt)}
             if extra:
@@ -1119,6 +1221,14 @@ class LLMWorker:
             TokenAnalyzer.log_usage(resp.usage, note, extra_payload)
             return resp.choices[0].message.content.strip()
         except Exception as e:
+            self._log_construction_call(
+                note=note,
+                extra=extra,
+                stage=construction_stage,
+                latency_sec=0.0,
+                success=False,
+                error=e,
+            )
             logger.warning(f"LLM call failed: {e}")
             return "{}" if json_mode else ""
 
