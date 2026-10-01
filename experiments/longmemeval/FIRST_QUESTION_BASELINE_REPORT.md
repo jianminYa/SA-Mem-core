@@ -127,3 +127,29 @@ conda run -n samem-lme python scripts/run_samem_smoke.py --data datasets/longmem
 ```
 
 These commands are recorded for the next phase only. They were not executed in this task.
+
+## Detailed evidence audit
+
+The answer-bearing source session is `answer_280352e9`. A local relevant
+excerpt is saved in `first_question/gold_source_dialogue.txt` and reproduced
+in `first_question/FIRST_QUESTION_DIAGNOSTIC.md`.
+
+The main MemBox gold memory is box `157` and the main
+SA-Mem gold MemBlock is block `152`. Both native records,
+including content, topics, events, and temporal metadata, are saved in the
+first-question diagnostic directory.
+
+The full embedding ranking is saved in each run's `retrieval_full.json`.
+Readable Top-20 tables are in `first_question/FIRST_QUESTION_DIAGNOSTIC.md`.
+The gold memory is rank 1 in both systems and is included in both final
+generation Top-10 contexts. The exact contexts and prompts remain in the run
+directories as `retrieved_context.txt` and `answer_prompt.txt`.
+
+### Construction Cost Breakdown
+
+MemBox construction is 403,731 provider-reported tokens: topic continuity
+189,593 and box extraction 214,138. SA-Mem construction is 941,089 tokens:
+split check 191,524, Pass 1 272,549, Pass 1 tool follow-up 302,666, and
+Pass 2 174,350. The SA-Mem / MemBox ratio is **2.3310x**. The continuity
+and split costs are close here; the current difference is mainly the SA-Mem
+extraction pipeline. This remains a one-question diagnostic.
