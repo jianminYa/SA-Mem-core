@@ -616,6 +616,7 @@ class LMERetriever:
         parse_source = directive.parse_source if directive else "NONE"
         timing_info = {
             "parse_source": parse_source,
+            "query_embedding_input": query_text,
             "t_parse": t_parse, "t_filter": t_filter, "t_rank": t_rank,
             "search_latency": t_search, "t_total": t_total,
         }
@@ -911,6 +912,7 @@ class LMERetriever:
                 "time_constraint_type": query_time_meta.get("time_constraint_type"),
                 "query_time_start": query_time_meta.get("query_time_start"),
                 "query_time_end": query_time_meta.get("query_time_end"),
+                "query_embedding_input": _timing.get("query_embedding_input"),
                 "retrieved_items_minimal": retrieved_items_minimal,
             }
             if graph_info is not None:

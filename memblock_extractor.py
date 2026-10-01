@@ -485,6 +485,8 @@ class Config:
 
     LLM_MODEL = "gpt-4o-mini"
     EMBEDDING_MODEL = "text-embedding-3-small"
+    API_MAX_RETRIES = int(os.environ.get("API_MAX_RETRIES", "5"))
+    API_RETRY_BACKOFF_BASE = float(os.environ.get("API_RETRY_BACKOFF_BASE", "0.5"))
     OLLAMA_LLM_MODEL = os.environ.get("OLLAMA_LLM_MODEL", "gpt-oss:120b")
     OLLAMA_EMBEDDING_MODEL = os.environ.get("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text:latest")
     OLLAMA_NUM_CTX = int(os.environ.get("OLLAMA_NUM_CTX", "0") or 0) or None
@@ -999,6 +1001,7 @@ class LLMWorker:
         self._construction_question_id = None
         self._construction_session_id = None
         self._construction_block_id = None
+        self._last_api_retry_index = 0
 
         self.client = OpenAI(base_url=self.base_url, api_key=self.api_key)
         try:
@@ -1085,6 +1088,35 @@ class LLMWorker:
         with open(path, "a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
+    @staticmethod
+    def _is_transient_error(error: Exception) -> bool:
+        status = getattr(error, "status_code", None)
+        if status is not None:
+            try:
+                return int(status) == 429 or int(status) >= 500
+            except (TypeError, ValueError):
+                pass
+        name = type(error).__name__.lower()
+        return any(token in name for token in ("timeout", "connection", "ratelimit", "apitimeout"))
+
+    def _chat_with_retries(self, kwargs: Dict[str, Any]):
+        self._last_api_retry_index = 0
+        for retry_index in range(int(getattr(Config, "API_MAX_RETRIES", 5)) + 1):
+            try:
+                response = self.client.chat.completions.create(**kwargs)
+                self._last_api_retry_index = retry_index
+                return response
+            except Exception as error:
+                if retry_index >= int(getattr(Config, "API_MAX_RETRIES", 5)) or not self._is_transient_error(error):
+                    raise
+                delay = min(30.0, float(getattr(Config, "API_RETRY_BACKOFF_BASE", 0.5)) * (2 ** retry_index))
+                logger.warning(
+                    "Transient LLM failure (%s), retry %d/%d after %.1fs",
+                    type(error).__name__, retry_index + 1,
+                    int(getattr(Config, "API_MAX_RETRIES", 5)), delay,
+                )
+                time.sleep(delay)
+
     def _create_chat_completion(self, *, messages: List[Dict[str, str]], json_mode: bool = False, timeout: float | None = None):
         kwargs: Dict[str, Any] = {
             "model": self.chat_model,
@@ -1106,11 +1138,11 @@ class LLMWorker:
                 kwargs["extra_body"] = {"options": options}
 
         try:
-            return self.client.chat.completions.create(**kwargs)
+            return self._chat_with_retries(kwargs)
         except Exception:
             if json_mode:
                 kwargs.pop("response_format", None)
-                return self.client.chat.completions.create(**kwargs)
+                return self._chat_with_retries(kwargs)
             raise
 
     def get_embedding(self, text, note="Emb"):
@@ -1171,7 +1203,7 @@ class LLMWorker:
                 kwargs["tool_choice"] = "auto"
 
             call_start = time.perf_counter()
-            resp = self.client.chat.completions.create(**kwargs)
+            resp = self._chat_with_retries(kwargs)
             self._log_construction_call(
                 note=note,
                 extra=extra,
@@ -1179,6 +1211,7 @@ class LLMWorker:
                 response=resp,
                 latency_sec=time.perf_counter() - call_start,
                 success=True,
+                retry_index=self._last_api_retry_index,
             )
 
             # Handle function calling
@@ -1205,7 +1238,7 @@ class LLMWorker:
                 kwargs.pop("tools", None)
                 kwargs.pop("tool_choice", None)
                 followup_start = time.perf_counter()
-                resp = self.client.chat.completions.create(**kwargs)
+                resp = self._chat_with_retries(kwargs)
                 self._log_construction_call(
                     note=note,
                     extra=extra,
@@ -1213,6 +1246,7 @@ class LLMWorker:
                     response=resp,
                     latency_sec=time.perf_counter() - followup_start,
                     success=True,
+                    retry_index=self._last_api_retry_index,
                 )
 
             extra_payload = {"prompt_tokens_est": self.count_tokens(prompt)}
@@ -1227,6 +1261,7 @@ class LLMWorker:
                 stage=construction_stage,
                 latency_sec=0.0,
                 success=False,
+                retry_index=self._last_api_retry_index,
                 error=e,
             )
             logger.warning(f"LLM call failed: {e}")
