@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-02T07:37:46.951847+00:00",
+  "system": "samem_2p",
+  "dataset": "longmemeval_s_cleaned.json",
+  "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "subset_file": "runs/samem_2p/full_50_seed42/_question_ids/e66b632c.txt",
+  "subset_file_sha256": "b729ee1723d3a17bd8b678849b9ac84adcc8f5b7d1eaa50f12b46985734c1adc",
+  "question_ids": [
+    "e66b632c"
+  ],
+  "question_ids_sha256": "c39ebf62dbb8312a3038cf96a5c6e76795c525904338e7f05a27937abcf84e04",
+  "source_git_commit": "ca4f58d93321d92675b3190ebaa5e16c9e62c78b",
+  "llm_model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "api_base_configured": true,
+  "temperature": 0.0,
+  "top_k": 20,
+  "generation_top_k": 10,
+  "trace_enabled": false,
+  "trace_construction_enabled": false,
+  "graph_enabled": false,
+  "merged_extraction_enabled": false,
+  "event_classification_enabled": true,
+  "retrieval_mode": "native_lme_enhanced_no_graph",
+  "retriever_user_aliases": {
+    "e66b632c": "c39ebf62"
+  },
+  "retrieval_query_parser_tokens_counted_as_construction": false,
+  "environment_name": "samem-lme",
+  "python_version": "3.11.16 (main, Sep  2 2026, 23:41:26) [GCC 15.3.0]",
+  "provider_usage_available": true,
+  "construction_wall_time_sec": 2484.406366
+}

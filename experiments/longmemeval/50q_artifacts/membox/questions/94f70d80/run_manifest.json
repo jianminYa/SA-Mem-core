@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-01T11:26:47.386084+00:00",
+  "system": "membox_compact",
+  "dataset": "longmemeval_s_cleaned.json",
+  "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "subset_file": "runs/membox/full_50_seed42/_question_ids/94f70d80.txt",
+  "subset_file_sha256": "3caeb7c03f7328bad5295586cad25350a29ad3d63e2c3e4bc4970a25f9fe292c",
+  "question_ids": [
+    "94f70d80"
+  ],
+  "question_ids_sha256": "404d8b00a0cc635619c76ca2c52b84119b7c1a026c2f850c870ecac985b23d31",
+  "source_git_commit": "91a68781be404264d74b66ebdabbb149bc2d47d5",
+  "llm_model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "api_base_configured": true,
+  "temperature": 0.0,
+  "top_k": 10,
+  "trace_enabled": false,
+  "trace_construction_enabled": false,
+  "graph_enabled": false,
+  "merged_extraction_enabled": false,
+  "text_modes": [
+    "content"
+  ],
+  "environment_name": "membox-lme",
+  "python_version": "3.11.16 (main, Sep  2 2026, 23:41:26) [GCC 15.3.0]",
+  "provider_usage_available": true,
+  "trace_artifacts_present": [],
+  "construction_wall_time_sec": 711.436557
+}

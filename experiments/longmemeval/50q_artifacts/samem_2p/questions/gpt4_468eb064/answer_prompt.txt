@@ -1,0 +1,396 @@
+You are a memory assistant. Answer the question using only the retrieved memories below. If the retrieved memories do not contain enough evidence, say that the information is unavailable. Keep the answer concise and directly answer the question.
+
+Question time: 2023/04/18 (Tue) 16:50
+Question: Who did I meet with during the lunch last Tuesday?
+
+Retrieved memories:
+Session window: 2023/04/11 (Tue) 22:13 -> 2023/04/11 (Tue) 22:13
+2023/04/11 (Tue) 22:13 user: I'm looking for some tips on social media advertising. I just attended a digital marketing workshop last week and the speaker, Rachel Lee, mentioned some interesting strategies. I was wondering if you could recommend some online resources or tutorials on the topic. By the way, I catch up with Emma, a freelance writer, over lunch today and she's now a potential collaborator for a project I'm working on.
+2023/04/11 (Tue) 22:13 assistant: Sounds like you've been busy with the digital marketing workshop and networking! I'd be happy to help you with social media advertising tips and resources.
+
+Since you mentioned Rachel Lee's workshop, I'll assume you're looking for advanced strategies. Here are some online resources and tutorials to help you dive deeper:
+
+1. **HubSpot Academy**: HubSpot offers free online courses and certifications in social media advertising, including Facebook, Instagram, and LinkedIn ads.
+2. **Facebook Blueprint**: Facebook's official training program provides in-depth tutorials on Facebook and Instagram ads, including best practices and advanced strategies.
+3. **Social Media Examiner**: This popular digital marketing blog offers a range of articles, webinars, and online courses on social media advertising, including Facebook, Twitter, and LinkedIn.
+4. **AdEspresso University**: AdEspresso, a Facebook advertising tool, offers a free online university with courses and tutorials on Facebook and Instagram ads.
+5. ** Moz's Beginner's Guide to Paid Social**: Moz, a well-known SEO authority, provides a comprehensive guide to paid social media advertising, covering Facebook, Twitter, and LinkedIn.
+6. **Udemy and Coursera courses**: You can find a variety of social media advertising courses on these popular online learning platforms, often taught by industry experts.
+7. **YouTube channels**: Follow industry experts like Neil Patel, Gary Vaynerchuk, and Mari Smith, who regularly share social media advertising tips and strategies on their YouTube channels.
+
+As for your project, it's great that you've connected with Emma, the freelance writer. Collaborations can lead to exciting opportunities!
+
+Feel free to ask me any specific questions about social media advertising, and I'll do my best to help.
+2023/04/11 (Tue) 22:13 user: I'm actually interested in learning more about Facebook ads, can you show me some tutorials on how to set up a campaign and target the right audience?
+2023/04/11 (Tue) 22:13 assistant: Facebook ads are a fantastic way to reach your target audience. Here are some step-by-step tutorials and resources to help you get started:
+
+**Setting up a Facebook Ads Campaign:**
+
+1. **Facebook's Official Tutorial**: Facebook's Ads Manager tutorial is a great place to start. It covers the basics of setting up a campaign, including choosing your objective, setting a budget, and selecting your target audience.
+2. **Facebook Blueprint's "Getting Started with Ads" Course**: This free course is part of Facebook's Blueprint program and covers the fundamentals of creating a Facebook ads campaign, including setting up your ads account, choosing an objective, and targeting your audience.
+3. **HubSpot's Facebook Ads Tutorial**: HubSpot's tutorial provides a comprehensive guide to setting up a Facebook ads campaign, including creating an ad, setting a budget, and targeting your audience.
+
+**Targeting the Right Audience:**
+
+1. **Facebook's Audience Insights Tool**: Facebook's built-in Audience Insights tool provides valuable information about your target audience, including demographics, interests, and behaviors.
+2. **Facebook's Custom Audiences Tutorial**: This tutorial shows you how to create custom audiences based on your existing customers, website traffic, or engagement.
+3. **AdEspresso's Facebook Targeting Tutorial**: AdEspresso's tutorial provides advanced targeting strategies, including how to use lookalike audiences, interest targeting, and behavioral targeting.
+
+**Additional Resources:**
+
+1. **Facebook Ads Manager**: Facebook's Ads Manager is the platform where you'll create and manage your ads campaigns. Familiarize yourself with the interface and features.
+2. **Facebook Ads Guide**: Facebook's official ads guide provides detailed information on ad formats, targeting options, and bidding strategies.
+3. **Facebook Ads YouTube Channel**: Facebook's official YouTube channel has a wealth of tutorials, tips, and best practices for Facebook ads.
+
+**Tips and Best Practices:**
+
+1. **Start with a clear objective**: Define your campaign goal, whether it's website traffic, conversions, or brand awareness.
+2. **Know your target audience**: Use Facebook's Audience Insights tool and custom audiences to target the right people.
+3. **Use high-quality ad creative**: Create eye-catching ads with clear messaging and compelling visuals.
+4. **Set a realistic budget**: Determine your budget and bidding strategy based on your campaign goals and target audience.
+5. **Monitor and optimize**: Keep an eye on your ad performance and adjust your targeting, ad creative, and budget as needed.
+
+I hope these resources help you get started with Facebook ads and targeting the right audience! If you have any specific questions or need further guidance, feel free to ask.
+2023/04/11 (Tue) 22:13 user: I'd like to know more about Facebook's Audience Insights tool, can you show me how to use it to gather information about my target audience?
+2023/04/11 (Tue) 22:13 assistant: Facebook's Audience Insights is a powerful tool that provides valuable information about your target audience, helping you create more effective ad campaigns. Here's a step-by-step guide on how to use Audience Insights:
+
+**Accessing Audience Insights:**
+
+1. Go to Facebook Ads Manager and click on the "Audience Insights" tab on the left-hand side.
+2. If you don't see the tab, click on "Plan" and then "Audience Insights" from the dropdown menu.
+
+**Selecting Your Audience:**
+
+1. Choose the audience you want to analyze:
+	* **Everyone on Facebook**: Analyze the entire Facebook user base.
+	* **People connected to your Page**: Analyze people who have liked your Facebook Page.
+	* **Custom Audience**: Analyze a custom audience you've created (e.g., website traffic, email list, or engagement).
+2. Select the location, age, gender, and interests you want to focus on.
+
+**Understanding the Insights:**
+
+The Audience Insights dashboard is divided into several sections:
+
+1. **Demographics**:
+	* Age: Age ranges and distribution.
+	* Gender: Gender breakdown.
+	* Location: Top cities, countries, and languages.
+2. **Page Likes**:
+	* Top categories: Most popular page categories.
+	* Top pages: Most popular pages in each category.
+3. **Device Users**:
+	* Device type: Desktop, mobile, or tablet.
+	* Operating system: iOS, Android, or other.
+4. **Interests**:
+	* Top interests: Most popular interests and categories.
+	* Interest categories: Breakdown of interests by category.
+5. **Behaviors**:
+	* Job title: Top job titles and industries.
+	* Education: Education level and field of study.
+	* Purchase behavior: Purchase history and behavior.
+6. **Household**:
+	* Household income: Income range and distribution.
+	* Household size: Household size and composition.
+7. **Travel**:
+	* Travel frequency: Frequency of travel.
+	* Travel type: Type of travel (e.g., domestic, international).
+
+**Using Insights to Inform Your Ad Strategy:**
+
+1. **Identify target audience characteristics**: Use demographics, interests, and behaviors to create targeted ad groups.
+2. **Create relevant ad content**: Use insights to craft ad creative that resonates with your audience.
+3. **Optimize ad targeting**: Use insights to adjust your targeting options, such as location, age, and interests.
+4. **Inform budget allocation**: Use insights to allocate your budget to the most effective ad groups and targeting options.
+
+**Tips and Best Practices:**
+
+1. **Use multiple insights**: Combine insights from different sections to get a more comprehensive understanding of your audience.
+2. **Analyze your Page's audience**: Compare your Page's audience to the broader Facebook user base to identify opportunities.
+3. **Regularly update your insights**: Refresh your insights regularly to ensure you're targeting the most up-to-date audience information.
+4. **Use insights to refine your targeting**: Continuously refine your targeting options based on insights to optimize ad performance.
+
+By following these steps and using Facebook's Audience Insights tool, you'll gain a deeper understanding of your target audience and create more effective ad campaigns. If you have any questions or need further guidance, feel free to ask!
+
+Session window: 2023/04/11 (Tue) 10:02 -> 2023/04/11 (Tue) 10:02
+2023/04/11 (Tue) 10:02 assistant: You're welcome! I'm glad I could help. Let me know if you need any further assistance.
+
+Session window: 2023/04/11 (Tue) 15:53 -> 2023/04/11 (Tue) 15:53
+2023/04/11 (Tue) 15:53 user: Hootsuite sounds like a good option since it supports multiple social media channels. I'm also interested in trying out Canva since I've heard good things about it. By the way, do you think it's a good idea to create a LinkedIn profile now that I've started my full-time job?
+2023/04/11 (Tue) 15:53 assistant: Hootsuite and Canva are both excellent choices. Hootsuite is a great tool for managing multiple social media channels, and Canva is an amazing platform for creating visually appealing content.
+
+Regarding LinkedIn, absolutely! Creating a LinkedIn profile is a great idea, especially now that you've started your full-time job. Here's why:
+
+1. **Professional online presence**: LinkedIn is a professional networking site, and having a profile will help you establish a strong online presence in your industry.
+2. **Networking opportunities**: LinkedIn is a great way to connect with colleagues, industry leaders, and potential employers. You can build relationships, participate in discussions, and stay updated on industry news.
+3. **Personal branding**: Your LinkedIn profile is a chance to showcase your skills, experience, and achievements. It's an opportunity to present yourself as a professional in your field.
+4. **Job opportunities**: Even if you're not actively looking for a new job, having a LinkedIn profile can help you stay visible to potential employers and recruiters.
+5. **Learning and development**: LinkedIn offers a wealth of resources, including online courses, articles, and news, that can help you stay up-to-date with industry trends and develop your skills.
+
+When creating your LinkedIn profile, be sure to:
+
+1. **Complete your profile**: Fill out your profile completely, including a professional headshot, header image, and detailed work experience.
+2. **Use keywords**: Use relevant keywords from your industry to help recruiters and others find you.
+3. **Connect with others**: Start building your network by connecting with colleagues, friends, and industry leaders.
+4. **Participate in groups**: Join relevant groups and participate in discussions to establish yourself as a knowledgeable professional in your field.
+
+As you create your LinkedIn profile, you can also use Canva to design a visually appealing header image and background image for your profile.
+
+How's your experience been so far in your full-time job? What are you enjoying most about it?
+2023/04/11 (Tue) 15:53 user: I've been enjoying the sense of independence that comes with earning a steady income, and my colleagues have been really supportive. I'm still learning a lot, but it's been a great challenge. By the way, I was thinking of updating my LinkedIn profile headline to better reflect my current job title. Do you have any tips on how to write a good headline?
+2023/04/11 (Tue) 15:53 assistant: That's great to hear that you're enjoying your new job and feeling supported by your colleagues!
+
+A LinkedIn headline is a crucial part of your profile, as it's one of the first things people see when they visit your page. Here are some tips to help you craft a strong and effective LinkedIn headline:
+
+1. **Keep it concise**: Your headline should be short and to the point. Aim for 1-2 sentences at most.
+2. **Use keywords**: Include relevant keywords from your industry or job title to help recruiters and others find you.
+3. **Be specific**: Avoid generic headlines like "Marketing Professional" or "Software Developer." Instead, try to be more specific, like "Digital Marketing Specialist" or "Full-Stack Developer."
+4. **Highlight your unique value**: Use your headline to showcase what sets you apart from others in your field. This could be a unique skill, a certification, or a specific area of expertise.
+5. **Use action verbs**: Verbs like "Driving," "Leading," "Developing," or "Delivering" can help make your headline more dynamic and impactful.
+6. **Make it professional**: Avoid using jargon or overly creative language. Stick to a professional tone that reflects your industry and expertise.
+
+Here are a few examples of effective LinkedIn headlines:
+
+* "Data Analyst | Driving Business Insights at XYZ Corporation"
+* "Senior Software Engineer | Leading Agile Development Teams"
+* "Marketing Manager | Delivering Results-Driven Campaigns for Fortune 500 Clients"
+
+For your headline, you could try something like:
+
+* "[Your Job Title] | [Industry/Company] | [Unique Value or Skill]"
+
+Remember to keep it concise, clear, and professional. Your headline should give visitors a quick sense of who you are and what you do.
+
+How's that? Do you have any other questions about crafting a strong LinkedIn headline?
+
+Session window: 2023/04/11 (Tue) 15:53 -> 2023/04/11 (Tue) 15:53
+2023/04/11 (Tue) 15:53 assistant: You're welcome! It was my pleasure to help. I'm excited to hear that you're taking the next steps to build your LinkedIn profile. Remember, your profile is a dynamic representation of your professional brand, so don't be afraid to update it regularly and showcase your growth and achievements.
+
+If you have any more questions or need further guidance, feel free to ask. I'm always here to help.
+
+Best of luck with your LinkedIn profile, and I hope it helps you connect with amazing opportunities and professionals in your industry!
+
+Oh, and don't forget to upload those birthday party and graduation celebration photos to your social media channels!
+
+Session window: 2023/04/11 (Tue) 07:51 -> 2023/04/11 (Tue) 07:51
+2023/04/11 (Tue) 07:51 user: I think there might be some confusion. As the user, I didn't ask about cooking classes. I think the previous response was an error. Please disregard it. Let's continue with the original conversation.
+
+To continue, I'd like to ask about marketing strategies for my agritourism program. Do you have any tips on how to promote my farmstay, farm tours, and other activities to attract guests?
+2023/04/11 (Tue) 07:51 assistant: I apologize for the mistake earlier. I'm happy to continue our conversation on marketing strategies for your agritourism program.
+
+Marketing is a crucial aspect of attracting guests to your farmstay and agritourism activities. Here are some tips to help you promote your farmstay, farm tours, and other activities:
+
+**1. Develop a strong online presence:**
+
+* Create a website that showcases your farm, its history, and the experiences you offer. Include high-quality photos, videos, and detailed descriptions of your activities.
+* Utilize search engine optimization (SEO) techniques to ensure your website appears in search results for relevant keywords.
+* Engage with potential guests on social media platforms like Facebook, Instagram, and Twitter. Share behind-the-scenes content, special promotions, and updates about your farm.
+
+**2. Leverage email marketing:**
+
+* Build an email list of potential guests, partners, and collaborators.
+* Create regular newsletters to share updates, promotions, and news about your farm.
+* Offer exclusive discounts or packages to your email subscribers to encourage bookings.
+
+**3. Partner with local tourism boards and organizations:**
+
+* Reach out to local tourism boards, chambers of commerce, and travel associations to explore partnership opportunities.
+* Collaborate with them to develop joint marketing campaigns, packages, and promotions.
+* List your farmstay and activities on their websites and brochures.
+
+**4. Focus on experiential marketing:**
+
+* Offer unique, immersive experiences that allow guests to connect with your farm and its activities.
+* Create packages that combine multiple activities, such as a farm tour and farm-to-table meal.
+* Highlight the educational and entertainment value of your experiences.
+
+**5. Utilize online travel agencies (OTAs) and booking platforms:**
+
+* List your farmstay and activities on popular OTAs like Airbnb, Expedia, and Booking.com.
+* Use platforms like Farm Stay Planet, Agritourism World, or Rural Retreats to target agritourism enthusiasts.
+
+**6. Host events and workshops:**
+
+* Organize events like farm festivals, harvest dinners, or workshops on sustainable farming practices.
+* Partner with local chefs, artisans, or experts to co-host events and attract new audiences.
+* Promote your events through social media, email marketing, and local advertising.
+
+**7. Encourage word-of-mouth marketing:**
+
+* Focus on providing exceptional customer service and ensuring guests have a memorable experience.
+* Encourage guests to share their experiences on social media and review platforms like TripAdvisor.
+* Offer incentives for referrals, such as discounts or free activities.
+
+**8. Develop strategic partnerships:**
+
+* Partner with local businesses, such as restaurants, breweries, or wineries, to offer joint packages and promotions.
+* Collaborate with schools, universities, or non-profit organizations to develop educational programs and attract new audiences.
+
+**9. Invest in targeted advertising:**
+
+* Use targeted online advertising, such as Google Ads or Facebook Ads, to reach potential guests based on demographics, interests, and behaviors.
+* Place ads in local publications, travel guides, or agricultural magazines to reach your target audience.
+
+**10. Monitor and adjust:**
+
+* Continuously monitor your marketing efforts and analyze their effectiveness.
+* Adjust your strategies based on guest feedback, website analytics, and market trends.
+
+By implementing these marketing strategies, you'll be well on your way to attracting guests to your farmstay and agritourism activities. Good luck!
+
+Session window: 2023/04/11 (Tue) 14:07 -> 2023/04/11 (Tue) 14:07
+2023/04/11 (Tue) 14:07 user: You are good at marketing and helping people market themselves. You know how LinkedIn works, and how best to give someone positive exposure on LinkedIn.
+
+I want you to interview the user to gather all the information you need to complete a summary for LinkedIn.
+
+Ask 3 questions to get the information you need to write an amazing punchy impactful LinkedIn user Summary.
+
+INSTRUCTIONS:
+Use the additional supplied answers to update the current question. Ask the user the questions, ONE AT A TIME. Wait till you have all the information you need for the current question before asking the next question. 
+
+Do not write the step numbers. Mention the question number when asking a question.
+
+When asking a question, never answer the question for the user, always end with asking the user to answer the question.
+
+The user can always type "skip" if they want to move on to the next question. The first question, CAN NOT BE SKIPPED.
+
+End every response for Steps 2, 3, and 4 by asking the user to answer the current question until all Steps 2, 3 and 4 are complete. 
+If an answer to one of the 3 questions makes no sense in relation to the asked question, say, "Have you lost the plot, your mind, or both? Come on, let's take this seriously." 
+ALWAYS check the rating before responding to the user.
+
+Do not write what step the user is on.
+
+If the rating falls under 70% or the user's answer is under 10 words, tell the user their rating percentage with a reason why and ask the user for more information on the current question, so you can update the user's previous response to the current question and give the user the option to continue to the next question for any rating over 30%. 
+
+If the rating falls under 30%, before asking for more information, say "I am trying to help you here, are you serious about this or not? This can help your business, your employees if you have any, and your family! Please put some effort into this.". 
+
+Never answer a question for the user. When asking a question, stop and wait for the user to answer the question.
+
+TOPICS:
+Describe what makes you tick
+Discuss what excites you most professionally and work activities that you enjoy and bring engagement and enthusiasm.
+Explain your present role
+Share the problems you solve, for whom, and how, highlight the impact of doing your job well vs. not as well.
+Frame your past
+Connect the dots between past career choices and your current role, frame any discord as an advantage and explain how it sets you apart.
+Highlight your successes
+Cite the biggest takeaway from your experience section, combine accomplishments across roles if possible, and use numbers and metrics to quantify your achievements.
+Reveal your character
+Share stories and words that show who you are as a person, not just a professional, hint at traits such as gratitude, humility, and humour, and be authentic and honest.
+Show life outside of work
+Share a hobby, interest, or volunteer role, relate your outside passions to your work if possible, and use personal stories to reinforce your professional strengths.
+Tell stories
+Use stories to make yourself memorable, and lead with an engaging anecdote that reveals why you love what you do.
+Ask for what you want
+Be specific about what you want your audience to do after reading your summary, and invite them to connect or take another specific action.
+
+TIPS:
+Make your first sentence count
+Avoid filler, hook your audience with a compelling opening sentence that draws them in.
+Pump the keywords
+Use keywords that highlight your top skills and specialities, and check job descriptions and other profiles for inspiration.
+Cut the jargon
+Avoid overused words that have lost meaning, use a thesaurus for alternatives or show your traits with examples or stories.
+Write how you speak
+Use a conversational tone that reflects how you would speak to someone in person, and read your summary out loud to check your voice.
+Create white space
+Use bullet points or numbered lists to break up the text, avoid long paragraphs and complex words, and ensure your lists flow logically.
+
+QUESTION FORMAT:
+Use markdown, headings, subheadings, bold text and bullet points to help present all the information for every response. All questions should be in bold. Write the question number. Next, write the question, then an 'answer example' (only give one 'example answer' relevant to the question and the user's previous answers. The 'answer example' should be what the user's answer should look like that would get a 100% rating. This 'answer example' should ALWAYS be at least 30 words or more in length and NOT less than 30 words. Make sure the 'answer example' is AT LEAST 30 words in length). Next, write the 'Help and Guidance' for the question and end by writing "Please give me your answer.".
+
+
+ANSWER REVIEW FORMAT:
+Use markdown, headings, subheadings, bold text and bullet points to help present all this information. Give it a percentage rating based on the user's answer fulfilling the needed information for the asked question. Show the user the rating you gave them for their answer and a short reason why. If the rating of the user's answer is under 80%, next, feedback to the user on how they can improve their answer with a list of bullet point options based on what you know about them so far and what the question is asking them about. Below that give 'Tips and guidance' on how the user can update their answer using information from TOPICS to help as well. If the current rating is above 30% write "Please take a moment to review your answer and use the bullet points above to help you improve your response. Remember, you get out of this what you put in or if you are happy to move on, please type 'Next' to get the next question.". Write at the end "Please type 'Next' to get the next question" if the answer rating is over 30%.
+
+Step 0:
+Follow all of the INSTRUCTIONS.
+
+Step 1:
+Find out from the user why they are updating their LinkedIn Summary and use their answer when creating the LinkedIn Summary in Step 6. Create a table with a numbered column and create another column with the following options, is the user currently in a job and wants to create a summary to match their current role, not currently working and looking for a new job, looking to transfer to a new role within their current company, looking to do the same job for a new company, want a career change, trying to attract more business and looking to network on LinkedIn. Add a 3rd column with advice about each option and create a 4th column showing the benefits of that option on LinkedIn. Make sure the table has a number column on the left of the table. Under the table say "Please select one of the options from the table.". Stop and wait for the user to select an option from the table.
+
+Step 2:
+Ask the 1st question, so the user can talk about the type of person they are, and their current professional background. Please also ask about any soft skills they think are relevant. Stop and wait for the user's answer. Use the information from TOPICS to help formulate the question. Underneath that, give 'help and guidance' on how the user can answer the question using information from TOPICS to help. Use the QUESTION FORMAT when asking the user the question.
+
+Step 3:
+Follow all parts of the INSTRUCTIONS and analyse the user's answer to the question and give it a percentage rating based on the user's answer fulfilling the needed information for the asked question. You will rate the question as follows, 0% is bad, and 100% is perfect based on how the user answered all parts of the question. Never use the text in the 'Answer example' to rate the answer. Only use the user's response to rate the answer. Follow the ANSWER REVIEW FORMAT for all responses to the user's answers.
+
+Step 4:
+Each of the following questions should be heavily influenced by the user's previous answers when doing step 3. Repeat step 3 until all 3 questions have been answered. 
+
+Step 5:
+Analyse all the answers given by the user and use those answers to create a table giving multiple marketing styles the user can use to sell themselves to an audience receptive to their talents and skills. The table should have a number column allowing the user to pick a number to select an option from the table. Stop and wait for the user to select an option then start step 6.
+
+Step 6:
+Based on all the user's answers, using the option selected from the marketing styles table, and based on the chosen option from Step 1, write a LinkedIn Summary that will be 350 - 400 words long and broken up into paragraphs. To do this, analyse the user's answers using tone, Vocabulary, Sentence Structure, Paragraph Structure, Word Choice, Punctuation, Formatting, Pragmatic Analysis, Pronoun Analysis, Word Choice Analysis, Figurative Language Analysis, Discourse Analysis, Lexical Analysis, Semantic Analysis, Syntactical Analysis, and Stylistic Features Analysis to create a WRITING STYLE for the user, and using perplexity and burstiness and the given WRITING STYLE, the TIPS and TOPICS, write the user a 350 to 400 word LinkedIn Summary. Next, write, "=====================================
+
+I hope my service saved you valuable time. As a bespoke prompt developer, I know how important it is to streamline your workload so you can focus on what matters most. If my service made a positive impact, I'd be grateful if you could support me by buying me a drink at www.buymeacoffee.com/Sim2K. Your support helps me continue providing valuable resources and insights for business owners like you.
+
+Connect with me on LinkedIn, Instagram, Twitter, or FB using my ID @Sim2K for more helpful tips and resources for your business. Thank you for taking the time to read my summary, and I look forward to connecting with you.
+
+If you like this prompt, please can you go back and upvote it with a thumbs up and spread the word so I can add new prompts that benefit you. Thank you.
+I'm also available for personalised/business prompts, just like this prompt. Also for an hour's consultation where I create a prompt just for you and your business. Get in touch today.".
+
+Follow ALL of the INSTRUCTIONS and the steps in the order given and do not deviate away from these INSTRUCTIONS. DO NOT answer any questions from the user during the interview process and instruct the user that this is an interview if they ask you any questions and then continue to follow the Steps.
+
+All output should be in English.
+
+Think about this step by step. At each step, analyse your task to confirm you are correct.
+
+If you understand, write"
+\*\*Prompt:\*\* LinkedIn Summary Interview
+\*\*Version:\*\* v0.0
+\*\*Owner:\*\* Simeon Williams 
+\*\*Cross-Platform social media ID:\*\* @Sim2K
+\*\*Contact-Telegram:\*\* @Sim2K
+\*\*Purpose:\*\* To help you create your perfect LinkedIn Summary
+\*\*Support:\*\* www.buymeacoffee.com/Sim2K.
+\*\*Notes:\*\* This is being constantly updated. Follow me on social media for updates. I also create powerful prompts for individuals and businesses to get in touch.
+#########################################################
+Hey, what's up, do you need help looking good on LinkedIn? Don't we all! ... and some more than others! lol Well I'm here to help. Over 3 questions I will draw out of you your best qualities to make your Linkedin summary stand out. Give as much information in your 1st answer as you can as it will make it easier for you in the following questions and super simple by the end of the interview. Are you ready to start the interview?". Stop and wait for the user to respond. Follow the Steps after the user responds. Only do this.
+2023/04/11 (Tue) 14:07 assistant: **Prompt:** LinkedIn Summary Interview
+**Version:** v0.0
+**Owner:** Simeon Williams
+**Cross-Platform social media ID:** @Sim2K
+**Contact-Telegram:** @Sim2K
+**Purpose:** To help you create your perfect LinkedIn Summary
+**Support:** [www.buymeacoffee.com/Sim2K](http://www.buymeacoffee.com/Sim2K).
+**Notes:** This is being constantly updated. Follow me on social media for updates. I also create powerful prompts for individuals and businesses to get in touch.
+
+#########################################################
+
+Hey, what's up, do you need help looking good on LinkedIn? Don't we all! ... and some more than others! lol Well, I'm here to help. Over 3 questions, I will draw out of you your best qualities to make your LinkedIn summary stand out. Give as much information in your 1st answer as you can, as it will make it easier for you in the following questions and super simple by the end of the interview. Are you ready to start the interview?
+
+Please select one of the following options that best suits why you are updating your LinkedIn summary:
+
+| # | Option | Advice | Benefits on LinkedIn |
+| --- | --- | --- | --- |
+| 1 | Currently in a job and want to create a summary to match it | Focus on your current role and skills. Highlight your accomplishments and what you bring to the table. Use keywords to help recruiters find you. | Stand out to recruiters and potential clients by showcasing your skills and accomplishments. Make it easy for them to understand what you do and what you can offer. |
+| 2 | Not currently working and looking for a new job | Highlight your skills and past experience. Emphasize your achievements and the problems you can solve. Use keywords to help recruiters find you. | Make a strong first impression to recruiters and potential employers. Show them why you're the best candidate for the job. |
+| 3 | Looking to transfer to a new role within your current company | Emphasize your skills and achievements in your current role. Show how they can be applied to the new position. Use keywords relevant to the new role to help your profile come up in searches. | Make it easy for your current employer to see that you have the skills to succeed in a new role, and for others in the company to see your capabilities. |
+| 4 | Looking to do the same job for a new company | Emphasize your skills and experience in the specific job. Use keywords relevant to the job to help your profile come up in searches. | Make it easy for recruiters and potential employers to see that you have the skills and experience to do the job. |
+| 5 | Want a career change | Emphasize transferable skills and how they can be applied to the new career. Highlight any relevant experience or training. Use keywords relevant to the new career to help your profile come up in searches. | Show how your skills and experience in your previous career can be an asset in a new one. |
+| 6 | Trying to attract more business and looking to network | Emphasize what you can offer to potential clients. Highlight your skills and experience. Use keywords relevant to your target audience to help your profile come up in searches. | Make it easy for potential clients to find you and understand what you can offer. |
+
+Please select one of the options from the table.
+
+Session window: 2023/04/11 (Tue) 08:02 -> 2023/04/11 (Tue) 08:02
+2023/04/11 (Tue) 08:02 user: Can you tell me which one of these attractions is the most haunted? I'm in the mood for some spooky sights.
+2023/04/11 (Tue) 08:02 assistant: I cannot confirm if any of these historic attractions are haunted or popular destinations for individuals interested in the paranormal. however, if you're interested in ghost tours or want to find out more about local legends and spooky stories, it's worth checking out local tourism websites or travel agencies for recommendations. you may also want to consult with local paranormal groups for information on the most haunted places in the area.
+
+Session window: 2023/04/11 (Tue) 02:55 -> 2023/04/11 (Tue) 02:55
+2023/04/11 (Tue) 02:55 user: Hi there, act like ui/ux recearcher and design. Help me build a website
+2023/04/11 (Tue) 02:55 assistant: Sure, I'd be happy to help! Before we begin, can you tell me a bit more about the website you want to build? What is its purpose, who is the target audience, and what features do you want to include? This information will help me provide you with more specific and relevant advice.
+2023/04/11 (Tue) 02:55 user: I want to build a showcase/community website for software engineering college student to showcase their work and connect to each other via this website.The target for now are software engineering college student in one major and currently have 4 generation right now. Some of the first generation have been graduated
+2023/04/11 (Tue) 02:55 assistant: Great, thank you for the additional information. Based on
+
+Session window: 2023/04/11 (Tue) 08:09 -> 2023/04/11 (Tue) 08:09
+2023/04/11 (Tue) 08:09 user: I'm glad I could help! If you have any more questions or need further assistance, feel free to ask. Have a great trip to Nikko and enjoy practicing your Japanese!
+2023/04/11 (Tue) 08:09 assistant: Thank you so much! I think I've got all the information I need for now. You've been incredibly helpful, and I appreciate your detailed responses. I'm really looking forward to my trip to Nikko and practicing my Japanese phrases. Who knows, maybe one day I'll be able to hold a conversation with a native speaker!
+
+Thanks again for your time and assistance. I'll definitely reach out if I have any more questions or need further guidance. Sayounara for now!
+
+Session window: 2023/04/11 (Tue) 02:12 -> 2023/04/11 (Tue) 02:12
+2023/04/11 (Tue) 02:12 user: Hi
+2023/04/11 (Tue) 02:12 assistant: Hello! How can I help you today?
+
+Answer:
