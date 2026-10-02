@@ -1,0 +1,12 @@
+{
+  "question_id": "e47becba",
+  "question": "What degree did I graduate with?",
+  "answer": "Business Administration",
+  "hypothesis": "You graduated with a degree in Business Administration.",
+  "autoeval": {
+    "model": "gpt-4o-2024-08-06",
+    "label": true
+  },
+  "retrieved_context_file": "retrieved_context.txt",
+  "prompt_file": "answer_prompt.txt"
+}
