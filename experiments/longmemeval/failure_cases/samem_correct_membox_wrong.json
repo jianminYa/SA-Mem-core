@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "d682f1a2",
+    "question_type": "multi-session",
+    "history_sessions": 47,
+    "history_messages": 469,
+    "history_tokens": 102363,
+    "membox_memory_units": 139,
+    "membox_construction_tokens": 379667,
+    "membox_gold_rank": 1,
+    "membox_correct": false,
+    "samem_memory_units": 138,
+    "samem_construction_tokens": 876032,
+    "samem_gold_rank": 1,
+    "samem_correct": true
+  },
+  {
+    "question_id": "0f05491a",
+    "question_type": "knowledge-update",
+    "history_sessions": 45,
+    "history_messages": 489,
+    "history_tokens": 101501,
+    "membox_memory_units": 148,
+    "membox_construction_tokens": 387609,
+    "membox_gold_rank": 1,
+    "membox_correct": false,
+    "samem_memory_units": 146,
+    "samem_construction_tokens": 894185,
+    "samem_gold_rank": 1,
+    "samem_correct": true
+  },
+  {
+    "question_id": "2133c1b5_abs",
+    "question_type": "knowledge-update",
+    "history_sessions": 50,
+    "history_messages": 476,
+    "history_tokens": 100272,
+    "membox_memory_units": 135,
+    "membox_construction_tokens": 380757,
+    "membox_gold_rank": 1,
+    "membox_correct": false,
+    "samem_memory_units": 134,
+    "samem_construction_tokens": 870884,
+    "samem_gold_rank": 8,
+    "samem_correct": true
+  }
+]

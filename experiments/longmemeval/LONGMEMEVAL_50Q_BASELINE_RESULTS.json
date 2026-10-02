@@ -1,0 +1,196 @@
+{
+  "dataset": "datasets/longmemeval_s_cleaned.json",
+  "question_count": 50,
+  "model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "membox": {
+    "system": "membox",
+    "questions": 50,
+    "history_tokens": {
+      "total": 5128989.0,
+      "mean": 102579.78,
+      "median": 102808.0
+    },
+    "history_messages": {
+      "total": 24344.0,
+      "mean": 486.88,
+      "median": 489.0
+    },
+    "memory_units": {
+      "total": 6876.0,
+      "mean": 137.52,
+      "median": 138.0
+    },
+    "construction_input_tokens": {
+      "total": 18213112.0,
+      "mean": 364262.24,
+      "median": 366260.5
+    },
+    "construction_output_tokens": {
+      "total": 1260289.0,
+      "mean": 25205.78,
+      "median": 25093.5
+    },
+    "construction_total_tokens": {
+      "total": 19473401.0,
+      "mean": 389468.02,
+      "median": 390992.0
+    },
+    "construction_calls": {
+      "total": 22088.0,
+      "mean": 441.76,
+      "median": 445.0
+    },
+    "construction_wall_time_sec": {
+      "total": 42891.86032900001,
+      "mean": 857.83720658,
+      "median": 827.603735
+    },
+    "construction_tokens_per_history_token": 3.7967328454009164,
+    "construction_tokens_per_message": 799.9261008872822,
+    "construction_tokens_per_memory_unit": 2832.082751599767,
+    "llm_calls_per_question": 441.76,
+    "evidence_hit": {
+      "1": 0.88,
+      "5": 0.96,
+      "10": 1.0,
+      "20": 1.0
+    },
+    "mrr": {
+      "total": 45.759523809523806,
+      "mean": 0.9151904761904762,
+      "median": 1.0
+    },
+    "stage_breakdown": {
+      "topic_continuity": {
+        "calls": 15212,
+        "input_tokens": 9439930,
+        "output_tokens": 28501,
+        "total_tokens": 9468431
+      },
+      "box_extraction": {
+        "calls": 6876,
+        "input_tokens": 8773182,
+        "output_tokens": 1231788,
+        "total_tokens": 10004970
+      }
+    },
+    "question_workers": 4,
+    "parallel_wall_time_sec": 6.364938,
+    "parallel_wall_time_note": "Resume/reconciliation manifest duration; not the original full MemBox compute wall time. Use construction_wall_time_sec for the measured per-question aggregate.",
+    "retried_calls": 13,
+    "permanently_failed_calls": 0
+  },
+  "samem": {
+    "system": "samem",
+    "questions": 50,
+    "history_tokens": {
+      "total": 5128989.0,
+      "mean": 102579.78,
+      "median": 102808.0
+    },
+    "history_messages": {
+      "total": 24344.0,
+      "mean": 486.88,
+      "median": 489.0
+    },
+    "memory_units": {
+      "total": 6857.0,
+      "mean": 137.14,
+      "median": 138.5
+    },
+    "construction_input_tokens": {
+      "total": 39188476.0,
+      "mean": 783769.52,
+      "median": 784431.5
+    },
+    "construction_output_tokens": {
+      "total": 4768153.0,
+      "mean": 95363.06,
+      "median": 96045.5
+    },
+    "construction_total_tokens": {
+      "total": 43956629.0,
+      "mean": 879132.58,
+      "median": 879279.5
+    },
+    "construction_calls": {
+      "total": 35669.0,
+      "mean": 713.38,
+      "median": 714.5
+    },
+    "construction_wall_time_sec": {
+      "total": 107577.297619,
+      "mean": 2151.54595238,
+      "median": 2110.5445745
+    },
+    "construction_tokens_per_history_token": 8.570232652087965,
+    "construction_tokens_per_message": 1805.6452924745317,
+    "construction_tokens_per_memory_unit": 6410.475280735015,
+    "llm_calls_per_question": 713.38,
+    "evidence_hit": {
+      "1": 0.82,
+      "5": 0.88,
+      "10": 0.96,
+      "20": 0.98
+    },
+    "mrr": {
+      "total": 42.65952380952381,
+      "mean": 0.8531904761904762,
+      "median": 1.0
+    },
+    "stage_breakdown": {
+      "split_check": {
+        "calls": 15229,
+        "input_tokens": 9455886,
+        "output_tokens": 28458,
+        "total_tokens": 9484344
+      },
+      "pass1_extract": {
+        "calls": 6857,
+        "input_tokens": 11692190,
+        "output_tokens": 806242,
+        "total_tokens": 12498432
+      },
+      "pass1_tool_followup": {
+        "calls": 6850,
+        "input_tokens": 12648636,
+        "output_tokens": 1290647,
+        "total_tokens": 13939283
+      },
+      "pass2_classify": {
+        "calls": 6733,
+        "input_tokens": 5391764,
+        "output_tokens": 2642806,
+        "total_tokens": 8034570
+      }
+    },
+    "question_workers": 4,
+    "parallel_wall_time_sec": 16817.631808,
+    "parallel_wall_time_note": "Measured question-level parallel run wall time with 4 workers.",
+    "retried_calls": 0,
+    "permanently_failed_calls": 0
+  },
+  "token_ratio_samem_over_membox": 2.2572651279558205,
+  "question_type_counts": {
+    "knowledge-update": 8,
+    "multi-session": 13,
+    "single-session-assistant": 5,
+    "single-session-preference": 3,
+    "single-session-user": 7,
+    "temporal-reasoning": 14
+  },
+  "failure_case_counts": {
+    "both_wrong": 29,
+    "membox_correct_samem_wrong": 5,
+    "samem_correct_membox_wrong": 3,
+    "membox_gold_extraction_failure": 0,
+    "membox_gold_extracted_rank_gt_10": 0,
+    "membox_gold_extracted_rank_gt_20": 0,
+    "membox_gold_in_context_but_qa_wrong": 32,
+    "samem_gold_extraction_failure": 0,
+    "samem_gold_extracted_rank_gt_10": 1,
+    "samem_gold_extracted_rank_gt_20": 1,
+    "samem_gold_in_context_but_qa_wrong": 32
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "question_id": "dcfa8644",
+    "question_type": "temporal-reasoning",
+    "history_sessions": 46,
+    "history_messages": 470,
+    "history_tokens": 100774,
+    "membox_memory_units": 135,
+    "membox_construction_tokens": 380670,
+    "membox_gold_rank": 1,
+    "membox_correct": false,
+    "samem_memory_units": 133,
+    "samem_construction_tokens": 856777,
+    "samem_gold_rank": 24,
+    "samem_correct": false
+  }
+]
