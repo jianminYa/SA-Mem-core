@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-01T09:11:46.342029+00:00",
+  "system": "membox_compact",
+  "dataset": "longmemeval_s_cleaned.json",
+  "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "subset_file": "longmemeval-baselines/subsets/first_question_id.txt",
+  "subset_file_sha256": "972b653611350b1ba4fdba0d948bbf88d034aca5b99f388d534fe819b9e8d0e6",
+  "question_ids": [
+    "e47becba"
+  ],
+  "question_ids_sha256": "878689469dcd8d1049594092edb7b6fcd567fd5df426ab3a63afae92f4f47455",
+  "source_git_commit": "91a68781be404264d74b66ebdabbb149bc2d47d5",
+  "llm_model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "api_base_configured": true,
+  "temperature": 0.0,
+  "top_k": 10,
+  "trace_enabled": false,
+  "trace_construction_enabled": false,
+  "graph_enabled": false,
+  "merged_extraction_enabled": false,
+  "text_modes": [
+    "content"
+  ],
+  "environment_name": "membox-lme",
+  "python_version": "3.11.16 (main, Sep  2 2026, 23:41:26) [GCC 15.3.0]",
+  "provider_usage_available": true,
+  "trace_artifacts_present": [],
+  "construction_wall_time_sec": 892.083769,
+  "source_git_branch": "membox/samem-lme-firstquestion",
+  "retrieval_candidate_top_k": 20,
+  "generation_top_k": 10,
+  "construction_token_accounting": "provider_usage_exact",
+  "environment_snapshot": {
+    "environment_name": "membox-lme",
+    "python_version": "3.11.16 (main, Sep  2 2026, 23:41:26) [GCC 15.3.0]",
+    "pip_freeze": [
+      "annotated-types==0.8.0",
+      "anyio==4.15.1",
+      "certifi==2026.7.22",
+      "charset-normalizer==3.5.2",
+      "click==8.5.0",
+      "cloudpickle==3.1.2",
+      "defusedxml==0.7.1",
+      "h11==0.16.0",
+      "httpcore2==2.13.1",
+      "httpx2==2.13.1",
+      "idna==3.20",
+      "jiter==0.17.0",
+      "joblib==1.6.0",
+      "narwhals==2.26.0",
+      "nltk==3.10.3",
+      "numpy==2.4.6",
+      "openai==3.22.1",
+      "packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1785888127/work",
+      "pydantic==2.13.5",
+      "pydantic_core==2.46.5",
+      "python-dateutil==2.9.0.post0",
+      "regex==2026.9.29",
+      "requests==2.34.2",
+      "scikit-learn==1.9.1",
+      "scipy==1.17.1",
+      "six==1.17.0",
+      "sniffio==1.3.1",
+      "tenacity==9.1.4",
+      "threadpoolctl==3.7.0",
+      "tiktoken==0.14.0",
+      "tqdm==4.70.1",
+      "truststore==0.10.4",
+      "typing-inspection==0.4.4",
+      "typing_extensions==4.16.0",
+      "urllib3==2.8.0"
+    ],
+    "cuda": {
+      "torch_cuda_available": false,
+      "torch_cuda_version": "unavailable"
+    },
+    "nvidia_smi": {
+      "available": false,
+      "stderr_present": false
+    }
+  }
+}

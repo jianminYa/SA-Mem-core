@@ -1,0 +1,16 @@
+{
+  "evaluator": "LongMemEval/src/evaluation/evaluate_qa.py",
+  "judge_model": "gpt-4o-2024-08-06",
+  "question_count": 1,
+  "accuracy": 1.0,
+  "by_question_type": {
+    "single-session-user": 1.0
+  },
+  "abstention_accuracy": null,
+  "judge_calls": 1,
+  "judge_input_tokens": 126,
+  "judge_output_tokens": 1,
+  "judge_total_tokens": 127,
+  "judge_usage_available": true,
+  "result_file": "runs/samem_2p/e47becba/hypotheses.jsonl.eval-results-gpt-4o"
+}
