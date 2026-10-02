@@ -1,67 +1,77 @@
-# LongMemEval baseline artifacts
+# LongMemEval-S 50-question baseline
 
-This branch is the immutable first-question diagnostic snapshot for
-`e47becba`:
+This branch is the completed phase-1 baseline for the frozen 50-question
+subset. It is separate from the single-question snapshot
+`membox/samem-lme-firstquestion`.
+
+## Experiment definition
 
 ```text
-Question: What degree did I graduate with?
-Gold: Business Administration
+Dataset: longmemeval_s_cleaned.json
+Subset: seed 42, 50 fixed question IDs
 LLM: gpt-4o-mini
 Embedding: text-embedding-3-small
+Question workers: 4
+Parallelism: question-level only
 ```
 
-## Where to look
-
-Start with the human-readable report:
-
-- [`FIRST_QUESTION_BASELINE_REPORT.md`](FIRST_QUESTION_BASELINE_REPORT.md)
-- [`first_question/FIRST_QUESTION_DIAGNOSTIC.md`](first_question/FIRST_QUESTION_DIAGNOSTIC.md)
-
-The diagnostic chain is deliberately visible:
+MemBox uses Topic Loom / box construction without Trace Weaver. SA-Mem uses
+the native two-pass MemBlock construction with:
 
 ```text
-source dialogue
-  -> extracted boxes / MemBlocks
-  -> full embedding retrieval ranking
-  -> candidate Top-20
-  -> generation Top-10
-  -> exact QA prompt
-  -> answer and evaluator result
+split_check -> pass1_extract -> pass1_tool_followup -> pass2_classify
 ```
 
-The complete single-question intermediate artifacts are under
-[`first_question/artifacts/`](first_question/artifacts/):
+For SA-Mem, merged extraction and graph/trace construction are disabled.
 
-| Artifact | Contents |
-|---|---|
-| `membox_boxes.jsonl` | All MemBox memory boxes for the question, including coverage, original dialogue, topic/keywords, events, and embedding representation text. |
-| `samem_memblocks.jsonl` | All SA-Mem MemBlocks, including coverage, original dialogue, events, event descriptions, and temporal metadata. |
-| `membox_retrieval_full.json` | Full MemBox ranking with IDs, scores, sessions, topics, events, and gold flags. |
-| `samem_retrieval_full.json` | Full SA-Mem ranking with IDs, scores, sessions, topics, events, and gold flags. |
-| `membox_generation_top10.json` / `samem_generation_top10.json` | The exact Top-10 records passed to QA. |
-| `membox_answer_prompt.txt` / `samem_answer_prompt.txt` | The final prompts sent to `gpt-4o-mini`. |
-| `*_answer.json` / `*_qa_results.json` | Generated answer and official evaluator result. |
-| `*_construction_calls.jsonl` | Sidecar token/latency records for every construction call; prompts and credentials are not stored. |
-| `*_run_manifest.json` | Non-secret model, dataset, environment, and pipeline configuration. |
+## Main results
 
-The compact, readable Top-20 files are also available directly as
-[`membox_retrieval_top20.json`](first_question/membox_retrieval_top20.json)
-and [`samem_retrieval_top20.json`](first_question/samem_retrieval_top20.json).
+- [`LONGMEMEVAL_50Q_BASELINE_REPORT.md`](LONGMEMEVAL_50Q_BASELINE_REPORT.md)
+- [`LONGMEMEVAL_50Q_BASELINE_RESULTS.json`](LONGMEMEVAL_50Q_BASELINE_RESULTS.json)
+- [`question_level_results.csv`](question_level_results.csv)
+- [`failure_cases/`](failure_cases/)
+- [`RETRIEVAL_AUDIT.md`](RETRIEVAL_AUDIT.md)
 
-## Pipeline configuration
+The report contains QA accuracy, question-type accuracy, construction token
+totals and stage breakdowns, evidence Hit@1/5/10/20, MRR, normalized token
+metrics, retry status, and representative failure cases.
 
-- MemBox Topic Loom and box extraction: enabled.
-- MemBox Trace Weaver construction/context: disabled.
-- SA-Mem native two-pass extraction: enabled.
-- `MEMBLOCK_MERGED_EXTRACTION=0`.
-- Graph, anchor expansion, and event-chain/trace construction: disabled.
-- Construction token usage comes from provider-reported usage and is kept
-  separate from QA and judge usage.
+## Reproducibility metadata
 
-## Scope and exclusions
+- [`longmemeval_s_50_ids.txt`](longmemeval_s_50_ids.txt): frozen question IDs.
+- [`longmemeval_s_50_manifest.json`](longmemeval_s_50_manifest.json): subset
+  provenance and distribution.
+- `scripts/run_question_parallel.py`: resumable question-level runner.
+- `scripts/aggregate_50q.py`: aggregate report generator.
+- `scripts/analyze_50q.py`: per-question memory/retrieval diagnostics.
+- `scripts/common.py`: shared QA, history-size, and artifact helpers.
 
-This repository contains the one-question audit package and small analysis
-artifacts. It does not contain the complete LongMemEval dataset, the 50Q raw
-run directories, embedding caches, `.env` files, API keys, or authorization
-headers. The 50-question aggregate branch is
-[`longmemeval-50q-baseline`](https://github.com/jianminYa/SA-Mem-core/tree/longmemeval-50q-baseline).
+The actual 50-question run directories remain on the experiment server at:
+
+```text
+runs/membox/full_50_seed42/questions/<question_id>/
+runs/samem_2p/full_50_seed42/questions/<question_id>/
+```
+
+Each local completed question contains its memory units, construction call
+log, full retrieval ranking, Top-20, generation Top-10, QA prompt, answer,
+and manifest. These raw per-question directories are intentionally not
+committed in full.
+
+## Single-question audit reference
+
+The first question is also retained as a fully inspectable example:
+
+- [`first_question/FIRST_QUESTION_DIAGNOSTIC.md`](first_question/FIRST_QUESTION_DIAGNOSTIC.md)
+- [`first_question/artifacts/`](first_question/artifacts/)
+- [`first_question/README.md`](first_question/README.md)
+
+Those artifacts show the complete chain from source dialogue to boxes/
+MemBlocks, full ranking, Top-10 QA context, prompt, and final answer for
+`e47becba`.
+
+## Exclusions
+
+The repository does not contain the complete LongMemEval dataset, API
+configuration files, API keys, authorization headers, embedding caches, or
+the full raw 50-question output directories.
