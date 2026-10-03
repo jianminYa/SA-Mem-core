@@ -20,6 +20,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from build_prompts import (
     PROMPT_MSG_CONTINUATION,
     PROMPT_DIALOG_EXTRACT,
+    PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL,
     PROMPT_DIALOG_CLASSIFICATION,
     PROMPT_DIALOG_EXTRACT_MERGED,
 )
@@ -461,6 +462,14 @@ class Config:
         "MEMBLOCK_MERGED_EXTRACTION", "0"
     ) not in ("0", "", "false", "False")
 
+    # Experimental optimization: Pass 1 identifies relative expressions and
+    # the existing local resolver annotates them before Pass 2.  Keep this
+    # disabled by default so the original function-calling baseline remains
+    # byte-for-byte on its existing path.
+    ENABLE_LOCAL_TEMPORAL_RESOLUTION = os.environ.get(
+        "MEMBLOCK_LOCAL_TEMPORAL_RESOLUTION", "0"
+    ) not in ("0", "", "false", "False")
+
     LIMIT_CONVERSATIONS = 2
     LIMIT_SESSIONS = None  # None 表示不限制
     TOP_K_RETRIEVE = 20
@@ -510,6 +519,7 @@ class Config:
 
     PROMPT_MSG_CONTINUATION = PROMPT_MSG_CONTINUATION
     PROMPT_DIALOG_EXTRACT = PROMPT_DIALOG_EXTRACT
+    PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL = PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL
     PROMPT_DIALOG_CLASSIFICATION = PROMPT_DIALOG_CLASSIFICATION
     PROMPT_DIALOG_EXTRACT_MERGED = PROMPT_DIALOG_EXTRACT_MERGED
     PROMPT_TRACE_EVENT_FILTER = """You are a narrative coherence analyzer for constructing and maintaining event memory chains. Your task is to filter events from a new event list (Event List B) that are directly related to an existing event chain (Event Chain A).
@@ -1030,6 +1040,10 @@ class LLMWorker:
         else:
             return None
         if followup:
+            if stage == "pass1_extract" and extra:
+                override = extra.get("followup_stage_override")
+                if override:
+                    return str(override)
             return "pass1_tool_followup" if stage == "pass1_extract" else f"{stage}_tool_followup"
         return stage
 
@@ -1084,6 +1098,47 @@ class LLMWorker:
         }
         if error is not None:
             row["error_type"] = type(error).__name__
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+    def _log_local_construction_stage(
+        self,
+        *,
+        success: bool,
+        latency_sec: float = 0.0,
+        metadata: Dict[str, Any] | None = None,
+        error: Exception | None = None,
+    ) -> None:
+        """Record deterministic temporal resolution without pretending it used LLM tokens."""
+        path = getattr(Config, "CONSTRUCTION_CALLS_FILE", "")
+        if not path:
+            return
+        self._construction_call_index += 1
+        row = {
+            "system": "samem",
+            "question_id": self._construction_question_id,
+            "user_id": getattr(self, "_construction_user_id", None),
+            "session_id": self._construction_session_id,
+            "block_id": self._construction_block_id,
+            "stage": "temporal_local_resolve",
+            "call_index": self._construction_call_index,
+            "model": "local-temporal-resolver",
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cached_tokens": None,
+            "latency_sec": round(float(latency_sec), 6),
+            "success": bool(success),
+            "retry_index": 0,
+            "provider_usage_available": False,
+            "usage_source": "local_no_llm",
+        }
+        if metadata:
+            row.update(metadata)
+        if error is not None:
+            row["error_type"] = type(error).__name__
+            row["error"] = str(error)[:300]
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")

@@ -57,6 +57,11 @@ def main() -> None:
     parser.add_argument("--workspace-root", type=Path, required=True)
     parser.add_argument("--model", default="gpt-4o-mini")
     parser.add_argument("--embedding-model", default="text-embedding-3-small")
+    parser.add_argument(
+        "--temporal-followup-opt",
+        action="store_true",
+        help="Use local temporal resolution in Pass 1 with original tool-calling fallback.",
+    )
     args = parser.parse_args()
 
     env = load_env_file(args.env_file)
@@ -96,6 +101,7 @@ def main() -> None:
     Config.API_MAX_RETRIES = 5
     Config.CHECKPOINT_EVERY_SAMPLE = False
     Config.ENABLE_MERGED_EXTRACTION = False
+    Config.ENABLE_LOCAL_TEMPORAL_RESOLUTION = bool(args.temporal_followup_opt)
     Config.ENABLE_EVENT_CLASSIFICATION = True
     Config.GEN_TEXT_MODES = ["content"]
     Config.CONSTRUCTION_CALLS_FILE = str(calls_path)
@@ -192,8 +198,23 @@ def main() -> None:
         append_jsonl(hypotheses_path, {"question_id": qid, "hypothesis": hypothesis})
 
         calls = [x for x in all_calls if x.get("question_id") == qid]
-        exact = all(x.get("provider_usage_available") for x in calls if x.get("success")) and bool(calls)
-        stage_names = ("split_check", "pass1_extract", "pass1_tool_followup", "pass2_classify")
+        llm_calls = [
+            x for x in calls
+            if x.get("stage") != "temporal_local_resolve"
+        ]
+        exact = all(
+            x.get("provider_usage_available")
+            for x in llm_calls
+            if x.get("success")
+        ) and bool(llm_calls)
+        stage_names = (
+            "split_check",
+            "pass1_extract",
+            "temporal_local_resolve",
+            "pass1_tool_followup",
+            "pass1_tool_followup_fallback",
+            "pass2_classify",
+        )
         breakdown = {}
         for stage in stage_names:
             stage_rows = [x for x in calls if x.get("stage") == stage]
@@ -212,7 +233,7 @@ def main() -> None:
                 "input_tokens": token_sum(calls, "prompt_tokens"),
                 "output_tokens": token_sum(calls, "completion_tokens"),
                 "total_tokens": token_sum(calls, "total_tokens"),
-                "llm_calls": len(calls),
+                "llm_calls": sum(x.get("success") is True for x in llm_calls),
                 "wall_time_sec": round(sum(float(x.get("latency_sec", 0.0) or 0.0) for x in calls), 6),
                 "provider_usage_available": exact,
                 "breakdown": breakdown,
@@ -255,13 +276,20 @@ def main() -> None:
         "trace_construction_enabled": False,
         "graph_enabled": False,
         "merged_extraction_enabled": False,
+        "temporal_followup_optimization_enabled": bool(args.temporal_followup_opt),
+        "temporal_local_resolve_enabled": bool(args.temporal_followup_opt),
+        "temporal_fallback_stage": "pass1_tool_followup_fallback",
         "event_classification_enabled": True,
         "retrieval_mode": "native_lme_enhanced_no_graph",
         "retriever_user_aliases": aliases,
         "retrieval_query_parser_tokens_counted_as_construction": False,
         "environment_name": "samem-lme",
         "python_version": sys.version,
-        "provider_usage_available": all(x.get("provider_usage_available") for x in all_calls if x.get("success")),
+        "provider_usage_available": all(
+            x.get("provider_usage_available")
+            for x in all_calls
+            if x.get("success") and x.get("stage") != "temporal_local_resolve"
+        ),
         "construction_wall_time_sec": round(build_wall, 6),
     }
     json_dump(run_root / "run_manifest.json", manifest)

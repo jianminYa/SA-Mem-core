@@ -1,6 +1,9 @@
 
 import json
 import os
+import re
+import time
+from datetime import datetime
 from typing import Any, Dict, List, Tuple
 
 from sklearn.metrics.pairwise import cosine_similarity
@@ -22,6 +25,110 @@ def _mx():
     import memblock_extractor as mx  # local import by design
 
     return mx
+
+
+def _temporal_observation_date(value: Any) -> str | None:
+    """Convert LongMemEval session timestamps to the resolver's ISO date input."""
+    text = str(value or "").strip()
+    if not text:
+        return None
+    match = re.search(r"(\d{4})[/-](\d{1,2})[/-](\d{1,2})", text)
+    if not match:
+        return None
+    try:
+        return datetime(
+            int(match.group(1)), int(match.group(2)), int(match.group(3))
+        ).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def _resolve_local_temporal_mentions(
+    *,
+    worker: Any,
+    mentions: List[str],
+    temporal_expressions: Any,
+    observation_time: Any,
+) -> Tuple[List[str], bool]:
+    """Resolve Pass-1 temporal annotations locally, with explicit fallback signals.
+
+    The helper never changes the event schema.  It only appends the resolver's
+    human-readable date annotation to the matching Pass-1 mention, which is
+    exactly the input shape consumed by the existing Pass-2 classifier.
+    """
+    if temporal_expressions in (None, []):
+        return mentions, True
+    if not isinstance(temporal_expressions, list):
+        worker._log_local_construction_stage(
+            success=False,
+            metadata={"fallback_used": True, "reason": "temporal_expressions_not_list"},
+        )
+        return mentions, False
+
+    observation_date = _temporal_observation_date(observation_time)
+    if not observation_date:
+        worker._log_local_construction_stage(
+            success=False,
+            metadata={"fallback_used": True, "reason": "invalid_observation_time"},
+        )
+        return mentions, False
+
+    resolved_mentions = list(mentions)
+    seen_indices = set()
+    for item in temporal_expressions:
+        started = time.perf_counter()
+        expression = ""
+        mention_index = None
+        try:
+            if not isinstance(item, dict):
+                raise ValueError("temporal expression entry is not an object")
+            expression = str(item.get("expression", "") or "").strip()
+            mention_index = item.get("mention_index")
+            if isinstance(mention_index, bool):
+                raise ValueError("mention_index must be an integer")
+            mention_index = int(mention_index)
+            if mention_index < 0 or mention_index >= len(resolved_mentions):
+                raise IndexError("mention_index outside mentions")
+            if mention_index in seen_indices:
+                raise ValueError("duplicate mention_index")
+            if not expression:
+                raise ValueError("empty temporal expression")
+
+            result = _mx().resolve_temporal_expression(observation_date, expression)
+            if not isinstance(result, dict) or result.get("warning"):
+                raise ValueError(str((result or {}).get("warning", "unresolved expression")))
+            resolved_expression = str(result.get("resolved_expression", "") or "").strip()
+            if not resolved_expression:
+                raise ValueError("resolver returned no resolved expression")
+
+            if resolved_expression not in resolved_mentions[mention_index]:
+                resolved_mentions[mention_index] = (
+                    f"{resolved_mentions[mention_index]} ({resolved_expression})"
+                )
+            seen_indices.add(mention_index)
+            worker._log_local_construction_stage(
+                success=True,
+                latency_sec=time.perf_counter() - started,
+                metadata={
+                    "expression": expression,
+                    "mention_index": mention_index,
+                    "resolved_expression": resolved_expression,
+                    "fallback_used": False,
+                },
+            )
+        except Exception as error:
+            worker._log_local_construction_stage(
+                success=False,
+                latency_sec=time.perf_counter() - started,
+                metadata={
+                    "expression": expression,
+                    "mention_index": mention_index,
+                    "fallback_used": True,
+                },
+                error=error,
+            )
+            return mentions, False
+    return resolved_mentions, True
 
 
 def _load_event_vector_cache(store: Any) -> Dict[str, List[float]]:
@@ -245,17 +352,27 @@ class TopicClusterManager:
                     )
 
         else:
-            # ✅ PASS 1: Extract mentions (strings only, no classification)
-            ps1_prompt = (
-                mx.Config.PROMPT_DIALOG_EXTRACT
-                .replace("{text}", content_str)
+            # ✅ PASS 1: Extract mentions (strings only, no classification).
+            # The default branch below is intentionally preserved.  The
+            # experimental branch makes one JSON-only call, then resolves
+            # explicitly identified relative expressions locally.
+            original_ps1_prompt = (
+                mx.Config.PROMPT_DIALOG_EXTRACT.replace("{text}", content_str)
             )
+            local_temporal = bool(
+                getattr(mx.Config, "ENABLE_LOCAL_TEMPORAL_RESOLUTION", False)
+            )
+            ps1_prompt = (
+                mx.Config.PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL
+                if local_temporal
+                else mx.Config.PROMPT_DIALOG_EXTRACT
+            ).replace("{text}", content_str)
 
             ps1_raw = self.worker.chat_completion(
                 ps1_prompt,
                 note=f"{prefix}_NotePS1_Extract",
                 json_mode=True,
-                enable_functions=True,  # Enable temporal resolution function calling
+                enable_functions=not local_temporal,
                 extra={"prompt_tokens_est": self.worker.count_tokens(ps1_prompt), "stage": "build"},
             )
 
@@ -266,6 +383,9 @@ class TopicClusterManager:
                  # Verify LLM output for first few boxes
                  mx.logger.info(f"🔍 [DEBUG] Box {new_box['box_id']} Pass 1 raw output (first 500 chars): {str(ps1_raw)[:500]}...")
 
+            parsed_pass1 = False
+            temporal_expressions: Any = []
+            local_fallback = False
             try:
                 d = mx.json.loads(ps1_raw)
                 topic = str(d.get("topic", "") or "").strip()
@@ -281,11 +401,67 @@ class TopicClusterManager:
                     mentions = [str(m).strip() for m in mns if str(m).strip()]
                 else:
                     mentions = []
+                temporal_expressions = d.get("temporal_expressions", [])
+                parsed_pass1 = True
             except Exception as e:
                 # 🔍 [DEBUG FIX] Catch JSON parse failures
                 if ps1_raw and str(ps1_raw).strip():
                     mx.logger.error(f"❌ [ERROR] Box {new_box['box_id']} Pass 1 JSON parse failed: {e}. Raw: {str(ps1_raw)[:50]}")
-                pass
+                if local_temporal:
+                    local_fallback = True
+
+            if local_temporal and parsed_pass1 and not local_fallback:
+                mentions, resolved_ok = _resolve_local_temporal_mentions(
+                    worker=self.worker,
+                    mentions=mentions,
+                    temporal_expressions=temporal_expressions,
+                    observation_time=session_end_time,
+                )
+                if not resolved_ok:
+                    local_fallback = True
+
+            # A malformed local output or an unsupported expression must use
+            # the original tool-calling path.  The fallback is explicit in
+            # the construction log and never silently uses the resolver's
+            # warning-date fallback.
+            if local_temporal and local_fallback:
+                self.worker._log_local_construction_stage(
+                    success=False,
+                    metadata={"fallback_used": True, "reason": "original_pass1_fallback"},
+                )
+                fallback_extra = {
+                    "prompt_tokens_est": self.worker.count_tokens(original_ps1_prompt),
+                    "stage": "build",
+                    "followup_stage_override": "pass1_tool_followup_fallback",
+                }
+                ps1_raw = self.worker.chat_completion(
+                    original_ps1_prompt,
+                    note=f"{prefix}_NotePS1_Extract",
+                    json_mode=True,
+                    enable_functions=True,
+                    extra=fallback_extra,
+                )
+                try:
+                    d = mx.json.loads(ps1_raw)
+                    topic = str(d.get("topic", "") or "").strip()
+                    kws = d.get("keywords", [])
+                    if isinstance(kws, list):
+                        keywords_txt = ", ".join(
+                            [str(k).strip() for k in kws if str(k).strip()]
+                        )
+                    else:
+                        keywords_txt = str(kws).strip()
+                    mns = d.get("mentions", [])
+                    mentions = (
+                        [str(m).strip() for m in mns if str(m).strip()]
+                        if isinstance(mns, list)
+                        else []
+                    )
+                except Exception as e:
+                    if ps1_raw and str(ps1_raw).strip():
+                        mx.logger.error(
+                            f"❌ [ERROR] Box {new_box['box_id']} fallback Pass 1 JSON parse failed: {e}. Raw: {str(ps1_raw)[:50]}"
+                        )
 
             # ✅ PASS 2: Classify mentions and assign temporal metadata
             if mentions:
