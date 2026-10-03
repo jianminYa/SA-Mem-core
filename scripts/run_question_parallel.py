@@ -195,8 +195,9 @@ def run_one(
         question_root.mkdir(parents=True, exist_ok=True)
         log_path = args.run_root / "_launcher_logs" / f"{qid}.attempt{attempt}.log"
         log_path.parent.mkdir(parents=True, exist_ok=True)
+        child_script = Path(args.repo) / system_cfg["script"]
         cmd = [
-            "conda", "run", "-n", system_cfg["env"], "python", system_cfg["script"],
+            "conda", "run", "-n", system_cfg["env"], "python", str(child_script),
             "--data", str(args.data), "--smoke-ids", str(qid_file),
             "--env-file", str(args.env_file), "--repo", str(args.repo),
             "--run-root", str(question_root), "--workspace-root", str(args.workspace_root),
