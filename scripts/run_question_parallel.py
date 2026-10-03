@@ -77,12 +77,13 @@ def validate_question(run_root: Path, system: str) -> dict[str, Any]:
     if missing:
         return {"complete": False, "reason": f"missing files: {missing}", "failed_calls": 0, "retried_calls": 0}
     calls = read_jsonl(run_root / "construction_calls.jsonl")
-    failed_calls = sum(row.get("success") is not True for row in calls)
+    llm_calls = [row for row in calls if row.get("stage") != "temporal_local_resolve"]
+    failed_calls = sum(row.get("success") is not True for row in llm_calls)
     usage_gaps = sum(
         row.get("success") is True and row.get("provider_usage_available") is not True
-        for row in calls
+        for row in llm_calls
     )
-    retried_calls = sum(max(0, int(row.get("retry_index", 0) or 0)) for row in calls)
+    retried_calls = sum(max(0, int(row.get("retry_index", 0) or 0)) for row in llm_calls)
     boxes = read_jsonl(run_root / "final_boxes_content.jsonl")
     retrieval = read_jsonl(run_root / "retrieval.jsonl")
     summaries = read_jsonl(run_root / "question_summary.jsonl")
@@ -201,6 +202,8 @@ def run_one(
             "--run-root", str(question_root), "--workspace-root", str(args.workspace_root),
             "--model", args.model, "--embedding-model", args.embedding_model,
         ]
+        if args.system == "samem" and args.temporal_followup_opt:
+            cmd.append("--temporal-followup-opt")
         started = utc_now()
         try:
             with log_path.open("w", encoding="utf-8") as log:
@@ -271,6 +274,11 @@ def main() -> None:
     parser.add_argument("--question-timeout-sec", type=int, default=7200)
     parser.add_argument("--model", default="gpt-4o-mini")
     parser.add_argument("--embedding-model", default="text-embedding-3-small")
+    parser.add_argument(
+        "--temporal-followup-opt",
+        action="store_true",
+        help="Pass the local temporal follow-up optimization switch to SA-Mem workers.",
+    )
     args = parser.parse_args()
     if args.workers < 1 or args.workers > 6:
         raise ValueError("workers must be between 1 and 6")
@@ -299,6 +307,7 @@ def main() -> None:
         "question_timeout_sec": args.question_timeout_sec,
         "llm_model": args.model,
         "embedding_model": args.embedding_model,
+        "temporal_followup_optimization_enabled": bool(args.temporal_followup_opt),
         "resume_enabled": True,
         "session_parallelism": False,
         "started_at": utc_now(),
