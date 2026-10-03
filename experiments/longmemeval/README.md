@@ -1,13 +1,61 @@
-# LongMemEval-S temporal follow-up optimization pilot
+# LongMemEval-S temporal-gate B2 pilot
 
-This branch is based on the completed phase-1 baseline branch
-`longmemeval-50q-baseline` and adds an opt-in Pass1 temporal follow-up
-optimization. It is separate from the single-question snapshot
+This branch is `longmemeval-temporal-gate-b2`. It is based on the completed
+phase-1 baseline branch `longmemeval-50q-baseline` and is separate from both
+the B1 local-resolution experiment and the single-question snapshot
 `membox/samem-lme-firstquestion`.
 
 The original 50-question baseline remains the B0 reference. This branch's
-measured B1 pilot is intentionally only eight questions; it does not contain
-or start a full 50-question optimized run.
+measured B2 pilot is intentionally only eight questions; it does not contain
+or start a full 50-question B2 run.
+
+## B2 temporal gate
+
+B2 keeps the B0 Pass1 prompt, function schema, mentions schema, temporal
+resolver, Pass2 prompt, MemBlock schema, retrieval, embedding, and QA path.
+The only opt-in change is a local high-recall gate before Pass1:
+
+```text
+raw block -> local needs_temporal_tool()
+  no relative-time expression -> original tool schema + tool_choice=none
+  uncertain/relative expression -> original B0 tool + follow-up path
+-> original Pass2
+```
+
+The gate is enabled only with `--temporal-gate-b2` in the experiment runner.
+It is disabled by default. Gate decisions and whether a tool/follow-up was
+actually observed are written to `temporal_gate.jsonl`; provider usage for
+construction remains in `construction_calls.jsonl`. The detector is
+high-recall and intentionally accepts false positives. The measured v2 pilot
+used the expanded `high_recall_local_regex_v2` detector.
+
+The committed B2 audit files are:
+
+- [`TEMPORAL_GATE_B2_REPORT.md`](TEMPORAL_GATE_B2_REPORT.md)
+- [`TEMPORAL_GATE_B2_RESULTS.json`](TEMPORAL_GATE_B2_RESULTS.json)
+- [`scripts/analyze_temporal_gate_b2.py`](../../scripts/analyze_temporal_gate_b2.py)
+
+The complete server-side B2 artifacts are under:
+
+```text
+runs/samem_2p/temporal_gate_b2_8q_v2/questions/<question_id>/
+├── final_boxes_content.jsonl
+├── construction_calls.jsonl
+├── temporal_gate.jsonl
+├── retrieval_full.json
+├── retrieval_top20.json
+├── generation_top10.json
+├── answer_prompt.txt
+├── answer.json
+└── run_manifest.json
+```
+
+`final_boxes_content.jsonl` is the constructed MemBlock output;
+`retrieval_full.json` is the complete ranking with memory IDs, scores,
+session IDs, raw dialogue and embedding representation text;
+`retrieval_top20.json` and `generation_top10.json` are the candidate and QA
+context slices. The B2 run directory is intentionally not committed because
+it contains large raw per-question artifacts.
 
 ## Experiment definition
 

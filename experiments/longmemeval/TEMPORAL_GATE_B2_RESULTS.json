@@ -1,0 +1,5254 @@
+{
+  "ids": [
+    "94f70d80",
+    "1d4da289",
+    "d682f1a2",
+    "41698283",
+    "gpt4_468eb064",
+    "gpt4_b5700ca0",
+    "0a34ad58",
+    "gpt4_f420262d"
+  ],
+  "b0": {
+    "aggregate": {
+      "questions": 8,
+      "input_tokens": 6227229,
+      "output_tokens": 755431,
+      "total_tokens": 6982660,
+      "llm_calls": 5618,
+      "wall_time_sec": 16564.573737,
+      "memory_units": 1069,
+      "qa_correct": 2,
+      "hit_at_1": 7,
+      "hit_at_5": 8,
+      "hit_at_10": 8,
+      "hit_at_20": 8,
+      "mean_gold_rank": 1.375,
+      "mrr": 0.90625,
+      "qa_accuracy": 0.25,
+      "mean_memory_units": 133.625
+    },
+    "stage_totals": {
+      "split_check": {
+        "calls": 2431,
+        "input_tokens": 1544996,
+        "output_tokens": 4473,
+        "total_tokens": 1549469
+      },
+      "pass1_extract": {
+        "calls": 1069,
+        "input_tokens": 1845523,
+        "output_tokens": 126149,
+        "total_tokens": 1971672
+      },
+      "pass1_tool_followup": {
+        "calls": 1067,
+        "input_tokens": 1991672,
+        "output_tokens": 205003,
+        "total_tokens": 2196675
+      },
+      "pass2_classify": {
+        "calls": 1051,
+        "input_tokens": 845038,
+        "output_tokens": 419806,
+        "total_tokens": 1264844
+      }
+    },
+    "questions": [
+      {
+        "question_id": "94f70d80",
+        "question_type": "single-session-user",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 49,
+          "messages": 510,
+          "characters": 488765,
+          "estimated_tokens": 102288
+        },
+        "construction": {
+          "input_tokens": 777974,
+          "output_tokens": 88084,
+          "total_tokens": 866058,
+          "llm_calls": 717,
+          "wall_time_sec": 2082.16272,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 333,
+              "input_tokens": 206764,
+              "output_tokens": 570,
+              "total_tokens": 207334
+            },
+            "pass1_extract": {
+              "calls": 129,
+              "input_tokens": 226437,
+              "output_tokens": 14769,
+              "total_tokens": 241206
+            },
+            "pass1_tool_followup": {
+              "calls": 129,
+              "input_tokens": 243815,
+              "output_tokens": 24285,
+              "total_tokens": 268100
+            },
+            "pass2_classify": {
+              "calls": 126,
+              "input_tokens": 100958,
+              "output_tokens": 48460,
+              "total_tokens": 149418
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_c63c0458",
+            "answer_c63c0458",
+            "answer_c63c0458",
+            "answer_c63c0458",
+            "2ae4f277_1",
+            "58de8f9b",
+            "2ae4f277_1",
+            "708e39b6_2",
+            "58ef5080",
+            "2ae4f277_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_c63c0458"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            118,
+            120,
+            119,
+            117
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.45464985113145134,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "memory_unit_count": 129,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.45464985113145134,
+          "ranking_size": 129,
+          "gold_memory_ids": [
+            118,
+            120,
+            119,
+            117
+          ],
+          "gold_dialogue_hashes": [
+            "192ba5a9bd71e6197033563f315caaccc7037e07f30e8029eb9b6d66c7a5dfad",
+            "bf889ca685b766078a087b6ce0289f4870225aab25d6935670da6b3e15f35281",
+            "958b639a76ae87dae6d2345661607d07c7c3244692dffb0ecc6192852712500d",
+            "27e3af7f2faac617c65f7df1bb8b1e2fc91d9ac665bed64912bb6773594f3230"
+          ],
+          "top10_ids": [
+            118,
+            120,
+            119,
+            117,
+            121,
+            2,
+            124,
+            17,
+            60,
+            122
+          ],
+          "top20_ids": [
+            118,
+            120,
+            119,
+            117,
+            121,
+            2,
+            124,
+            17,
+            60,
+            122,
+            123,
+            127,
+            98,
+            71,
+            42,
+            16,
+            93,
+            87,
+            73,
+            62
+          ]
+        }
+      },
+      {
+        "question_id": "1d4da289",
+        "question_type": "single-session-assistant",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 55,
+          "messages": 506,
+          "characters": 505310,
+          "estimated_tokens": 104039
+        },
+        "construction": {
+          "input_tokens": 806859,
+          "output_tokens": 99908,
+          "total_tokens": 906767,
+          "llm_calls": 735,
+          "wall_time_sec": 2312.639944,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 312,
+              "input_tokens": 194739,
+              "output_tokens": 567,
+              "total_tokens": 195306
+            },
+            "pass1_extract": {
+              "calls": 141,
+              "input_tokens": 239068,
+              "output_tokens": 17170,
+              "total_tokens": 256238
+            },
+            "pass1_tool_followup": {
+              "calls": 141,
+              "input_tokens": 259964,
+              "output_tokens": 27111,
+              "total_tokens": 287075
+            },
+            "pass2_classify": {
+              "calls": 141,
+              "input_tokens": 113088,
+              "output_tokens": 55060,
+              "total_tokens": 168148
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_ultrachat_348449",
+            "answer_ultrachat_348449",
+            "ultrachat_213759",
+            "answer_ultrachat_348449",
+            "ultrachat_213759",
+            "ultrachat_213759",
+            "sharegpt_AfruXDt_0",
+            "sharegpt_spHxzCF_0",
+            "sharegpt_spHxzCF_0",
+            "sharegpt_eVmxjQZ_0"
+          ],
+          "gold_answer_session_ids": [
+            "answer_ultrachat_348449"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            37,
+            35,
+            36
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.42175587065577447,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "memory_unit_count": 141,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.42175587065577447,
+          "ranking_size": 141,
+          "gold_memory_ids": [
+            37,
+            35,
+            36
+          ],
+          "gold_dialogue_hashes": [
+            "4360df43dc9e22b780f19ef668d0db517c8ea692fd9f6d85895f54fc971a8847",
+            "d65446a9bca778e79c5a3255e62f7723eca4dfd7ed36b49650c85fb69c5b0ede",
+            "e783ba9c12085043eff5a1655112935670997001c02f473c2afb2def049e50a8"
+          ],
+          "top10_ids": [
+            37,
+            35,
+            140,
+            36,
+            138,
+            139,
+            20,
+            24,
+            26,
+            104
+          ],
+          "top20_ids": [
+            37,
+            35,
+            140,
+            36,
+            138,
+            139,
+            20,
+            24,
+            26,
+            104,
+            25,
+            127,
+            64,
+            8,
+            16,
+            5,
+            9,
+            136,
+            6,
+            28
+          ]
+        }
+      },
+      {
+        "question_id": "d682f1a2",
+        "question_type": "multi-session",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 47,
+          "messages": 469,
+          "characters": 482671,
+          "estimated_tokens": 102363
+        },
+        "construction": {
+          "input_tokens": 775855,
+          "output_tokens": 100177,
+          "total_tokens": 876032,
+          "llm_calls": 699,
+          "wall_time_sec": 2049.96765,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 289,
+              "input_tokens": 178648,
+              "output_tokens": 559,
+              "total_tokens": 179207
+            },
+            "pass1_extract": {
+              "calls": 138,
+              "input_tokens": 234178,
+              "output_tokens": 17206,
+              "total_tokens": 251384
+            },
+            "pass1_tool_followup": {
+              "calls": 137,
+              "input_tokens": 253875,
+              "output_tokens": 26612,
+              "total_tokens": 280487
+            },
+            "pass2_classify": {
+              "calls": 135,
+              "input_tokens": 109154,
+              "output_tokens": 55800,
+              "total_tokens": 164954
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_c008e5df_2",
+            "answer_c008e5df_3",
+            "answer_c008e5df_1",
+            "answer_c008e5df_2",
+            "answer_c008e5df_2",
+            "answer_c008e5df_2",
+            "9de29219_1",
+            "6e2cca63_8",
+            "answer_c008e5df_3",
+            "sharegpt_2sPvS5O_7"
+          ],
+          "gold_answer_session_ids": [
+            "answer_c008e5df_1",
+            "answer_c008e5df_2",
+            "answer_c008e5df_3"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            87,
+            125,
+            21,
+            86,
+            90,
+            91,
+            127,
+            126,
+            88,
+            22,
+            89
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.38562757610175125,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "You have used at least two different types of food delivery services recently: Domino's Pizza and Uber Eats. Additionally, you mentioned a new service called Fresh Fusion.",
+          "correct": true
+        },
+        "memory_unit_count": 138,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.38562757610175125,
+          "ranking_size": 138,
+          "gold_memory_ids": [
+            87,
+            125,
+            21,
+            86,
+            90,
+            91,
+            127,
+            126,
+            88,
+            22,
+            89
+          ],
+          "gold_dialogue_hashes": [
+            "2fe6bc00d1867b153d60d4a9617a1b270b7f41e1f2cbe56114964b902e5b9448",
+            "3c70ca79902b31187a80243960c3d5267dcf6d2c416f18344de4f2e7652721bc",
+            "47611d610a2b24a3eb90b1cf2383c8657c51877c8d5f6d3c1466fd20cfe181ec",
+            "d8195446ed6c03727d104e7feeac802d12a79458757e8e5c442177f7f78cae97",
+            "b308e8ab506d87be1f26a81c31efad9e8aa12bd860ee3361fad6a827e90dc8fc",
+            "356b9463565e26aa49e9f92f57dc559475f68286318a70f5439148505686044e",
+            "fd6d891a7c93287de0bb446398664b6cbcf756eaa3d697f39b430ef0435efc9d",
+            "11f36b2b9afa089adbf62f2762c3425b7ed14f6301ba59792c4266b0f0bb5eb7",
+            "2ba24f611a28883db63a24a3241fd8cf5edb7b207e09b9f9144c5ad2c2a2aadd",
+            "cbc44f8d3a03e92b5711b41a3fc07e2df65f07c8559fa25aefaab62feb61b1fb",
+            "5d1f1de95e1eb9f9477b5a3bfd7d0df4f434ac18ce0a62d2a2db6da56509112d"
+          ],
+          "top10_ids": [
+            87,
+            125,
+            21,
+            86,
+            90,
+            91,
+            61,
+            137,
+            127,
+            108
+          ],
+          "top20_ids": [
+            87,
+            125,
+            21,
+            86,
+            90,
+            91,
+            61,
+            137,
+            127,
+            108,
+            126,
+            136,
+            57,
+            7,
+            45,
+            78,
+            134,
+            88,
+            75,
+            23
+          ]
+        }
+      },
+      {
+        "question_id": "41698283",
+        "question_type": "knowledge-update",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 45,
+          "messages": 476,
+          "characters": 475176,
+          "estimated_tokens": 102271
+        },
+        "construction": {
+          "input_tokens": 781778,
+          "output_tokens": 96010,
+          "total_tokens": 877788,
+          "llm_calls": 699,
+          "wall_time_sec": 1984.21807,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 297,
+              "input_tokens": 194688,
+              "output_tokens": 561,
+              "total_tokens": 195249
+            },
+            "pass1_extract": {
+              "calls": 135,
+              "input_tokens": 231444,
+              "output_tokens": 15529,
+              "total_tokens": 246973
+            },
+            "pass1_tool_followup": {
+              "calls": 135,
+              "input_tokens": 249686,
+              "output_tokens": 25644,
+              "total_tokens": 275330
+            },
+            "pass2_classify": {
+              "calls": 132,
+              "input_tokens": 105960,
+              "output_tokens": 54276,
+              "total_tokens": 160236
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_c7ddc051_2",
+            "431ae25c",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_1",
+            "431ae25c"
+          ],
+          "gold_answer_session_ids": [
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            134,
+            11,
+            132,
+            15,
+            130,
+            14,
+            12,
+            13,
+            131,
+            10,
+            133
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.5015635499621494,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "You recently purchased a 50mm prime lens.",
+          "correct": false
+        },
+        "memory_unit_count": 135,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.5015635499621494,
+          "ranking_size": 125,
+          "gold_memory_ids": [
+            134,
+            11,
+            132,
+            15,
+            130,
+            14,
+            12,
+            13,
+            131,
+            10,
+            133
+          ],
+          "gold_dialogue_hashes": [
+            "6c401e94f80b632ed65ed88de62bd6f3c2421d148210bb60899b3e71161bb03c",
+            "cb7ecf9207bf26d26de118a7b5af9fdf276b3cae165cf75f1afc234b7c96e5bf",
+            "aa14d26262d2bc61b78aba6427cc4829815f0b18f2f7e219224e4d55a902b113",
+            "59f0168d8a318b92ed9938461810ec1ec033086f2d73e6a6b1a50f5d7dfe912d",
+            "c425b9b16e9d44c86963238d5a0362c6f9263b65ab65a03e184bf4e7c41cd513",
+            "ac3b1a89c1434f504295cd59c86bd4e59eee80dcf3011041ebbeee7f16ea8237",
+            "f2c7178f121429642c803864d71b34e4063fd71fc5f405385d6188dbae69426b",
+            "e937f16fcec934d19a30b739dbd350184b131f8ec01b170e3ac4ecbc4419a1c4",
+            "8e5eff419f270cad1fbdf1595f5f164a75e7b8be075985eeee187fe1f8fb876d",
+            "783ee6f1ba36798eb735f8ca1747fd8519787fe316e1aaf53e062b75c75db9b2",
+            "b355999ebd954cad12e8158b1de0618c2364c494332ffbffe4bf2aa31029077f"
+          ],
+          "top10_ids": [
+            134,
+            65,
+            11,
+            132,
+            15,
+            130,
+            14,
+            12,
+            13,
+            66
+          ],
+          "top20_ids": [
+            134,
+            65,
+            11,
+            132,
+            15,
+            130,
+            14,
+            12,
+            13,
+            66,
+            131,
+            10,
+            133,
+            64,
+            69,
+            104,
+            102,
+            77,
+            21,
+            99
+          ]
+        }
+      },
+      {
+        "question_id": "gpt4_468eb064",
+        "question_type": "temporal-reasoning",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 48,
+          "messages": 460,
+          "characters": 490774,
+          "estimated_tokens": 101372
+        },
+        "construction": {
+          "input_tokens": 757597,
+          "output_tokens": 91305,
+          "total_tokens": 848902,
+          "llm_calls": 679,
+          "wall_time_sec": 2405.041088,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 284,
+              "input_tokens": 183617,
+              "output_tokens": 539,
+              "total_tokens": 184156
+            },
+            "pass1_extract": {
+              "calls": 134,
+              "input_tokens": 229426,
+              "output_tokens": 14839,
+              "total_tokens": 244265
+            },
+            "pass1_tool_followup": {
+              "calls": 133,
+              "input_tokens": 241845,
+              "output_tokens": 25063,
+              "total_tokens": 266908
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 102709,
+              "output_tokens": 50864,
+              "total_tokens": 153573
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "sharegpt_C2Qfdn8_0",
+            "sharegpt_0PLBHdX_15",
+            "3de0912a_3",
+            "answer_9b09d95b_1",
+            "sharegpt_wrwD6bG_0",
+            "sharegpt_wCNstIN_0",
+            "c035d5e3",
+            "c035d5e3",
+            "dff89d9d_1",
+            "ultrachat_283896"
+          ],
+          "gold_answer_session_ids": [
+            "answer_9b09d95b_1"
+          ],
+          "evidence_hit_at_1": false,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            38,
+            39
+          ],
+          "gold_rank": 4,
+          "gold_score": 0.26411131996734144,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 0.25
+        },
+        "qa": {
+          "hypothesis": "**Prompt:** LinkedIn Summary Interview  \n**Version:** v0.0  \n**Owner:** Simeon Williams  \n**Cross-Platform social media ID:** @Sim2K  \n**Contact-Telegram:** @Sim2K  \n**Purpose:** To help you create your perfect LinkedIn Summary  \n**Support:** [www.buymeacoffee.com/Sim2K](http://www.buymeacoffee.com/Sim2K).  \n**Notes:** This is being constantly updated. Follow me on social media for updates. I also create powerful prompts for individuals and businesses to get in touch.  \n\n#########################################################\n\nHey, what's up, do you need help looking good on LinkedIn? Don't we all! ... and some more than others! lol Well, I'm here to help. Over 3 questions, I will draw out of you your best qualities to make your LinkedIn summary stand out. Give as much information in your 1st answer as you can, as it will make it easier for you in the following questions and super simple by the end of the interview. Are you ready to start the interview?",
+          "correct": false
+        },
+        "memory_unit_count": 134,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": false,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 4,
+          "gold_score": 0.26411131996734144,
+          "ranking_size": 86,
+          "gold_memory_ids": [
+            38,
+            39
+          ],
+          "gold_dialogue_hashes": [
+            "68730b1c60a754c37a2898cb4cf6160c0bf28d5d6ef9ae72eb4f9d56729a3a19",
+            "435e119ae44876a3c02ca7e6855b28a668997baa5c081d63e8b9066c44132764"
+          ],
+          "top10_ids": [
+            130,
+            76,
+            122,
+            38,
+            96,
+            104,
+            82,
+            80,
+            87,
+            98
+          ],
+          "top20_ids": [
+            130,
+            76,
+            122,
+            38,
+            96,
+            104,
+            82,
+            80,
+            87,
+            98,
+            43,
+            67,
+            105,
+            133,
+            73,
+            68,
+            74,
+            120,
+            54,
+            83
+          ]
+        }
+      },
+      {
+        "question_id": "gpt4_b5700ca0",
+        "question_type": "temporal-reasoning",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 50,
+          "messages": 500,
+          "characters": 495507,
+          "estimated_tokens": 102646
+        },
+        "construction": {
+          "input_tokens": 776291,
+          "output_tokens": 100598,
+          "total_tokens": 876889,
+          "llm_calls": 709,
+          "wall_time_sec": 1991.685599,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 323,
+              "input_tokens": 196895,
+              "output_tokens": 560,
+              "total_tokens": 197455
+            },
+            "pass1_extract": {
+              "calls": 129,
+              "input_tokens": 226665,
+              "output_tokens": 15997,
+              "total_tokens": 242662
+            },
+            "pass1_tool_followup": {
+              "calls": 129,
+              "input_tokens": 247294,
+              "output_tokens": 27729,
+              "total_tokens": 275023
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 105437,
+              "output_tokens": 56312,
+              "total_tokens": 161749
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_a17423e8_1",
+            "sharegpt_FpTfRvR_0",
+            "answer_a17423e8_1",
+            "fd29aa98_1",
+            "sharegpt_FpTfRvR_0",
+            "sharegpt_P1RbLxL_11",
+            "109e07e8_2",
+            "1a70d1f3_2",
+            "fd29aa98_1",
+            "534be93d_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_a17423e8_1"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            78,
+            77
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.30137738255853097,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "memory_unit_count": 129,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.30137738255853097,
+          "ranking_size": 59,
+          "gold_memory_ids": [
+            78,
+            77
+          ],
+          "gold_dialogue_hashes": [
+            "32d3db60559b98c74a8d9816c7d4252002f96a887c5efe495ed010070212ecd1",
+            "8f1546db7439e69ba85fc0bd0df49f94304d6b95ff76c3a51eccd61e960c31fc"
+          ],
+          "top10_ids": [
+            78,
+            94,
+            77,
+            117,
+            93,
+            100,
+            15,
+            110,
+            118,
+            75
+          ],
+          "top20_ids": [
+            78,
+            94,
+            77,
+            117,
+            93,
+            100,
+            15,
+            110,
+            118,
+            75,
+            74,
+            92,
+            76,
+            95,
+            116,
+            101,
+            91,
+            81,
+            97,
+            109
+          ]
+        }
+      },
+      {
+        "question_id": "0a34ad58",
+        "question_type": "single-session-preference",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 42,
+          "messages": 485,
+          "characters": 496786,
+          "estimated_tokens": 102881
+        },
+        "construction": {
+          "input_tokens": 776555,
+          "output_tokens": 90386,
+          "total_tokens": 866941,
+          "llm_calls": 700,
+          "wall_time_sec": 1914.88256,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 314,
+              "input_tokens": 201910,
+              "output_tokens": 574,
+              "total_tokens": 202484
+            },
+            "pass1_extract": {
+              "calls": 129,
+              "input_tokens": 226705,
+              "output_tokens": 15414,
+              "total_tokens": 242119
+            },
+            "pass1_tool_followup": {
+              "calls": 129,
+              "input_tokens": 245712,
+              "output_tokens": 24167,
+              "total_tokens": 269879
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 102228,
+              "output_tokens": 50231,
+              "total_tokens": 152459
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "5c0574b1",
+            "f0cb130e_4"
+          ],
+          "gold_answer_session_ids": [
+            "answer_cebb7159"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            36,
+            34,
+            41,
+            39,
+            35,
+            40,
+            37,
+            38
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.5716898588768838,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "memory_unit_count": 129,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.5716898588768838,
+          "ranking_size": 129,
+          "gold_memory_ids": [
+            36,
+            34,
+            41,
+            39,
+            35,
+            40,
+            37,
+            38
+          ],
+          "gold_dialogue_hashes": [
+            "77234c7e469c3af0dd82d0b9dadd998af13f5402917ba2d8c4fc5433a26703b9",
+            "9fa1750c98d6067954a8428c97ce21f2170c479a954c53148489c22df24774d8",
+            "ffd53e3354ae394569e741ff6a224a33694a459a6280a78d18abe2f68602ab10",
+            "82b2774c2ab96dc740fa7418d22dd6f6578444a84b42b03afb2e92f7c19ba796",
+            "761ef96d0b5052175be40a9e67108b47f7d3c8c9af14928a1aee0ac598622700",
+            "47ea5fbefc3beb0faa5b66371d6c345b2b12f1c641de4c92569086372890f8ed",
+            "822ba7419dee62557e16d5de516709fd50fa14915fa9134154b1133f1eb2ab04",
+            "d0e3d6bd08568f389aef38e3643c353f3607571e700528fb892d0bd32171885c"
+          ],
+          "top10_ids": [
+            36,
+            34,
+            41,
+            39,
+            35,
+            40,
+            37,
+            38,
+            128,
+            9
+          ],
+          "top20_ids": [
+            36,
+            34,
+            41,
+            39,
+            35,
+            40,
+            37,
+            38,
+            128,
+            9,
+            73,
+            125,
+            75,
+            0,
+            11,
+            72,
+            58,
+            25,
+            43,
+            71
+          ]
+        }
+      },
+      {
+        "question_id": "gpt4_f420262d",
+        "question_type": "temporal-reasoning",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 43,
+          "messages": 454,
+          "characters": 488808,
+          "estimated_tokens": 103624
+        },
+        "construction": {
+          "input_tokens": 774320,
+          "output_tokens": 88963,
+          "total_tokens": 863283,
+          "llm_calls": 680,
+          "wall_time_sec": 1823.976106,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 279,
+              "input_tokens": 187735,
+              "output_tokens": 543,
+              "total_tokens": 188278
+            },
+            "pass1_extract": {
+              "calls": 134,
+              "input_tokens": 231600,
+              "output_tokens": 15225,
+              "total_tokens": 246825
+            },
+            "pass1_tool_followup": {
+              "calls": 134,
+              "input_tokens": 249481,
+              "output_tokens": 24392,
+              "total_tokens": 273873
+            },
+            "pass2_classify": {
+              "calls": 133,
+              "input_tokens": 105504,
+              "output_tokens": 48803,
+              "total_tokens": 154307
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_d8a1af6c_2",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_3",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_1",
+            "answer_d8a1af6c_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_d8a1af6c_1",
+            "answer_d8a1af6c_2",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_3"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            65,
+            90,
+            102,
+            117,
+            91,
+            89,
+            104,
+            103,
+            44,
+            42,
+            43,
+            66,
+            105,
+            120,
+            106,
+            64,
+            45,
+            119,
+            46,
+            92,
+            67,
+            121,
+            118,
+            68
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.41818141351748844,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "You flew with American Airlines on Valentine's Day.",
+          "correct": true
+        },
+        "memory_unit_count": 134,
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.41818141351748844,
+          "ranking_size": 134,
+          "gold_memory_ids": [
+            65,
+            90,
+            102,
+            117,
+            91,
+            89,
+            104,
+            103,
+            44,
+            42,
+            43,
+            66,
+            105,
+            120,
+            106,
+            64,
+            45,
+            119,
+            46,
+            92,
+            67,
+            121,
+            118,
+            68
+          ],
+          "gold_dialogue_hashes": [
+            "350b3cba1bc9f42155aad792ade16183092bdc8433bf33ab792745b4eb7b8881",
+            "0f29b5812465b3274d53ba7bbd4b18cb6719b6715acf579fd480dac40838d8c2",
+            "47e1146477bec83afaec1b4bb9412de4e123eacbffb5a046c00b1ac03c7a3ce6",
+            "a42fdea13386846ca39877085b8d8ca3df394a519d7ba375e2db51646bf9fc45",
+            "03bf34908f006f042ed4b81b72dba2e1eaa84fda53f5c1fba3e874005788575c",
+            "bd9534dbf258f6c3fcf3ff1e898d6d5431794cb678b93c48202c2bb2215c991d",
+            "d54d309122c6e7cb5d67f9ea0173447495b07fc6521d3563e30744a21af8fbd7",
+            "317fca50f202bd1db14a5f2c0c2f9279cbe03205d70efb08b52b0284eea65c9c",
+            "9919a8741bd1c6ea6e14b65bc97a18ce2a53690353eb2334fca1de4417d14972",
+            "4900d82665fa3260486788af593e1758cbdeb2bf9ec0e4c8aaf69eb5d2686bbf",
+            "76a02810e7cac2aad17859aba38700f26779d7d1b4011fe21fed7d704e6efe47",
+            "ced328217a289e97fad28aec979cb19eb0c98773fa821ca92c13715a56fe88cf",
+            "ba505fe673edf8722f71e5e2ea792017cc9ff3e9c6ddfb978dbe45ffffc8a1d0",
+            "e16fe083792eb39b9f39d4fcd78f1ac198893784e5f95c54f7dfb8314ce06ce9",
+            "74402a8377147ca301fe032973686f798270c9dbef32ff85c6d1fa0010e8ae09",
+            "5ef380285a3cc0ee0a89137d18d0d1a9492c3ff0a34480a0458b61109ddcf25a",
+            "a97e3e8026abaea4d0d04f02d28a9f44f23898ae6057dc35b0b43c7061ddaf21",
+            "416a7b34e983ea903df378c26ec6f08d160f3374a4123f352cd11794ee8a6b37",
+            "dabbb621865f26e0e204e1e8d80c003072add91e74cc037225fc4814c272da25",
+            "815babbd189a30ccdaa120adb982e7285e32d585d6312806e19c835dd818a3ee",
+            "96d9b2f184d5c15382450cfe4a7aa7415ed8f696a854759be107edeef9877918",
+            "28fcfe4afc2b0c93bd0de7a19c5ee55ae025901aa7042756b1072ed26e74c1bf",
+            "ef6aab182fca4c3fa6f8bd9e9f7936b1b117be8ffff6b73908a5ba485f9a56ff",
+            "5e1c1e844a1b264892ee93757fd9cc72e12cf701bb4df24721d67d1269b0b0e1"
+          ],
+          "top10_ids": [
+            65,
+            90,
+            102,
+            117,
+            91,
+            89,
+            104,
+            103,
+            44,
+            42
+          ],
+          "top20_ids": [
+            65,
+            90,
+            102,
+            117,
+            91,
+            89,
+            104,
+            103,
+            44,
+            42,
+            43,
+            66,
+            105,
+            120,
+            106,
+            64,
+            45,
+            119,
+            46,
+            92
+          ]
+        }
+      }
+    ]
+  },
+  "b2": {
+    "aggregate": {
+      "questions": 8,
+      "input_tokens": 5243186,
+      "output_tokens": 618558,
+      "total_tokens": 5861744,
+      "llm_calls": 5044,
+      "wall_time_sec": 12709.39681,
+      "memory_units": 1066,
+      "qa_correct": 0,
+      "hit_at_1": 7,
+      "hit_at_5": 7,
+      "hit_at_10": 8,
+      "hit_at_20": 8,
+      "mean_gold_rank": 1.75,
+      "mrr": 0.8928571428571429,
+      "qa_accuracy": 0.0,
+      "mean_memory_units": 133.25
+    },
+    "stage_totals": {
+      "split_check": {
+        "calls": 2434,
+        "input_tokens": 1543549,
+        "output_tokens": 4467,
+        "total_tokens": 1548016
+      },
+      "pass1_extract": {
+        "calls": 1066,
+        "input_tokens": 1843347,
+        "output_tokens": 142887,
+        "total_tokens": 1986234
+      },
+      "pass1_tool_followup": {
+        "calls": 508,
+        "input_tokens": 1038884,
+        "output_tokens": 100498,
+        "total_tokens": 1139382
+      },
+      "pass2_classify": {
+        "calls": 1036,
+        "input_tokens": 817406,
+        "output_tokens": 370706,
+        "total_tokens": 1188112
+      }
+    },
+    "questions": [
+      {
+        "question_id": "94f70d80",
+        "question_type": "single-session-user",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 49,
+          "messages": 510,
+          "characters": 488765,
+          "estimated_tokens": 102288
+        },
+        "memory_unit_count": 128,
+        "construction": {
+          "input_tokens": 642270,
+          "output_tokens": 71955,
+          "total_tokens": 714225,
+          "llm_calls": 638,
+          "wall_time_sec": 1852.574468,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 334,
+              "input_tokens": 204607,
+              "output_tokens": 568,
+              "total_tokens": 205175
+            },
+            "pass1_extract": {
+              "calls": 128,
+              "input_tokens": 225603,
+              "output_tokens": 17412,
+              "total_tokens": 243015
+            },
+            "pass1_tool_followup": {
+              "calls": 51,
+              "input_tokens": 113600,
+              "output_tokens": 10203,
+              "total_tokens": 123803
+            },
+            "pass2_classify": {
+              "calls": 125,
+              "input_tokens": 98460,
+              "output_tokens": 43772,
+              "total_tokens": 142232
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 128,
+          "gate_on_count": 51,
+          "gate_off_count": 77,
+          "temporal_tool_called_count": 51,
+          "pass1_tool_followup_count": 51
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_c63c0458",
+            "answer_c63c0458",
+            "answer_c63c0458",
+            "answer_c63c0458",
+            "58de8f9b",
+            "2ae4f277_1",
+            "708e39b6_2",
+            "2ae4f277_1",
+            "58ef5080",
+            "2ae4f277_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_c63c0458"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            117,
+            119,
+            118,
+            116
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.4655556048502143,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.4655556048502143,
+          "ranking_size": 128,
+          "gold_memory_ids": [
+            117,
+            119,
+            118,
+            116
+          ],
+          "gold_dialogue_hashes": [
+            "192ba5a9bd71e6197033563f315caaccc7037e07f30e8029eb9b6d66c7a5dfad",
+            "bf889ca685b766078a087b6ce0289f4870225aab25d6935670da6b3e15f35281",
+            "958b639a76ae87dae6d2345661607d07c7c3244692dffb0ecc6192852712500d",
+            "27e3af7f2faac617c65f7df1bb8b1e2fc91d9ac665bed64912bb6773594f3230"
+          ],
+          "top10_ids": [
+            117,
+            119,
+            118,
+            116,
+            2,
+            120,
+            17,
+            123,
+            60,
+            121
+          ],
+          "top20_ids": [
+            117,
+            119,
+            118,
+            116,
+            2,
+            120,
+            17,
+            123,
+            60,
+            121,
+            97,
+            122,
+            126,
+            70,
+            41,
+            85,
+            16,
+            72,
+            91,
+            95
+          ]
+        }
+      },
+      {
+        "question_id": "1d4da289",
+        "question_type": "single-session-assistant",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 55,
+          "messages": 506,
+          "characters": 505310,
+          "estimated_tokens": 104039
+        },
+        "memory_unit_count": 140,
+        "construction": {
+          "input_tokens": 664582,
+          "output_tokens": 78014,
+          "total_tokens": 742596,
+          "llm_calls": 653,
+          "wall_time_sec": 1935.638229,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 313,
+              "input_tokens": 196087,
+              "output_tokens": 565,
+              "total_tokens": 196652
+            },
+            "pass1_extract": {
+              "calls": 140,
+              "input_tokens": 238236,
+              "output_tokens": 18919,
+              "total_tokens": 257155
+            },
+            "pass1_tool_followup": {
+              "calls": 61,
+              "input_tokens": 121419,
+              "output_tokens": 11927,
+              "total_tokens": 133346
+            },
+            "pass2_classify": {
+              "calls": 139,
+              "input_tokens": 108840,
+              "output_tokens": 46603,
+              "total_tokens": 155443
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 140,
+          "gate_on_count": 61,
+          "gate_off_count": 79,
+          "temporal_tool_called_count": 61,
+          "pass1_tool_followup_count": 61
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_ultrachat_348449",
+            "answer_ultrachat_348449",
+            "ultrachat_213759",
+            "answer_ultrachat_348449",
+            "ultrachat_213759",
+            "sharegpt_AfruXDt_0",
+            "sharegpt_spHxzCF_0",
+            "ultrachat_213759",
+            "sharegpt_spHxzCF_0",
+            "sharegpt_eVmxjQZ_0"
+          ],
+          "gold_answer_session_ids": [
+            "answer_ultrachat_348449"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            37,
+            35,
+            36
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.4195820027646799,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.4195820027646799,
+          "ranking_size": 140,
+          "gold_memory_ids": [
+            37,
+            35,
+            36
+          ],
+          "gold_dialogue_hashes": [
+            "4360df43dc9e22b780f19ef668d0db517c8ea692fd9f6d85895f54fc971a8847",
+            "d65446a9bca778e79c5a3255e62f7723eca4dfd7ed36b49650c85fb69c5b0ede",
+            "e783ba9c12085043eff5a1655112935670997001c02f473c2afb2def049e50a8"
+          ],
+          "top10_ids": [
+            37,
+            35,
+            139,
+            36,
+            137,
+            20,
+            24,
+            138,
+            26,
+            103
+          ],
+          "top20_ids": [
+            37,
+            35,
+            139,
+            36,
+            137,
+            20,
+            24,
+            138,
+            26,
+            103,
+            25,
+            126,
+            63,
+            5,
+            8,
+            9,
+            6,
+            135,
+            16,
+            7
+          ]
+        }
+      },
+      {
+        "question_id": "d682f1a2",
+        "question_type": "multi-session",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 47,
+          "messages": 469,
+          "characters": 482671,
+          "estimated_tokens": 102363
+        },
+        "memory_unit_count": 138,
+        "construction": {
+          "input_tokens": 660311,
+          "output_tokens": 83411,
+          "total_tokens": 743722,
+          "llm_calls": 632,
+          "wall_time_sec": 1496.374774,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 289,
+              "input_tokens": 178612,
+              "output_tokens": 559,
+              "total_tokens": 179171
+            },
+            "pass1_extract": {
+              "calls": 138,
+              "input_tokens": 234243,
+              "output_tokens": 18722,
+              "total_tokens": 252965
+            },
+            "pass1_tool_followup": {
+              "calls": 73,
+              "input_tokens": 142647,
+              "output_tokens": 14671,
+              "total_tokens": 157318
+            },
+            "pass2_classify": {
+              "calls": 132,
+              "input_tokens": 104809,
+              "output_tokens": 49459,
+              "total_tokens": 154268
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 138,
+          "gate_on_count": 73,
+          "gate_off_count": 65,
+          "temporal_tool_called_count": 73,
+          "pass1_tool_followup_count": 73
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_c008e5df_2",
+            "answer_c008e5df_3",
+            "answer_c008e5df_2",
+            "answer_c008e5df_1",
+            "answer_c008e5df_2",
+            "answer_c008e5df_2",
+            "9de29219_1",
+            "6e2cca63_8",
+            "answer_c008e5df_3",
+            "sharegpt_2sPvS5O_7"
+          ],
+          "gold_answer_session_ids": [
+            "answer_c008e5df_1",
+            "answer_c008e5df_2",
+            "answer_c008e5df_3"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            87,
+            125,
+            86,
+            22,
+            90,
+            91,
+            127,
+            126,
+            88,
+            23,
+            89
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.38562757610175125,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.38562757610175125,
+          "ranking_size": 138,
+          "gold_memory_ids": [
+            87,
+            125,
+            86,
+            22,
+            90,
+            91,
+            127,
+            126,
+            88,
+            23,
+            89
+          ],
+          "gold_dialogue_hashes": [
+            "2fe6bc00d1867b153d60d4a9617a1b270b7f41e1f2cbe56114964b902e5b9448",
+            "3c70ca79902b31187a80243960c3d5267dcf6d2c416f18344de4f2e7652721bc",
+            "d8195446ed6c03727d104e7feeac802d12a79458757e8e5c442177f7f78cae97",
+            "47611d610a2b24a3eb90b1cf2383c8657c51877c8d5f6d3c1466fd20cfe181ec",
+            "b308e8ab506d87be1f26a81c31efad9e8aa12bd860ee3361fad6a827e90dc8fc",
+            "356b9463565e26aa49e9f92f57dc559475f68286318a70f5439148505686044e",
+            "fd6d891a7c93287de0bb446398664b6cbcf756eaa3d697f39b430ef0435efc9d",
+            "11f36b2b9afa089adbf62f2762c3425b7ed14f6301ba59792c4266b0f0bb5eb7",
+            "2ba24f611a28883db63a24a3241fd8cf5edb7b207e09b9f9144c5ad2c2a2aadd",
+            "cbc44f8d3a03e92b5711b41a3fc07e2df65f07c8559fa25aefaab62feb61b1fb",
+            "5d1f1de95e1eb9f9477b5a3bfd7d0df4f434ac18ce0a62d2a2db6da56509112d"
+          ],
+          "top10_ids": [
+            87,
+            125,
+            86,
+            22,
+            90,
+            91,
+            62,
+            137,
+            127,
+            108
+          ],
+          "top20_ids": [
+            87,
+            125,
+            86,
+            22,
+            90,
+            91,
+            62,
+            137,
+            127,
+            108,
+            136,
+            126,
+            58,
+            78,
+            7,
+            134,
+            107,
+            88,
+            46,
+            76
+          ]
+        }
+      },
+      {
+        "question_id": "41698283",
+        "question_type": "knowledge-update",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 45,
+          "messages": 476,
+          "characters": 475176,
+          "estimated_tokens": 102271
+        },
+        "memory_unit_count": 138,
+        "construction": {
+          "input_tokens": 651655,
+          "output_tokens": 74772,
+          "total_tokens": 726427,
+          "llm_calls": 626,
+          "wall_time_sec": 1360.584208,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 294,
+              "input_tokens": 192277,
+              "output_tokens": 567,
+              "total_tokens": 192844
+            },
+            "pass1_extract": {
+              "calls": 138,
+              "input_tokens": 234255,
+              "output_tokens": 18079,
+              "total_tokens": 252334
+            },
+            "pass1_tool_followup": {
+              "calls": 60,
+              "input_tokens": 120969,
+              "output_tokens": 10743,
+              "total_tokens": 131712
+            },
+            "pass2_classify": {
+              "calls": 134,
+              "input_tokens": 104154,
+              "output_tokens": 45383,
+              "total_tokens": 149537
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 138,
+          "gate_on_count": 60,
+          "gate_off_count": 78,
+          "temporal_tool_called_count": 60,
+          "pass1_tool_followup_count": 60
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_c7ddc051_2",
+            "431ae25c",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2"
+          ],
+          "gold_answer_session_ids": [
+            "answer_c7ddc051_1",
+            "answer_c7ddc051_2"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            137,
+            11,
+            135,
+            15,
+            133,
+            14,
+            13,
+            12,
+            134,
+            136,
+            10
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.5133866561659426,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "You recently purchased a 50mm prime lens.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.5133866561659426,
+          "ranking_size": 128,
+          "gold_memory_ids": [
+            137,
+            11,
+            135,
+            15,
+            133,
+            14,
+            13,
+            12,
+            134,
+            136,
+            10
+          ],
+          "gold_dialogue_hashes": [
+            "6c401e94f80b632ed65ed88de62bd6f3c2421d148210bb60899b3e71161bb03c",
+            "cb7ecf9207bf26d26de118a7b5af9fdf276b3cae165cf75f1afc234b7c96e5bf",
+            "aa14d26262d2bc61b78aba6427cc4829815f0b18f2f7e219224e4d55a902b113",
+            "59f0168d8a318b92ed9938461810ec1ec033086f2d73e6a6b1a50f5d7dfe912d",
+            "c425b9b16e9d44c86963238d5a0362c6f9263b65ab65a03e184bf4e7c41cd513",
+            "ac3b1a89c1434f504295cd59c86bd4e59eee80dcf3011041ebbeee7f16ea8237",
+            "e937f16fcec934d19a30b739dbd350184b131f8ec01b170e3ac4ecbc4419a1c4",
+            "f2c7178f121429642c803864d71b34e4063fd71fc5f405385d6188dbae69426b",
+            "8e5eff419f270cad1fbdf1595f5f164a75e7b8be075985eeee187fe1f8fb876d",
+            "b355999ebd954cad12e8158b1de0618c2364c494332ffbffe4bf2aa31029077f",
+            "783ee6f1ba36798eb735f8ca1747fd8519787fe316e1aaf53e062b75c75db9b2"
+          ],
+          "top10_ids": [
+            137,
+            66,
+            11,
+            135,
+            15,
+            133,
+            14,
+            13,
+            12,
+            134
+          ],
+          "top20_ids": [
+            137,
+            66,
+            11,
+            135,
+            15,
+            133,
+            14,
+            13,
+            12,
+            134,
+            67,
+            136,
+            10,
+            65,
+            70,
+            106,
+            79,
+            104,
+            21,
+            113
+          ]
+        }
+      },
+      {
+        "question_id": "gpt4_468eb064",
+        "question_type": "temporal-reasoning",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 48,
+          "messages": 460,
+          "characters": 490774,
+          "estimated_tokens": 101372
+        },
+        "memory_unit_count": 130,
+        "construction": {
+          "input_tokens": 647283,
+          "output_tokens": 78952,
+          "total_tokens": 726235,
+          "llm_calls": 610,
+          "wall_time_sec": 1353.481181,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 288,
+              "input_tokens": 185646,
+              "output_tokens": 531,
+              "total_tokens": 186177
+            },
+            "pass1_extract": {
+              "calls": 130,
+              "input_tokens": 225842,
+              "output_tokens": 16566,
+              "total_tokens": 242408
+            },
+            "pass1_tool_followup": {
+              "calls": 69,
+              "input_tokens": 137723,
+              "output_tokens": 13996,
+              "total_tokens": 151719
+            },
+            "pass2_classify": {
+              "calls": 123,
+              "input_tokens": 98072,
+              "output_tokens": 47859,
+              "total_tokens": 145931
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 130,
+          "gate_on_count": 70,
+          "gate_off_count": 60,
+          "temporal_tool_called_count": 69,
+          "pass1_tool_followup_count": 69
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "3de0912a_3",
+            "sharegpt_0PLBHdX_15",
+            "sharegpt_C2Qfdn8_0",
+            "sharegpt_wCNstIN_0",
+            "c035d5e3",
+            "sharegpt_wrwD6bG_0",
+            "answer_9b09d95b_1",
+            "ultrachat_283896",
+            "c035d5e3",
+            "dff89d9d_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_9b09d95b_1"
+          ],
+          "evidence_hit_at_1": false,
+          "evidence_hit_at_5": false,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            37,
+            38
+          ],
+          "gold_rank": 7,
+          "gold_score": 0.24152234642070375,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 0.14285714285714285
+        },
+        "qa": {
+          "hypothesis": "**Prompt:** LinkedIn Summary Interview  \n**Version:** v0.0  \n**Owner:** Simeon Williams  \n**Cross-Platform social media ID:** @Sim2K  \n**Contact-Telegram:** @Sim2K  \n**Purpose:** To help you create your perfect LinkedIn Summary  \n**Support:** [www.buymeacoffee.com/Sim2K](http://www.buymeacoffee.com/Sim2K).  \n**Notes:** This is being constantly updated. Follow me on social media for updates. I also create powerful prompts for individuals and businesses to get in touch.  \n\n#########################################################\n\nHey, what's up, do you need help looking good on LinkedIn? Don't we all! ... and some more than others! lol Well, I'm here to help. Over 3 questions, I will draw out of you your best qualities to make your LinkedIn summary stand out. Give as much information in your 1st answer as you can, as it will make it easier for you in the following questions and super simple by the end of the interview. Are you ready to start the interview?\n\nPlease select one of the following options that best suits why you are updating your LinkedIn summary:\n\n| # | Option | Advice | Benefits on LinkedIn |\n| --- | --- | --- | --- |\n| 1 | Currently in a job and want to create a summary to match it | Focus on your current role and skills. Highlight your accomplishments and what you bring to the table. Use keywords to help recruiters find you. | Stand out to recruiters and potential clients by showcasing your skills and accomplishments. Make it easy for them to understand what you do and what you can offer. |\n| 2 | Not currently working and looking for a new job | Highlight your skills and past experience. Emphasize your achievements and the problems you can solve. Use keywords to help recruiters find you. | Make a strong first impression to recruiters and potential employers. Show them why you're the best candidate for the job. |\n| 3 | Looking to transfer to a new role within your current company | Emphasize your skills and achievements in your current role. Show how they can be applied to the new position. Use keywords relevant to the new role to help your profile come up in searches. | Make it easy for your current employer to see that you have the skills to succeed in a new role, and for others in the company to see your capabilities. |\n| 4 | Looking to do the same job for a new company | Emphasize your skills and experience in the specific job. Use keywords relevant to the job to help your profile come up in searches. | Make it easy for recruiters and potential employers to see that you have the skills and experience to do the job. |\n| 5 | Want a career change | Emphasize transferable skills and how they can be applied to the new career. Highlight any relevant experience or training. Use keywords relevant to the new career to help your profile come up in searches. | Show how your skills and experience in your previous career can be an asset in a new one. |\n| 6 | Trying to attract more business and looking to network | Emphasize what you can offer to potential clients. Highlight your skills and experience. Use keywords relevant to your target audience to help your profile come up in searches. | Make it easy for potential clients to find you and understand what you can offer. |\n\nPlease select one of the options from the table.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 7,
+          "gold_score": 0.24152234642070375,
+          "ranking_size": 87,
+          "gold_memory_ids": [
+            37,
+            38
+          ],
+          "gold_dialogue_hashes": [
+            "68730b1c60a754c37a2898cb4cf6160c0bf28d5d6ef9ae72eb4f9d56729a3a19",
+            "435e119ae44876a3c02ca7e6855b28a668997baa5c081d63e8b9066c44132764"
+          ],
+          "top10_ids": [
+            119,
+            74,
+            126,
+            102,
+            80,
+            94,
+            37,
+            96,
+            78,
+            85
+          ],
+          "top20_ids": [
+            119,
+            74,
+            126,
+            102,
+            80,
+            94,
+            37,
+            96,
+            78,
+            85,
+            42,
+            65,
+            129,
+            103,
+            71,
+            66,
+            117,
+            72,
+            81,
+            125
+          ]
+        }
+      },
+      {
+        "question_id": "gpt4_b5700ca0",
+        "question_type": "temporal-reasoning",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 50,
+          "messages": 500,
+          "characters": 495507,
+          "estimated_tokens": 102646
+        },
+        "memory_unit_count": 128,
+        "construction": {
+          "input_tokens": 656522,
+          "output_tokens": 78633,
+          "total_tokens": 735155,
+          "llm_calls": 638,
+          "wall_time_sec": 1463.474844,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 324,
+              "input_tokens": 197772,
+              "output_tokens": 558,
+              "total_tokens": 198330
+            },
+            "pass1_extract": {
+              "calls": 128,
+              "input_tokens": 225819,
+              "output_tokens": 18177,
+              "total_tokens": 243996
+            },
+            "pass1_tool_followup": {
+              "calls": 63,
+              "input_tokens": 134419,
+              "output_tokens": 13647,
+              "total_tokens": 148066
+            },
+            "pass2_classify": {
+              "calls": 123,
+              "input_tokens": 98512,
+              "output_tokens": 46251,
+              "total_tokens": 144763
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 128,
+          "gate_on_count": 63,
+          "gate_off_count": 65,
+          "temporal_tool_called_count": 63,
+          "pass1_tool_followup_count": 63
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_a17423e8_1",
+            "sharegpt_FpTfRvR_0",
+            "fd29aa98_1",
+            "answer_a17423e8_1",
+            "sharegpt_P1RbLxL_11",
+            "sharegpt_FpTfRvR_0",
+            "109e07e8_2",
+            "1a70d1f3_2",
+            "fd29aa98_1",
+            "534be93d_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_a17423e8_1"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            77,
+            76
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.3166973904487489,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.3166973904487489,
+          "ranking_size": 59,
+          "gold_memory_ids": [
+            77,
+            76
+          ],
+          "gold_dialogue_hashes": [
+            "32d3db60559b98c74a8d9816c7d4252002f96a887c5efe495ed010070212ecd1",
+            "8f1546db7439e69ba85fc0bd0df49f94304d6b95ff76c3a51eccd61e960c31fc"
+          ],
+          "top10_ids": [
+            77,
+            93,
+            116,
+            76,
+            99,
+            92,
+            15,
+            109,
+            117,
+            74
+          ],
+          "top20_ids": [
+            77,
+            93,
+            116,
+            76,
+            99,
+            92,
+            15,
+            109,
+            117,
+            74,
+            73,
+            91,
+            75,
+            115,
+            94,
+            96,
+            100,
+            90,
+            80,
+            108
+          ]
+        }
+      },
+      {
+        "question_id": "0a34ad58",
+        "question_type": "single-session-preference",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 42,
+          "messages": 485,
+          "characters": 496786,
+          "estimated_tokens": 102881
+        },
+        "memory_unit_count": 128,
+        "construction": {
+          "input_tokens": 661934,
+          "output_tokens": 74059,
+          "total_tokens": 735993,
+          "llm_calls": 633,
+          "wall_time_sec": 1358.620357,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 315,
+              "input_tokens": 202998,
+              "output_tokens": 572,
+              "total_tokens": 203570
+            },
+            "pass1_extract": {
+              "calls": 128,
+              "input_tokens": 225858,
+              "output_tokens": 16771,
+              "total_tokens": 242629
+            },
+            "pass1_tool_followup": {
+              "calls": 64,
+              "input_tokens": 134077,
+              "output_tokens": 12578,
+              "total_tokens": 146655
+            },
+            "pass2_classify": {
+              "calls": 126,
+              "input_tokens": 99001,
+              "output_tokens": 44138,
+              "total_tokens": 143139
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 128,
+          "gate_on_count": 64,
+          "gate_off_count": 64,
+          "temporal_tool_called_count": 64,
+          "pass1_tool_followup_count": 64
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "answer_cebb7159",
+            "5c0574b1",
+            "58ad78d6_2"
+          ],
+          "gold_answer_session_ids": [
+            "answer_cebb7159"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            35,
+            33,
+            40,
+            38,
+            34,
+            39,
+            36,
+            37
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.5806575928717927,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.5806575928717927,
+          "ranking_size": 128,
+          "gold_memory_ids": [
+            35,
+            33,
+            40,
+            38,
+            34,
+            39,
+            36,
+            37
+          ],
+          "gold_dialogue_hashes": [
+            "77234c7e469c3af0dd82d0b9dadd998af13f5402917ba2d8c4fc5433a26703b9",
+            "9fa1750c98d6067954a8428c97ce21f2170c479a954c53148489c22df24774d8",
+            "ffd53e3354ae394569e741ff6a224a33694a459a6280a78d18abe2f68602ab10",
+            "82b2774c2ab96dc740fa7418d22dd6f6578444a84b42b03afb2e92f7c19ba796",
+            "761ef96d0b5052175be40a9e67108b47f7d3c8c9af14928a1aee0ac598622700",
+            "47ea5fbefc3beb0faa5b66371d6c345b2b12f1c641de4c92569086372890f8ed",
+            "822ba7419dee62557e16d5de516709fd50fa14915fa9134154b1133f1eb2ab04",
+            "d0e3d6bd08568f389aef38e3643c353f3607571e700528fb892d0bd32171885c"
+          ],
+          "top10_ids": [
+            35,
+            33,
+            40,
+            38,
+            34,
+            39,
+            36,
+            37,
+            127,
+            72
+          ],
+          "top20_ids": [
+            35,
+            33,
+            40,
+            38,
+            34,
+            39,
+            36,
+            37,
+            127,
+            72,
+            74,
+            0,
+            124,
+            9,
+            24,
+            71,
+            57,
+            10,
+            42,
+            2
+          ]
+        }
+      },
+      {
+        "question_id": "gpt4_f420262d",
+        "question_type": "temporal-reasoning",
+        "system": "samem_2p",
+        "history": {
+          "sessions": 43,
+          "messages": 454,
+          "characters": 488808,
+          "estimated_tokens": 103624
+        },
+        "memory_unit_count": 136,
+        "construction": {
+          "input_tokens": 658629,
+          "output_tokens": 78762,
+          "total_tokens": 737391,
+          "llm_calls": 614,
+          "wall_time_sec": 1888.648749,
+          "provider_usage_available": true,
+          "breakdown": {
+            "split_check": {
+              "calls": 277,
+              "input_tokens": 185550,
+              "output_tokens": 547,
+              "total_tokens": 186097
+            },
+            "pass1_extract": {
+              "calls": 136,
+              "input_tokens": 233491,
+              "output_tokens": 18241,
+              "total_tokens": 251732
+            },
+            "pass1_tool_followup": {
+              "calls": 67,
+              "input_tokens": 134030,
+              "output_tokens": 12733,
+              "total_tokens": 146763
+            },
+            "pass2_classify": {
+              "calls": 134,
+              "input_tokens": 105558,
+              "output_tokens": 47241,
+              "total_tokens": 152799
+            }
+          },
+          "qa_tokens_in_construction": false,
+          "judge_tokens_in_construction": false,
+          "retrieval_parser_tokens_in_construction": false,
+          "embedding_tokens_in_construction": false
+        },
+        "temporal_gate": {
+          "enabled": true,
+          "blocks_total": 136,
+          "gate_on_count": 67,
+          "gate_off_count": 69,
+          "temporal_tool_called_count": 67,
+          "pass1_tool_followup_count": 67
+        },
+        "retrieval": {
+          "candidate_top_k": 20,
+          "generation_top_k": 10,
+          "retrieved_session_ids": [
+            "answer_d8a1af6c_2",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_3",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_1",
+            "answer_d8a1af6c_1"
+          ],
+          "gold_answer_session_ids": [
+            "answer_d8a1af6c_1",
+            "answer_d8a1af6c_2",
+            "answer_d8a1af6c_5",
+            "answer_d8a1af6c_4",
+            "answer_d8a1af6c_3"
+          ],
+          "evidence_hit_at_1": true,
+          "evidence_hit_at_5": true,
+          "evidence_hit_at_10": true,
+          "evidence_hit_at_20": true,
+          "gold_memory_ids": [
+            67,
+            93,
+            106,
+            120,
+            107,
+            92,
+            108,
+            94,
+            45,
+            43,
+            68,
+            109,
+            123,
+            66,
+            44,
+            110,
+            46,
+            122,
+            47,
+            95,
+            69,
+            124,
+            121,
+            70
+          ],
+          "gold_rank": 1,
+          "gold_score": 0.4316880784136669,
+          "gold_in_top20": true,
+          "gold_in_generation_top10": true,
+          "mrr": 1.0
+        },
+        "qa": {
+          "hypothesis": "The information is unavailable.",
+          "correct": false
+        },
+        "diagnosis": {
+          "gold_memory_preserved": true,
+          "gold_extracted_but_rank_gt_10": false,
+          "gold_extracted_but_rank_gt_20": false,
+          "gold_extraction_failure": false
+        },
+        "retrieval_audit": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.4316880784136669,
+          "ranking_size": 136,
+          "gold_memory_ids": [
+            67,
+            93,
+            106,
+            120,
+            107,
+            92,
+            108,
+            94,
+            45,
+            43,
+            68,
+            109,
+            123,
+            66,
+            44,
+            110,
+            46,
+            122,
+            47,
+            95,
+            69,
+            124,
+            121,
+            70
+          ],
+          "gold_dialogue_hashes": [
+            "350b3cba1bc9f42155aad792ade16183092bdc8433bf33ab792745b4eb7b8881",
+            "0f29b5812465b3274d53ba7bbd4b18cb6719b6715acf579fd480dac40838d8c2",
+            "47e1146477bec83afaec1b4bb9412de4e123eacbffb5a046c00b1ac03c7a3ce6",
+            "a42fdea13386846ca39877085b8d8ca3df394a519d7ba375e2db51646bf9fc45",
+            "317fca50f202bd1db14a5f2c0c2f9279cbe03205d70efb08b52b0284eea65c9c",
+            "bd9534dbf258f6c3fcf3ff1e898d6d5431794cb678b93c48202c2bb2215c991d",
+            "d54d309122c6e7cb5d67f9ea0173447495b07fc6521d3563e30744a21af8fbd7",
+            "03bf34908f006f042ed4b81b72dba2e1eaa84fda53f5c1fba3e874005788575c",
+            "9919a8741bd1c6ea6e14b65bc97a18ce2a53690353eb2334fca1de4417d14972",
+            "4900d82665fa3260486788af593e1758cbdeb2bf9ec0e4c8aaf69eb5d2686bbf",
+            "ced328217a289e97fad28aec979cb19eb0c98773fa821ca92c13715a56fe88cf",
+            "ba505fe673edf8722f71e5e2ea792017cc9ff3e9c6ddfb978dbe45ffffc8a1d0",
+            "e16fe083792eb39b9f39d4fcd78f1ac198893784e5f95c54f7dfb8314ce06ce9",
+            "5ef380285a3cc0ee0a89137d18d0d1a9492c3ff0a34480a0458b61109ddcf25a",
+            "76a02810e7cac2aad17859aba38700f26779d7d1b4011fe21fed7d704e6efe47",
+            "74402a8377147ca301fe032973686f798270c9dbef32ff85c6d1fa0010e8ae09",
+            "a97e3e8026abaea4d0d04f02d28a9f44f23898ae6057dc35b0b43c7061ddaf21",
+            "416a7b34e983ea903df378c26ec6f08d160f3374a4123f352cd11794ee8a6b37",
+            "dabbb621865f26e0e204e1e8d80c003072add91e74cc037225fc4814c272da25",
+            "815babbd189a30ccdaa120adb982e7285e32d585d6312806e19c835dd818a3ee",
+            "96d9b2f184d5c15382450cfe4a7aa7415ed8f696a854759be107edeef9877918",
+            "28fcfe4afc2b0c93bd0de7a19c5ee55ae025901aa7042756b1072ed26e74c1bf",
+            "ef6aab182fca4c3fa6f8bd9e9f7936b1b117be8ffff6b73908a5ba485f9a56ff",
+            "5e1c1e844a1b264892ee93757fd9cc72e12cf701bb4df24721d67d1269b0b0e1"
+          ],
+          "top10_ids": [
+            67,
+            93,
+            106,
+            120,
+            107,
+            92,
+            108,
+            94,
+            45,
+            43
+          ],
+          "top20_ids": [
+            67,
+            93,
+            106,
+            120,
+            107,
+            92,
+            108,
+            94,
+            45,
+            43,
+            68,
+            109,
+            123,
+            66,
+            44,
+            110,
+            46,
+            122,
+            47,
+            95
+          ]
+        }
+      }
+    ]
+  },
+  "gate": {
+    "blocks_total": 1066,
+    "gate_on": 509,
+    "gate_off": 557,
+    "temporal_tool_called": 508,
+    "pass1_tool_followup": 508,
+    "reason_counts": {
+      "no_relative_temporal_expression_detected": 557,
+      "relative_temporal_expression:Now": 38,
+      "relative_temporal_expression:this evening": 1,
+      "relative_temporal_expression:now": 79,
+      "relative_temporal_expression:recent years": 9,
+      "relative_temporal_expression:past year": 3,
+      "relative_temporal_expression:recently": 52,
+      "relative_temporal_expression:soon": 37,
+      "relative_temporal_expression:a few weeks ago": 1,
+      "relative_temporal_expression:Today": 11,
+      "relative_temporal_expression:this year": 4,
+      "relative_temporal_expression:last decade": 1,
+      "relative_temporal_expression:next decade": 1,
+      "relative_temporal_expression:next quarter": 2,
+      "relative_temporal_expression:last week": 10,
+      "relative_temporal_expression:next weekend": 2,
+      "relative_temporal_expression:last Saturday": 4,
+      "relative_temporal_expression:past century": 2,
+      "relative_temporal_expression:Last weekend": 1,
+      "relative_temporal_expression:this weekend": 12,
+      "relative_temporal_expression:last weekend": 5,
+      "relative_temporal_expression:lately": 49,
+      "relative_temporal_expression:later": 27,
+      "relative_temporal_expression:tonight": 7,
+      "relative_temporal_expression:several years ago": 1,
+      "relative_temporal_expression:earlier": 26,
+      "relative_temporal_expression:two weeks ago": 3,
+      "relative_temporal_expression:currently": 18,
+      "relative_temporal_expression:tomorrow": 4,
+      "relative_temporal_expression:today": 34,
+      "relative_temporal_expression:next month": 4,
+      "relative_temporal_expression:Yesterday": 2,
+      "relative_temporal_expression:previously": 7,
+      "relative_temporal_expression:three weeks ago": 3,
+      "relative_temporal_expression:last Sunday": 2,
+      "relative_temporal_expression:Currently": 1,
+      "relative_temporal_expression:last month": 10,
+      "relative_temporal_expression:this month": 1,
+      "relative_temporal_expression:this week": 4,
+      "relative_temporal_expression:Later": 3,
+      "relative_temporal_expression:one year ago": 1,
+      "relative_temporal_expression:next year": 1,
+      "relative_temporal_expression:within 120 days": 1,
+      "relative_temporal_expression:a few days later": 2,
+      "relative_temporal_expression:6 weeks ago": 1,
+      "relative_temporal_expression:yesterday": 1,
+      "relative_temporal_expression:This year": 1,
+      "relative_temporal_expression:this summer": 1,
+      "relative_temporal_expression:This decade": 1,
+      "relative_temporal_expression:2 months ago": 1,
+      "relative_temporal_expression:past month": 1,
+      "relative_temporal_expression:this day": 1,
+      "relative_temporal_expression:next morning": 1,
+      "relative_temporal_expression:a few weeks before": 1,
+      "relative_temporal_expression:next Saturday": 3,
+      "relative_temporal_expression:next week": 2,
+      "relative_temporal_expression:a few months ago": 1,
+      "relative_temporal_expression:last night": 1,
+      "relative_temporal_expression:previous year": 1,
+      "relative_temporal_expression:last Wednesday": 2,
+      "relative_temporal_expression:two months ago": 1,
+      "relative_temporal_expression:2 weeks before": 1,
+      "relative_temporal_expression:last Thursday": 1
+    }
+  },
+  "detector_audit": {
+    "candidate_blocks": 509,
+    "candidate_blocks_gate_on": 509,
+    "candidate_blocks_gate_on_rate": 1.0,
+    "examples": [
+      {
+        "question_id": "94f70d80",
+        "block_id": 1,
+        "reason": "relative_temporal_expression:Now"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 3,
+        "reason": "relative_temporal_expression:Now"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 4,
+        "reason": "relative_temporal_expression:this evening"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 7,
+        "reason": "relative_temporal_expression:now"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 8,
+        "reason": "relative_temporal_expression:now"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 11,
+        "reason": "relative_temporal_expression:recent years"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 14,
+        "reason": "relative_temporal_expression:past year"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 15,
+        "reason": "relative_temporal_expression:recently"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 16,
+        "reason": "relative_temporal_expression:recently"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 17,
+        "reason": "relative_temporal_expression:now"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 18,
+        "reason": "relative_temporal_expression:recently"
+      },
+      {
+        "question_id": "94f70d80",
+        "block_id": 19,
+        "reason": "relative_temporal_expression:recently"
+      }
+    ],
+    "detector": "high_recall_local_regex_v2"
+  },
+  "detector_reference_audit": {
+    "reference_root": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_8q_parallel_v2/questions",
+    "candidate_blocks": 505,
+    "matched_to_b2_coverage": 486,
+    "unmatched_due_to_segmentation": 19,
+    "matched_gate_on": 486,
+    "matched_gate_on_rate": 1.0,
+    "false_negative_count": 0,
+    "false_negative_examples": [],
+    "detector": "high_recall_local_regex_v2"
+  },
+  "memblock_diff": {
+    "matched": {
+      "all": 1022,
+      "gate_on": 485,
+      "gate_off": 537
+    },
+    "different": {
+      "all": 937,
+      "gate_on": 406,
+      "gate_off": 531
+    },
+    "difference_rate": {
+      "all": 0.9168297455968689,
+      "gate_on": 0.8371134020618557,
+      "gate_off": 0.9888268156424581
+    },
+    "component_differences": {
+      "all": {
+        "topic_keywords": 665,
+        "event_count": 559,
+        "event_descriptions": 824,
+        "event_type": 712,
+        "time_metadata": 641,
+        "temporal_index": 60
+      },
+      "gate_on": {
+        "topic_keywords": 213,
+        "event_count": 207,
+        "event_descriptions": 330,
+        "event_type": 282,
+        "time_metadata": 258,
+        "temporal_index": 33
+      },
+      "gate_off": {
+        "topic_keywords": 452,
+        "event_count": 352,
+        "event_descriptions": 494,
+        "event_type": 430,
+        "time_metadata": 383,
+        "temporal_index": 27
+      }
+    },
+    "unmatched": {
+      "b0": 46,
+      "b2": 43
+    },
+    "examples": [
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "09b651aa_3",
+          1,
+          4
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Baking a chocolate cake with nuts and gluten-free options chocolate cake, nuts, gluten-free, almond flour, coconut flour, walnuts, baking, recipe",
+          "events_count": 1,
+          "events": [
+            {
+              "description": "The user wants to make sure the walnuts for the chocolate cake are nice and fragrant.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Recipe recommendations and baking tips chocolate cake, nuts, gluten-free, banana bread, almond flour, coconut flour, walnuts, baking",
+          "events_count": 2,
+          "events": [
+            {
+              "description": "The user has been experimenting with gluten-free flours and had success with a gluten-free banana bread on January 15th.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00",
+                "startTime": "2023-01-15",
+                "endTime": "Unknown",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user wants to make sure the walnuts for the recipe are nice and fragrant.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "09b651aa_3",
+          12,
+          12
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Gluten-free baking and banana bread recipes digital AI assistant, gluten-free baking, banana bread, gluten-free flours, texture, recipes",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "The assistant does not have personal experiences or memories.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The assistant does not have the capability to engage in cooking or baking activities.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The assistant did not make a gluten-free banana bread on January 15th.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00",
+                "startTime": "2023-01-15",
+                "endTime": "2023-01-15",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Gluten-free banana bread can have a different texture compared to traditional banana bread.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Some gluten-free flours can result in a denser or heavier texture.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Other gluten-free flours can produce a lighter, more tender crumb.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Discussion about gluten-free baking and banana bread recipes digital AI assistant, gluten-free baking, banana bread, recipes, cooking, flours, texture",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "The assistant does not have personal experiences, memories, or the ability to bake or make recipes.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The assistant does not have a physical body and cannot engage in cooking or baking activities.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The assistant can provide general information about gluten-free baking and banana bread recipes.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Gluten-free banana bread can have a different texture compared to traditional banana bread.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "09b651aa_3",
+          5,
+          6
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Substituting nuts in a cake recipe pecans, cake recipe, flavor profile, walnuts, texture, chocolate, toasting instructions, Texas pecan",
+          "events_count": 7,
+          "events": [
+            {
+              "description": "The user would like to try a different type of nut in the cake recipe.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user is considering using pecans in the cake recipe.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Pecans will change the flavor profile of the cake slightly.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Pecans have a richer, more buttery, and slightly sweeter flavor compared to walnuts.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Pecans are generally softer and more prone to breaking down than walnuts.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user might want to use a slightly smaller amount of pecans (about 3/4 cup) to avoid overpowering the cake.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user should chop the pecans coarsely to ensure they're evenly distributed throughout the batter.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Substituting nuts in a cake recipe pecans, cake recipe, flavor profile, walnuts, texture, chocolate, toasting instructions, personal preference",
+          "events_count": 7,
+          "events": [
+            {
+              "description": "The user would like to try a different type of nut in the cake recipe.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user is considering using pecans in the cake recipe.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Pecans will change the flavor profile of the cake slightly.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Pecans have a richer, more buttery, and slightly sweeter flavor compared to walnuts.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "Pecans are generally softer and more prone to breaking down than walnuts.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user might want to use a slightly smaller amount of pecans (about 3/4 cup) to avoid overpowering the cake.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user should chop the pecans coarsely to ensure they're evenly distributed throughout the batter.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "09b651aa_3",
+          7,
+          8
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Storing pecans and gluten-free baking tips pecans, recipe, gluten-free, banana bread, almond flour, coconut flour, storage tips, baking",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "The user thinks they will try using pecans in the recipe.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user has had issues with nuts going rancid in the past.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user made a gluten-free banana bread on January 15th.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00",
+                "startTime": "2023-01-15",
+                "endTime": "2023-01-15",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user has been experimenting with different types of flours, including gluten-free options.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Storing pecans and gluten-free baking tips pecans, recipe, gluten-free, banana bread, almond flour, coconut flour, storage tips, baking",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "The user thinks they will try using pecans in the recipe.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user has had issues with nuts going rancid in the past.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user made a gluten-free banana bread on January 15th using almond flour and coconut flour.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00",
+                "startTime": "2023-01-15",
+                "endTime": "2023-01-15",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user has been experimenting with different types of flours, including gluten-free options.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "09b651aa_3",
+          9,
+          11
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Discussion about gluten-free baking and its effects gluten-free baking, traditional baked goods, digestive health, energy levels, banana bread, texture, celiac disease",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "The user is glad to have found the tips helpful.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user is curious about the gluten-free banana bread made on January 15th.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user wants to know if the texture of the gluten-free banana bread was denser than traditional banana bread.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "The user asked about the differences in how they feel after eating gluten-free versus traditional baked goods on May 27th.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00",
+                "startTime": "2023-05-27",
+                "endTime": "2023-05-27",
+                "granularity": "day"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Discussion about gluten-free baking and its effects gluten-free baking, banana bread, digestive health, energy levels, celiac disease, dietary restrictions, personal reasons",
+          "events_count": 3,
+          "events": [
+            {
+              "description": "User is glad that the tips were helpful.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "User is curious about the gluten-free banana bread made on January 15th.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            },
+            {
+              "description": "User wants to know if the texture of the gluten-free banana bread was denser than traditional banana bread.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-27T16:39:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "2479cbae",
+          1,
+          12
+        ],
+        "gate": "gate_on",
+        "b0": {
+          "topic_kw_text": "Gift ideas for weddings and anniversaries weddings, gift ideas, Napa Valley, wine tasting, The Little Door, anniversary packages, romantic dinner",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "Williams Daniel is planning to attend a few more weddings this year and is looking for gift ideas for the couples.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00",
+                "startTime": "2023-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel likes the idea of gifting an experience.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is thinking of gifting an experience to his aunt and uncle for their 30-year anniversary.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00",
+                "startTime": "2023-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel is considering a romantic dinner for his aunt and uncle's anniversary.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00"
+              }
+            },
+            {
+              "description": "Williams Daniel will call The Little Door to make a reservation and ask about their anniversary packages and menus.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Gift ideas for weddings and anniversaries weddings, gift ideas, Napa Valley, wine tasting, The Little Door, anniversary packages, romantic dinner",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "Williams Daniel is planning to attend a few more weddings this year and is looking for gift ideas for the couples.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00",
+                "startTime": "2023-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel likes the idea of gifting an experience.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is thinking of gifting an experience to his aunt and uncle for their 30-year anniversary.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00",
+                "startTime": "2023-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel believes a romantic dinner would be a great idea for his aunt and uncle's anniversary.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is considering making a reservation at The Little Door and asking about their anniversary packages and menus.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T22:52:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "2ae4f277_1",
+          1,
+          4
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Creating a daily schedule that accommodates morning meetings daily routine, schedule, morning meetings, oatmeal, exercise, personal time, afternoon work, evening routine",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "The user is trying to get a better handle on their daily routine.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user has morning meetings on Mondays and Thursdays at 9:00 am.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user needs to leave the house by 8:15 am to make it to their 9:00 am meetings on time.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user usually has oatmeal with fruit for breakfast around 8:15 am every day.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user likes the sample schedule provided by the assistant.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Creating a daily schedule that accommodates morning meetings and personal preferences daily routine, schedule, morning meetings, oatmeal, exercise, personal time, afternoon work, evening routine",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "User is trying to get a better handle on their daily routine.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User has morning meetings on Mondays and Thursdays at 9:00 am.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User needs to leave the house by 8:15 am to make it to their 9:00 am meetings on time.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User usually has oatmeal with fruit for breakfast around 8:15 am every day.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User likes the sample schedule provided by the assistant.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User thinks they need to adjust the morning routine on Mondays and Thursdays.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "2ae4f277_1",
+          5,
+          6
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Scheduling workouts and walks schedule, workouts, walks, evenings, Sundays, personal time, self-care",
+          "events_count": 7,
+          "events": [
+            {
+              "description": "The user likes the revised schedule.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user thinks they should also block out time for their workouts and walks.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user usually works out in the evenings around 6:30 pm or 7:00 pm.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user likes to take a relaxing walk on Sundays around 8:00 pm.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user has added workouts on weekdays from 6:30 pm to 7:30 pm.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user has added a relaxing walk on Sundays from 8:00 pm to 9:00 pm.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "The user is reminded to prioritize self-care and rest when needed.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Scheduling workouts and walks into a daily routine schedule, workouts, walks, evenings, Sundays, personal time, self-care",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "User likes the revised schedule.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User thinks they should block out time for workouts and walks.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User usually works out in the evenings around 6:30 pm or 7:00 pm.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            },
+            {
+              "description": "User likes to take a relaxing walk on Sundays around 8:00 pm.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "2ae4f277_1",
+          7,
+          8
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Scheduling personal time for TV and streaming shows TV, streaming shows, schedule, personal time, work, self-care",
+          "events_count": 2,
+          "events": [
+            {
+              "description": "The user would like to block out time for TV or streaming shows in the evenings.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00",
+                "startTime": "2023-05-30",
+                "endTime": "2023-05-30",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user is reminded to prioritize self-care and make time for activities that bring joy and relaxation.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Incorporating TV and streaming time into a daily schedule TV, streaming shows, schedule, evenings, personal time, work/productivity, self-care",
+          "events_count": 1,
+          "events": [
+            {
+              "description": "The user would like to block out time for TV or streaming shows in the evenings.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "2ae4f277_1",
+          9,
+          12
+        ],
+        "gate": "gate_on",
+        "b0": {
+          "topic_kw_text": "Adjusting bedtime routine for better sleep bedtime routine, sleep, schedule, morning routine, personal time, work/productivity, TV/streaming time, workout",
+          "events_count": 1,
+          "events": [
+            {
+              "description": "The user would like to make sure they are getting enough sleep.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Adjusting bedtime routine for better sleep bedtime routine, sleep, schedule, morning routine, work/productivity, personal time, TV/streaming time, workout",
+          "events_count": 1,
+          "events": [
+            {
+              "description": "The user would like to make sure they are getting enough sleep.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T13:29:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "34deeb0c_2",
+          1,
+          10
+        ],
+        "gate": "gate_on",
+        "b0": {
+          "topic_kw_text": "Planning a post-wedding family trip to Hawaii or Costa Rica. post-wedding trip, sister's wedding, half-marathon, Hawaii, Costa Rica, shoulder season, Waikiki, accommodations",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "The user is thinking of planning a post-wedding trip with their family after their sister's wedding in June.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user just got back from a great run and is still on a high from completing their half-marathon on April 10th.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00",
+                "startTime": "2023-04-10",
+                "endTime": "Unknown",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user is leaning towards Hawaii for their trip.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user wants to make sure their trip to Hawaii is not too crowded and expensive.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user is thinking of staying in Waikiki, as they have heard it's a great spot for first-time visitors to Oahu.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Planning a post-wedding family trip to Hawaii or Costa Rica post-wedding trip, sister's wedding, half-marathon, Hawaii, Costa Rica, shoulder season, Waikiki, accommodations",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "Williams Daniel is thinking of planning a post-wedding trip with his family after his sister's wedding in June.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "Williams Daniel just got back from a great run and is still on a high from completing his half-marathon on April 10th.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00",
+                "startTime": "2023-04-10",
+                "endTime": "Unknown",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel is interested in Hawaii and Costa Rica as potential destinations for his family trip.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is leaning towards Hawaii for his family trip.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "Williams Daniel wants to ensure that Hawaii is not too crowded and expensive during the shoulder season in April and May.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is thinking of staying in Waikiki, which he has heard is a great spot for first-time visitors to Oahu.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "34deeb0c_2",
+          11,
+          12
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Planning a vacation to Waikiki half-marathon, Waikiki, accommodations, activities, budget, family, outdoor adventures, cultural experiences",
+          "events_count": 3,
+          "events": [
+            {
+              "description": "Williams Daniel completed a half-marathon on April 10th.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00",
+                "startTime": "2023-04-10",
+                "endTime": "2023-04-10",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel is looking forward to a relaxing vacation in Waikiki.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is interested in booking accommodations and planning activities for the trip.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Planning a vacation to Waikiki half-marathon, April 10th, Waikiki, accommodations, activities, budget, family, outdoor adventures",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "The user completed a half-marathon on April 10th.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00",
+                "startTime": "2023-04-10",
+                "endTime": "2023-04-10",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user is looking forward to a relaxing vacation in Waikiki.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user is interested in booking accommodations and planning activities for their trip.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user is inquiring about the budget for accommodations.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user is considering options for a hotel, resort, or vacation rental.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            },
+            {
+              "description": "The user is interested in activities for their family during the trip.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-26T11:42:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "3d17c489_1",
+          1,
+          4
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Cultural events and festivals promoting diversity and social justice cultural events, festivals, social justice, diversity, inclusivity, Latin American culture, Indian culture, community",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "The user has been living in the United States for the past 5 years.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00",
+                "startTime": "2018-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user is interested in cultural events that celebrate diversity and inclusivity.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The user has a background from India.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The user has an interest in Latin American culture.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The user is trying to learn more about the cultural events in their neighborhood.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Exploring cultural events and festivals related to diversity and social justice. cultural events, festivals, social justice, diversity, inclusivity, Latin American culture, Indian culture, community engagement",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "The user has been living in the United States for the past 5 years.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00",
+                "startTime": "2018-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "The user is trying to learn more about the cultural events in their neighborhood.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The user has a background from India and an interest in Latin American culture.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The user is particularly interested in attending cultural events that celebrate diversity and inclusivity.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The user is looking for specific events or festivals that focus on promoting social justice and racial equality.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "3d17c489_1",
+          5,
+          12
+        ],
+        "gate": "gate_on",
+        "b0": {
+          "topic_kw_text": "Cultural differences in social justice movements between the US and India social justice, Dalit rights movement, caste system, Mahatma Gandhi, Ambedkar, grassroots movements, digital activism, intersectionality",
+          "events_count": 3,
+          "events": [
+            {
+              "description": "Williams Daniel is curious to know more about the Dalit rights movement in India.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "Williams Daniel finds the cultural differences between the US and India in social justice and activism helpful to understand.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is interested in the impact of social media on the Dalit rights movement in India.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Cultural differences in social justice movements between the US and India Dalit rights movement, social justice, caste system, Mahatma Gandhi, Ambedkar, grassroots movements, digital activism, intersectionality",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "Williams Daniel is curious to know more about the Dalit rights movement in India.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "Williams Daniel finds the cultural differences between the US and India in social justice and activism helpful for understanding.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "Social media has amplified Dalit voices, allowing them to share their experiences and raise awareness about issues.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00"
+              }
+            },
+            {
+              "description": "The rise of Dalit-led political parties like the Bahujan Samaj Party (BSP) and the Viduthalai Chiruthaigal Katchi (VCK) has gained significant traction recently.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-22T19:08:00",
+                "startTime": "2023-05-22",
+                "endTime": "2023-05-22",
+                "granularity": "day"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "43df393f",
+          1,
+          12
+        ],
+        "gate": "gate_on",
+        "b0": {
+          "topic_kw_text": "Reducing social media usage and finding alternative news sources screen time, social media, Apple News, The Skimm, mental health, Facebook, Twitter, news aggregator",
+          "events_count": 4,
+          "events": [
+            {
+              "description": "Williams Daniel has been trying to be more mindful of his screen time lately.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            },
+            {
+              "description": "Williams Daniel was wondering if you could recommend some apps that can help him track his social media usage more effectively.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            },
+            {
+              "description": "Williams Daniel has been trying to cut down on his social media usage for two months now.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00",
+                "startTime": "2023-03-30",
+                "endTime": "Unknown",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel plans to try out Apple News and The Skimm to start.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Reducing social media usage and finding alternative news sources screen time, social media, Apple News, The Skimm, mental health, Facebook, Twitter, news aggregator",
+          "events_count": 5,
+          "events": [
+            {
+              "description": "Williams Daniel has been trying to be more mindful of his screen time lately.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            },
+            {
+              "description": "Williams Daniel was wondering if you could recommend some apps that can help him track his social media usage more effectively.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            },
+            {
+              "description": "Williams Daniel has been trying to cut down on his social media usage for two months now.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00",
+                "startTime": "2023-03-30",
+                "endTime": "Unknown",
+                "granularity": "day"
+              }
+            },
+            {
+              "description": "Williams Daniel thinks relying too much on social media for news is affecting his mental health.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            },
+            {
+              "description": "Williams Daniel plans to try out Apple News and The Skimm to start.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T05:00:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "4e77dbbe_5",
+          7,
+          12
+        ],
+        "gate": "gate_on",
+        "b0": {
+          "topic_kw_text": "Budgeting for farm expenses and vet care Method 2, amortize, vet bills, expenses, budget, categories, farm, vaccinations",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "Williams Daniel thinks he will go with Method 2 and amortize the expense over time.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel plans to add $41.75 per quarter for the equipment and maintenance category for the next 3 years.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is considering whether to expect the same level of expenses for vet care in the next quarter.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel has a better idea of how to estimate his expenses for the next quarter.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel will start working on his budget using the categories and estimation methods discussed.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is advised to regularly review and adjust his budget to ensure it remains accurate and effective.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Budgeting for farm expenses and vet care Method 2, amortize, vet bills, expenses, budget, categories, farm, vaccinations",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "Williams Daniel thinks he will go with Method 2 and amortize the expense over time.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel plans to add $41.75 per quarter for the equipment and maintenance category for the next 3 years.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is considering whether to expect the same level of expenses for vet care in the next quarter.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel has a better idea of how to estimate his expenses for the next quarter.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is starting to work on his budget using the categories and estimation methods discussed.",
+              "event_temporal_type": "OCCURRENCE",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            },
+            {
+              "description": "Williams Daniel is advised to regularly review and adjust his budget to ensure it remains accurate and effective.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-24T13:01:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "5832a64a",
+          1,
+          2
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Online courses for agile project management agile project management, online courses, Scrum, certification, Coursera, edX, Project Management Institute, Pluralsight",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "The user is looking for online courses on agile project management to further improve their skills.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider their current level of knowledge and experience in agile project management.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the certification they're aiming for, such as CSM or ACP.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the course duration and format, whether self-paced or instructor-led.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the cost and whether it fits their budget.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the reputation and credibility of the course provider.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Searching for online courses in agile project management agile project management, online courses, Scrum, certification, Coursera, edX, Project Management Institute, Pluralsight",
+          "events_count": 6,
+          "events": [
+            {
+              "description": "The user is looking for online courses on agile project management to further improve their skills.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider their current level of knowledge and experience in agile project management.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the certification they're aiming for, such as CSM or ACP.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the course duration and format, whether self-paced or instructor-led.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the cost and whether it fits their budget.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user should consider the reputation and credibility of the course provider.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "5832a64a",
+          11,
+          12
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Learning about case studies in the Design Thinking Specialization Design Thinking, case studies, University of Virginia, Coursera, business challenges, social impact, product design, critical thinking",
+          "events_count": 15,
+          "events": [
+            {
+              "description": "The user is interested in learning more about the case studies in the Design Thinking Specialization.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The case studies in the Design Thinking Specialization by University of Virginia on Coursera help develop design thinking skills by applying principles to real-world scenarios.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user can expect to analyze real-world business challenges and develop design thinking-based solutions.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will develop design thinking-based solutions for product design challenges.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will analyze case studies by identifying key stakeholders, needs, and opportunities for improvement.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will apply design thinking principles and methods to develop a solution to the case study challenge.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will submit their solution for peer review and receive feedback from others on their work.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will develop critical thinking skills by analyzing complex problems and identifying creative solutions.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will practice empathy by understanding the needs and perspectives of various stakeholders.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will develop their creative skills by generating innovative solutions to complex challenges.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will practice communicating their ideas and solutions effectively, both verbally and in writing.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user is advised to take their time to thoroughly analyze the problem and develop a well-thought-out solution.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user is encouraged to think outside the box and come up with innovative solutions.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user is reminded to keep the user's needs and perspectives at the forefront of their solution.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user is advised to use the feedback received from peers to improve their solution and develop their design thinking skills.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Exploring case studies in the Design Thinking Specialization Design Thinking, case studies, University of Virginia, Coursera, business challenges, social impact, product design, critical thinking",
+          "events_count": 7,
+          "events": [
+            {
+              "description": "The user is interested in learning more about the case studies in the Design Thinking Specialization.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The case studies in the Design Thinking Specialization by University of Virginia on Coursera help develop design thinking skills.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user can expect to analyze real-world business challenges and develop design thinking-based solutions.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will develop design thinking-based solutions for product design challenges.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will practice empathy by understanding the needs and perspectives of various stakeholders.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will develop critical thinking skills by analyzing complex problems and identifying creative solutions.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user will practice communicating ideas and solutions effectively, both verbally and in writing.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "5832a64a",
+          3,
+          6
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Learning resources and certification for design thinking design thinking, Coursera, University of Virginia, certification, online courses, resources, empathy, prototyping",
+          "events_count": 10,
+          "events": [
+            {
+              "description": "The user is interested in learning more about design thinking.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user is interested in the Coursera - Design Thinking Specialization by University of Virginia.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The Design Thinking Specialization consists of 4 courses, each lasting 4-6 weeks.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user needs to complete all 4 courses to earn the Specialization certificate.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user needs to pass assignments, quizzes, and peer reviews to demonstrate understanding of the material.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The current fee for the Specialization certificate is $49/month, billed annually at $588.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The Design Thinking Specialization certificate is recognized in the industry as a demonstration of skills and knowledge in design thinking.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The certificate is issued by the University of Virginia, a prestigious institution.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Coursera is a well-established online learning platform, and its certifications are recognized by many employers.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Many organizations, including IBM, Google, and Amazon, have recognized the value of design thinking skills.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Learning about design thinking and its certification process design thinking, Coursera, University of Virginia, certification, online courses, resources, community, skills",
+          "events_count": 8,
+          "events": [
+            {
+              "description": "The user is interested in learning more about design thinking.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The user is interested in the Coursera - Design Thinking Specialization by University of Virginia.",
+              "event_temporal_type": "INTENTION",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The Design Thinking Specialization consists of 4 courses, each lasting 4-6 weeks.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The current fee for the Coursera - Design Thinking Specialization is $49/month (billed annually at $588).",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The Design Thinking Specialization certificate is recognized in the industry as a demonstration of skills and knowledge in design thinking.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The certificate is issued by the University of Virginia, a prestigious institution.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Coursera is a well-established online learning platform, and its certifications are recognized by many employers.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Many organizations, including IBM, Google, and Amazon, have recognized the value of design thinking skills.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "question_id": "94f70d80",
+        "coverage": [
+          "5832a64a",
+          7,
+          10
+        ],
+        "gate": "gate_off",
+        "b0": {
+          "topic_kw_text": "Difficulty and nature of assignments in the Design Thinking Specialization Design Thinking, Specialization, peer-reviewed assignments, University of Virginia, Coursera, case studies, design challenges, feedback",
+          "events_count": 10,
+          "events": [
+            {
+              "description": "The assignments and quizzes in the Design Thinking Specialization are designed to test understanding of design thinking concepts.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The level of difficulty of the assignments and quizzes in the Design Thinking Specialization is generally moderate.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Multiple-choice quizzes in the Design Thinking Specialization are rated 4/10 for difficulty.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Short-answer questions in the Design Thinking Specialization are rated 5/10 for difficulty.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Peer-reviewed assignments in the Design Thinking Specialization are rated 6/10 for difficulty.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Case studies in the Design Thinking Specialization are rated 5/10 for difficulty.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Reflective journals in the Design Thinking Specialization are rated 3/10 for difficulty.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The assignments and quizzes in the Design Thinking Specialization are a mix of both theoretical and practical in nature.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Peer-reviewed assignments in the Design Thinking Specialization are projects that you'll work on individually or in teams.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The peer review process offers benefits such as improved learning and networking opportunities.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        },
+        "b2": {
+          "topic_kw_text": "Difficulty and nature of assignments in the Design Thinking Specialization Design Thinking, Specialization, University of Virginia, peer-reviewed assignments, quizzes, case studies, feedback, learning experience",
+          "events_count": 8,
+          "events": [
+            {
+              "description": "The level of difficulty of the assignments and quizzes in the Design Thinking Specialization is generally moderate.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Multiple-choice quizzes in the Design Thinking Specialization are straightforward but require attention to detail.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Short-answer questions in the Design Thinking Specialization require some critical thinking and application of concepts.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Peer-reviewed assignments in the Design Thinking Specialization require practical application of design thinking principles and methods.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "Case studies in the Design Thinking Specialization require analysis and application of design thinking principles to real-world scenarios.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The assignments and quizzes in the Design Thinking Specialization are a mix of both theoretical and practical in nature.",
+              "event_temporal_type": "ATTRIBUTE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "The peer-reviewed assignments in the Design Thinking Specialization are projects that you'll work on individually or in teams.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            },
+            {
+              "description": "In the peer review process, your assignment will be reviewed by 2-3 peers who will provide feedback using a rubric.",
+              "event_temporal_type": "STATE",
+              "time_metadata": {
+                "observedTime": "2023-05-30T21:45:00"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "qa_failure_audit": [
+    {
+      "question_id": "d682f1a2",
+      "transition": "B0_correct_B2_wrong",
+      "b0_answer": "You have used at least two different types of food delivery services recently: Domino's Pizza and Uber Eats. Additionally, you mentioned a new service called Fresh Fusion.",
+      "b2_answer": "The information is unavailable.",
+      "b0_retrieval": {
+        "hit_at_1": true,
+        "hit_at_5": true,
+        "hit_at_10": true,
+        "hit_at_20": true,
+        "gold_rank": 1,
+        "gold_score": 0.38562757610175125,
+        "ranking_size": 138,
+        "gold_memory_ids": [
+          87,
+          125,
+          21,
+          86,
+          90,
+          91,
+          127,
+          126,
+          88,
+          22,
+          89
+        ],
+        "gold_dialogue_hashes": [
+          "2fe6bc00d1867b153d60d4a9617a1b270b7f41e1f2cbe56114964b902e5b9448",
+          "3c70ca79902b31187a80243960c3d5267dcf6d2c416f18344de4f2e7652721bc",
+          "47611d610a2b24a3eb90b1cf2383c8657c51877c8d5f6d3c1466fd20cfe181ec",
+          "d8195446ed6c03727d104e7feeac802d12a79458757e8e5c442177f7f78cae97",
+          "b308e8ab506d87be1f26a81c31efad9e8aa12bd860ee3361fad6a827e90dc8fc",
+          "356b9463565e26aa49e9f92f57dc559475f68286318a70f5439148505686044e",
+          "fd6d891a7c93287de0bb446398664b6cbcf756eaa3d697f39b430ef0435efc9d",
+          "11f36b2b9afa089adbf62f2762c3425b7ed14f6301ba59792c4266b0f0bb5eb7",
+          "2ba24f611a28883db63a24a3241fd8cf5edb7b207e09b9f9144c5ad2c2a2aadd",
+          "cbc44f8d3a03e92b5711b41a3fc07e2df65f07c8559fa25aefaab62feb61b1fb",
+          "5d1f1de95e1eb9f9477b5a3bfd7d0df4f434ac18ce0a62d2a2db6da56509112d"
+        ],
+        "top10_ids": [
+          87,
+          125,
+          21,
+          86,
+          90,
+          91,
+          61,
+          137,
+          127,
+          108
+        ],
+        "top20_ids": [
+          87,
+          125,
+          21,
+          86,
+          90,
+          91,
+          61,
+          137,
+          127,
+          108,
+          126,
+          136,
+          57,
+          7,
+          45,
+          78,
+          134,
+          88,
+          75,
+          23
+        ]
+      },
+      "b2_retrieval": {
+        "hit_at_1": true,
+        "hit_at_5": true,
+        "hit_at_10": true,
+        "hit_at_20": true,
+        "gold_rank": 1,
+        "gold_score": 0.38562757610175125,
+        "ranking_size": 138,
+        "gold_memory_ids": [
+          87,
+          125,
+          86,
+          22,
+          90,
+          91,
+          127,
+          126,
+          88,
+          23,
+          89
+        ],
+        "gold_dialogue_hashes": [
+          "2fe6bc00d1867b153d60d4a9617a1b270b7f41e1f2cbe56114964b902e5b9448",
+          "3c70ca79902b31187a80243960c3d5267dcf6d2c416f18344de4f2e7652721bc",
+          "d8195446ed6c03727d104e7feeac802d12a79458757e8e5c442177f7f78cae97",
+          "47611d610a2b24a3eb90b1cf2383c8657c51877c8d5f6d3c1466fd20cfe181ec",
+          "b308e8ab506d87be1f26a81c31efad9e8aa12bd860ee3361fad6a827e90dc8fc",
+          "356b9463565e26aa49e9f92f57dc559475f68286318a70f5439148505686044e",
+          "fd6d891a7c93287de0bb446398664b6cbcf756eaa3d697f39b430ef0435efc9d",
+          "11f36b2b9afa089adbf62f2762c3425b7ed14f6301ba59792c4266b0f0bb5eb7",
+          "2ba24f611a28883db63a24a3241fd8cf5edb7b207e09b9f9144c5ad2c2a2aadd",
+          "cbc44f8d3a03e92b5711b41a3fc07e2df65f07c8559fa25aefaab62feb61b1fb",
+          "5d1f1de95e1eb9f9477b5a3bfd7d0df4f434ac18ce0a62d2a2db6da56509112d"
+        ],
+        "top10_ids": [
+          87,
+          125,
+          86,
+          22,
+          90,
+          91,
+          62,
+          137,
+          127,
+          108
+        ],
+        "top20_ids": [
+          87,
+          125,
+          86,
+          22,
+          90,
+          91,
+          62,
+          137,
+          127,
+          108,
+          136,
+          126,
+          58,
+          78,
+          7,
+          134,
+          107,
+          88,
+          46,
+          76
+        ]
+      },
+      "gold_session_retained_in_top10": true,
+      "gold_rank_changed": false,
+      "top10_ids_changed": true,
+      "gold_dialogue_hashes_overlap": true,
+      "answer_prompt_sha256_b0": "7854781e93a465c0f39779a35c2699cc37a8af282dabf4d886269fc446685e12",
+      "answer_prompt_sha256_b2": "7854781e93a465c0f39779a35c2699cc37a8af282dabf4d886269fc446685e12",
+      "answer_prompt_equal": true
+    },
+    {
+      "question_id": "gpt4_f420262d",
+      "transition": "B0_correct_B2_wrong",
+      "b0_answer": "You flew with American Airlines on Valentine's Day.",
+      "b2_answer": "The information is unavailable.",
+      "b0_retrieval": {
+        "hit_at_1": true,
+        "hit_at_5": true,
+        "hit_at_10": true,
+        "hit_at_20": true,
+        "gold_rank": 1,
+        "gold_score": 0.41818141351748844,
+        "ranking_size": 134,
+        "gold_memory_ids": [
+          65,
+          90,
+          102,
+          117,
+          91,
+          89,
+          104,
+          103,
+          44,
+          42,
+          43,
+          66,
+          105,
+          120,
+          106,
+          64,
+          45,
+          119,
+          46,
+          92,
+          67,
+          121,
+          118,
+          68
+        ],
+        "gold_dialogue_hashes": [
+          "350b3cba1bc9f42155aad792ade16183092bdc8433bf33ab792745b4eb7b8881",
+          "0f29b5812465b3274d53ba7bbd4b18cb6719b6715acf579fd480dac40838d8c2",
+          "47e1146477bec83afaec1b4bb9412de4e123eacbffb5a046c00b1ac03c7a3ce6",
+          "a42fdea13386846ca39877085b8d8ca3df394a519d7ba375e2db51646bf9fc45",
+          "03bf34908f006f042ed4b81b72dba2e1eaa84fda53f5c1fba3e874005788575c",
+          "bd9534dbf258f6c3fcf3ff1e898d6d5431794cb678b93c48202c2bb2215c991d",
+          "d54d309122c6e7cb5d67f9ea0173447495b07fc6521d3563e30744a21af8fbd7",
+          "317fca50f202bd1db14a5f2c0c2f9279cbe03205d70efb08b52b0284eea65c9c",
+          "9919a8741bd1c6ea6e14b65bc97a18ce2a53690353eb2334fca1de4417d14972",
+          "4900d82665fa3260486788af593e1758cbdeb2bf9ec0e4c8aaf69eb5d2686bbf",
+          "76a02810e7cac2aad17859aba38700f26779d7d1b4011fe21fed7d704e6efe47",
+          "ced328217a289e97fad28aec979cb19eb0c98773fa821ca92c13715a56fe88cf",
+          "ba505fe673edf8722f71e5e2ea792017cc9ff3e9c6ddfb978dbe45ffffc8a1d0",
+          "e16fe083792eb39b9f39d4fcd78f1ac198893784e5f95c54f7dfb8314ce06ce9",
+          "74402a8377147ca301fe032973686f798270c9dbef32ff85c6d1fa0010e8ae09",
+          "5ef380285a3cc0ee0a89137d18d0d1a9492c3ff0a34480a0458b61109ddcf25a",
+          "a97e3e8026abaea4d0d04f02d28a9f44f23898ae6057dc35b0b43c7061ddaf21",
+          "416a7b34e983ea903df378c26ec6f08d160f3374a4123f352cd11794ee8a6b37",
+          "dabbb621865f26e0e204e1e8d80c003072add91e74cc037225fc4814c272da25",
+          "815babbd189a30ccdaa120adb982e7285e32d585d6312806e19c835dd818a3ee",
+          "96d9b2f184d5c15382450cfe4a7aa7415ed8f696a854759be107edeef9877918",
+          "28fcfe4afc2b0c93bd0de7a19c5ee55ae025901aa7042756b1072ed26e74c1bf",
+          "ef6aab182fca4c3fa6f8bd9e9f7936b1b117be8ffff6b73908a5ba485f9a56ff",
+          "5e1c1e844a1b264892ee93757fd9cc72e12cf701bb4df24721d67d1269b0b0e1"
+        ],
+        "top10_ids": [
+          65,
+          90,
+          102,
+          117,
+          91,
+          89,
+          104,
+          103,
+          44,
+          42
+        ],
+        "top20_ids": [
+          65,
+          90,
+          102,
+          117,
+          91,
+          89,
+          104,
+          103,
+          44,
+          42,
+          43,
+          66,
+          105,
+          120,
+          106,
+          64,
+          45,
+          119,
+          46,
+          92
+        ]
+      },
+      "b2_retrieval": {
+        "hit_at_1": true,
+        "hit_at_5": true,
+        "hit_at_10": true,
+        "hit_at_20": true,
+        "gold_rank": 1,
+        "gold_score": 0.4316880784136669,
+        "ranking_size": 136,
+        "gold_memory_ids": [
+          67,
+          93,
+          106,
+          120,
+          107,
+          92,
+          108,
+          94,
+          45,
+          43,
+          68,
+          109,
+          123,
+          66,
+          44,
+          110,
+          46,
+          122,
+          47,
+          95,
+          69,
+          124,
+          121,
+          70
+        ],
+        "gold_dialogue_hashes": [
+          "350b3cba1bc9f42155aad792ade16183092bdc8433bf33ab792745b4eb7b8881",
+          "0f29b5812465b3274d53ba7bbd4b18cb6719b6715acf579fd480dac40838d8c2",
+          "47e1146477bec83afaec1b4bb9412de4e123eacbffb5a046c00b1ac03c7a3ce6",
+          "a42fdea13386846ca39877085b8d8ca3df394a519d7ba375e2db51646bf9fc45",
+          "317fca50f202bd1db14a5f2c0c2f9279cbe03205d70efb08b52b0284eea65c9c",
+          "bd9534dbf258f6c3fcf3ff1e898d6d5431794cb678b93c48202c2bb2215c991d",
+          "d54d309122c6e7cb5d67f9ea0173447495b07fc6521d3563e30744a21af8fbd7",
+          "03bf34908f006f042ed4b81b72dba2e1eaa84fda53f5c1fba3e874005788575c",
+          "9919a8741bd1c6ea6e14b65bc97a18ce2a53690353eb2334fca1de4417d14972",
+          "4900d82665fa3260486788af593e1758cbdeb2bf9ec0e4c8aaf69eb5d2686bbf",
+          "ced328217a289e97fad28aec979cb19eb0c98773fa821ca92c13715a56fe88cf",
+          "ba505fe673edf8722f71e5e2ea792017cc9ff3e9c6ddfb978dbe45ffffc8a1d0",
+          "e16fe083792eb39b9f39d4fcd78f1ac198893784e5f95c54f7dfb8314ce06ce9",
+          "5ef380285a3cc0ee0a89137d18d0d1a9492c3ff0a34480a0458b61109ddcf25a",
+          "76a02810e7cac2aad17859aba38700f26779d7d1b4011fe21fed7d704e6efe47",
+          "74402a8377147ca301fe032973686f798270c9dbef32ff85c6d1fa0010e8ae09",
+          "a97e3e8026abaea4d0d04f02d28a9f44f23898ae6057dc35b0b43c7061ddaf21",
+          "416a7b34e983ea903df378c26ec6f08d160f3374a4123f352cd11794ee8a6b37",
+          "dabbb621865f26e0e204e1e8d80c003072add91e74cc037225fc4814c272da25",
+          "815babbd189a30ccdaa120adb982e7285e32d585d6312806e19c835dd818a3ee",
+          "96d9b2f184d5c15382450cfe4a7aa7415ed8f696a854759be107edeef9877918",
+          "28fcfe4afc2b0c93bd0de7a19c5ee55ae025901aa7042756b1072ed26e74c1bf",
+          "ef6aab182fca4c3fa6f8bd9e9f7936b1b117be8ffff6b73908a5ba485f9a56ff",
+          "5e1c1e844a1b264892ee93757fd9cc72e12cf701bb4df24721d67d1269b0b0e1"
+        ],
+        "top10_ids": [
+          67,
+          93,
+          106,
+          120,
+          107,
+          92,
+          108,
+          94,
+          45,
+          43
+        ],
+        "top20_ids": [
+          67,
+          93,
+          106,
+          120,
+          107,
+          92,
+          108,
+          94,
+          45,
+          43,
+          68,
+          109,
+          123,
+          66,
+          44,
+          110,
+          46,
+          122,
+          47,
+          95
+        ]
+      },
+      "gold_session_retained_in_top10": true,
+      "gold_rank_changed": false,
+      "top10_ids_changed": true,
+      "gold_dialogue_hashes_overlap": true,
+      "answer_prompt_sha256_b0": "0884856e2552fd51b6342b710315f7b99c7fdf7b99d384b22e7f980575797f40",
+      "answer_prompt_sha256_b2": "0884856e2552fd51b6342b710315f7b99c7fdf7b99d384b22e7f980575797f40",
+      "answer_prompt_equal": true
+    }
+  ],
+  "token_saving": {
+    "tokens": 1120916,
+    "fraction": 0.1605285091927718
+  }
+}
