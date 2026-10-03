@@ -17,6 +17,14 @@ from graph_storage import (
 )
 
 
+_RELATIVE_TEMPORAL_RE = re.compile(
+    r"\b(?:yesterday|today|last\s+(?:week|month|year|monday|tuesday|wednesday|"
+    r"thursday|friday|saturday|sunday|weekend)|this\s+(?:morning|afternoon|evening|"
+    r"tonight)|two\s+months?\s+ago|a\s+month\s+ago|last\s+night)\b",
+    re.IGNORECASE,
+)
+
+
 def _mx():
     """
     Lazy import to avoid circular import:
@@ -129,6 +137,36 @@ def _resolve_local_temporal_mentions(
             )
             return mentions, False
     return resolved_mentions, True
+
+
+def _temporal_annotations_cover_mentions(
+    mentions: List[str], temporal_expressions: Any
+) -> bool:
+    """Require every relative expression in a mention to be explicitly mapped."""
+    if not isinstance(temporal_expressions, list):
+        return False
+    specs_by_index: Dict[int, List[str]] = {}
+    for item in temporal_expressions:
+        if not isinstance(item, dict):
+            continue
+        try:
+            index = int(item.get("mention_index"))
+        except (TypeError, ValueError):
+            continue
+        specs_by_index.setdefault(index, []).append(
+            str(item.get("expression", "") or "").strip().lower()
+        )
+    for index, mention in enumerate(mentions):
+        expressions = [x.lower() for x in _RELATIVE_TEMPORAL_RE.findall(mention)]
+        if not expressions:
+            continue
+        specs = specs_by_index.get(index, [])
+        if not specs:
+            return False
+        for expression in expressions:
+            if not any(expression in spec or spec in expression for spec in specs if spec):
+                return False
+    return True
 
 
 def _load_event_vector_cache(store: Any) -> Dict[str, List[float]]:
@@ -411,14 +449,24 @@ class TopicClusterManager:
                     local_fallback = True
 
             if local_temporal and parsed_pass1 and not local_fallback:
-                mentions, resolved_ok = _resolve_local_temporal_mentions(
-                    worker=self.worker,
-                    mentions=mentions,
-                    temporal_expressions=temporal_expressions,
-                    observation_time=session_end_time,
-                )
-                if not resolved_ok:
+                if not _temporal_annotations_cover_mentions(mentions, temporal_expressions):
                     local_fallback = True
+                    self.worker._log_local_construction_stage(
+                        success=False,
+                        metadata={
+                            "fallback_used": True,
+                            "reason": "unmapped_relative_expression",
+                        },
+                    )
+                else:
+                    mentions, resolved_ok = _resolve_local_temporal_mentions(
+                        worker=self.worker,
+                        mentions=mentions,
+                        temporal_expressions=temporal_expressions,
+                        observation_time=session_end_time,
+                    )
+                    if not resolved_ok:
+                        local_fallback = True
 
             # A malformed local output or an unsupported expression must use
             # the original tool-calling path.  The fallback is explicit in

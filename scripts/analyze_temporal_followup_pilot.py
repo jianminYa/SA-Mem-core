@@ -8,6 +8,7 @@ import csv
 import json
 import math
 import re
+from difflib import SequenceMatcher
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -24,7 +25,7 @@ STAGES = (
 RELATIVE_RE = re.compile(
     r"\b(?:yesterday|today|last\s+(?:week|month|year|monday|tuesday|wednesday|"
     r"thursday|friday|saturday|sunday)|this\s+(?:morning|afternoon|evening|tonight)|"
-    r"two\s+months?\s+ago|a\s+month\s+ago|last\s+night)\b",
+    r"two\s+months?\s+ago|a\s+month\s+ago|last\s+night|last\s+weekend)\b",
     re.IGNORECASE,
 )
 
@@ -55,7 +56,7 @@ def stage_stats(path: Path) -> dict[str, Any]:
             "total_tokens": token_sum(subset, "total_tokens"),
         }
     llm_rows = [row for row in rows if row.get("stage") != "temporal_local_resolve"]
-    return {
+    stats = {
         "rows": len(rows),
         "llm_calls": sum(row.get("success") is True for row in llm_rows),
         "input_tokens": token_sum(llm_rows, "prompt_tokens"),
@@ -68,7 +69,7 @@ def stage_stats(path: Path) -> dict[str, Any]:
             row.get("stage") == "temporal_local_resolve" and row.get("success") is True
             for row in rows
         ),
-        "fallback_events": sum(
+        "fallback_event_rows": sum(
             row.get("stage") == "temporal_local_resolve" and row.get("fallback_used") is True
             for row in rows
         ),
@@ -78,6 +79,16 @@ def stage_stats(path: Path) -> dict[str, Any]:
         ),
         "breakdown": breakdown,
     }
+    fallback_keys = {
+        (
+            str(row.get("session_id") or ""),
+            str(row.get("block_id") or ""),
+        )
+        for row in rows
+        if row.get("stage") == "temporal_local_resolve" and row.get("fallback_used") is True
+    }
+    stats["fallback_blocks"] = len(fallback_keys)
+    return stats
 
 
 def coverage_key(box: dict[str, Any]) -> tuple[str, int, int]:
@@ -172,10 +183,21 @@ def event_time_signature(event: Any, box: dict[str, Any]) -> dict[str, Any]:
     return result
 
 
+def event_description(event: Any) -> str:
+    return str(event.get("description") or "") if isinstance(event, dict) else str(event or "")
+
+
+def event_similarity(left: str, right: str) -> float:
+    left_tokens = set(re.findall(r"[a-z0-9]+", left.lower()))
+    right_tokens = set(re.findall(r"[a-z0-9]+", right.lower()))
+    overlap = len(left_tokens & right_tokens) / max(1, len(left_tokens | right_tokens))
+    return max(overlap, SequenceMatcher(None, left.lower(), right.lower()).ratio())
+
+
 def temporal_comparison(b0_boxes: list[dict[str, Any]], b1_boxes: list[dict[str, Any]]) -> dict[str, Any]:
     b0 = {coverage_key(box): box for box in b0_boxes}
     b1 = {coverage_key(box): box for box in b1_boxes}
-    candidates = []
+    block_rows = []
     for key in sorted(set(b0) & set(b1)):
         left, right = b0[key], b1[key]
         text = str((left.get("features") or {}).get("content_text") or "")
@@ -185,31 +207,58 @@ def temporal_comparison(b0_boxes: list[dict[str, Any]], b1_boxes: list[dict[str,
             continue
         left_events = left.get("events") or []
         right_events = right.get("events") or []
-        pair_count = min(len(left_events), len(right_events))
+        left_temporal = [
+            event for event in left_events if RELATIVE_RE.search(event_description(event))
+        ]
+        right_temporal = [
+            event for event in right_events if RELATIVE_RE.search(event_description(event))
+        ]
+        unmatched_right = set(range(len(right_temporal)))
+        pairs = []
+        for left_event in left_temporal:
+            left_expr = {x.lower() for x in RELATIVE_RE.findall(event_description(left_event))}
+            match_candidates = [
+                (event_similarity(event_description(left_event), event_description(right_temporal[i])), i)
+                for i in unmatched_right
+                if left_expr & {x.lower() for x in RELATIVE_RE.findall(event_description(right_temporal[i]))}
+            ]
+            if not match_candidates:
+                continue
+            score, index = max(match_candidates)
+            if score < 0.20:
+                continue
+            unmatched_right.remove(index)
+            pairs.append((left_event, right_temporal[index]))
+        pair_count = len(pairs)
         same = sum(
-            event_time_signature(left_events[i], left) == event_time_signature(right_events[i], right)
-            for i in range(pair_count)
+            event_time_signature(left_event, left) == event_time_signature(right_event, right)
+            for left_event, right_event in pairs
         )
-        candidates.append({
+        block_rows.append({
             "coverage": {"session_id": key[0], "start_idx": key[1], "end_idx": key[2]},
             "expressions": expressions,
-            "baseline_event_count": len(left_events),
-            "optimized_event_count": len(right_events),
+            "baseline_event_count": len(left_temporal),
+            "optimized_event_count": len(right_temporal),
             "paired_events": pair_count,
             "same_time_metadata": same,
             "different_time_metadata": pair_count - same,
-            "baseline_times": [event_time_signature(event, left) for event in left_events],
-            "optimized_times": [event_time_signature(event, right) for event in right_events],
+            "unmatched_events": len(left_temporal) + len(right_temporal) - 2 * pair_count,
+            "baseline_times": [event_time_signature(left_event, left) for left_event, _ in pairs],
+            "optimized_times": [event_time_signature(right_event, right) for _, right_event in pairs],
+            "paired_descriptions": [
+                {"baseline": event_description(left_event), "optimized": event_description(right_event)}
+                for left_event, right_event in pairs
+            ],
         })
-    pair_count = sum(row["paired_events"] for row in candidates)
-    same = sum(row["same_time_metadata"] for row in candidates)
+    pair_count = sum(row["paired_events"] for row in block_rows)
+    same = sum(row["same_time_metadata"] for row in block_rows)
     return {
-        "candidate_blocks": len(candidates),
+        "candidate_blocks": len(block_rows),
         "paired_events": pair_count,
         "same_time_metadata": same,
         "different_time_metadata": pair_count - same,
-        "missing_event_pairs": sum(abs(row["baseline_event_count"] - row["optimized_event_count"]) for row in candidates),
-        "samples": candidates[:12],
+        "missing_event_pairs": sum(row["unmatched_events"] for row in block_rows),
+        "samples": block_rows[:12],
     }
 
 
@@ -304,7 +353,8 @@ def main() -> None:
             "hit_at_20": sum(x["retrieval"]["hit_at_20"] for x in side) / len(side) if side else None,
             "gold_rank_mean": sum(x["retrieval"]["gold_rank"] or 0 for x in side) / len(side) if side else None,
             "gold_rank_missing": sum(x["retrieval"]["gold_rank"] is None for x in side),
-            "fallback_events": sum(x["construction"]["fallback_events"] for x in side),
+            "fallback_blocks": sum(x["construction"]["fallback_blocks"] for x in side),
+            "fallback_event_rows": sum(x["construction"]["fallback_event_rows"] for x in side),
             "fallback_followup_calls": sum(x["construction"]["fallback_followup_calls"] for x in side),
             "local_resolve_successes": sum(x["construction"]["local_resolve_successes"] for x in side),
             "retried_calls": sum(x["construction"]["retried_calls"] for x in side),
@@ -394,7 +444,7 @@ def main() -> None:
         )
     lines += [
         "",
-        f"B1 local resolver successes: **{b1['local_resolve_successes']}**; explicit fallback events: **{b1['fallback_events']}**; fallback tool follow-up calls: **{b1['fallback_followup_calls']}**.",
+        f"B1 local resolver successes: **{b1['local_resolve_successes']}**; fallback blocks: **{b1['fallback_blocks']}** (instrumentation rows: {b1['fallback_event_rows']}); fallback tool follow-up calls: **{b1['fallback_followup_calls']}**.",
         "",
         "## Per-question results",
         "",
@@ -414,7 +464,7 @@ def main() -> None:
         "The runtime schema stores event temporal information in `time_metadata`/`temporal_index` for these artifacts rather than always exposing `events.start_time/end_time`. The audit compares the actual available fields for blocks containing explicit relative-time expressions.",
         "",
         f"- Candidate blocks: **{temporal['candidate_blocks']}** across **{temporal['questions_with_candidates']}** questions.",
-        f"- Paired events: **{temporal['paired_events']}**; identical time metadata: **{temporal['same_time_metadata']}**; different: **{temporal['different_time_metadata']}**; unmatched event count difference: **{temporal['missing_event_pairs']}**.",
+        f"- Paired relative-time events: **{temporal['paired_events']}**; identical time metadata: **{temporal['same_time_metadata']}**; different: **{temporal['different_time_metadata']}**; unmatched temporal event records: **{temporal['missing_event_pairs']}**.",
         "",
         "Representative audited blocks:",
         "",
