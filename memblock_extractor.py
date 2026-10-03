@@ -432,6 +432,7 @@ class Config:
     # Optional sidecar for phase-1 construction token accounting. This is
     # intentionally write-only instrumentation; it is never sent to a model.
     CONSTRUCTION_CALLS_FILE = os.environ.get("CONSTRUCTION_CALLS_FILE", "")
+    TEMPORAL_GATE_LOG_FILE = os.environ.get("TEMPORAL_GATE_LOG_FILE", "")
     BUILD_TRACE_FILE = os.path.join(OUTPUT_DIR, "trace_build_process.jsonl")
     TIME_TRACE_FILE = os.path.join(OUTPUT_DIR, "time_traces.jsonl")
     TRACE_PROMPT_LOG_FILE = os.path.join(OUTPUT_DIR, "trace_prompts.jsonl")
@@ -468,6 +469,13 @@ class Config:
     # byte-for-byte on its existing path.
     ENABLE_LOCAL_TEMPORAL_RESOLUTION = os.environ.get(
         "MEMBLOCK_LOCAL_TEMPORAL_RESOLUTION", "0"
+    ) not in ("0", "", "false", "False")
+
+    # B2: keep the original Pass1 prompt/function schema and decide locally
+    # only whether the temporal function may be called for this raw block.
+    # Disabled by default so B0 and B1 entry points remain unchanged.
+    ENABLE_TEMPORAL_GATE_B2 = os.environ.get(
+        "MEMBLOCK_TEMPORAL_GATE_B2", "0"
     ) not in ("0", "", "false", "False")
 
     LIMIT_CONVERSATIONS = 2
@@ -1012,6 +1020,10 @@ class LLMWorker:
         self._construction_session_id = None
         self._construction_block_id = None
         self._last_api_retry_index = 0
+        self._temporal_gate_on = None
+        self._temporal_gate_reason = None
+        self._temporal_tool_called = False
+        self._pass1_tool_followup = False
 
         self.client = OpenAI(base_url=self.base_url, api_key=self.api_key)
         try:
@@ -1143,6 +1155,36 @@ class LLMWorker:
         with open(path, "a", encoding="utf-8") as handle:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
+    def _log_temporal_gate(
+        self,
+        *,
+        gate_on: bool,
+        reason: str,
+        temporal_tool_called: bool,
+        pass1_tool_followup: bool,
+    ) -> None:
+        """Persist one zero-token B2 gate decision per constructed block."""
+        path = getattr(Config, "TEMPORAL_GATE_LOG_FILE", "")
+        if not path:
+            return
+        row = {
+            "system": "samem",
+            "question_id": self._construction_question_id,
+            "user_id": getattr(self, "_construction_user_id", None),
+            "session_id": self._construction_session_id,
+            "block_id": self._construction_block_id,
+            "stage": "temporal_gate",
+            "temporal_gate_on": bool(gate_on),
+            "temporal_gate_reason": str(reason),
+            "temporal_tool_called": bool(temporal_tool_called),
+            "pass1_tool_followup": bool(pass1_tool_followup),
+            "provider_usage_available": False,
+            "usage_source": "local_gate_no_llm",
+        }
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
     @staticmethod
     def _is_transient_error(error: Exception) -> bool:
         status = getattr(error, "status_code", None)
@@ -1216,7 +1258,15 @@ class LLMWorker:
         except Exception:
             return [0.0] * self.embedding_fallback_dims
 
-    def chat_completion(self, prompt, note="Completion", json_mode=False, extra=None, enable_functions=False):
+    def chat_completion(
+        self,
+        prompt,
+        note="Completion",
+        json_mode=False,
+        extra=None,
+        enable_functions=False,
+        tool_choice_override=None,
+    ):
         """
         Call LLM with optional function calling support.
 
@@ -1255,7 +1305,7 @@ class LLMWorker:
                     "type": "function",
                     "function": TEMPORAL_RESOLUTION_FUNCTION_SCHEMA
                 }]
-                kwargs["tool_choice"] = "auto"
+                kwargs["tool_choice"] = tool_choice_override or "auto"
 
             call_start = time.perf_counter()
             resp = self._chat_with_retries(kwargs)
@@ -1271,6 +1321,7 @@ class LLMWorker:
 
             # Handle function calling
             if enable_functions and resp.choices[0].message.tool_calls:
+                self._temporal_tool_called = True
                 # Execute function calls
                 tool_calls = resp.choices[0].message.tool_calls
                 messages.append(resp.choices[0].message)
@@ -1292,6 +1343,7 @@ class LLMWorker:
                 kwargs["messages"] = messages
                 kwargs.pop("tools", None)
                 kwargs.pop("tool_choice", None)
+                self._pass1_tool_followup = True
                 followup_start = time.perf_counter()
                 resp = self._chat_with_retries(kwargs)
                 self._log_construction_call(

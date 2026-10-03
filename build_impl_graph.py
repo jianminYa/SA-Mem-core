@@ -18,11 +18,41 @@ from graph_storage import (
 
 
 _RELATIVE_TEMPORAL_RE = re.compile(
-    r"\b(?:yesterday|today|last\s+(?:week|month|year|monday|tuesday|wednesday|"
-    r"thursday|friday|saturday|sunday|weekend)|this\s+(?:morning|afternoon|evening|"
-    r"tonight)|two\s+months?\s+ago|a\s+month\s+ago|last\s+night)\b",
+    r"(?:"
+    r"\b(?:today|yesterday|tomorrow|tonight|now|recently|lately|currently|"
+    r"presently|previously|earlier|later|soon|the\s+other\s+day)\b"
+    r"|\b(?:this|last|next|previous|prior|following|upcoming)\s+"
+    r"(?:week|weekend|month|year|morning|afternoon|evening|night|day|"
+    r"monday|tuesday|wednesday|thursday|friday|saturday|sunday|quarter|"
+    r"season|summer|spring|fall|winter)\b"
+    r"|\b(?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|"
+    r"\d+)\s+(?:day|days|week|weeks|month|months|year|years)\s+"
+    r"(?:ago|from\s+now|before|later)\b"
+    r"|\b(?:in|within|by)\s+(?:a|an|one|two|three|four|five|six|seven|"
+    r"eight|nine|ten|\d+)\s+(?:day|days|week|weeks|month|months|year|years)\b"
+    r"|\b(?:earlier|later)\s+(?:today|this\s+week|this\s+month|this\s+year)\b"
+    r")",
     re.IGNORECASE,
 )
+
+
+def needs_temporal_tool(block_text: str) -> bool:
+    """Return whether a raw block should retain B0 temporal tool calling.
+
+    This is deliberately a high-recall lexical gate.  A false positive only
+    forfeits a possible token saving; a false negative could change temporal
+    semantics.  The function is local-only and never sends block text to an
+    LLM or changes the Pass1/Pass2 schemas.
+    """
+    return bool(_RELATIVE_TEMPORAL_RE.search(str(block_text or "")))
+
+
+def temporal_gate_decision(block_text: str) -> Tuple[bool, str]:
+    """Return the B2 gate decision and an auditable local reason."""
+    match = _RELATIVE_TEMPORAL_RE.search(str(block_text or ""))
+    if match:
+        return True, f"relative_temporal_expression:{match.group(0)}"
+    return False, "no_relative_temporal_expression_detected"
 
 
 def _mx():
@@ -397,9 +427,28 @@ class TopicClusterManager:
             original_ps1_prompt = (
                 mx.Config.PROMPT_DIALOG_EXTRACT.replace("{text}", content_str)
             )
+            b2_temporal_gate = bool(
+                getattr(mx.Config, "ENABLE_TEMPORAL_GATE_B2", False)
+            )
             local_temporal = bool(
                 getattr(mx.Config, "ENABLE_LOCAL_TEMPORAL_RESOLUTION", False)
-            )
+            ) and not b2_temporal_gate
+
+            # B2 keeps the original prompt and output schema.  Its only
+            # behavior change is the local decision to force tool_choice=none
+            # for blocks with no detected relative temporal expression.
+            gate_on = True
+            gate_reason = "b2_disabled_original_path"
+            tool_choice_override = None
+            if b2_temporal_gate:
+                gate_on, gate_reason = temporal_gate_decision(content_str)
+                tool_choice_override = None if gate_on else "none"
+
+            self.worker._temporal_gate_on = gate_on if b2_temporal_gate else None
+            self.worker._temporal_gate_reason = gate_reason if b2_temporal_gate else None
+            self.worker._temporal_tool_called = False
+            self.worker._pass1_tool_followup = False
+
             ps1_prompt = (
                 mx.Config.PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL
                 if local_temporal
@@ -410,9 +459,18 @@ class TopicClusterManager:
                 ps1_prompt,
                 note=f"{prefix}_NotePS1_Extract",
                 json_mode=True,
-                enable_functions=not local_temporal,
+                enable_functions=(True if b2_temporal_gate else not local_temporal),
+                tool_choice_override=tool_choice_override,
                 extra={"prompt_tokens_est": self.worker.count_tokens(ps1_prompt), "stage": "build"},
             )
+
+            if b2_temporal_gate:
+                self.worker._log_temporal_gate(
+                    gate_on=gate_on,
+                    reason=gate_reason,
+                    temporal_tool_called=self.worker._temporal_tool_called,
+                    pass1_tool_followup=self.worker._pass1_tool_followup,
+                )
 
             # 🔍 [DEBUG FIX] Detect empty response and log warning
             if not ps1_raw or not str(ps1_raw).strip():
