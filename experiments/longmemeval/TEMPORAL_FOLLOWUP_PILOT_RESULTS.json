@@ -1,0 +1,4514 @@
+{
+  "pilot_ids": [
+    "94f70d80",
+    "1d4da289",
+    "d682f1a2",
+    "41698283",
+    "gpt4_468eb064",
+    "gpt4_b5700ca0",
+    "0a34ad58",
+    "gpt4_f420262d"
+  ],
+  "questions": [
+    {
+      "question_id": "94f70d80",
+      "question_type": "single-session-user",
+      "b0": {
+        "history": {
+          "sessions": 49,
+          "messages": 510,
+          "characters": 488765,
+          "estimated_tokens": 102288
+        },
+        "memory_units": 129,
+        "construction": {
+          "rows": 717,
+          "llm_calls": 717,
+          "input_tokens": 777974,
+          "output_tokens": 88084,
+          "total_tokens": 866058,
+          "wall_time_sec": 2082.1627199999994,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 333,
+              "input_tokens": 206764,
+              "output_tokens": 570,
+              "total_tokens": 207334
+            },
+            "pass1_extract": {
+              "calls": 129,
+              "input_tokens": 226437,
+              "output_tokens": 14769,
+              "total_tokens": 241206
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 129,
+              "input_tokens": 243815,
+              "output_tokens": 24285,
+              "total_tokens": 268100
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 126,
+              "input_tokens": 100958,
+              "output_tokens": 48460,
+              "total_tokens": 149418
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.45464985113145134,
+          "gold_block_id": 118,
+          "ranking_size": 129,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      },
+      "b1": {
+        "history": {
+          "sessions": 49,
+          "messages": 510,
+          "characters": 488765,
+          "estimated_tokens": 102288
+        },
+        "memory_units": 128,
+        "construction": {
+          "rows": 708,
+          "llm_calls": 648,
+          "input_tokens": 592493,
+          "output_tokens": 101934,
+          "total_tokens": 694427,
+          "wall_time_sec": 2371.1671309999965,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 2,
+          "fallback_event_rows": 58,
+          "fallback_followup_calls": 29,
+          "breakdown": {
+            "split_check": {
+              "calls": 334,
+              "input_tokens": 206788,
+              "output_tokens": 568,
+              "total_tokens": 207356
+            },
+            "pass1_extract": {
+              "calls": 157,
+              "input_tokens": 216440,
+              "output_tokens": 34453,
+              "total_tokens": 250893
+            },
+            "temporal_local_resolve": {
+              "calls": 2,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 29,
+              "input_tokens": 61803,
+              "output_tokens": 5688,
+              "total_tokens": 67491
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 107462,
+              "output_tokens": 61225,
+              "total_tokens": 168687
+            }
+          },
+          "fallback_blocks": 29
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.46034870937639105,
+          "gold_block_id": 117,
+          "ranking_size": 128,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": true
+      }
+    },
+    {
+      "question_id": "1d4da289",
+      "question_type": "single-session-assistant",
+      "b0": {
+        "history": {
+          "sessions": 55,
+          "messages": 506,
+          "characters": 505310,
+          "estimated_tokens": 104039
+        },
+        "memory_units": 141,
+        "construction": {
+          "rows": 735,
+          "llm_calls": 735,
+          "input_tokens": 806859,
+          "output_tokens": 99908,
+          "total_tokens": 906767,
+          "wall_time_sec": 2312.639944000002,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 312,
+              "input_tokens": 194739,
+              "output_tokens": 567,
+              "total_tokens": 195306
+            },
+            "pass1_extract": {
+              "calls": 141,
+              "input_tokens": 239068,
+              "output_tokens": 17170,
+              "total_tokens": 256238
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 141,
+              "input_tokens": 259964,
+              "output_tokens": 27111,
+              "total_tokens": 287075
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 141,
+              "input_tokens": 113088,
+              "output_tokens": 55060,
+              "total_tokens": 168148
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.42175587065577447,
+          "gold_block_id": 37,
+          "ranking_size": 141,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      },
+      "b1": {
+        "history": {
+          "sessions": 55,
+          "messages": 506,
+          "characters": 505310,
+          "estimated_tokens": 104039
+        },
+        "memory_units": 140,
+        "construction": {
+          "rows": 696,
+          "llm_calls": 642,
+          "input_tokens": 580247,
+          "output_tokens": 109555,
+          "total_tokens": 689802,
+          "wall_time_sec": 1933.3270709999995,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 4,
+          "fallback_event_rows": 50,
+          "fallback_followup_calls": 25,
+          "breakdown": {
+            "split_check": {
+              "calls": 312,
+              "input_tokens": 194739,
+              "output_tokens": 561,
+              "total_tokens": 195300
+            },
+            "pass1_extract": {
+              "calls": 165,
+              "input_tokens": 214937,
+              "output_tokens": 37001,
+              "total_tokens": 251938
+            },
+            "temporal_local_resolve": {
+              "calls": 4,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 25,
+              "input_tokens": 53539,
+              "output_tokens": 5064,
+              "total_tokens": 58603
+            },
+            "pass2_classify": {
+              "calls": 140,
+              "input_tokens": 117032,
+              "output_tokens": 66929,
+              "total_tokens": 183961
+            }
+          },
+          "fallback_blocks": 25
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.4161883410055149,
+          "gold_block_id": 36,
+          "ranking_size": 140,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    },
+    {
+      "question_id": "d682f1a2",
+      "question_type": "multi-session",
+      "b0": {
+        "history": {
+          "sessions": 47,
+          "messages": 469,
+          "characters": 482671,
+          "estimated_tokens": 102363
+        },
+        "memory_units": 138,
+        "construction": {
+          "rows": 699,
+          "llm_calls": 699,
+          "input_tokens": 775855,
+          "output_tokens": 100177,
+          "total_tokens": 876032,
+          "wall_time_sec": 2049.96765,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 289,
+              "input_tokens": 178648,
+              "output_tokens": 559,
+              "total_tokens": 179207
+            },
+            "pass1_extract": {
+              "calls": 138,
+              "input_tokens": 234178,
+              "output_tokens": 17206,
+              "total_tokens": 251384
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 137,
+              "input_tokens": 253875,
+              "output_tokens": 26612,
+              "total_tokens": 280487
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 135,
+              "input_tokens": 109154,
+              "output_tokens": 55800,
+              "total_tokens": 164954
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.38562757610175125,
+          "gold_block_id": 87,
+          "ranking_size": 138,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": true
+      },
+      "b1": {
+        "history": {
+          "sessions": 47,
+          "messages": 469,
+          "characters": 482671,
+          "estimated_tokens": 102363
+        },
+        "memory_units": 141,
+        "construction": {
+          "rows": 684,
+          "llm_calls": 624,
+          "input_tokens": 567197,
+          "output_tokens": 122167,
+          "total_tokens": 689364,
+          "wall_time_sec": 2134.280307,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 4,
+          "fallback_event_rows": 56,
+          "fallback_followup_calls": 28,
+          "breakdown": {
+            "split_check": {
+              "calls": 286,
+              "input_tokens": 176343,
+              "output_tokens": 565,
+              "total_tokens": 176908
+            },
+            "pass1_extract": {
+              "calls": 169,
+              "input_tokens": 214165,
+              "output_tokens": 40500,
+              "total_tokens": 254665
+            },
+            "temporal_local_resolve": {
+              "calls": 4,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 28,
+              "input_tokens": 56998,
+              "output_tokens": 5760,
+              "total_tokens": 62758
+            },
+            "pass2_classify": {
+              "calls": 141,
+              "input_tokens": 119691,
+              "output_tokens": 75342,
+              "total_tokens": 195033
+            }
+          },
+          "fallback_blocks": 28
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.36949995701519045,
+          "gold_block_id": 90,
+          "ranking_size": 141,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    },
+    {
+      "question_id": "41698283",
+      "question_type": "knowledge-update",
+      "b0": {
+        "history": {
+          "sessions": 45,
+          "messages": 476,
+          "characters": 475176,
+          "estimated_tokens": 102271
+        },
+        "memory_units": 135,
+        "construction": {
+          "rows": 699,
+          "llm_calls": 699,
+          "input_tokens": 781778,
+          "output_tokens": 96010,
+          "total_tokens": 877788,
+          "wall_time_sec": 1984.21807,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 297,
+              "input_tokens": 194688,
+              "output_tokens": 561,
+              "total_tokens": 195249
+            },
+            "pass1_extract": {
+              "calls": 135,
+              "input_tokens": 231444,
+              "output_tokens": 15529,
+              "total_tokens": 246973
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 135,
+              "input_tokens": 249686,
+              "output_tokens": 25644,
+              "total_tokens": 275330
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 132,
+              "input_tokens": 105960,
+              "output_tokens": 54276,
+              "total_tokens": 160236
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.5015635499621494,
+          "gold_block_id": 134,
+          "ranking_size": 125,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      },
+      "b1": {
+        "history": {
+          "sessions": 45,
+          "messages": 476,
+          "characters": 475176,
+          "estimated_tokens": 102271
+        },
+        "memory_units": 138,
+        "construction": {
+          "rows": 673,
+          "llm_calls": 619,
+          "input_tokens": 575300,
+          "output_tokens": 115389,
+          "total_tokens": 690689,
+          "wall_time_sec": 2458.522933000003,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 4,
+          "fallback_event_rows": 50,
+          "fallback_followup_calls": 25,
+          "breakdown": {
+            "split_check": {
+              "calls": 294,
+              "input_tokens": 192277,
+              "output_tokens": 567,
+              "total_tokens": 192844
+            },
+            "pass1_extract": {
+              "calls": 163,
+              "input_tokens": 212344,
+              "output_tokens": 37385,
+              "total_tokens": 249729
+            },
+            "temporal_local_resolve": {
+              "calls": 4,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 25,
+              "input_tokens": 54443,
+              "output_tokens": 4931,
+              "total_tokens": 59374
+            },
+            "pass2_classify": {
+              "calls": 137,
+              "input_tokens": 116236,
+              "output_tokens": 72506,
+              "total_tokens": 188742
+            }
+          },
+          "fallback_blocks": 25
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.4845154934233117,
+          "gold_block_id": 137,
+          "ranking_size": 128,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    },
+    {
+      "question_id": "gpt4_468eb064",
+      "question_type": "temporal-reasoning",
+      "b0": {
+        "history": {
+          "sessions": 48,
+          "messages": 460,
+          "characters": 490774,
+          "estimated_tokens": 101372
+        },
+        "memory_units": 134,
+        "construction": {
+          "rows": 679,
+          "llm_calls": 679,
+          "input_tokens": 757597,
+          "output_tokens": 91305,
+          "total_tokens": 848902,
+          "wall_time_sec": 2405.0410880000004,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 284,
+              "input_tokens": 183617,
+              "output_tokens": 539,
+              "total_tokens": 184156
+            },
+            "pass1_extract": {
+              "calls": 134,
+              "input_tokens": 229426,
+              "output_tokens": 14839,
+              "total_tokens": 244265
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 133,
+              "input_tokens": 241845,
+              "output_tokens": 25063,
+              "total_tokens": 266908
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 102709,
+              "output_tokens": 50864,
+              "total_tokens": 153573
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": false,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 4,
+          "gold_score": 0.26411131996734144,
+          "gold_block_id": 38,
+          "ranking_size": 86,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      },
+      "b1": {
+        "history": {
+          "sessions": 48,
+          "messages": 460,
+          "characters": 490774,
+          "estimated_tokens": 101372
+        },
+        "memory_units": 131,
+        "construction": {
+          "rows": 671,
+          "llm_calls": 606,
+          "input_tokens": 562033,
+          "output_tokens": 108461,
+          "total_tokens": 670494,
+          "wall_time_sec": 1873.390453000001,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 7,
+          "fallback_event_rows": 58,
+          "fallback_followup_calls": 29,
+          "breakdown": {
+            "split_check": {
+              "calls": 287,
+              "input_tokens": 186691,
+              "output_tokens": 533,
+              "total_tokens": 187224
+            },
+            "pass1_extract": {
+              "calls": 160,
+              "input_tokens": 210088,
+              "output_tokens": 35875,
+              "total_tokens": 245963
+            },
+            "temporal_local_resolve": {
+              "calls": 7,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 29,
+              "input_tokens": 55375,
+              "output_tokens": 5460,
+              "total_tokens": 60835
+            },
+            "pass2_classify": {
+              "calls": 130,
+              "input_tokens": 109879,
+              "output_tokens": 66593,
+              "total_tokens": 176472
+            }
+          },
+          "fallback_blocks": 29
+        },
+        "retrieval": {
+          "hit_at_1": false,
+          "hit_at_5": false,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 7,
+          "gold_score": 0.25851145754382854,
+          "gold_block_id": 37,
+          "ranking_size": 87,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    },
+    {
+      "question_id": "gpt4_b5700ca0",
+      "question_type": "temporal-reasoning",
+      "b0": {
+        "history": {
+          "sessions": 50,
+          "messages": 500,
+          "characters": 495507,
+          "estimated_tokens": 102646
+        },
+        "memory_units": 129,
+        "construction": {
+          "rows": 709,
+          "llm_calls": 709,
+          "input_tokens": 776291,
+          "output_tokens": 100598,
+          "total_tokens": 876889,
+          "wall_time_sec": 1991.6855990000006,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 323,
+              "input_tokens": 196895,
+              "output_tokens": 560,
+              "total_tokens": 197455
+            },
+            "pass1_extract": {
+              "calls": 129,
+              "input_tokens": 226665,
+              "output_tokens": 15997,
+              "total_tokens": 242662
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 129,
+              "input_tokens": 247294,
+              "output_tokens": 27729,
+              "total_tokens": 275023
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 105437,
+              "output_tokens": 56312,
+              "total_tokens": 161749
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.30137738255853097,
+          "gold_block_id": 78,
+          "ranking_size": 59,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      },
+      "b1": {
+        "history": {
+          "sessions": 50,
+          "messages": 500,
+          "characters": 495507,
+          "estimated_tokens": 102646
+        },
+        "memory_units": 127,
+        "construction": {
+          "rows": 735,
+          "llm_calls": 651,
+          "input_tokens": 613202,
+          "output_tokens": 117652,
+          "total_tokens": 730854,
+          "wall_time_sec": 1964.8626409999997,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 12,
+          "fallback_event_rows": 72,
+          "fallback_followup_calls": 36,
+          "breakdown": {
+            "split_check": {
+              "calls": 325,
+              "input_tokens": 198587,
+              "output_tokens": 556,
+              "total_tokens": 199143
+            },
+            "pass1_extract": {
+              "calls": 163,
+              "input_tokens": 227598,
+              "output_tokens": 39865,
+              "total_tokens": 267463
+            },
+            "temporal_local_resolve": {
+              "calls": 12,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 36,
+              "input_tokens": 76824,
+              "output_tokens": 7692,
+              "total_tokens": 84516
+            },
+            "pass2_classify": {
+              "calls": 127,
+              "input_tokens": 110193,
+              "output_tokens": 69539,
+              "total_tokens": 179732
+            }
+          },
+          "fallback_blocks": 36
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.31555221116197646,
+          "gold_block_id": 78,
+          "ranking_size": 57,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    },
+    {
+      "question_id": "0a34ad58",
+      "question_type": "single-session-preference",
+      "b0": {
+        "history": {
+          "sessions": 42,
+          "messages": 485,
+          "characters": 496786,
+          "estimated_tokens": 102881
+        },
+        "memory_units": 129,
+        "construction": {
+          "rows": 700,
+          "llm_calls": 700,
+          "input_tokens": 776555,
+          "output_tokens": 90386,
+          "total_tokens": 866941,
+          "wall_time_sec": 1914.88256,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 314,
+              "input_tokens": 201910,
+              "output_tokens": 574,
+              "total_tokens": 202484
+            },
+            "pass1_extract": {
+              "calls": 129,
+              "input_tokens": 226705,
+              "output_tokens": 15414,
+              "total_tokens": 242119
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 129,
+              "input_tokens": 245712,
+              "output_tokens": 24167,
+              "total_tokens": 269879
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 102228,
+              "output_tokens": 50231,
+              "total_tokens": 152459
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.5716898588768838,
+          "gold_block_id": 36,
+          "ranking_size": 129,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      },
+      "b1": {
+        "history": {
+          "sessions": 42,
+          "messages": 485,
+          "characters": 496786,
+          "estimated_tokens": 102881
+        },
+        "memory_units": 128,
+        "construction": {
+          "rows": 703,
+          "llm_calls": 631,
+          "input_tokens": 589617,
+          "output_tokens": 105623,
+          "total_tokens": 695240,
+          "wall_time_sec": 1875.0834250000012,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 12,
+          "fallback_event_rows": 60,
+          "fallback_followup_calls": 30,
+          "breakdown": {
+            "split_check": {
+              "calls": 315,
+              "input_tokens": 202998,
+              "output_tokens": 572,
+              "total_tokens": 203570
+            },
+            "pass1_extract": {
+              "calls": 158,
+              "input_tokens": 216609,
+              "output_tokens": 34808,
+              "total_tokens": 251417
+            },
+            "temporal_local_resolve": {
+              "calls": 12,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 30,
+              "input_tokens": 62273,
+              "output_tokens": 5440,
+              "total_tokens": 67713
+            },
+            "pass2_classify": {
+              "calls": 128,
+              "input_tokens": 107737,
+              "output_tokens": 64803,
+              "total_tokens": 172540
+            }
+          },
+          "fallback_blocks": 30
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.573161612732061,
+          "gold_block_id": 35,
+          "ranking_size": 128,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    },
+    {
+      "question_id": "gpt4_f420262d",
+      "question_type": "temporal-reasoning",
+      "b0": {
+        "history": {
+          "sessions": 43,
+          "messages": 454,
+          "characters": 488808,
+          "estimated_tokens": 103624
+        },
+        "memory_units": 134,
+        "construction": {
+          "rows": 680,
+          "llm_calls": 680,
+          "input_tokens": 774320,
+          "output_tokens": 88963,
+          "total_tokens": 863283,
+          "wall_time_sec": 1823.9761059999987,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 0,
+          "fallback_event_rows": 0,
+          "fallback_followup_calls": 0,
+          "breakdown": {
+            "split_check": {
+              "calls": 279,
+              "input_tokens": 187735,
+              "output_tokens": 543,
+              "total_tokens": 188278
+            },
+            "pass1_extract": {
+              "calls": 134,
+              "input_tokens": 231600,
+              "output_tokens": 15225,
+              "total_tokens": 246825
+            },
+            "temporal_local_resolve": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 134,
+              "input_tokens": 249481,
+              "output_tokens": 24392,
+              "total_tokens": 273873
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass2_classify": {
+              "calls": 133,
+              "input_tokens": 105504,
+              "output_tokens": 48803,
+              "total_tokens": 154307
+            }
+          },
+          "fallback_blocks": 0
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.41818141351748844,
+          "gold_block_id": 65,
+          "ranking_size": 134,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": true
+      },
+      "b1": {
+        "history": {
+          "sessions": 43,
+          "messages": 454,
+          "characters": 488808,
+          "estimated_tokens": 103624
+        },
+        "memory_units": 136,
+        "construction": {
+          "rows": 670,
+          "llm_calls": 603,
+          "input_tokens": 566089,
+          "output_tokens": 104106,
+          "total_tokens": 670195,
+          "wall_time_sec": 1808.0126139999988,
+          "retried_calls": 0,
+          "failed_llm_calls": 0,
+          "local_resolve_successes": 13,
+          "fallback_event_rows": 54,
+          "fallback_followup_calls": 27,
+          "breakdown": {
+            "split_check": {
+              "calls": 277,
+              "input_tokens": 186383,
+              "output_tokens": 547,
+              "total_tokens": 186930
+            },
+            "pass1_extract": {
+              "calls": 163,
+              "input_tokens": 212588,
+              "output_tokens": 35299,
+              "total_tokens": 247887
+            },
+            "temporal_local_resolve": {
+              "calls": 13,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup": {
+              "calls": 0,
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "pass1_tool_followup_fallback": {
+              "calls": 27,
+              "input_tokens": 53613,
+              "output_tokens": 4529,
+              "total_tokens": 58142
+            },
+            "pass2_classify": {
+              "calls": 136,
+              "input_tokens": 113505,
+              "output_tokens": 63731,
+              "total_tokens": 177236
+            }
+          },
+          "fallback_blocks": 27
+        },
+        "retrieval": {
+          "hit_at_1": true,
+          "hit_at_5": true,
+          "hit_at_10": true,
+          "hit_at_20": true,
+          "gold_rank": 1,
+          "gold_score": 0.42691235934396277,
+          "gold_block_id": 66,
+          "ranking_size": 136,
+          "gold_preserved": true,
+          "gold_in_top20": true,
+          "gold_in_top10": true
+        },
+        "qa_correct": false
+      }
+    }
+  ],
+  "aggregate": {
+    "b0_original": {
+      "questions": 8,
+      "history_tokens": 821484,
+      "history_messages": 3860,
+      "memory_units": 1069,
+      "construction_input_tokens": 6227229,
+      "construction_output_tokens": 755431,
+      "construction_total_tokens": 6982660,
+      "construction_llm_calls": 5618,
+      "construction_wall_time_sec": 16564.573737,
+      "qa_correct": 2,
+      "qa_accuracy": 0.25,
+      "hit_at_1": 0.875,
+      "hit_at_5": 1.0,
+      "hit_at_10": 1.0,
+      "hit_at_20": 1.0,
+      "gold_rank_mean": 1.375,
+      "gold_rank_missing": 0,
+      "fallback_blocks": 0,
+      "fallback_event_rows": 0,
+      "fallback_followup_calls": 0,
+      "local_resolve_successes": 0,
+      "retried_calls": 0,
+      "failed_llm_calls": 0,
+      "stage_breakdown": {
+        "split_check": {
+          "calls": 2431,
+          "input_tokens": 1544996,
+          "output_tokens": 4473,
+          "total_tokens": 1549469
+        },
+        "pass1_extract": {
+          "calls": 1069,
+          "input_tokens": 1845523,
+          "output_tokens": 126149,
+          "total_tokens": 1971672
+        },
+        "temporal_local_resolve": {
+          "calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "pass1_tool_followup": {
+          "calls": 1067,
+          "input_tokens": 1991672,
+          "output_tokens": 205003,
+          "total_tokens": 2196675
+        },
+        "pass1_tool_followup_fallback": {
+          "calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "pass2_classify": {
+          "calls": 1051,
+          "input_tokens": 845038,
+          "output_tokens": 419806,
+          "total_tokens": 1264844
+        }
+      }
+    },
+    "b1_optimized": {
+      "questions": 8,
+      "history_tokens": 821484,
+      "history_messages": 3860,
+      "memory_units": 1069,
+      "construction_input_tokens": 4646178,
+      "construction_output_tokens": 884887,
+      "construction_total_tokens": 5531065,
+      "construction_llm_calls": 5024,
+      "construction_wall_time_sec": 16418.646575,
+      "qa_correct": 1,
+      "qa_accuracy": 0.125,
+      "hit_at_1": 0.875,
+      "hit_at_5": 0.875,
+      "hit_at_10": 1.0,
+      "hit_at_20": 1.0,
+      "gold_rank_mean": 1.75,
+      "gold_rank_missing": 0,
+      "fallback_blocks": 229,
+      "fallback_event_rows": 458,
+      "fallback_followup_calls": 229,
+      "local_resolve_successes": 58,
+      "retried_calls": 0,
+      "failed_llm_calls": 0,
+      "stage_breakdown": {
+        "split_check": {
+          "calls": 2430,
+          "input_tokens": 1544806,
+          "output_tokens": 4469,
+          "total_tokens": 1549275
+        },
+        "pass1_extract": {
+          "calls": 1298,
+          "input_tokens": 1724769,
+          "output_tokens": 295186,
+          "total_tokens": 2019955
+        },
+        "temporal_local_resolve": {
+          "calls": 58,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "pass1_tool_followup": {
+          "calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "pass1_tool_followup_fallback": {
+          "calls": 229,
+          "input_tokens": 474868,
+          "output_tokens": 44564,
+          "total_tokens": 519432
+        },
+        "pass2_classify": {
+          "calls": 1067,
+          "input_tokens": 901735,
+          "output_tokens": 540668,
+          "total_tokens": 1442403
+        }
+      }
+    },
+    "token_saving": {
+      "absolute": 1451595,
+      "fraction": 0.20788567680511438,
+      "ratio_b1_over_b0": 0.7921143231948856
+    },
+    "temporal": {
+      "questions_with_candidates": 8,
+      "candidate_blocks": 130,
+      "paired_events": 84,
+      "same_time_metadata": 73,
+      "different_time_metadata": 11,
+      "missing_event_pairs": 24,
+      "by_question": {
+        "94f70d80": {
+          "candidate_blocks": 10,
+          "paired_events": 3,
+          "same_time_metadata": 3,
+          "different_time_metadata": 0,
+          "missing_event_pairs": 1,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "34deeb0c_2",
+                "start_idx": 1,
+                "end_idx": 10
+              },
+              "expressions": [
+                "Last weekend"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "3d17c489_1",
+                "start_idx": 5,
+                "end_idx": 12
+              },
+              "expressions": [
+                "Today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "4e77dbbe_5",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-24",
+                    "observedTime": "2023-05-24T13:01:00",
+                    "startTime": "2023-05-17"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-24",
+                    "observedTime": "2023-05-24T13:01:00",
+                    "startTime": "2023-05-17"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user spent $500 on new feeding troughs last week.",
+                  "optimized": "The speaker spent $500 on new feeding troughs last week."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "58ef5080",
+                "start_idx": 5,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last Saturday"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 1,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "9a59023e_1",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-26",
+                    "observedTime": "2023-05-26T23:04:00",
+                    "startTime": "2023-05-26"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-26",
+                    "observedTime": "2023-05-26T23:04:00",
+                    "startTime": "2023-05-26"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user helped their friend Emma with her organic produce stall at the Farmers' Market at the community center last weekend.",
+                  "optimized": "The user helped their friend Emma with her organic produce stall at the Farmers' Market at the community center last weekend."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_PCqCVmR_18",
+                "start_idx": 1,
+                "end_idx": 3
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_WQr7EZT_0",
+                "start_idx": 5,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last night"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-20T12:16:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-20T12:16:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user mentioned that last night (2023-05-20) their bed sheets smelled like someone they were in love with.",
+                  "optimized": "The user mentioned that last night (2023-05-20) their bed sheets smelled like someone they were in love with."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_ePjOvWS_0",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "this evening"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "ultrachat_416769",
+                "start_idx": 1,
+                "end_idx": 10
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "ultrachat_476942",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        },
+        "1d4da289": {
+          "candidate_blocks": 15,
+          "paired_events": 9,
+          "same_time_metadata": 9,
+          "different_time_metadata": 0,
+          "missing_event_pairs": 8,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "1e01dbcc_2",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-26",
+                    "observedTime": "2023-05-26T12:58:00",
+                    "startTime": "2023-05-26"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-26",
+                    "observedTime": "2023-05-26T12:58:00",
+                    "startTime": "2023-05-26"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user started attending a music meetup group today.",
+                  "optimized": "The speaker is thinking of learning some new songs to play at a music meetup group they started attending today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "252715f8_4",
+                "start_idx": 1,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last night"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "33baaaab_6",
+                "start_idx": 1,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "b75f475e_2",
+                "start_idx": 9,
+                "end_idx": 12
+              },
+              "expressions": [
+                "this afternoon"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "bf85791d",
+                "start_idx": 5,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-30T12:36:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-30T12:36:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel just turned 30 last month, which has been a big milestone for him.",
+                  "optimized": "Williams Daniel just turned 30 last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "c9e45290",
+                "start_idx": 3,
+                "end_idx": 6
+              },
+              "expressions": [
+                "a month ago"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-29",
+                    "observedTime": "2023-05-29T12:26:00",
+                    "startTime": "2023-05-29"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-29",
+                    "observedTime": "2023-05-29T12:26:00",
+                    "startTime": "2023-05-29"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user saw an ad for a Black Friday sale at H&M about a month ago, which is when they started their shopping spree.",
+                  "optimized": "The user saw an ad for a Black Friday sale at H&M about a month ago."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "e9c1e2a8_1",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-21",
+                    "observedTime": "2023-05-21T23:26:00",
+                    "startTime": "2023-05-21"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-21",
+                    "observedTime": "2023-05-21T23:26:00",
+                    "startTime": "2023-05-21"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user just bought a new yoga mat online today.",
+                  "optimized": "The speaker just bought a new yoga mat online today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "efaec12f",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last Saturday"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-22T02:01:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-22T02:01:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User just finished their F-16 model last Saturday.",
+                  "optimized": "User just finished their F-16 model last Saturday."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "f01df2d2_1",
+                "start_idx": 9,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last Sunday",
+                "last week"
+              ],
+              "baseline_event_count": 2,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-21",
+                    "observedTime": "2023-05-26T22:21:00",
+                    "startTime": "2023-05-21"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-21",
+                    "observedTime": "2023-05-26T22:21:00",
+                    "startTime": "2023-05-21"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User has already done some meal prep last Sunday.",
+                  "optimized": "User has already done some meal prep last Sunday."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_M1hMVxm_13",
+                "start_idx": 1,
+                "end_idx": 1
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 6,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 6,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_eVmxjQZ_0",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "Today",
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "ultrachat_203284",
+                "start_idx": 9,
+                "end_idx": 10
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-26",
+                    "observedTime": "2023-05-26T10:13:00",
+                    "startTime": "2023-05-26"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-26",
+                    "observedTime": "2023-05-26T10:13:00",
+                    "startTime": "2023-05-26"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The legacy of Puritanism continues to influence modern American society in various ways as of today.",
+                  "optimized": "The legacy of Puritanism continues to influence modern American society in various ways as of today."
+                }
+              ]
+            }
+          ]
+        },
+        "d682f1a2": {
+          "candidate_blocks": 13,
+          "paired_events": 7,
+          "same_time_metadata": 6,
+          "different_time_metadata": 1,
+          "missing_event_pairs": 2,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "0aa8f6bf",
+                "start_idx": 5,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-27T07:22:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-27T07:22:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user used their old backpack for a 5-day trip to California last month.",
+                  "optimized": "The user used their old backpack for a 5-day trip to California last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "48c4c76b",
+                "start_idx": 3,
+                "end_idx": 4
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "5201ff55_2",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "58335f60_2",
+                "start_idx": 7,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-28T23:04:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-28T23:04:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user was thinking about the community-supported agriculture (CSA) program they invested in last month.",
+                  "optimized": "I was thinking about the community-supported agriculture (CSA) program I invested in last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "7332a779_2",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 1,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "answer_c008e5df_1",
+                "start_idx": 1,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-22",
+                    "observedTime": "2023-05-22T01:26:00",
+                    "startTime": "2023-05-15"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-22",
+                    "observedTime": "2023-05-22T01:26:00",
+                    "startTime": "2023-05-15"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel had Domino's Pizza three times last week.",
+                  "optimized": "Williams Daniel had Domino's Pizza three times last week."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "be5ed2e3",
+                "start_idx": 3,
+                "end_idx": 4
+              },
+              "expressions": [
+                "last Sunday"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-14",
+                    "observedTime": "2023-05-21T20:56:00",
+                    "startTime": "2023-05-14"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-14",
+                    "observedTime": "2023-05-21T20:56:00",
+                    "startTime": "2023-05-14"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user rearranged their furniture last Sunday (2023-05-14) and it has made a big difference in their room's atmosphere.",
+                  "optimized": "The speaker rearranged their furniture last Sunday and it has made a big difference in their room's atmosphere."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "e30307d8_2",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-25T16:25:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-25T16:25:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel had a birthday last month.",
+                  "optimized": "The user had a birthday last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "e30307d8_2",
+                "start_idx": 12,
+                "end_idx": 12
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "f906baa7_2",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_E7VUcfj_0",
+                "start_idx": 7,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last year"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 0,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-05-27T06:56:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2022-12-31",
+                    "observedTime": "2023-05-27T06:56:00",
+                    "startTime": "2022-01-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user is interested in measuring overall health and wellbeing compared to last year.",
+                  "optimized": "The user is reflecting on their health compared to last year."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_zkklJJ2_0",
+                "start_idx": 9,
+                "end_idx": 10
+              },
+              "expressions": [
+                "Today",
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        },
+        "41698283": {
+          "candidate_blocks": 13,
+          "paired_events": 8,
+          "same_time_metadata": 7,
+          "different_time_metadata": 1,
+          "missing_event_pairs": 2,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "0e8ba03b_1",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last month",
+                "yesterday"
+              ],
+              "baseline_event_count": 2,
+              "optimized_event_count": 2,
+              "paired_events": 2,
+              "same_time_metadata": 2,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-07-23",
+                    "observedTime": "2023-07-24T06:03:00",
+                    "startTime": "2023-07-23"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "endTime": "2023-06-30",
+                    "observedTime": "2023-07-24T06:03:00",
+                    "startTime": "2023-06-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-07-23",
+                    "observedTime": "2023-07-24T06:03:00",
+                    "startTime": "2023-07-23"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "endTime": "2023-06-30",
+                    "observedTime": "2023-07-24T06:03:00",
+                    "startTime": "2023-06-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user launched their social media campaign to promote their blog yesterday.",
+                  "optimized": "I just launched my social media campaign to promote my blog yesterday."
+                },
+                {
+                  "baseline": "The user participated in a social media campaign for a new clothing brand that just launched in their city last month.",
+                  "optimized": "I participated in a social media campaign for a new clothing brand that just launched in my city last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "431ae25c",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-13",
+                    "observedTime": "2023-05-19T04:11:00",
+                    "startTime": "2023-05-13"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-13",
+                    "observedTime": "2023-05-19T04:11:00",
+                    "startTime": "2023-05-13"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user tried astrophotography for the first time last weekend.",
+                  "optimized": "The user tried astrophotography for the first time last weekend."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "47a2bd5a_1",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "631e4016",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "Unknown",
+                    "observedTime": "2023-07-27T08:50:00",
+                    "startTime": "2023-07-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "Unknown",
+                    "observedTime": "2023-07-27T08:50:00",
+                    "startTime": "2023-07-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel got a new backpack last week and it's been a lifesaver for his daily commute.",
+                  "optimized": "The speaker got a new backpack last week and it has been a lifesaver for their daily commute."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "631e4016",
+                "start_idx": 7,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-07-27",
+                    "observedTime": "2023-07-27T08:50:00",
+                    "startTime": "2023-07-27"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-07-27",
+                    "observedTime": "2023-07-27T08:50:00",
+                    "startTime": "2023-07-27"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel remembers cleaning out his old messenger bag last weekend.",
+                  "optimized": "Williams Daniel remembers cleaning out his old messenger bag last weekend."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "631e4016",
+                "start_idx": 11,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 0,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-07-27",
+                    "observedTime": "2023-07-27T08:50:00",
+                    "startTime": "2023-07-25"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-07-20",
+                    "observedTime": "2023-07-27T08:50:00",
+                    "startTime": "2023-07-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User is really loving their new backpack, which they got on Tuesday last week.",
+                  "optimized": "The speaker got a new backpack on Tuesday last week."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "9e9cb89f",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "Today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "a68db5db_1",
+                "start_idx": 7,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-02-18T02:10:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-02-18T02:10:00"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel has been meaning to follow up with the woman he met at the networking event last month.",
+                  "optimized": "Williams Daniel has been meaning to follow up with the woman he met at the networking event last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "answer_c7ddc051_2",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "bfa5961b_2",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-08-10",
+                    "observedTime": "2023-08-10T17:00:00",
+                    "startTime": "2023-08-10"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-08-10",
+                    "observedTime": "2023-08-10T17:00:00",
+                    "startTime": "2023-08-10"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel decided to upgrade his road bike's pedals to clipless pedals today.",
+                  "optimized": "Williams Daniel decided to upgrade his road bike's pedals to clipless pedals today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "f9d0bc67",
+                "start_idx": 11,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 1,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_FpaT130_0",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        },
+        "gpt4_468eb064": {
+          "candidate_blocks": 15,
+          "paired_events": 12,
+          "same_time_metadata": 11,
+          "different_time_metadata": 1,
+          "missing_event_pairs": 2,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "21ab8a2c_1",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-31",
+                    "observedTime": "2023-04-11T01:18:00",
+                    "startTime": "2023-03-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-31",
+                    "observedTime": "2023-04-11T01:18:00",
+                    "startTime": "2023-03-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel submitted his thesis proposal last month.",
+                  "optimized": "The person submitted their thesis proposal last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "4d4df0e0_1",
+                "start_idx": 7,
+                "end_idx": 8
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "4e77dbbe_6",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T14:49:00",
+                    "startTime": "2023-04-04"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T14:49:00",
+                    "startTime": "2023-04-04"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user spent around $500 on new feeding troughs for the cows last week.",
+                  "optimized": "User spent around $500 on new feeding troughs for the cows last week."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "5e2b7e01_1",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T21:54:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T21:54:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel recently got the new Spider-Man: No Way Home figures at the comic-con event last weekend.",
+                  "optimized": "Williams Daniel recently got the new Spider-Man: No Way Home figures at the comic-con event last weekend."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "5e2b7e01_1",
+                "start_idx": 7,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last month",
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 2,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-31",
+                    "observedTime": "2023-04-11T21:54:00",
+                    "startTime": "2023-03-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-31",
+                    "observedTime": "2023-04-11T21:54:00",
+                    "startTime": "2023-03-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User purchased 7 new albums in the last month.",
+                  "optimized": "User purchased 7 new albums in the last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "answer_9b09d95b_1",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last week",
+                "today"
+              ],
+              "baseline_event_count": 2,
+              "optimized_event_count": 2,
+              "paired_events": 2,
+              "same_time_metadata": 1,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T22:13:00",
+                    "startTime": "2023-04-04"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "endTime": "Unknown",
+                    "observedTime": "2023-04-11T22:13:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T22:13:00",
+                    "startTime": "2023-04-04"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T22:13:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel attended a digital marketing workshop last week.",
+                  "optimized": "I just attended a digital marketing workshop last week and the speaker, Rachel Lee, mentioned some interesting strategies."
+                },
+                {
+                  "baseline": "Williams Daniel had lunch with Emma today and she is now a potential collaborator for a project.",
+                  "optimized": "I catch up with Emma, a freelance writer, over lunch today and she's now a potential collaborator for a project I'm working on."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "c3023a45_1",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-08",
+                    "observedTime": "2023-04-11T04:47:00",
+                    "startTime": "2023-04-08"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-08",
+                    "observedTime": "2023-04-11T04:47:00",
+                    "startTime": "2023-04-08"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel had a great experience at a board game cafe last weekend and wants to try Azul.",
+                  "optimized": "Williams Daniel had a great experience at a board game cafe last weekend and wants to try Azul."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "c3023a45_1",
+                "start_idx": 7,
+                "end_idx": 10
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-04-11T04:47:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-04-11T04:47:00"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel has been meaning to buy the expansion pack for Ticket to Ride since he saw it at the game store near his house last month.",
+                  "optimized": "User has been meaning to buy the expansion pack for Ticket to Ride since they saw it at the game store near their house last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "dff89d9d_1",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T07:51:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T07:51:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel finally finished building a new coop for his chickens today.",
+                  "optimized": "Williams Daniel finally finished building a new coop for his chickens today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_0PLBHdX_15",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "Today",
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T10:02:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-11",
+                    "observedTime": "2023-04-11T10:02:00",
+                    "startTime": "2023-04-11"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Halit Kurt's phones never stopped ringing today from people expressing positive thoughts about him.",
+                  "optimized": "Halit Kurt's phones never stopped ringing today from people expressing positive thoughts about him."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_C2Qfdn8_0",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_wrwD6bG_0",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        },
+        "gpt4_b5700ca0": {
+          "candidate_blocks": 18,
+          "paired_events": 11,
+          "same_time_metadata": 8,
+          "different_time_metadata": 3,
+          "missing_event_pairs": 3,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "01dc2b54_2",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 0,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "Unknown",
+                    "observedTime": "2023-03-31T05:15:00",
+                    "startTime": "2023-03-31"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-03-31T05:15:00"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel is thrilled to have their sewing machine serviced, and it's working like new again today.",
+                  "optimized": "Williams Daniel is thrilled to have their sewing machine serviced, and it's working like new again today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "01dc2b54_2",
+                "start_idx": 7,
+                "end_idx": 12
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-31",
+                    "observedTime": "2023-03-31T05:15:00",
+                    "startTime": "2023-03-31"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-31",
+                    "observedTime": "2023-03-31T05:15:00",
+                    "startTime": "2023-03-31"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel is glad he got his sewing machine serviced, and it's working like new again today.",
+                  "optimized": "Williams Daniel is glad that he got his sewing machine serviced, and it's working like new again today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "93395e5f_3",
+                "start_idx": 3,
+                "end_idx": 8
+              },
+              "expressions": [
+                "Today",
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "answer_a17423e8_1",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 0,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T05:36:00",
+                    "startTime": "2023-03-30"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-03-30",
+                    "observedTime": "2023-04-06T05:36:00",
+                    "startTime": "2023-03-30"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel helped out at an Easter Egg Hunt event last week.",
+                  "optimized": "I just helped out at an Easter Egg Hunt event last week."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "c4251d8d_2",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-28",
+                    "observedTime": "2023-03-28T00:27:00",
+                    "startTime": "2023-02-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-28",
+                    "observedTime": "2023-03-28T00:27:00",
+                    "startTime": "2023-02-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User just got back from a road trip to Yellowstone National Park with family last month.",
+                  "optimized": "The user just got back from a road trip to Yellowstone National Park with family last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "fd29aa98_1",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel is starting yoga classes at a new studio today.",
+                  "optimized": "I start taking yoga classes at a new studio today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "fd29aa98_1",
+                "start_idx": 7,
+                "end_idx": 8
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user is excited to start taking yoga classes at a new studio today.",
+                  "optimized": "I'm really excited to start taking yoga classes at this new studio today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "fd29aa98_1",
+                "start_idx": 9,
+                "end_idx": 12
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 2,
+              "optimized_event_count": 2,
+              "paired_events": 2,
+              "same_time_metadata": 2,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T18:36:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user is thinking of getting a bike ride in after their yoga class today.",
+                  "optimized": "The speaker is thinking of getting a bike ride in after their yoga class today."
+                },
+                {
+                  "baseline": "The user plans to take a bike ride through the park after their yoga class today.",
+                  "optimized": "The speaker thinks they will take a bike ride through the park after their yoga class today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_FpTfRvR_0",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "Today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 0,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-04-06T09:56:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T09:56:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Today, the Sokolov Malopolski is a versatile breed used for riding, driving, and light draft work.",
+                  "optimized": "Today, the Sokolow Malopolski is a versatile breed used for riding, driving, and light draft work."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_FpTfRvR_0",
+                "start_idx": 3,
+                "end_idx": 4
+              },
+              "expressions": [
+                "Today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T09:56:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-06",
+                    "observedTime": "2023-04-06T09:56:00",
+                    "startTime": "2023-04-06"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Today (2023-04-06), Sokolów Malopolski is a small town with a population of around 8,000 people.",
+                  "optimized": "Today (2023-04-06), Sokolów Malopolski is a small town with a population of around 8,000 people."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_FpTfRvR_0",
+                "start_idx": 5,
+                "end_idx": 6
+              },
+              "expressions": [
+                "Today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 1,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "sharegpt_FpTfRvR_0",
+                "start_idx": 7,
+                "end_idx": 8
+              },
+              "expressions": [
+                "Today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        },
+        "0a34ad58": {
+          "candidate_blocks": 21,
+          "paired_events": 17,
+          "same_time_metadata": 15,
+          "different_time_metadata": 2,
+          "missing_event_pairs": 3,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "02f2ab8e_1",
+                "start_idx": 1,
+                "end_idx": 10
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "122b906c",
+                "start_idx": 5,
+                "end_idx": 10
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-24",
+                    "observedTime": "2023-05-24T11:43:00",
+                    "startTime": "2023-05-17"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-24",
+                    "observedTime": "2023-05-24T11:43:00",
+                    "startTime": "2023-05-17"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel finished a landscape piece last week.",
+                  "optimized": "Williams Daniel finished a landscape piece last week and was really proud of how it turned out."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "1e65e79a",
+                "start_idx": 5,
+                "end_idx": 12
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "240c23de_1",
+                "start_idx": 1,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last week",
+                "today"
+              ],
+              "baseline_event_count": 2,
+              "optimized_event_count": 2,
+              "paired_events": 2,
+              "same_time_metadata": 2,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-05-25T06:35:00"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-05-25T06:35:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-05-25T06:35:00"
+                  }
+                },
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-05-25T06:35:00"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel received his clothing order from Zara today.",
+                  "optimized": "Williams Daniel received his clothing order from Zara today."
+                },
+                {
+                  "baseline": "Williams Daniel shopped on eBay around the last week of February.",
+                  "optimized": "Williams Daniel shopped on eBay around the last week of February."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "8f589040_3",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-29T03:14:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-29T03:14:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel already redeemed 2,000 points for a $20 Amazon gift card last month.",
+                  "optimized": "I already redeemed 2,000 points for a $20 Amazon gift card last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "8f589040_3",
+                "start_idx": 9,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-29T03:14:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-29T03:14:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel redeemed 2,000 points for a $20 Amazon gift card last month.",
+                  "optimized": "The user redeemed 2,000 points for a $20 Amazon gift card last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "90342357_3",
+                "start_idx": 1,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-30T08:55:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-30T08:55:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User has been involved in a few charity events recently, like the Walk for Hunger last month.",
+                  "optimized": "User has been involved in a few charity events recently, like the Walk for Hunger last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "90342357_3",
+                "start_idx": 9,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last month"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 0,
+              "different_time_metadata": 1,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-05-30T08:55:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-04-30",
+                    "observedTime": "2023-05-30T08:55:00",
+                    "startTime": "2023-04-01"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User has had a great time participating in charity events recently, like the Walk for Hunger last month.",
+                  "optimized": "I have had a great time participating in charity events recently, like the Walk for Hunger last month."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "9ca2a195_1",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "last Saturday"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-23T15:28:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-23T15:28:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user played tennis with their colleague Rachel last Saturday and had a blast.",
+                  "optimized": "The user played tennis with their colleague Rachel at the community center last Saturday."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "9ca2a195_1",
+                "start_idx": 5,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last Saturday"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-23T15:28:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-23T15:28:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user played a great match with their colleague Rachel last Saturday.",
+                  "optimized": "The user played a great match with their colleague Rachel last Saturday at the community center."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "9ca2a195_1",
+                "start_idx": 9,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last Saturday"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-23T15:28:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-05-20",
+                    "observedTime": "2023-05-23T15:28:00",
+                    "startTime": "2023-05-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel played tennis with Rachel last Saturday (2023-05-20) at the local community center.",
+                  "optimized": "Williams Daniel played tennis with Rachel last Saturday (2023-05-20) at the local community center."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "b4c5414d_2",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        },
+        "gpt4_f420262d": {
+          "candidate_blocks": 25,
+          "paired_events": 17,
+          "same_time_metadata": 14,
+          "different_time_metadata": 3,
+          "missing_event_pairs": 3,
+          "samples": [
+            {
+              "coverage": {
+                "session_id": "00c7b769_1",
+                "start_idx": 1,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-02-02T16:14:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-02-02T16:14:00"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel went to a salsa social at a club downtown last weekend and had a blast.",
+                  "optimized": "Williams Daniel went to a salsa social at a club downtown last weekend and had a blast."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "0dcfb511_1",
+                "start_idx": 5,
+                "end_idx": 12
+              },
+              "expressions": [
+                "TODAY"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "1032cbcf_1",
+                "start_idx": 5,
+                "end_idx": 8
+              },
+              "expressions": [
+                "last week"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-28",
+                    "observedTime": "2023-02-28T10:38:00",
+                    "startTime": "2023-02-21"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-28",
+                    "observedTime": "2023-02-28T10:38:00",
+                    "startTime": "2023-02-21"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "User was really into college basketball last week.",
+                  "optimized": "Williams Daniel was really into college basketball last week and watched the Duke vs. North Carolina matchup on February 1st."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "1bfd5a8b_3",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "last weekend"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-01-17",
+                    "observedTime": "2023-01-17T12:23:00",
+                    "startTime": "2023-01-17"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-01-17",
+                    "observedTime": "2023-01-17T12:23:00",
+                    "startTime": "2023-01-17"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel enjoyed the 'Street Photography' exhibition at the Photography Museum last weekend.",
+                  "optimized": "Williams Daniel enjoyed the 'Street Photography' exhibition at the Photography Museum last weekend."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "9c46fb6a",
+                "start_idx": 3,
+                "end_idx": 4
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "a7c62fd2_2",
+                "start_idx": 1,
+                "end_idx": 6
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2022-11-16",
+                    "observedTime": "2022-11-16T19:43:00",
+                    "startTime": "2022-11-16"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2022-11-16",
+                    "observedTime": "2022-11-16T19:43:00",
+                    "startTime": "2022-11-16"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user redeemed 1,000 points for a $10 gift card to Target on Fetch Rewards today.",
+                  "optimized": "The user redeemed 1,000 points for a $10 gift card to Target on Fetch Rewards today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "ad361482_1",
+                "start_idx": 1,
+                "end_idx": 4
+              },
+              "expressions": [
+                "two months ago"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-01-05T14:54:00"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "observedTime": "2023-01-05T14:54:00"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel has been obsessed with the new Athleta store that opened up at the outdoor mall near his house about two months ago.",
+                  "optimized": "Williams Daniel has been obsessed with the new Athleta store that opened up at the outdoor mall near his house about two months ago."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "ad361482_1",
+                "start_idx": 11,
+                "end_idx": 12
+              },
+              "expressions": [
+                "last Saturday"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2022-12-31",
+                    "observedTime": "2023-01-05T14:54:00",
+                    "startTime": "2022-12-31"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2022-12-31",
+                    "observedTime": "2023-01-05T14:54:00",
+                    "startTime": "2022-12-31"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The assistant mentioned visiting the indie bookshop last Saturday and found it adorable.",
+                  "optimized": "The user made a visit to the indie bookshop last Saturday."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "answer_d8a1af6c_2",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 0,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            },
+            {
+              "coverage": {
+                "session_id": "answer_d8a1af6c_4",
+                "start_idx": 1,
+                "end_idx": 2
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-20",
+                    "observedTime": "2023-02-20T18:00:00",
+                    "startTime": "2023-02-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-20",
+                    "observedTime": "2023-02-20T18:00:00",
+                    "startTime": "2023-02-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "The user had a terrible experience with American Airlines' in-flight entertainment system on their flight from New York to Los Angeles today.",
+                  "optimized": "I had a terrible experience with it on my flight from New York to Los Angeles today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "answer_d8a1af6c_4",
+                "start_idx": 3,
+                "end_idx": 4
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 1,
+              "paired_events": 1,
+              "same_time_metadata": 1,
+              "different_time_metadata": 0,
+              "unmatched_events": 0,
+              "baseline_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-20",
+                    "observedTime": "2023-02-20T18:00:00",
+                    "startTime": "2023-02-20"
+                  }
+                }
+              ],
+              "optimized_times": [
+                {
+                  "time_metadata": {
+                    "endTime": "2023-02-20",
+                    "observedTime": "2023-02-20T18:00:00",
+                    "startTime": "2023-02-20"
+                  }
+                }
+              ],
+              "paired_descriptions": [
+                {
+                  "baseline": "Williams Daniel is still unsure about flying with American Airlines after his terrible experience today.",
+                  "optimized": "The user is still unsure about flying with American Airlines after their terrible experience today."
+                }
+              ]
+            },
+            {
+              "coverage": {
+                "session_id": "answer_d8a1af6c_4",
+                "start_idx": 5,
+                "end_idx": 6
+              },
+              "expressions": [
+                "today"
+              ],
+              "baseline_event_count": 1,
+              "optimized_event_count": 0,
+              "paired_events": 0,
+              "same_time_metadata": 0,
+              "different_time_metadata": 0,
+              "unmatched_events": 1,
+              "baseline_times": [],
+              "optimized_times": [],
+              "paired_descriptions": []
+            }
+          ]
+        }
+      }
+    }
+  }
+}

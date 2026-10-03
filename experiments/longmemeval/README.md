@@ -1,8 +1,13 @@
-# LongMemEval-S 50-question baseline
+# LongMemEval-S temporal follow-up optimization pilot
 
-This branch is the completed phase-1 baseline for the frozen 50-question
-subset. It is separate from the single-question snapshot
+This branch is based on the completed phase-1 baseline branch
+`longmemeval-50q-baseline` and adds an opt-in Pass1 temporal follow-up
+optimization. It is separate from the single-question snapshot
 `membox/samem-lme-firstquestion`.
+
+The original 50-question baseline remains the B0 reference. This branch's
+measured B1 pilot is intentionally only eight questions; it does not contain
+or start a full 50-question optimized run.
 
 ## Experiment definition
 
@@ -22,7 +27,7 @@ MemBox environment: membox-lme
 SA-Mem environment: samem-lme
 ```
 
-MemBox uses Topic Loom / box construction without Trace Weaver. SA-Mem uses
+MemBox uses Topic Loom / box construction without Trace Weaver. SA-Mem B0 uses
 the native two-pass MemBlock construction with:
 
 ```text
@@ -32,6 +37,44 @@ split_check -> pass1_extract -> pass1_tool_followup -> pass2_classify
 For SA-Mem, merged extraction and graph/trace construction are disabled.
 Construction token totals use provider-reported usage. QA generation, judge,
 retrieval-parser, and embedding calls are not included in construction cost.
+
+## B1 temporal follow-up switch
+
+The optimization is off by default. Enable it only with:
+
+```bash
+--temporal-followup-opt
+```
+
+The B1 path is:
+
+```text
+Pass1 JSON (mentions + temporal_expressions)
+    -> existing local resolve_temporal_expression()
+    -> Pass2 classification
+```
+
+When a mention contains an unmapped relative expression, an unsupported
+expression, invalid mention index, or invalid observation time, B1 falls back
+to the original function-calling path. Fallback follow-ups are recorded as
+`pass1_tool_followup_fallback`; local resolution is recorded as
+`temporal_local_resolve` with zero provider LLM tokens. Raw dialogue and the
+MemBlock schema are unchanged.
+
+The 8-question pilot IDs are in
+[`temporal_followup_pilot_8_ids.txt`](temporal_followup_pilot_8_ids.txt).
+The final measured pilot uses the server-side run root
+`runs/samem_2p/temporal_followup_b1_8q_parallel_v2/`; its per-question raw
+artifacts are intentionally kept off GitHub because they are large. The
+auditable committed outputs are:
+
+- [`TEMPORAL_FOLLOWUP_PILOT.md`](TEMPORAL_FOLLOWUP_PILOT.md)
+- [`TEMPORAL_FOLLOWUP_PILOT_RESULTS.json`](TEMPORAL_FOLLOWUP_PILOT_RESULTS.json)
+- [`scripts/analyze_temporal_followup_pilot.py`](../../scripts/analyze_temporal_followup_pilot.py)
+
+The report explicitly separates B0 original follow-ups, B1 fallback
+follow-ups, local resolver calls, construction tokens, QA, gold-session
+retrieval, and paired relative-time metadata.
 
 ## Main results
 

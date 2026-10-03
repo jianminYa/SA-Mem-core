@@ -370,6 +370,8 @@ def main() -> None:
         return totals
 
     aggregate_data = {"b0_original": aggregate("b0"), "b1_optimized": aggregate("b1")}
+    b1_manifest = read_json(args.b1_root / "questions" / ids[0] / "run_manifest.json", {}) or {}
+    b0_manifest = read_json(args.b0_root / "questions" / ids[0] / "run_manifest.json", {}) or {}
     aggregate_data["token_saving"] = {
         "absolute": aggregate_data["b0_original"]["construction_total_tokens"] - aggregate_data["b1_optimized"]["construction_total_tokens"],
         "fraction": 1 - aggregate_data["b1_optimized"]["construction_total_tokens"] / aggregate_data["b0_original"]["construction_total_tokens"],
@@ -402,6 +404,7 @@ def main() -> None:
         "",
         "- Dataset: `longmemeval_s_cleaned.json`; IDs are a deterministic subset of the frozen seed-42 50Q set.",
         "- LLM: `gpt-4o-mini`; embedding: `text-embedding-3-small`; temperature: `0.0`.",
+        f"- Measured B0 source commit: `{b0_manifest.get('source_git_commit', 'unknown')}`; measured B1 source commit: `{b1_manifest.get('source_git_commit', 'unknown')}`.",
         "- SA-Mem: two-pass enabled, merged extraction off, graph off; retrieval candidate Top-20 and QA generation Top-10.",
         "- B0: original Pass1 function-calling and follow-up.",
         "- B1: Pass1 emits `temporal_expressions`; existing `resolve_temporal_expression()` resolves them locally; invalid/unreliable entries use the original tool path with stage `pass1_tool_followup_fallback`.",
@@ -481,10 +484,14 @@ def main() -> None:
         "",
         "QA correctness here is a smoke diagnostic only. For each question, extraction is considered preserved when at least one memory covers an answer session; retrieval is considered the limiting stage when the best gold rank is beyond Top-10/Top-20; otherwise a wrong answer is attributed to QA generation. Full per-question details are in `TEMPORAL_FOLLOWUP_PILOT_RESULTS.json` and the local run artifacts.",
         "",
+        "## Pilot decision",
+        "",
+        f"B1 saves **{aggregate_data['token_saving']['fraction'] * 100:.2f}%** construction tokens and keeps gold-session Hit@10 at **{pct(b1['hit_at_10'])}**, but it does not clear the expansion gate: QA accuracy changes from **{pct(b0['qa_accuracy'])}** to **{pct(b1['qa_accuracy'])}**, mean gold rank changes from **{b0['gold_rank_mean']:.4f}** to **{b1['gold_rank_mean']:.4f}**, and **{temporal['different_time_metadata']}** of **{temporal['paired_events']}** paired relative-time events have different available temporal metadata. Do not expand B1 to the full 50Q run from this pilot; investigate the Pass1 temporal annotation/context handling and QA differences first.",
+        "",
         "## Artifacts",
         "",
         "- B0: `runs/samem_2p/full_50_seed42/questions/<question_id>/`.",
-        "- B1: `runs/samem_2p/temporal_followup_b1_8q_parallel/questions/<question_id>/`.",
+        f"- B1: `{args.b1_root}/questions/<question_id>/`.",
         "- B1 calls include `temporal_local_resolve` with zero provider tokens and `pass1_tool_followup_fallback` for the original fallback path.",
         "- Exact aggregate JSON: `TEMPORAL_FOLLOWUP_PILOT_RESULTS.json`.",
     ]
