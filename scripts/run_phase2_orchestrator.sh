@@ -7,8 +7,8 @@ set -euo pipefail
 # modified.
 
 REPO="/workspace/SA-mem/halumem-b0-b3-work"
-ENV_FILE="/workspace/SA-mem/4omini.txt"
-WORK_ROOT="/workspace/SA-mem/halumem-b0-b3-runs"
+ENV_FILE="${PHASE2_ENV_FILE:-/workspace/SA-mem/4omini.txt}"
+WORK_ROOT="${PHASE2_WORK_ROOT:-/workspace/SA-mem/halumem-b0-b3-runs-v2}"
 H_DATA="/workspace/SA-mem/SA-Mem/data/data"
 H_PROCESSED="$H_DATA/processed_halumem"
 H_PROCESSED_ISO="$WORK_ROOT/metadata/processed_halumem_iso"
@@ -24,6 +24,16 @@ set -a
 source "$ENV_FILE"
 set +a
 export OPENAI_API_KEY
+export OPENAI_BASE_URL
+
+# Keep every OpenAI-compatible caller in this phase on the same API path.  The
+# relay configured in 4omini.txt uses a host-root base URL, while its chat and
+# embedding endpoints are under /v1.  This is a transport normalization only;
+# it does not alter prompts, models, or algorithm behavior.
+OPENAI_BASE_URL="${OPENAI_BASE_URL%/}"
+if [[ "$OPENAI_BASE_URL" != */v1 ]]; then
+  OPENAI_BASE_URL="${OPENAI_BASE_URL}/v1"
+fi
 export OPENAI_BASE_URL
 
 echo "phase2 orchestrator started at $(date -u +%FT%TZ)"

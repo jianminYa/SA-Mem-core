@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-WORK_ROOT="/workspace/SA-mem/halumem-b0-b3-runs"
+WORK_ROOT="${PHASE2_WORK_ROOT:-/workspace/SA-mem/halumem-b0-b3-runs-v2}"
 REPO="/workspace/SA-mem/halumem-b0-b3-work"
 LME_ROOT_BASE="/workspace/SA-mem/longmemeval-baselines/runs/samem_2p"
 COMBINED="$WORK_ROOT/metadata/halumem_medium_combined.json"

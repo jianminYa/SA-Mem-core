@@ -13,6 +13,18 @@ llm_model="${LLM_MODEL_OVERRIDE:-gpt-4o-mini}"
 embedding_model="${EMBEDDING_MODEL_OVERRIDE:-text-embedding-3-small}"
 workers="${HALUMEM_BUILD_WORKERS:-10}"
 
+# Some OpenAI-compatible relays expose the API at the /v1 path while their
+# configured base URL is the host root.  The SA-Mem LME adapter normalizes
+# this before constructing its client; keep this standalone HaluMem launcher
+# consistent without changing prompts or algorithm behavior.
+if [[ -n "${OPENAI_BASE_URL:-}" ]]; then
+  OPENAI_BASE_URL="${OPENAI_BASE_URL%/}"
+  if [[ "$OPENAI_BASE_URL" != */v1 ]]; then
+    OPENAI_BASE_URL="${OPENAI_BASE_URL}/v1"
+  fi
+  export OPENAI_BASE_URL
+fi
+
 if [[ -n "${HALUMEM_CONDA_ENV:-}" ]]; then
   python_cmd=(conda run -n "$HALUMEM_CONDA_ENV" python)
 else
