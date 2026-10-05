@@ -24,10 +24,14 @@ STAGES = {
         "b2": ["split_check", "pass1_extract", "pass1_tool_followup", "pass2_classify"],
     },
     "halumem": {
-        "b0": ["topic_continuity", "box_extraction", "pass1_extract", "pass1_tool_followup", "pass2_classify"],
-        "b1": ["topic_continuity", "box_extraction", "pass1_extract", "pass1_tool_followup", "pass1_tool_followup_fallback", "temporal_local_resolve", "pass2_classify"],
-        "b2": ["topic_continuity", "box_extraction", "pass1_extract", "pass1_tool_followup", "pass2_classify"],
-        "b3": ["topic_continuity", "box_extraction", "merged_extract", "pass1_extract", "pass2_classify"],
+        # HaluMem phase 2 uses the same SA-Mem construction runner as LME,
+        # with B3 switching to merged extraction.  Keep these names aligned
+        # with the actual JSONL instrumentation rather than the earlier
+        # Topic-Loom prototype labels.
+        "b0": ["split_check", "pass1_extract", "pass1_tool_followup", "pass2_classify"],
+        "b1": ["split_check", "pass1_extract", "temporal_local_resolve", "pass1_tool_followup_fallback", "pass2_classify"],
+        "b2": ["split_check", "pass1_extract", "pass1_tool_followup", "pass2_classify"],
+        "b3": ["split_check", "merged_extract", "merged_extract_tool_followup"],
     },
 }
 
@@ -102,6 +106,14 @@ def construction_summary(root: Path, variant: str, family: str) -> dict[str, Any
     stage_names = STAGES[family][variant]
     stage_breakdown = {stage: usage_sum(all_rows, stage) for stage in stage_names}
     total = usage_sum(all_rows)
+    provider_failures = sum(
+        1 for row in all_rows
+        if row.get("provider_usage_available") is True and row.get("success") is False
+    )
+    local_fallback_events = sum(
+        1 for row in all_rows
+        if row.get("usage_source") == "local_no_llm" and row.get("fallback_used") is True
+    )
     return {
         "variant": variant,
         "completed_questions": complete if (root / "questions").exists() else None,
@@ -109,6 +121,8 @@ def construction_summary(root: Path, variant: str, family: str) -> dict[str, Any
         "construction": total,
         "stage_breakdown": stage_breakdown,
         "raw_call_rows": len(all_rows),
+        "provider_failures": provider_failures,
+        "local_fallback_events": local_fallback_events,
     }
 
 
