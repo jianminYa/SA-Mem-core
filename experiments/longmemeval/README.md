@@ -1,15 +1,24 @@
-# LongMemEval-S temporal-gate B2 pilot
+# LongMemEval-S B0 / B1 / B2 experiments
 
-This branch is `longmemeval-temporal-gate-b2`. It is based on the completed
-phase-1 baseline branch `longmemeval-50q-baseline` and is separate from both
-the B1 local-resolution experiment and the single-question snapshot
-`membox/samem-lme-firstquestion`.
+This branch is `longmemeval-b1-b2-50q-retrieval`. It contains the Chinese
+phase-1 progress note plus the B2 implementation and audit. It is based on
+the completed phase-1 baseline branch `longmemeval-50q-baseline` and keeps the
+B0 baseline, B1 local-resolution experiment, and the single-question snapshot
+`membox/samem-lme-firstquestion` conceptually separate.
+
+中文阶段汇报（包含 B1 call 口径、Pass1 输出格式、50Q construction 和
+retrieval 指标）：
+
+- [`B0_B1_PHASE1_PROGRESS_ZH.md`](B0_B1_PHASE1_PROGRESS_ZH.md)
 
 The original 50-question baseline remains the B0 reference. This branch's
 measured B2 pilot is intentionally only eight questions; it does not contain
 or start a full 50-question B2 run.
 
 ## B2 temporal gate
+
+本 README 主要说明代码和 artifact 位置；B0/B1 当前阶段的详细中文解释请
+先阅读上面的 [`B0_B1_PHASE1_PROGRESS_ZH.md`](B0_B1_PHASE1_PROGRESS_ZH.md)。
 
 B2 keeps the B0 Pass1 prompt, function schema, mentions schema, temporal
 resolver, Pass2 prompt, MemBlock schema, retrieval, embedding, and QA path.
