@@ -60,6 +60,23 @@ orchestrator 会：
 4. 自动运行 HaluMem 四个版本 QA，每个问题重复 3 次；
 5. 保存 checkpoint、失败列表、逐问题结果和 aggregate summary。
 
+实验完成后由独立 watcher 自动执行：
+
+```bash
+bash scripts/run_phase2_aggregate_when_ready.sh
+```
+
+最终汇总位置：
+
+```text
+/workspace/SA-mem/halumem-b0-b3-runs/reports/PHASE2_REPORT.md
+/workspace/SA-mem/halumem-b0-b3-runs/reports/PHASE2_RESULTS.json
+```
+
+对应生成器为 `scripts/aggregate_phase2_results.py`。它只读取 LME 与
+HaluMem 的已完成 artifacts，不覆盖任何 B0/B1/B2 construction、retrieval 或
+QA 原始文件。
+
 LME QA 使用 Top-10 context；HaluMem 使用当前 HaluMem baseline 的 Top-20 context。
 QA repeat 只重复 generation/judge，不重复 construction。
 
