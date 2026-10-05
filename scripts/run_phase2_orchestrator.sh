@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Persistent Phase-2 orchestrator. It waits for the existing LME B2 run,
-# launches LME B0/B1/B2 QA repeats, then runs HaluMem B0/B1/B2/B3 in isolated
-# roots and evaluates QA repeats. No existing baseline directory is modified.
+# Persistent Phase-2 orchestrator. LME B2 is already running in its own root.
+# HaluMem construction/retrieval is independent and starts in parallel; LME QA
+# waits for B2. All outputs are isolated and no existing baseline directory is
+# modified.
 
 REPO="/workspace/SA-mem/halumem-b0-b3-work"
 ENV_FILE="/workspace/SA-mem/4omini.txt"
@@ -38,6 +39,33 @@ python "$REPO/scripts/prepare_halumem_combined.py" \
 python "$REPO/scripts/normalize_halumem_processed.py" \
   --input-dir "$H_PROCESSED" \
   --output-dir "$H_PROCESSED_ISO"
+
+# HaluMem construction/retrieval does not depend on LME B2. Start it now so
+# the two independent workloads overlap. Completion markers make a restart
+# resume completed variants instead of launching duplicate work.
+echo "starting HaluMem B0/B1/B2/B3 construction and retrieval in parallel with LME B2"
+export HALUMEM_REPO_ROOT="$REPO"
+export HALUMEM_PROCESSED_DIR="$H_PROCESSED_ISO"
+export HALUMEM_COMBINED_FILE="$COMBINED"
+export HALUMEM_OUTPUT_BASE="$WORK_ROOT/variants"
+export HALUMEM_BUILD_WORKERS=5
+export HALUMEM_CONDA_ENV=samem-lme
+export LLM_MODEL_OVERRIDE=gpt-4o-mini
+export EMBEDDING_MODEL_OVERRIDE=text-embedding-3-small
+
+(
+  for variant in b0 b1 b2 b3; do
+    marker="$WORK_ROOT/status/halumem_${variant}_construction_retrieval_complete"
+    if [[ -f "$marker" ]]; then
+      echo "HaluMem $variant already complete; skipping"
+      continue
+    fi
+    echo "starting HaluMem $variant"
+    bash "$REPO/scripts/run_halumem_variant.sh" "$variant"
+    printf '%s\n' "complete" > "$marker"
+  done
+) > "$WORK_ROOT/halumem_construction.stdout.log" 2>&1 &
+halumem_construction_pid=$!
 
 echo "waiting for LME B2 completion"
 while true; do
@@ -84,26 +112,12 @@ echo "starting LME B0/B1/B2 QA repeats with 5 workers"
 ) &
 lme_pid=$!
 
-echo "starting HaluMem B0/B1/B2/B3 construction and retrieval with 5 workers"
-export HALUMEM_REPO_ROOT="$REPO"
-export HALUMEM_PROCESSED_DIR="$H_PROCESSED_ISO"
-export HALUMEM_COMBINED_FILE="$COMBINED"
-export HALUMEM_OUTPUT_BASE="$WORK_ROOT/variants"
-export HALUMEM_BUILD_WORKERS=5
-export LLM_MODEL_OVERRIDE=gpt-4o-mini
-export EMBEDDING_MODEL_OVERRIDE=text-embedding-3-small
-
-for variant in b0 b1 b2 b3; do
-  echo "starting HaluMem $variant"
-  bash "$REPO/scripts/run_halumem_variant.sh" "$variant"
-  printf '%s\n' "complete" > "$WORK_ROOT/status/halumem_${variant}_construction_retrieval_complete"
-done
-
 wait "$lme_pid"
+wait "$halumem_construction_pid"
 
 echo "starting HaluMem B0/B1/B2/B3 QA repeats with 10 workers"
 for variant in b0 b1 b2 b3; do
-  bash "$REPO/scripts/run_halumem_qa_repeats.sh" \
+  conda run -n samem-lme python "$REPO/scripts/run_halumem_qa_repeats.py" \
     --variant "$variant" \
     --run-dir "$WORK_ROOT/variants/halumem_${variant}" \
     --combined-file "$COMBINED" \

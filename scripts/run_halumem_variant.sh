@@ -13,6 +13,12 @@ llm_model="${LLM_MODEL_OVERRIDE:-gpt-4o-mini}"
 embedding_model="${EMBEDDING_MODEL_OVERRIDE:-text-embedding-3-small}"
 workers="${HALUMEM_BUILD_WORKERS:-10}"
 
+if [[ -n "${HALUMEM_CONDA_ENV:-}" ]]; then
+  python_cmd=(conda run -n "$HALUMEM_CONDA_ENV" python)
+else
+  python_cmd=(python)
+fi
+
 case "$variant" in
   b0)
     run_id="halumem_b0"
@@ -59,7 +65,7 @@ export TEMPORAL_GATE_LOG_FILE="$run_dir/temporal_gate.jsonl"
 cd "$repo_root"
 
 if [[ ! -f "$stage_dir/build.done" ]]; then
-  python memblock_cli.py \
+  "${python_cmd[@]}" memblock_cli.py \
     --stage build \
     --raw-data-file "$combined_file" \
     --raw-data-dir "$processed_dir" \
@@ -78,7 +84,7 @@ if [[ ! -f "$stage_dir/build.done" ]]; then
 fi
 
 if [[ ! -f "$stage_dir/retrieve.done" ]]; then
-  python memblock_cli.py \
+  "${python_cmd[@]}" memblock_cli.py \
     --stage retrieve \
     --raw-data-file "$combined_file" \
     --run-id "$run_id" \
