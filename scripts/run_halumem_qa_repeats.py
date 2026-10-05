@@ -20,6 +20,12 @@ from typing import Any
 
 from openai import OpenAI
 
+# The runner is invoked as ``python scripts/run_halumem_qa_repeats.py``.
+# Make repository-root modules importable without relying on the caller's cwd.
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from generate_prompts import PROMPT_QA_ANSWER
 from llm_judge_eval import EVALUATION_PROMPT_FOR_QUESTION
 
