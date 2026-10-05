@@ -10,6 +10,7 @@ and one judge call sequentially.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import random
@@ -74,6 +75,23 @@ def load_retrieval(path: Path) -> dict[str, Any]:
     raise ValueError(f"empty retrieval file: {path}")
 
 
+def resolve_box_user_id(boxes: dict[str, dict[int, Any]], question_id: str) -> str:
+    """Resolve frozen box artifacts across the two persisted ID conventions.
+
+    Older LME runners restored the externally visible retrieval row to the
+    original question ID, while the native builder persisted some box files
+    under the deterministic 8-character SHA alias.  This read-only resolver
+    keeps QA from treating that representation mismatch as an empty context.
+    """
+    qid = str(question_id)
+    if qid in boxes and boxes[qid]:
+        return qid
+    alias = hashlib.sha256(qid.encode()).hexdigest()[:8]
+    if alias in boxes and boxes[alias]:
+        return alias
+    return qid
+
+
 def run_one(task: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     system = task["system"]
     repeat = task["repeat"]
@@ -88,7 +106,7 @@ def run_one(task: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
     boxes_path = question_dir / "final_boxes_content.jsonl"
     retrieval = load_retrieval(retrieval_path)
     boxes = load_boxes(str(boxes_path))
-    user_id = str(retrieval.get("user_id", ""))
+    user_id = resolve_box_user_id(boxes, str(retrieval.get("question_id") or qid))
     ranking = (retrieval.get("rankings") or {}).get("content_event_topic_kw") or []
     memories = build_memories_string(boxes.get(user_id, {}), ranking, args.topk)
     if not memories:
