@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "e66b632c",
+  "question_type": "knowledge-update",
+  "question": "What was my previous personal best time for the charity 5K run?",
+  "gold": "27 minutes and 45 seconds",
+  "hypothesis": "Your previous personal best time for the charity 5K run was **26 minutes and 30 seconds**. Congratulations on that achievement!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 9350,
+    "completion_tokens": 27,
+    "total_tokens": 9377
+  },
+  "judge_usage": {
+    "prompt_tokens": 142,
+    "completion_tokens": 2,
+    "total_tokens": 144
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/e66b632c/retrieval.jsonl"
+}

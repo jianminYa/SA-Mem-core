@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "5a7937c8",
+  "question_type": "multi-session",
+  "question": "How many days did I spend participating in faith-related activities in December?",
+  "gold": "3 days.",
+  "hypothesis": "Based on your memories, you mentioned participating in a Bible study group on December 17th. However, there are no specific mentions of other faith-related activities in December. Therefore, it appears that you spent **1 day** participating in faith-related activities in December. If there were additional activities you engaged in that weren't mentioned, please let me know!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8528,
+    "completion_tokens": 70,
+    "total_tokens": 8598
+  },
+  "judge_usage": {
+    "prompt_tokens": 195,
+    "completion_tokens": 2,
+    "total_tokens": 197
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/5a7937c8/retrieval.jsonl"
+}

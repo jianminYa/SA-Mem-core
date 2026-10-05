@@ -1,0 +1,865 @@
+{
+  "user_id": "2ebe6c90",
+  "question_id": "2ebe6c90",
+  "question_type": "temporal-reasoning",
+  "question": "How many days did it take me to finish 'The Nightingale' by Kristin Hannah?",
+  "answer": "21 days. 22 days (including the last day) is also acceptable.",
+  "answer_session_ids": [
+    "answer_c9d35c00_1",
+    "answer_c9d35c00_2"
+  ],
+  "question_date": "2023/05/01 (Mon) 21:05",
+  "rankings": {
+    "content_event_topic_kw": [
+      41,
+      50,
+      51,
+      43,
+      42,
+      45,
+      35,
+      62,
+      44,
+      36,
+      63,
+      60,
+      37,
+      61,
+      82,
+      83,
+      78,
+      17,
+      13,
+      49,
+      100,
+      64,
+      107,
+      101,
+      98,
+      65,
+      99,
+      27,
+      11,
+      1,
+      95,
+      111,
+      73,
+      79,
+      88,
+      59,
+      57,
+      38,
+      94,
+      16,
+      85,
+      58,
+      91,
+      56,
+      55,
+      2,
+      93,
+      96,
+      48,
+      109,
+      67,
+      84,
+      86,
+      4,
+      81,
+      110,
+      46,
+      14,
+      114,
+      97,
+      89,
+      12,
+      68,
+      8,
+      20,
+      80,
+      18,
+      0,
+      113,
+      90,
+      10,
+      53,
+      74,
+      52,
+      116,
+      54,
+      112,
+      3,
+      15,
+      39,
+      47,
+      28,
+      92,
+      102,
+      25,
+      9,
+      75,
+      77,
+      30,
+      106,
+      34,
+      23,
+      40,
+      29,
+      24,
+      76,
+      105,
+      6,
+      71,
+      7,
+      32,
+      117,
+      19,
+      31,
+      104,
+      72,
+      69,
+      118,
+      26,
+      108,
+      87,
+      103,
+      70,
+      115,
+      5,
+      22,
+      33,
+      21,
+      66
+    ]
+  },
+  "target_boxes": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    50,
+    51
+  ],
+  "mode": "Enhanced",
+  "time_constraint_type": "NONE",
+  "query_time_start": null,
+  "query_time_end": null,
+  "query_embedding_input": "How many days did it take me to finish 'The Nightingale' by Kristin Hannah?",
+  "retrieved_items_minimal": [
+    {
+      "block_id": 41,
+      "rank": 1,
+      "block_time_start": "2023-01-10",
+      "block_time_end": "2023-01-10"
+    },
+    {
+      "block_id": 50,
+      "rank": 2,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 51,
+      "rank": 3,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 43,
+      "rank": 4,
+      "block_time_start": "2023-01-10",
+      "block_time_end": "2023-01-10"
+    },
+    {
+      "block_id": 42,
+      "rank": 5,
+      "block_time_start": "2023-01-10",
+      "block_time_end": "2023-01-10"
+    },
+    {
+      "block_id": 45,
+      "rank": 6,
+      "block_time_start": "2023-01-10",
+      "block_time_end": "2023-01-10"
+    },
+    {
+      "block_id": 35,
+      "rank": 7,
+      "block_time_start": "2023-01-05",
+      "block_time_end": "2023-01-05"
+    },
+    {
+      "block_id": 62,
+      "rank": 8,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 44,
+      "rank": 9,
+      "block_time_start": "2023-01-10",
+      "block_time_end": "2023-01-10"
+    },
+    {
+      "block_id": 36,
+      "rank": 10,
+      "block_time_start": "2023-01-05",
+      "block_time_end": "2023-01-05"
+    },
+    {
+      "block_id": 63,
+      "rank": 11,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 60,
+      "rank": 12,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 37,
+      "rank": 13,
+      "block_time_start": "2023-01-05",
+      "block_time_end": "2023-01-05"
+    },
+    {
+      "block_id": 61,
+      "rank": 14,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 82,
+      "rank": 15,
+      "block_time_start": "2022-12-01",
+      "block_time_end": "2022-12-31"
+    },
+    {
+      "block_id": 83,
+      "rank": 16,
+      "block_time_start": "2023-02-04",
+      "block_time_end": "2023-02-04"
+    },
+    {
+      "block_id": 78,
+      "rank": 17,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 17,
+      "rank": 18,
+      "block_time_start": "2022-12-24",
+      "block_time_end": "2022-12-24"
+    },
+    {
+      "block_id": 13,
+      "rank": 19,
+      "block_time_start": "2022-12-23",
+      "block_time_end": "2022-12-23"
+    },
+    {
+      "block_id": 49,
+      "rank": 20,
+      "block_time_start": "2023-01-18",
+      "block_time_end": "2023-01-18"
+    },
+    {
+      "block_id": 100,
+      "rank": 21,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 64,
+      "rank": 22,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 107,
+      "rank": 23,
+      "block_time_start": "2023-01-28",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 101,
+      "rank": 24,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 98,
+      "rank": 25,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 65,
+      "rank": 26,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 99,
+      "rank": 27,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 27,
+      "rank": 28,
+      "block_time_start": "2022-12-31",
+      "block_time_end": "2022-12-31"
+    },
+    {
+      "block_id": 11,
+      "rank": 29,
+      "block_time_start": "2022-11-01",
+      "block_time_end": "2022-11-30"
+    },
+    {
+      "block_id": 1,
+      "rank": 30,
+      "block_time_start": "2013-01-01",
+      "block_time_end": "2022-01-01"
+    },
+    {
+      "block_id": 95,
+      "rank": 31,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 111,
+      "rank": 32,
+      "block_time_start": "2023-01-15",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 73,
+      "rank": 33,
+      "block_time_start": "2023-01-10",
+      "block_time_end": "2023-01-10"
+    },
+    {
+      "block_id": 79,
+      "rank": 34,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 88,
+      "rank": 35,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 59,
+      "rank": 36,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 57,
+      "rank": 37,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 38,
+      "rank": 38,
+      "block_time_start": "2023-01-07",
+      "block_time_end": "2023-01-07"
+    },
+    {
+      "block_id": 94,
+      "rank": 39,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 16,
+      "rank": 40,
+      "block_time_start": "2022-12-24",
+      "block_time_end": "2022-12-24"
+    },
+    {
+      "block_id": 85,
+      "rank": 41,
+      "block_time_start": "2023-01-24",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 58,
+      "rank": 42,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 91,
+      "rank": 43,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 56,
+      "rank": 44,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 55,
+      "rank": 45,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 2,
+      "rank": 46,
+      "block_time_start": "2013-01-01",
+      "block_time_end": "2022-12-31"
+    },
+    {
+      "block_id": 93,
+      "rank": 47,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 96,
+      "rank": 48,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 48,
+      "rank": 49,
+      "block_time_start": "2023-01-18",
+      "block_time_end": "2023-01-18"
+    },
+    {
+      "block_id": 109,
+      "rank": 50,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 67,
+      "rank": 51,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 84,
+      "rank": 52,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 86,
+      "rank": 53,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 4,
+      "rank": 54,
+      "block_time_start": "2022-12-15",
+      "block_time_end": "2022-12-15"
+    },
+    {
+      "block_id": 81,
+      "rank": 55,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 110,
+      "rank": 56,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 46,
+      "rank": 57,
+      "block_time_start": "2023-01-11",
+      "block_time_end": "2023-01-11"
+    },
+    {
+      "block_id": 14,
+      "rank": 58,
+      "block_time_start": "2022-12-23",
+      "block_time_end": "2022-12-23"
+    },
+    {
+      "block_id": 114,
+      "rank": 59,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 97,
+      "rank": 60,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 89,
+      "rank": 61,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 12,
+      "rank": 62,
+      "block_time_start": "2022-12-23",
+      "block_time_end": "2022-12-23"
+    },
+    {
+      "block_id": 68,
+      "rank": 63,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 8,
+      "rank": 64,
+      "block_time_start": "2022-12-15",
+      "block_time_end": "2022-12-15"
+    },
+    {
+      "block_id": 20,
+      "rank": 65,
+      "block_time_start": "2022-12-25",
+      "block_time_end": "2022-12-25"
+    },
+    {
+      "block_id": 80,
+      "rank": 66,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 18,
+      "rank": 67,
+      "block_time_start": "2022-12-24",
+      "block_time_end": "2022-12-24"
+    },
+    {
+      "block_id": 0,
+      "rank": 68,
+      "block_time_start": "2022-12-12",
+      "block_time_end": "2022-12-12"
+    },
+    {
+      "block_id": 113,
+      "rank": 69,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 90,
+      "rank": 70,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 10,
+      "rank": 71,
+      "block_time_start": "2022-12-18",
+      "block_time_end": "2022-12-18"
+    },
+    {
+      "block_id": 53,
+      "rank": 72,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 74,
+      "rank": 73,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 52,
+      "rank": 74,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 116,
+      "rank": 75,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 54,
+      "rank": 76,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 112,
+      "rank": 77,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 3,
+      "rank": 78,
+      "block_time_start": "2022-12-15",
+      "block_time_end": "2022-12-15"
+    },
+    {
+      "block_id": 15,
+      "rank": 79,
+      "block_time_start": "2022-12-24",
+      "block_time_end": "2022-12-24"
+    },
+    {
+      "block_id": 39,
+      "rank": 80,
+      "block_time_start": "2023-01-07",
+      "block_time_end": "2023-01-07"
+    },
+    {
+      "block_id": 47,
+      "rank": 81,
+      "block_time_start": "2023-01-11",
+      "block_time_end": "2023-01-11"
+    },
+    {
+      "block_id": 28,
+      "rank": 82,
+      "block_time_start": "2022-12-31",
+      "block_time_end": "2022-12-31"
+    },
+    {
+      "block_id": 92,
+      "rank": 83,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 102,
+      "rank": 84,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 25,
+      "rank": 85,
+      "block_time_start": "2022-12-30",
+      "block_time_end": "2022-12-30"
+    },
+    {
+      "block_id": 9,
+      "rank": 86,
+      "block_time_start": "2022-11-01",
+      "block_time_end": "2022-11-30"
+    },
+    {
+      "block_id": 75,
+      "rank": 87,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 77,
+      "rank": 88,
+      "block_time_start": "2010-01-01",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 30,
+      "rank": 89,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-01"
+    },
+    {
+      "block_id": 106,
+      "rank": 90,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 34,
+      "rank": 91,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-01"
+    },
+    {
+      "block_id": 23,
+      "rank": 92,
+      "block_time_start": "2022-12-30",
+      "block_time_end": "2022-12-30"
+    },
+    {
+      "block_id": 40,
+      "rank": 93,
+      "block_time_start": "2023-01-07",
+      "block_time_end": "2023-01-07"
+    },
+    {
+      "block_id": 29,
+      "rank": 94,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-01"
+    },
+    {
+      "block_id": 24,
+      "rank": 95,
+      "block_time_start": "2022-12-30",
+      "block_time_end": "2022-12-30"
+    },
+    {
+      "block_id": 76,
+      "rank": 96,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 105,
+      "rank": 97,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 6,
+      "rank": 98,
+      "block_time_start": "2022-12-15",
+      "block_time_end": "2022-12-15"
+    },
+    {
+      "block_id": 71,
+      "rank": 99,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 7,
+      "rank": 100,
+      "block_time_start": "2022-12-15",
+      "block_time_end": "2022-12-15"
+    },
+    {
+      "block_id": 32,
+      "rank": 101,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-01"
+    },
+    {
+      "block_id": 117,
+      "rank": 102,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 19,
+      "rank": 103,
+      "block_time_start": "2022-12-25",
+      "block_time_end": "2022-12-25"
+    },
+    {
+      "block_id": 31,
+      "rank": 104,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-01"
+    },
+    {
+      "block_id": 104,
+      "rank": 105,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 72,
+      "rank": 106,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 69,
+      "rank": 107,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 118,
+      "rank": 108,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 26,
+      "rank": 109,
+      "block_time_start": "2022-12-30",
+      "block_time_end": "2022-12-30"
+    },
+    {
+      "block_id": 108,
+      "rank": 110,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 87,
+      "rank": 111,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 103,
+      "rank": 112,
+      "block_time_start": "1947-01-01",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 70,
+      "rank": 113,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 115,
+      "rank": 114,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    },
+    {
+      "block_id": 5,
+      "rank": 115,
+      "block_time_start": "2022-12-15",
+      "block_time_end": "2022-12-15"
+    },
+    {
+      "block_id": 22,
+      "rank": 116,
+      "block_time_start": "2022-12-27",
+      "block_time_end": "2022-12-27"
+    },
+    {
+      "block_id": 33,
+      "rank": 117,
+      "block_time_start": "2023-01-01",
+      "block_time_end": "2023-01-01"
+    },
+    {
+      "block_id": 21,
+      "rank": 118,
+      "block_time_start": "2022-12-27",
+      "block_time_end": "2022-12-27"
+    },
+    {
+      "block_id": 66,
+      "rank": 119,
+      "block_time_start": "2023-01-31",
+      "block_time_end": "2023-01-31"
+    }
+  ]
+}

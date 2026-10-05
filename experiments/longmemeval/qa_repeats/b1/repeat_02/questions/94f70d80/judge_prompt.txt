@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How long did it take me to assemble the IKEA bookshelf?
+
+Correct Answer: 4 hours
+
+Model Response: Based on your previous messages, you mentioned that you assembled the IKEA bookshelf recently, and it took you **4 hours** to complete the assembly. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

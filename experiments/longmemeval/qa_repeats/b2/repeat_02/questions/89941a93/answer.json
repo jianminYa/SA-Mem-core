@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "89941a93",
+  "question_type": "knowledge-update",
+  "question": "How many bikes do I currently own?",
+  "gold": "4",
+  "hypothesis": "Based on your previous messages, you currently own **four bikes**: a road bike, a mountain bike, a commuter bike, and a new hybrid bike you recently purchased.",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 9200,
+    "completion_tokens": 35,
+    "total_tokens": 9235
+  },
+  "judge_usage": {
+    "prompt_tokens": 138,
+    "completion_tokens": 1,
+    "total_tokens": 139
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/89941a93/retrieval.jsonl"
+}

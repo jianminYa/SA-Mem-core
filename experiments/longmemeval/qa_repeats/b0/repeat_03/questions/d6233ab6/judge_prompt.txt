@@ -1,0 +1,13 @@
+I will give you a question, a rubric for desired personalized response, and a response from a model. Please answer yes if the response satisfies the desired response. Otherwise, answer no. The model does not need to reflect all the points in the rubric. The response is correct as long as it recalls and utilizes the user's personal information correctly.
+
+Question: I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?
+
+Rubric: The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.
+
+Model Response: Attending your high school reunion could be a wonderful opportunity, especially since you've been feeling nostalgic. It sounds like you have fond memories from that time, such as being part of the debate team and taking advanced placement courses in economics. Reunions can be a great way to reconnect with old friends, share stories, and reflect on how far you've all come since those high school days.
+
+Given your recent experiences, like planning intimate gatherings and celebrating family, it seems you value connection and meaningful interactions. If you feel comfortable and excited about the idea of seeing your classmates again, it could be a rewarding experience. You might even find that many others share your nostalgia and are eager to catch up.
+
+If you're unsure, consider reaching out to a few friends from high school to gauge their interest in attending. Their enthusiasm might help you decide. Ultimately, if the thought of reconnecting brings you joy, it sounds like a great idea to go!
+
+Is the model response correct? Answer yes or no only.

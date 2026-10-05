@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "d596882b",
+  "question_type": "single-session-assistant",
+  "question": "I'm planning another trip to New York City and I was wondering if you could remind me of that vegan eatery you recommended last time, the one with multiple locations throughout the city?",
+  "gold": "By Chloe",
+  "hypothesis": "It sounds like you're having a great time experimenting in the kitchen! Roasted jalapeno poppers are a fantastic choice, and they can definitely add a fun and spicy element to your dinner party. \n\nIf you have a special filling or technique for your jalapeno poppers, I'd love to hear about it! Common fillings include cream cheese, cheddar, or a mix of cheeses with spices, but there are so many variations you can try. Some people even add bacon or sausage for extra flavor.\n\nAs for serving them at your dinner party, they would make a great appetizer to kick off the meal. You could serve them alongside the Moroccan-Style Salad and Grilled Lemon Herb Chicken Tagine for a nice balance of flavors.\n\nRegarding your experimentation with different types of peppers, both sweet and hot peppers can be wonderful in various dishes. Sweet peppers like bell peppers can be roasted, stuffed, or used fresh in salads, while hot peppers like habaneros or ghost peppers can add a serious kick to salsas, sauces, or marinades. \n\nIf you're looking for more ideas on how to use different types of peppers, here are a few suggestions:\n\n1. **Stuffed Bell Peppers**: Use a mixture of rice, beans, and spices for a hearty vegetarian dish.\n2. **Salsa**: Combine diced tomatoes, onions, cilantro, and your choice of peppers for a fresh salsa.\n3. **Pepper Relish**: Cook down sweet peppers with vinegar and spices for a tangy relish that pairs well with grilled meats.\n4. **Spicy Marinades**: Blend hot peppers with garlic, lime juice, and olive oil for a zesty marinade for chicken or fish.\n\nFeel free to share your favorite recipes or any new pepper experiments you have in mind!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 13444,
+    "completion_tokens": 361,
+    "total_tokens": 13805
+  },
+  "judge_usage": {
+    "prompt_tokens": 507,
+    "completion_tokens": 2,
+    "total_tokens": 509
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/d596882b/retrieval.jsonl"
+}

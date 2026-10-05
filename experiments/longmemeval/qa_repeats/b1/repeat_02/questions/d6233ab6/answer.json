@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "d6233ab6",
+  "question_type": "single-session-preference",
+  "question": "I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?",
+  "gold": "The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.",
+  "hypothesis": "Attending your high school reunion can be a wonderful opportunity to reconnect with old friends and reminisce about shared experiences. Given your recent feelings of nostalgia and your plans to host intimate gatherings with friends, it seems like you value connection and meaningful interactions. Here are some points to consider when deciding whether to attend your reunion:\n\n1. **Nostalgia and Connection**: If you're feeling nostalgic, a reunion could be a great way to relive those memories and reconnect with people who were significant in your life during high school.\n\n2. **Socializing**: It sounds like you enjoy spending time with friends, as evidenced by your dinner party plans. A reunion can provide a chance to catch up with old friends and perhaps even rekindle some friendships.\n\n3. **Curiosity**: You might be curious about how your classmates have changed and what they have been up to since graduation. This can be a fun and enlightening experience.\n\n4. **Personal Growth**: Attending a reunion can also be a way to reflect on your own journey since high school and share your experiences with others.\n\n5. **Comfort Level**: Consider how comfortable you feel about attending. If you have any reservations or anxiety about seeing people from your past, it might be worth discussing those feelings with a close friend or family member.\n\n6. **Making New Memories**: Reunions can create new memories that you can cherish in the future, just like the memories you have from high school.\n\nUltimately, if the idea of reconnecting with old friends excites you and you feel ready to share your experiences, attending the reunion could be a great idea. If you decide to go, you might even find it to be a rewarding experience that adds to your collection of cherished memories.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 9898,
+    "completion_tokens": 351,
+    "total_tokens": 10249
+  },
+  "judge_usage": {
+    "prompt_tokens": 554,
+    "completion_tokens": 2,
+    "total_tokens": 556
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/d6233ab6/retrieval.jsonl"
+}

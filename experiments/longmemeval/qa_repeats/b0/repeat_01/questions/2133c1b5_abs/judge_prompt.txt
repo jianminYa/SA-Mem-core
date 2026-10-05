@@ -1,0 +1,24 @@
+I will give you an unanswerable question, an explanation, and a response from a model. Please answer yes if the model correctly identifies the question as unanswerable. The model could say that the information is incomplete, or some other information is given but the asked information is not.
+
+Question: How long have I been living in my current apartment in Shinjuku?
+
+Explanation: The information provided is not enough. You mentioned living in Harajuku but not Shinjuku.
+
+Model Response: Based on the information you've provided, you moved to your current apartment in Shinjuku in March 2023. Today is October 15, 2023. 
+
+To calculate how long you've been living in your apartment:
+
+1. **From March to October**: 
+   - March to April: 1 month
+   - April to May: 1 month
+   - May to June: 1 month
+   - June to July: 1 month
+   - July to August: 1 month
+   - August to September: 1 month
+   - September to October: 1 month
+
+So, from March 2023 to October 2023, you have been living in your apartment for **7 months**. 
+
+If you have any more questions or need further assistance, feel free to ask!
+
+Does the model correctly identify the question as unanswerable? Answer yes or no only.

@@ -1,0 +1,16 @@
+{
+  "source": "server-side independent QA repeat run",
+  "systems": [
+    "b0",
+    "b1",
+    "b2"
+  ],
+  "repeats": 3,
+  "questions": 50,
+  "model": "gpt-4o-mini",
+  "judge_model": "gpt-4o-2024-08-06",
+  "top_k": 10,
+  "workers": 5,
+  "construction_tokens_included": false,
+  "api_keys_included": false
+}

@@ -1,0 +1,15 @@
+I will give you a question, a rubric for desired personalized response, and a response from a model. Please answer yes if the response satisfies the desired response. Otherwise, answer no. The model does not need to reflect all the points in the rubric. The response is correct as long as it recalls and utilizes the user's personal information correctly.
+
+Question: I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?
+
+Rubric: The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.
+
+Model Response: Attending your high school reunion could be a wonderful opportunity, especially since you've been feeling nostalgic. It sounds like you have fond memories of your high school experiences, such as being part of the debate team and taking advanced placement courses in economics. Reunions can provide a chance to reconnect with old friends, share stories, and reflect on how far you've all come since those days.
+
+Given your recent plans to host a dinner party and invite close friends, it seems you value meaningful connections and shared experiences. A reunion could offer a similar atmosphere, allowing you to catch up with classmates and reminisce about shared memories. 
+
+If you're feeling uncertain, consider what you hope to gain from the experience. If you're looking to reconnect with old friends or see how everyone has changed, it could be a great idea to attend. On the other hand, if you're feeling apprehensive about seeing people from your past, it's perfectly okay to skip it. Ultimately, the decision should align with what feels right for you. 
+
+If you do decide to go, it might be helpful to reach out to a few friends beforehand to make the experience more enjoyable. Enjoy the journey down memory lane!
+
+Is the model response correct? Answer yes or no only.

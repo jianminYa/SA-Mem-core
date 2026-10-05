@@ -1,0 +1,9 @@
+I will give you an unanswerable question, an explanation, and a response from a model. Please answer yes if the model correctly identifies the question as unanswerable. The model could say that the information is incomplete, or some other information is given but the asked information is not.
+
+Question: How many different museums or galleries did I visit in December?
+
+Explanation: 0. You did not mention visitng any museum in December
+
+Model Response: Based on the memories you've shared, it appears that you visited at least one museum in December: the Natural History Museum with your niece on February 8. However, there is no specific mention of any museums or galleries you visited in December. Therefore, I cannot determine how many different museums or galleries you visited in December based on the provided information. If you have more details or memories from December, please share them, and I can help you further!
+
+Does the model correctly identify the question as unanswerable? Answer yes or no only.

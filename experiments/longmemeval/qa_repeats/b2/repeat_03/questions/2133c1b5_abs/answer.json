@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "2133c1b5_abs",
+  "question_type": "knowledge-update",
+  "question": "How long have I been living in my current apartment in Shinjuku?",
+  "gold": "The information provided is not enough. You mentioned living in Harajuku but not Shinjuku.",
+  "hypothesis": "Based on the information you've provided, you moved to your current apartment in Shinjuku in March 2023. Today is October 15, 2023. \n\nTo calculate how long you've been living in your current apartment:\n\n1. **From March to October**: \n   - March to April: 1 month\n   - April to May: 1 month\n   - May to June: 1 month\n   - June to July: 1 month\n   - July to August: 1 month\n   - August to September: 1 month\n   - September to October: 1 month\n\nSo, from March to October, you have been living in your apartment for **7 months**.\n\nIf you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "No",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 11942,
+    "completion_tokens": 162,
+    "total_tokens": 12104
+  },
+  "judge_usage": {
+    "prompt_tokens": 287,
+    "completion_tokens": 1,
+    "total_tokens": 288
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/2133c1b5_abs/retrieval.jsonl"
+}

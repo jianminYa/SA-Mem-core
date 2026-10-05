@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "86f00804",
+  "question_type": "single-session-user",
+  "question": "What book am I currently reading?",
+  "gold": "The Seven Husbands of Evelyn Hugo",
+  "hypothesis": "Here are the remaining texts with inference questions and their translations into Spanish:\n\n**Text 8:**\nThe teacher handed out the homework assignment and explained the instructions. Then she reminded the students to turn it in on time.\n\nWhat can be inferred from this text?\nA. The students already turned in their homework\nB. The students are not paying attention\nC. The homework is due tomorrow\nD. The teacher doesn't care about the homework\n\n**Answer:** C. The homework is due tomorrow.\n\n**Traducción al español:**\n**Texto 8:**\nLa maestra repartió la tarea y explicó las instrucciones. Luego les recordó a los estudiantes que la entregaran a tiempo.\n\n¿Qué se puede inferir de este texto?\nA. Los estudiantes ya entregaron su tarea\nB. Los estudiantes no están prestando atención\nC. La tarea es para mañana\nD. A la maestra no le importa la tarea\n\n**Respuesta:** C. La tarea es para mañana.\n\n---\n\n**Text 9:**\nAfter a long day at work, Tom came home and collapsed on the couch. He didn't even bother to change out of his work clothes.\n\nWhat can be inferred from this text?\nA. Tom is very energetic\nB. Tom is tired from work\nC. Tom enjoys his job\nD. Tom is going out again\n\n**Answer:** B. Tom is tired from work.\n\n**Traducción al español:**\n**Texto 9:**\nDespués de un largo día de trabajo, Tom llegó a casa y se desplomó en el sofá. Ni siquiera se molestó en cambiarse de ropa.\n\n¿Qué se puede inferir de este texto?\nA. Tom tiene mucha energía\nB. Tom está cansado del trabajo\nC. A Tom le gusta su trabajo\nD. Tom va a salir de nuevo\n\n**Respuesta:** B. Tom está cansado del trabajo.\n\n---\n\n**Text 10:**\nLucy opened the fridge and frowned at the empty shelves. She sighed and grabbed her phone to order takeout.\n\nWhat can be inferred from this text?\nA. Lucy enjoys cooking\nB. Lucy has no food at home\nC. Lucy is planning to go grocery shopping\nD. Lucy is having a dinner party\n\n**Answer:** B. Lucy has no food at home.\n\n**Traducción al español:**\n**Texto 10:**\nLucy abrió el refrigerador y frunció el ceño ante los estantes vacíos. Suspiró y tomó su teléfono para pedir comida.\n\n¿Qué se puede inferir de este texto?\nA. A Lucy le gusta cocinar\nB. Lucy no tiene comida en casa\nC. Lucy está planeando ir de compras\nD. Lucy está organizando una cena\n\n**Respuesta:** B. Lucy no tiene comida en casa.\n\n---\n\nThese texts and questions can help readers practice their inference skills, which are crucial for reading comprehension. If you need more examples or further assistance, feel free to ask!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 9248,
+    "completion_tokens": 602,
+    "total_tokens": 9850
+  },
+  "judge_usage": {
+    "prompt_tokens": 724,
+    "completion_tokens": 2,
+    "total_tokens": 726
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/86f00804/retrieval.jsonl"
+}

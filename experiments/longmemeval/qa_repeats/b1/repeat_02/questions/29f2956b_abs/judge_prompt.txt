@@ -1,0 +1,11 @@
+I will give you an unanswerable question, an explanation, and a response from a model. Please answer yes if the model correctly identifies the question as unanswerable. The model could say that the information is incomplete, or some other information is given but the asked information is not.
+
+Question: How much time do I dedicate to practicing violin every day?
+
+Explanation: You did not mention this information. You mentioned practing guitar everyday, but not violin.
+
+Model Response: Based on the information provided, you have not mentioned practicing the violin specifically in your previous sessions. However, you did mention practicing guitar for 30 minutes daily. If you are looking to establish a practice routine for the violin, you might consider starting with a similar time commitment, such as 30 minutes a day, and adjust based on your progress and comfort level.
+
+If you have a specific goal or piece you want to work on, you might want to dedicate more time to it as you progress. Consistency is key, so try to set aside a regular time each day for your practice. If you have any specific questions about violin practice or need tips, feel free to ask!
+
+Does the model correctly identify the question as unanswerable? Answer yes or no only.

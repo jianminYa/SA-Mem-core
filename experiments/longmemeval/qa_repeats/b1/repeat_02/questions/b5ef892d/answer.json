@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "b5ef892d",
+  "question_type": "multi-session",
+  "question": "How many days did I spend on camping trips in the United States this year?",
+  "gold": "8 days.",
+  "hypothesis": "Based on the memories you've shared, it looks like you spent a total of **5 days** on camping trips in the United States this year. You mentioned a **5-day camping trip to Yellowstone National Park** last month, and there were no other camping trips mentioned in your memories for this year. \n\nIf you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 13660,
+    "completion_tokens": 77,
+    "total_tokens": 13737
+  },
+  "judge_usage": {
+    "prompt_tokens": 204,
+    "completion_tokens": 2,
+    "total_tokens": 206
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/b5ef892d/retrieval.jsonl"
+}

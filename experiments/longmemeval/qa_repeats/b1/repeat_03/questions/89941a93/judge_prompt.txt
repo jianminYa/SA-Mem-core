@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: How many bikes do I currently own?
+
+Correct Answer: 4
+
+Model Response: Based on your previous messages, you currently own **four bikes**: a road bike, a mountain bike, a commuter bike, and a new hybrid bike you recently purchased. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

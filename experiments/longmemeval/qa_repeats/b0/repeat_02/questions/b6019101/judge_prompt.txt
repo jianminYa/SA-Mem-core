@@ -1,0 +1,11 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: How many MCU films did I watch in the last 3 months?
+
+Correct Answer: 5
+
+Model Response: Based on your previous messages, you mentioned that you watched 4 MCU films in the last 3 months. However, later you stated that you had watched 12 films in total during that same period, including 5 MCU films. 
+
+To clarify, you have watched **5 MCU films** in the last 3 months. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

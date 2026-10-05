@@ -1,0 +1,14 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many different types of food delivery services have I used recently?
+
+Correct Answer: 3
+
+Model Response: Based on your recent memories, it appears that you have used at least two different types of food delivery services recently:
+
+1. **Uber Eats**: You mentioned relying on Uber Eats for convenience and that it has been a lifesaver for your weekends.
+2. **Fresh Fusion**: You mentioned discovering a new service called Fresh Fusion that offers pre-made meals.
+
+If there are any other services you've used that weren't mentioned in the provided memories, please let me know! But from the information given, it looks like you've used at least these two services.
+
+Is the model response correct? Answer yes or no only.

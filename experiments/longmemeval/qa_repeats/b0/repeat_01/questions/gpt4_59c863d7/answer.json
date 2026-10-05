@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "gpt4_59c863d7",
+  "question_type": "multi-session",
+  "question": "How many model kits have I worked on or bought?",
+  "gold": "I have worked on or bought five model kits. The scales of the models are: Revell F-15 Eagle (scale not mentioned), Tamiya 1/48 scale Spitfire Mk.V, 1/16 scale German Tiger I tank, 1/72 scale B-29 bomber, and 1/24 scale '69 Camaro.",
+  "hypothesis": "Based on your memories, you have worked on or bought at least three model kits:\n\n1. A **Revell F-15 Eagle** kit that you finished and mentioned picking up during a trip to the hobby store in late April.\n2. A **1/72 scale B-29 bomber** that you are planning to work on next.\n3. A **1/24 scale '69 Camaro** that you acquired at a model show.\n\nIf there are any other kits you might have worked on or purchased that weren't mentioned in the provided memories, please let me know!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 15336,
+    "completion_tokens": 115,
+    "total_tokens": 15451
+  },
+  "judge_usage": {
+    "prompt_tokens": 305,
+    "completion_tokens": 2,
+    "total_tokens": 307
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/gpt4_59c863d7/retrieval.jsonl"
+}

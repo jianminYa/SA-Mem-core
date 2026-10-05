@@ -1,0 +1,21 @@
+{
+  "question_id": "dcfa8644",
+  "status": "complete",
+  "attempts": 1,
+  "started_at": "2026-10-05T06:13:29.314005+00:00",
+  "finished_at": "2026-10-05T06:48:05.994883+00:00",
+  "failed_calls": 0,
+  "retried_calls": 0,
+  "permanently_failed_calls": 0,
+  "validation": {
+    "complete": true,
+    "reason": "ok",
+    "failed_calls": 0,
+    "usage_gaps": 0,
+    "retried_calls": 0,
+    "construction_calls": 625,
+    "memory_units": 134,
+    "qa_failures": 0,
+    "permanently_failed_calls": 0
+  }
+}

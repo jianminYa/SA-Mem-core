@@ -1,0 +1,14 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many tanks do I currently have, including the one I set up for my friend's kid?
+
+Correct Answer: 3
+
+Model Response: Based on the information you've provided, you currently have **two tanks**:
+
+1. Your **20-gallon community tank** named "Amazonia," which houses neon tetras, harlequin rasboras, and platies.
+2. A **1-gallon tank** that you set up for your friend's kid, which contains a few guppies and some plants.
+
+So, including the tank for your friend's kid, you have a total of **two tanks**. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

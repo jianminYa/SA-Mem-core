@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "21d02d0d",
+  "question_type": "multi-session",
+  "question": "How many fun runs did I miss in March due to work commitments?",
+  "gold": "2",
+  "hypothesis": "Based on your previous messages, you mentioned that you missed a 5K fun run on March 5th due to work commitments and also missed a 5K fun run on March 26th. Therefore, you missed **two fun runs** in March due to your work commitments. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 9959,
+    "completion_tokens": 74,
+    "total_tokens": 10033
+  },
+  "judge_usage": {
+    "prompt_tokens": 198,
+    "completion_tokens": 1,
+    "total_tokens": 199
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/21d02d0d/retrieval.jsonl"
+}

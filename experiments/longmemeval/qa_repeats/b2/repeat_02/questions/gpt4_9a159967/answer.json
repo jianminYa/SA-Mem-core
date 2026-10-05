@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "gpt4_9a159967",
+  "question_type": "temporal-reasoning",
+  "question": "Which airline did I fly with the most in March and April?",
+  "gold": "United Airlines",
+  "hypothesis": "Based on your memories, it seems that you flew with United Airlines the most in March and April. You mentioned taking a business trip to Chicago with United Airlines in March, where you had two flights each way (four flights total). Additionally, you expressed a preference for United for your next long-haul flight and have accumulated around 20,000 miles with them over the past three months.\n\nWhile you also mentioned flying with American Airlines for a trip to Hawaii, the frequency of your flights with United Airlines during your business trip indicates that United was your most flown airline during that period. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8574,
+    "completion_tokens": 132,
+    "total_tokens": 8706
+  },
+  "judge_usage": {
+    "prompt_tokens": 319,
+    "completion_tokens": 1,
+    "total_tokens": 320
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/gpt4_9a159967/retrieval.jsonl"
+}

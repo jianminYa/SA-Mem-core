@@ -1,0 +1,17 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many days did I spend on camping trips in the United States this year?
+
+Correct Answer: 8 days.
+
+Model Response: Based on the information you've provided, here's the updated **Online Shopping Expenses Tracker** with the sneakers included:
+
+**Online Shopping Expenses Tracker**
+
+| **Date**       | **Item Description** | **Cost** | **Store/Website** |
+|----------------|-----------------------|----------|--------------------|
+| 2023-04-29     | Sneakers              | $80      | Amazon             |
+
+Now, please provide the details for your next purchase, including the date, item description, cost, and store/website. We can continue adding to the tracker from there!
+
+Is the model response correct? Answer yes or no only.

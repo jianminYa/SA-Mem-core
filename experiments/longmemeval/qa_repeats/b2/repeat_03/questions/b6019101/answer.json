@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "b6019101",
+  "question_type": "knowledge-update",
+  "question": "How many MCU films did I watch in the last 3 months?",
+  "gold": "5",
+  "hypothesis": "Based on your previous messages, you mentioned that you watched 4 MCU films in the last 3 months. However, later you stated that you had watched 12 films in total, including 5 MCU films. \n\nTo clarify, if you are asking how many MCU films you watched in the last 3 months, the answer is **5 MCU films**. \n\nIf you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 14745,
+    "completion_tokens": 90,
+    "total_tokens": 14835
+  },
+  "judge_usage": {
+    "prompt_tokens": 199,
+    "completion_tokens": 1,
+    "total_tokens": 200
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/b6019101/retrieval.jsonl"
+}

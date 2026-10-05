@@ -1,0 +1,21 @@
+{
+  "question_id": "gpt4_468eb064",
+  "status": "complete",
+  "attempts": 1,
+  "started_at": "2026-10-05T05:39:54.737847+00:00",
+  "finished_at": "2026-10-05T06:11:23.936220+00:00",
+  "failed_calls": 0,
+  "retried_calls": 0,
+  "permanently_failed_calls": 0,
+  "validation": {
+    "complete": true,
+    "reason": "ok",
+    "failed_calls": 0,
+    "usage_gaps": 0,
+    "retried_calls": 0,
+    "construction_calls": 613,
+    "memory_units": 132,
+    "qa_failures": 0,
+    "permanently_failed_calls": 0
+  }
+}

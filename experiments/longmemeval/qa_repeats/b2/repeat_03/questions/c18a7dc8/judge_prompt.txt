@@ -1,0 +1,15 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many years older am I than when I graduated from college?
+
+Correct Answer: 7
+
+Model Response: Based on the memories you have shared, I do not have any information about your current age or the age at which you graduated from college. The only related detail is that you completed your Bachelor's degree in Business Administration with a concentration in Marketing from the University of California, Berkeley, at the age of 25.
+
+To answer your question, "How many years older am I than when I graduated from college?" I would need to know your current age or the date when you graduated. If you provide your current age or the current year and the year you graduated, I can calculate the difference for you.
+
+For example, if you graduated at age 25 and you are now 30 years old, then you are 5 years older than when you graduated.
+
+Please provide your current age or the current year so I can help you calculate the number of years older you are than when you graduated from college.
+
+Is the model response correct? Answer yes or no only.

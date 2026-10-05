@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "gpt4_f420262d",
+  "question_type": "temporal-reasoning",
+  "question": "What was the airline that I flied with on Valentine's day?",
+  "gold": "American Airlines",
+  "hypothesis": "Based on your previous conversations, it appears that you flew with **American Airlines** on **February 10th** from New York to Los Angeles. However, you mentioned considering **JetBlue** for your trip to Miami on **Valentine's Day** (February 14th). Therefore, if you are asking about the airline you flew with on Valentine's Day, it would be **JetBlue**. \n\nIf you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 6747,
+    "completion_tokens": 98,
+    "total_tokens": 6845
+  },
+  "judge_usage": {
+    "prompt_tokens": 285,
+    "completion_tokens": 2,
+    "total_tokens": 287
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/gpt4_f420262d/retrieval.jsonl"
+}

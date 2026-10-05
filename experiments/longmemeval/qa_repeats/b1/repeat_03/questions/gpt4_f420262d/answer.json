@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "gpt4_f420262d",
+  "question_type": "temporal-reasoning",
+  "question": "What was the airline that I flied with on Valentine's day?",
+  "gold": "American Airlines",
+  "hypothesis": "Based on your previous conversations, it appears that you flew with **American Airlines** on **Valentine's Day** (February 14, 2023). You mentioned having a terrible experience with their in-flight entertainment system on a flight from New York to Los Angeles on February 10, 2023, and you were considering flying with them again for your trip to Miami. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 6747,
+    "completion_tokens": 92,
+    "total_tokens": 6839
+  },
+  "judge_usage": {
+    "prompt_tokens": 279,
+    "completion_tokens": 2,
+    "total_tokens": 281
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/gpt4_f420262d/retrieval.jsonl"
+}

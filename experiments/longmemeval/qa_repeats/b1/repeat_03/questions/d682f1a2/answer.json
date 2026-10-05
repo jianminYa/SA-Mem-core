@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "d682f1a2",
+  "question_type": "multi-session",
+  "question": "How many different types of food delivery services have I used recently?",
+  "gold": "3",
+  "hypothesis": "Based on your recent memories, it appears that you have used at least two different types of food delivery services recently:\n\n1. **Uber Eats**: You mentioned relying on Uber Eats for convenience and that it has been a lifesaver for your weekends.\n2. **Fresh Fusion**: You mentioned discovering a new service called Fresh Fusion that offers pre-made meals.\n\nIf there are any other services you've used that weren't mentioned in the provided memories, please let me know! But from the information given, it looks like you've used at least these two services.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8843,
+    "completion_tokens": 110,
+    "total_tokens": 8953
+  },
+  "judge_usage": {
+    "prompt_tokens": 233,
+    "completion_tokens": 2,
+    "total_tokens": 235
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/d682f1a2/retrieval.jsonl"
+}

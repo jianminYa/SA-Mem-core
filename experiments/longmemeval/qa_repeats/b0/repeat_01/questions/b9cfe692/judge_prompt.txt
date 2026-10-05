@@ -1,0 +1,15 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: How long did I take to finish 'The Seven Husbands of Evelyn Hugo' and 'The Nightingale' combined?
+
+Correct Answer: 5.5 weeks
+
+Model Response: Chapters in books can vary widely in length, but they typically range from about 1,500 to 5,000 words. Here are some general guidelines:
+
+- **Short Chapters**: These can be around 1,000 to 2,000 words. They are often used in fast-paced novels or thrillers to maintain momentum and keep readers engaged.
+- **Standard Chapters**: Most chapters fall into the range of 2,500 to 4,000 words. This length allows for a good balance of detail and pacing.
+- **Long Chapters**: Some chapters can exceed 5,000 words, especially in literary fiction or epic novels where more extensive development of themes and characters is necessary.
+
+Ultimately, the length of a chapter depends on the author's style, the genre of the book, and the pacing of the story. Some authors prefer shorter chapters to create a sense of urgency, while others may opt for longer chapters to delve deeper into character development and plot intricacies.
+
+Is the model response correct? Answer yes or no only.

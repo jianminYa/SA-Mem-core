@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: How long have I been living in my current apartment in Harajuku?
+
+Correct Answer: 3 months
+
+Model Response: Based on your memories, you have been living in your current apartment in Harajuku for **3 months** as of October 15, 2023. You mentioned that you have been living there for 3 months during your conversation on that date.
+
+Is the model response correct? Answer yes or no only.

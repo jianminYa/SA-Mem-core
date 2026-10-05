@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "gpt4_f420262d",
+  "question_type": "temporal-reasoning",
+  "question": "What was the airline that I flied with on Valentine's day?",
+  "gold": "American Airlines",
+  "hypothesis": "Based on your memories, it appears that you flew with JetBlue on Valentine's Day (February 14, 2023) from Boston (BOS) to Fort Lauderdale (FLL). You mentioned leaning towards the JetBlue option and discussed their amenities and seat selection process. If you have any further questions or need assistance, feel free to ask!",
+  "judge_response": "No",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 6747,
+    "completion_tokens": 70,
+    "total_tokens": 6817
+  },
+  "judge_usage": {
+    "prompt_tokens": 257,
+    "completion_tokens": 1,
+    "total_tokens": 258
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/gpt4_f420262d/retrieval.jsonl"
+}

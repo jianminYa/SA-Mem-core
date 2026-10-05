@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "726462e0",
+  "question_type": "single-session-user",
+  "question": "What was the discount I got on my first purchase from the new clothing brand?",
+  "gold": "10%",
+  "hypothesis": "You received a **10% discount** on your first purchase from the new clothing brand, which you mentioned last month.",
+  "judge_response": "yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7048,
+    "completion_tokens": 24,
+    "total_tokens": 7072
+  },
+  "judge_usage": {
+    "prompt_tokens": 150,
+    "completion_tokens": 1,
+    "total_tokens": 151
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/726462e0/retrieval.jsonl"
+}

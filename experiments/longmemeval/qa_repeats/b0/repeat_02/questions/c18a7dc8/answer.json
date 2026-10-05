@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 2,
+  "question_id": "c18a7dc8",
+  "question_type": "multi-session",
+  "question": "How many years older am I than when I graduated from college?",
+  "gold": "7",
+  "hypothesis": "To answer your question about how many years older you are than when you graduated from college, I would need to know the year you graduated from college. However, since that information isn't provided in the context, I can guide you on how to calculate it.\n\n1. **Determine the year you graduated from college**.\n2. **Subtract that year from the current year (2023)**. \n\nFor example, if you graduated in 2010:\n- Current year: 2023\n- Year graduated: 2010\n- Calculation: 2023 - 2010 = 13\n\nSo, you would be 13 years older than when you graduated from college.\n\nIf you provide the year you graduated, I can give you the exact number of years.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 7911,
+    "completion_tokens": 154,
+    "total_tokens": 8065
+  },
+  "judge_usage": {
+    "prompt_tokens": 277,
+    "completion_tokens": 2,
+    "total_tokens": 279
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/c18a7dc8/retrieval.jsonl"
+}

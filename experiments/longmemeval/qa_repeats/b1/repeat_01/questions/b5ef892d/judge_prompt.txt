@@ -1,0 +1,11 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many days did I spend on camping trips in the United States this year?
+
+Correct Answer: 8 days.
+
+Model Response: Based on the memories you've shared, it looks like you spent a total of **5 days** on camping trips in the United States this year. You mentioned a **5-day camping trip to Yellowstone National Park** last month, and there were no other camping trips mentioned in your memories for this year. 
+
+If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

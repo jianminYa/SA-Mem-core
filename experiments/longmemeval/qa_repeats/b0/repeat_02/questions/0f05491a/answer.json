@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 2,
+  "question_id": "0f05491a",
+  "question_type": "knowledge-update",
+  "question": "How many stars do I need to reach the gold level on my Starbucks Rewards app?",
+  "gold": "120",
+  "hypothesis": "As of your latest information, you need to earn **120 stars** within a 12-month period to reach the Gold level on your Starbucks Rewards app. Keep earning stars through purchases, app orders, and promotions to hit that target and enjoy the Gold benefits!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 5118,
+    "completion_tokens": 52,
+    "total_tokens": 5170
+  },
+  "judge_usage": {
+    "prompt_tokens": 164,
+    "completion_tokens": 2,
+    "total_tokens": 166
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/0f05491a/retrieval.jsonl"
+}

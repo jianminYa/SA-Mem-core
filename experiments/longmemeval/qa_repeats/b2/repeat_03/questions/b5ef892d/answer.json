@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "b5ef892d",
+  "question_type": "multi-session",
+  "question": "How many days did I spend on camping trips in the United States this year?",
+  "gold": "8 days.",
+  "hypothesis": "Based on the information you've provided, here's the updated **Online Shopping Expenses Tracker** with the sneakers included:\n\n**Online Shopping Expenses Tracker**\n\n| **Date**       | **Item Description** | **Cost** | **Store/Website** |\n|----------------|-----------------------|----------|--------------------|\n| 2023-04-29     | Sneakers              | $80      | Amazon             |\n\nNow, please provide the details for your next purchase, including the date, item description, cost, and store/website. We can continue adding to the tracker from there!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 12056,
+    "completion_tokens": 114,
+    "total_tokens": 12170
+  },
+  "judge_usage": {
+    "prompt_tokens": 241,
+    "completion_tokens": 2,
+    "total_tokens": 243
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/b5ef892d/retrieval.jsonl"
+}

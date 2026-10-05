@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-10-05T09:02:54.488450+00:00",
+  "system": "samem_2p",
+  "dataset": "longmemeval_s_cleaned.json",
+  "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "subset_file": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/_question_ids/2133c1b5.txt",
+  "subset_file_sha256": "f7870eee6414cd90091e80d3c8267cd6d8d1ea06180cdc1dc4d83809a113ad64",
+  "question_ids": [
+    "2133c1b5"
+  ],
+  "question_ids_sha256": "d12e722bcad3ad0c85449242514808b6ebc8058f2502b23d2637daa0240eaf1e",
+  "source_git_commit": "241b3c0eab65e6bcceb0a9ec7b268b07610e7820",
+  "llm_model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-small",
+  "api_base_configured": true,
+  "temperature": 0.0,
+  "top_k": 20,
+  "generation_top_k": 10,
+  "trace_enabled": false,
+  "trace_construction_enabled": false,
+  "graph_enabled": false,
+  "merged_extraction_enabled": false,
+  "event_classification_enabled": true,
+  "temporal_gate_b2_enabled": true,
+  "temporal_gate_log": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/2133c1b5/temporal_gate.jsonl",
+  "temporal_gate_detector": "high_recall_local_regex_v1",
+  "temporal_followup_optimization_enabled": false,
+  "qa_enabled": false,
+  "retrieval_mode": "native_lme_enhanced_no_graph",
+  "retriever_user_aliases": {
+    "2133c1b5": "d12e722b"
+  },
+  "retrieval_query_parser_tokens_counted_as_construction": false,
+  "environment_name": "samem-lme",
+  "python_version": "3.11.16 (main, Sep  2 2026, 23:41:26) [GCC 15.3.0]",
+  "provider_usage_available": true,
+  "construction_wall_time_sec": 1956.366638
+}

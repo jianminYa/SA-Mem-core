@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "726462e0",
+  "question_type": "single-session-user",
+  "question": "What was the discount I got on my first purchase from the new clothing brand?",
+  "gold": "10%",
+  "hypothesis": "Based on your previous memory, you received a **10% discount** on your first purchase from the new clothing brand, which you mentioned was a nice benefit. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7048,
+    "completion_tokens": 48,
+    "total_tokens": 7096
+  },
+  "judge_usage": {
+    "prompt_tokens": 174,
+    "completion_tokens": 1,
+    "total_tokens": 175
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/726462e0/retrieval.jsonl"
+}

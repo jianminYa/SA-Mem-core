@@ -1,0 +1,9 @@
+I will give you an unanswerable question, an explanation, and a response from a model. Please answer yes if the model correctly identifies the question as unanswerable. The model could say that the information is incomplete, or some other information is given but the asked information is not.
+
+Question: How much time do I dedicate to practicing violin every day?
+
+Explanation: You did not mention this information. You mentioned practing guitar everyday, but not violin.
+
+Model Response: Based on the information provided, it appears that you have not mentioned practicing the violin in any of your previous sessions. Instead, you have discussed practicing guitar for 30 minutes daily, along with various other activities and interests. Therefore, I cannot determine how much time you dedicate to practicing the violin every day, as there is no record of you practicing it. If you would like to share your current practice routine for the violin, I would be happy to help you assess it!
+
+Does the model correctly identify the question as unanswerable? Answer yes or no only.

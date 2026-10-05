@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "86f00804",
+  "question_type": "single-session-user",
+  "question": "What book am I currently reading?",
+  "gold": "The Seven Husbands of Evelyn Hugo",
+  "hypothesis": "Based on your previous messages, it seems you are currently reading \"The Seven Husbands of Evelyn Hugo.\" If you have any other questions or need further assistance, feel free to ask!",
+  "judge_response": "yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8744,
+    "completion_tokens": 37,
+    "total_tokens": 8781
+  },
+  "judge_usage": {
+    "prompt_tokens": 159,
+    "completion_tokens": 1,
+    "total_tokens": 160
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/86f00804/retrieval.jsonl"
+}

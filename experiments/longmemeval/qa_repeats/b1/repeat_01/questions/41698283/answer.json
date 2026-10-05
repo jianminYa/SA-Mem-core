@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "41698283",
+  "question_type": "knowledge-update",
+  "question": "What type of camera lens did I purchase most recently?",
+  "gold": "a 70-200mm zoom lens",
+  "hypothesis": "Based on your memories, it appears that you have not mentioned purchasing a new camera lens recently. The last lens you discussed was your 70-200mm zoom lens, which you mentioned enjoying while taking shots at a local park. You also expressed interest in potentially getting a wide-angle lens, such as a 14-24mm or 16-35mm, but there is no record of a recent purchase of any lens. \n\nIf you have made a purchase after the last recorded memory, please provide that information, and I can help you further!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 6388,
+    "completion_tokens": 111,
+    "total_tokens": 6499
+  },
+  "judge_usage": {
+    "prompt_tokens": 223,
+    "completion_tokens": 2,
+    "total_tokens": 225
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/41698283/retrieval.jsonl"
+}

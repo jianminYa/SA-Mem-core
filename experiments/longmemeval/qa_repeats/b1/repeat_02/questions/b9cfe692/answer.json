@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "b9cfe692",
+  "question_type": "temporal-reasoning",
+  "question": "How long did I take to finish 'The Seven Husbands of Evelyn Hugo' and 'The Nightingale' combined?",
+  "gold": "5.5 weeks",
+  "hypothesis": "Chapters in books can vary widely in length, but they typically range from about 1,500 to 5,000 words. Some chapters may be shorter, around 1,000 words, especially in fast-paced novels or thrillers, while others can be much longer, particularly in literary fiction or epic narratives. Ultimately, the length of a chapter often depends on the author's style, the pacing of the story, and the structure of the book.",
+  "judge_response": "No",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8305,
+    "completion_tokens": 91,
+    "total_tokens": 8396
+  },
+  "judge_usage": {
+    "prompt_tokens": 291,
+    "completion_tokens": 1,
+    "total_tokens": 292
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/b9cfe692/retrieval.jsonl"
+}

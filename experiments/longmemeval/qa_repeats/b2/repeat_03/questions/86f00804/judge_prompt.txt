@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: What book am I currently reading?
+
+Correct Answer: The Seven Husbands of Evelyn Hugo
+
+Model Response: Based on your previous messages, you are currently reading "The Seven Husbands of Evelyn Hugo." Enjoy your reading! If you have any other questions or need recommendations, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

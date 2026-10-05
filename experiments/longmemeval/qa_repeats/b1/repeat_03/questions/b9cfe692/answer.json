@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "b9cfe692",
+  "question_type": "temporal-reasoning",
+  "question": "How long did I take to finish 'The Seven Husbands of Evelyn Hugo' and 'The Nightingale' combined?",
+  "gold": "5.5 weeks",
+  "hypothesis": "Chapters in books can vary widely in length, but they typically range from about 1,500 to 5,000 words. Here are some general guidelines:\n\n- **Short Chapters**: These can be around 1,000 to 2,000 words. They are often used in fast-paced novels or thrillers to maintain momentum and keep readers engaged.\n- **Average Chapters**: Most chapters fall between 2,000 to 4,000 words. This length allows for a good balance of detail and pacing, making it suitable for many genres, including literary fiction and historical novels.\n- **Long Chapters**: Some chapters can exceed 5,000 words, especially in epic novels or those with complex narratives. These chapters may delve deeply into character development or intricate plotlines.\n\nUltimately, the length of a chapter is determined by the author's style, the story's pacing, and the overall structure of the book.",
+  "judge_response": "No",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8305,
+    "completion_tokens": 186,
+    "total_tokens": 8491
+  },
+  "judge_usage": {
+    "prompt_tokens": 386,
+    "completion_tokens": 1,
+    "total_tokens": 387
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/b9cfe692/retrieval.jsonl"
+}

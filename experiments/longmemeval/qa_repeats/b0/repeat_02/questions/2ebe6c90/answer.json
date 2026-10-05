@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 2,
+  "question_id": "2ebe6c90",
+  "question_type": "temporal-reasoning",
+  "question": "How many days did it take me to finish 'The Nightingale' by Kristin Hannah?",
+  "gold": "21 days. 22 days (including the last day) is also acceptable.",
+  "hypothesis": "Based on the information provided, you started reading \"The Nightingale\" by Kristin Hannah on January 10, 2023, and you finished it on January 31, 2023. \n\nTo calculate the number of days it took you to finish the book:\n\n- Start date: January 10, 2023\n- End date: January 31, 2023\n\nFrom January 10 to January 31 is 21 days.\n\nTherefore, it took you **21 days** to finish \"The Nightingale.\"",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8722,
+    "completion_tokens": 107,
+    "total_tokens": 8829
+  },
+  "judge_usage": {
+    "prompt_tokens": 313,
+    "completion_tokens": 2,
+    "total_tokens": 315
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/2ebe6c90/retrieval.jsonl"
+}

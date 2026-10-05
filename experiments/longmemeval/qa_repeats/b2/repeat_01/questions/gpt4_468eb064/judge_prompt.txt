@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: Who did I meet with during the lunch last Tuesday?
+
+Correct Answer: Emma
+
+Model Response: I'm sorry, but I cannot provide information about who you met with during lunch last Tuesday based on the memories provided. The only relevant detail I have is that you mentioned catching up with Emma, a freelance writer, over lunch on April 11, 2023. If you were referring to a different lunch or need more specific details, please provide additional context.
+
+Is the model response correct? Answer yes or no only.

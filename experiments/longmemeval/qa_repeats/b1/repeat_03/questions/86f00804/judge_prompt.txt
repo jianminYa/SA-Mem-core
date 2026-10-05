@@ -1,0 +1,86 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: What book am I currently reading?
+
+Correct Answer: The Seven Husbands of Evelyn Hugo
+
+Model Response: Here are the remaining texts with inference questions and their translations into Spanish:
+
+**Text 8:**
+The teacher handed out the homework assignment and explained the instructions. Then she reminded the students to turn it in on time.
+
+What can be inferred from this text?
+A. The students already turned in their homework
+B. The students are not paying attention
+C. The homework is due tomorrow
+D. The teacher doesn't care about the homework
+
+**Answer:** C. The homework is due tomorrow
+
+**Traducción al español:**
+**Texto 8:**
+La maestra repartió la tarea y explicó las instrucciones. Luego les recordó a los estudiantes que la entregaran a tiempo.
+
+¿Qué se puede inferir de este texto?
+A. Los estudiantes ya entregaron su tarea
+B. Los estudiantes no están prestando atención
+C. La tarea es para mañana
+D. A la maestra no le importa la tarea
+
+**Respuesta:** C. La tarea es para mañana
+
+---
+
+**Text 9:**
+After a long day at work, Tom collapsed onto the couch and turned on the TV. He sighed with relief as he sank into the cushions.
+
+What can be inferred from this text?
+A. Tom had a tiring day
+B. Tom is excited to watch TV
+C. Tom prefers to work late
+D. Tom is unhappy at home
+
+**Answer:** A. Tom had a tiring day
+
+**Traducción al español:**
+**Texto 9:**
+Después de un largo día de trabajo, Tom se dejó caer en el sofá y encendió la televisión. Suspiró de alivio mientras se hundía en los cojines.
+
+¿Qué se puede inferir de este texto?
+A. Tom tuvo un día agotador
+B. Tom está emocionado por ver televisión
+C. A Tom le gusta trabajar tarde
+D. Tom no es feliz en casa
+
+**Respuesta:** A. Tom tuvo un día agotador
+
+---
+
+**Text 10:**
+Lily opened the fridge and frowned at the empty shelves. She grabbed her phone and ordered takeout for dinner.
+
+What can be inferred from this text?
+A. Lily enjoys cooking
+B. Lily has no food at home
+C. Lily is on a diet
+D. Lily is having guests for dinner
+
+**Answer:** B. Lily has no food at home
+
+**Traducción al español:**
+**Texto 10:**
+Lily abrió el refrigerador y frunció el ceño ante los estantes vacíos. Agarró su teléfono y pidió comida para llevar para la cena.
+
+¿Qué se puede inferir de este texto?
+A. A Lily le gusta cocinar
+B. Lily no tiene comida en casa
+C. Lily está a dieta
+D. Lily tiene invitados para la cena
+
+**Respuesta:** B. Lily no tiene comida en casa
+
+---
+
+These texts and questions should help illustrate the concept of making inferences in reading comprehension. If you need more examples or further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

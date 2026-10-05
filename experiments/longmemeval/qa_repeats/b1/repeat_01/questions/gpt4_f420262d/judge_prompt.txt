@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: What was the airline that I flied with on Valentine's day?
+
+Correct Answer: American Airlines
+
+Model Response: Based on your previous conversations, it appears that you flew with **American Airlines** on Valentine's Day (February 14, 2023). You mentioned having a terrible experience with their in-flight entertainment system on a flight from New York to Los Angeles, which you referenced in your discussions about your travel experiences. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

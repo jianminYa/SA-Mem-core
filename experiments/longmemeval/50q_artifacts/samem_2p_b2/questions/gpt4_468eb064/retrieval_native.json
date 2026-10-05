@@ -1,0 +1,614 @@
+{
+  "user_id": "gpt4_468eb064",
+  "question_id": "gpt4_468eb064",
+  "question_type": "temporal-reasoning",
+  "question": "Who did I meet with during the lunch last Tuesday?",
+  "answer": "Emma",
+  "answer_session_ids": [
+    "answer_9b09d95b_1"
+  ],
+  "question_date": "2023/04/18 (Tue) 16:50",
+  "rankings": {
+    "content_event_topic_kw": [
+      129,
+      75,
+      121,
+      95,
+      81,
+      37,
+      103,
+      97,
+      86,
+      79,
+      42,
+      66,
+      72,
+      67,
+      104,
+      73,
+      82,
+      118,
+      128,
+      131,
+      54,
+      84,
+      53,
+      38,
+      96,
+      87,
+      88,
+      78,
+      106,
+      85,
+      125,
+      65,
+      98,
+      74,
+      108,
+      44,
+      119,
+      39,
+      114,
+      59,
+      80,
+      94,
+      43,
+      41,
+      120,
+      101,
+      127,
+      117,
+      83,
+      130,
+      100,
+      55,
+      105,
+      57,
+      68,
+      52,
+      113,
+      99,
+      56,
+      46,
+      62,
+      89,
+      102,
+      91,
+      50,
+      93,
+      126,
+      115,
+      77,
+      48,
+      45,
+      111,
+      60,
+      64,
+      61,
+      116,
+      70,
+      124,
+      90,
+      58,
+      123,
+      47,
+      122,
+      92
+    ]
+  },
+  "target_boxes": [
+    37,
+    38
+  ],
+  "mode": "Enhanced",
+  "time_constraint_type": "POINT",
+  "query_time_start": "2023-04-11",
+  "query_time_end": "2023-04-11",
+  "query_embedding_input": "Who did I meet with",
+  "retrieved_items_minimal": [
+    {
+      "block_id": 129,
+      "rank": 1,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 75,
+      "rank": 2,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 121,
+      "rank": 3,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 95,
+      "rank": 4,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 81,
+      "rank": 5,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 37,
+      "rank": 6,
+      "block_time_start": "2023-04-04",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 103,
+      "rank": 7,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 97,
+      "rank": 8,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 86,
+      "rank": 9,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 79,
+      "rank": 10,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 42,
+      "rank": 11,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 66,
+      "rank": 12,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 72,
+      "rank": 13,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 67,
+      "rank": 14,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 104,
+      "rank": 15,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 73,
+      "rank": 16,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 82,
+      "rank": 17,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 118,
+      "rank": 18,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 128,
+      "rank": 19,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 131,
+      "rank": 20,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 54,
+      "rank": 21,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 84,
+      "rank": 22,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 53,
+      "rank": 23,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 38,
+      "rank": 24,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 96,
+      "rank": 25,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 87,
+      "rank": 26,
+      "block_time_start": "2023-04-04",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 88,
+      "rank": 27,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 78,
+      "rank": 28,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 106,
+      "rank": 29,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 85,
+      "rank": 30,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 125,
+      "rank": 31,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 65,
+      "rank": 32,
+      "block_time_start": "2023-03-21",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 98,
+      "rank": 33,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 74,
+      "rank": 34,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 108,
+      "rank": 35,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 44,
+      "rank": 36,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 119,
+      "rank": 37,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 39,
+      "rank": 38,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 114,
+      "rank": 39,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 59,
+      "rank": 40,
+      "block_time_start": "2023-02-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 80,
+      "rank": 41,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 94,
+      "rank": 42,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 43,
+      "rank": 43,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 41,
+      "rank": 44,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 120,
+      "rank": 45,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 101,
+      "rank": 46,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 127,
+      "rank": 47,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 117,
+      "rank": 48,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 83,
+      "rank": 49,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 130,
+      "rank": 50,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 100,
+      "rank": 51,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 55,
+      "rank": 52,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 105,
+      "rank": 53,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 57,
+      "rank": 54,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 68,
+      "rank": 55,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 52,
+      "rank": 56,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 113,
+      "rank": 57,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 99,
+      "rank": 58,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 56,
+      "rank": 59,
+      "block_time_start": "2023-04-06",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 46,
+      "rank": 60,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 62,
+      "rank": 61,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 89,
+      "rank": 62,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 102,
+      "rank": 63,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 91,
+      "rank": 64,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 50,
+      "rank": 65,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 93,
+      "rank": 66,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 126,
+      "rank": 67,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 115,
+      "rank": 68,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 77,
+      "rank": 69,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 48,
+      "rank": 70,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 45,
+      "rank": 71,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 111,
+      "rank": 72,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 60,
+      "rank": 73,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 64,
+      "rank": 74,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 61,
+      "rank": 75,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 116,
+      "rank": 76,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 70,
+      "rank": 77,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 124,
+      "rank": 78,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 90,
+      "rank": 79,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 58,
+      "rank": 80,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 123,
+      "rank": 81,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 47,
+      "rank": 82,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 122,
+      "rank": 83,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    },
+    {
+      "block_id": 92,
+      "rank": 84,
+      "block_time_start": "2023-04-11",
+      "block_time_end": "2023-04-11"
+    }
+  ]
+}

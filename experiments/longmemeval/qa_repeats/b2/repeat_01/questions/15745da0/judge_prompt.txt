@@ -1,0 +1,11 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How long have I been collecting vintage cameras?
+
+Correct Answer: three months
+
+Model Response: Based on your previous messages, you mentioned that you've been collecting vintage cameras for three months as of May 21, 2023. Since today is May 30, 2023, you have been collecting vintage cameras for approximately **3 months and 9 days**. 
+
+If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

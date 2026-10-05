@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "1b9b7252",
+  "question_type": "single-session-assistant",
+  "question": "I wanted to follow up on our previous conversation about mindfulness techniques. You mentioned some great resources for guided imagery exercises, can you remind me of the website that had free exercises like 'The Mountain Meditation' and 'The Body Scan Meditation'?",
+  "gold": "Mindful.org.",
+  "hypothesis": "Here’s a curated list of books, articles, and podcasts that address the problem of perfectionism, organized from most useful/insightful/scientifically proven to less useful:\n\n### Books\n1. **\"The Gifts of Imperfection: Let Go of Who You Think You're Supposed to Be and Embrace Who You Are\" by Brené Brown**  \n   - Explores the importance of embracing imperfection and cultivating self-compassion.\n\n2. **\"How to Be an Imperfectionist: The New Way to Self-Acceptance, Fearless Living, and Freedom from Perfectionism\" by Stephen Guise**  \n   - Offers practical strategies for overcoming perfectionism and embracing a more relaxed approach to life.\n\n3. **\"Present Perfect: A Mindfulness Approach to Letting Go of Perfectionism and the Need for Control\" by Pavel G. Somov**  \n   - Combines mindfulness techniques with insights on overcoming perfectionism.\n\n4. **\"Overcoming Perfectionism: A Self-Help Guide Using Scientifically Supported Cognitive Behavioural Techniques\" by Roz Shafran, Sarah Egan, and Tracey Wade**  \n   - Provides evidence-based strategies for addressing perfectionism through cognitive behavioral therapy.\n\n5. **\"The Perfectionism Workbook: Proven Strategies to End Procrastination, Accept Yourself, and Achieve Your Goals\" by Taylor Newendorp**  \n   - A practical workbook filled with exercises and strategies to combat perfectionism.\n\n### Articles\n1. **\"The Many Faces of Perfectionism\" by Etienne Benson**  \n   - An overview of the different types of perfectionism and their psychological impacts. [Read here](https://www.apa.org/monitor/nov03/manyfaces)\n\n2. **\"The Problem with Perfectionism\" by Olga Khazan**  \n   - Discusses the negative effects of perfectionism on mental health and well-being. [Read here](https://www.theatlantic.com/magazine/archive/2018/12/the-problem-with-perfectionism/573944/)\n\n3. **\"How Perfectionism Holds Women Back\" by Alice Boyes**  \n   - Explores how perfectionism disproportionately affects women and offers insights on overcoming it. [Read here](https://hbr.org/2018/06/how-perfectionism-holds-women-back)\n\n4. **\"The Double-Edged Sword of Perfectionism\" by Sarah Knapton**  \n   - Examines the paradox of perfectionism and its link to mental health issues. [Read here](https://www.telegraph.co.uk/science/2018/11/27/double-edged-sword-perfectionism-linked-mental-health-problems/)\n\n### Podcasts\n1. **\"The Power of Vulnerability\" - The TED Interview (TED Talks)**  \n   - Features Brené Brown discussing vulnerability and imperfection. [Listen here](https://www.ted.com/podcasts/the-ted-interview/episodes/season-1-episode-1)\n\n2. **\"Perfectionism\" - The Savvy Psychologist (Quick and Dirty Tips)**  \n   - Offers insights and strategies for managing perfectionism. [Listen here](https://www.quickanddirtytips.com/podcasts/episodes/perfectionism)\n\n3. **\"The Problem with Perfectionism\" - The Happiness Lab (Pushkin Industries)**  \n   - Discusses the detrimental effects of perfectionism on happiness. [Listen here](https://www.happinesslab.fm/season-1-episodes/a-silver-lining)\n\n4. **\"How to Overcome Perfectionism\" - The Life Coach School Podcast (Brooke Castillo)**  \n   - Provides practical advice for overcoming perfectionistic tendencies. [Listen here](https://thelifecoachschool.com/podcast/273/)\n\n5. **\"Perfectionism: The Thief of Joy\" - The Feel Good Effect Podcast (Robyn Conley Downs)**  \n   - Explores how perfectionism can hinder joy and fulfillment. [Listen here](https://realfoodwholelife.com/feelgoodeffect/perfectionism-thief-joy/)\n\nThis list should provide a solid foundation for understanding and addressing perfectionism through various mediums.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8088,
+    "completion_tokens": 862,
+    "total_tokens": 8950
+  },
+  "judge_usage": {
+    "prompt_tokens": 1021,
+    "completion_tokens": 2,
+    "total_tokens": 1023
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/1b9b7252/retrieval.jsonl"
+}

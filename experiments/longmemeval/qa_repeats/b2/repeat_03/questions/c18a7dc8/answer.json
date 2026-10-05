@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "c18a7dc8",
+  "question_type": "multi-session",
+  "question": "How many years older am I than when I graduated from college?",
+  "gold": "7",
+  "hypothesis": "Based on the memories you have shared, I do not have any information about your current age or the age at which you graduated from college. The only related detail is that you completed your Bachelor's degree in Business Administration with a concentration in Marketing from the University of California, Berkeley, at the age of 25.\n\nTo answer your question, \"How many years older am I than when I graduated from college?\" I would need to know your current age or the date when you graduated. If you provide your current age or the current year and the year you graduated, I can calculate the difference for you.\n\nFor example, if you graduated at age 25 and you are now 30 years old, then you are 5 years older than when you graduated.\n\nPlease provide your current age or the current year so I can help you calculate the number of years older you are than when you graduated from college.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8983,
+    "completion_tokens": 180,
+    "total_tokens": 9163
+  },
+  "judge_usage": {
+    "prompt_tokens": 303,
+    "completion_tokens": 2,
+    "total_tokens": 305
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/c18a7dc8/retrieval.jsonl"
+}

@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: Where am I planning to stay for my birthday trip to Hawaii?
+
+Correct Answer: Oahu
+
+Model Response: Based on your previous memories, you are planning to stay on **Oahu** for your birthday trip to Hawaii. You mentioned that you would be snorkeling at **Hanauma Bay Nature Preserve** and **Shark's Cove**, and you also expressed interest in relaxing on a beach afterward. Enjoy your trip and have a fantastic birthday celebration!
+
+Is the model response correct? Answer yes or no only.

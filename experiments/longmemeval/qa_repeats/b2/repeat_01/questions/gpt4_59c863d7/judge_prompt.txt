@@ -1,0 +1,15 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many model kits have I worked on or bought?
+
+Correct Answer: I have worked on or bought five model kits. The scales of the models are: Revell F-15 Eagle (scale not mentioned), Tamiya 1/48 scale Spitfire Mk.V, 1/16 scale German Tiger I tank, 1/72 scale B-29 bomber, and 1/24 scale '69 Camaro.
+
+Model Response: Based on your memories, you have worked on or bought at least three model kits:
+
+1. A **Revell F-15 Eagle** kit that you finished recently.
+2. A **1/72 scale B-29 bomber** that you are planning to work on next.
+3. A **1/24 scale '69 Camaro** that you acquired at a model show.
+
+If there are any other kits you might have worked on or purchased that weren't mentioned in the provided memories, please let me know!
+
+Is the model response correct? Answer yes or no only.

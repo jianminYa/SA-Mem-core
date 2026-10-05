@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "6cb6f249",
+  "question_type": "multi-session",
+  "question": "How many days did I take social media breaks in total?",
+  "gold": "17 days",
+  "hypothesis": "Based on the memories you've shared, you took social media breaks on two occasions: a week-long break in mid-January and a 10-day break in mid-February. \n\nTo calculate the total number of days you took social media breaks:\n\n1. **Week-long break in January**: 7 days\n2. **10-day break in February**: 10 days\n\nAdding these together gives you a total of **17 days** of social media breaks.",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 12750,
+    "completion_tokens": 94,
+    "total_tokens": 12844
+  },
+  "judge_usage": {
+    "prompt_tokens": 217,
+    "completion_tokens": 2,
+    "total_tokens": 219
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/6cb6f249/retrieval.jsonl"
+}

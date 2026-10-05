@@ -1,0 +1,14 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: How many days had passed since I bought my Adidas running shoes when I realized one of the shoelaces on my old Converse sneakers had broken?
+
+Correct Answer: 14 days. 15 days (including the last day) is also acceptable.
+
+Model Response: To answer your original question about how many days had passed since you bought your Adidas running shoes when you realized one of the shoelaces on your old Converse sneakers had broken, we need to establish a timeline based on the information provided.
+
+1. **Date of the question**: February 3, 2023.
+2. **Date you bought the Adidas running shoes**: This date is not explicitly mentioned in the provided information, so we cannot determine the exact number of days that have passed since you bought them.
+
+If you can provide the date when you purchased the Adidas running shoes, I can calculate the number of days that have passed until February 3, 2023. Without that date, I cannot provide a specific answer.
+
+Is the model response correct? Answer yes or no only.

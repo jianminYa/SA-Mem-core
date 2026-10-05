@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: Where did I attend the religious activity last week?
+
+Correct Answer: the Episcopal Church
+
+Model Response: Based on your memories, you attended the Maundy Thursday service at the Episcopal Church last week. This service took place on April 6, 2023, and you described it as a beautiful and moving experience. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

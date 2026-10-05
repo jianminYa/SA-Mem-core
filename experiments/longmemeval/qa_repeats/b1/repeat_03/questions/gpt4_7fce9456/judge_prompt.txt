@@ -1,0 +1,11 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many properties did I view before making an offer on the townhouse in the Brookside neighborhood?
+
+Correct Answer: I viewed four properties before making an offer on the townhouse in the Brookside neighborhood. The reasons I didn't make an offer on them were: the kitchen of the bungalow needed serious renovation, the property in Cedar Creek was out of my budget, the noise from the highway was a deal-breaker for the 1-bedroom condo, and my offer on the 2-bedroom condo was rejected due to a higher bid.
+
+Model Response: Based on the information provided, you viewed **one property** before making an offer on the townhouse in the Brookside neighborhood. You mentioned that you saw the 3-bedroom townhouse on February 22nd and put in an offer on February 25th. Additionally, you also mentioned viewing a 2-bedroom condo on February 15th, but that was a different property that you did not make an offer on. 
+
+If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

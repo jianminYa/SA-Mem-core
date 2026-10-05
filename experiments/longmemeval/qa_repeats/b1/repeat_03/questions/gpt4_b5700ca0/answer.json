@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "gpt4_b5700ca0",
+  "question_type": "temporal-reasoning",
+  "question": "Where did I attend the religious activity last week?",
+  "gold": "the Episcopal Church",
+  "hypothesis": "Based on your memories, you attended the Maundy Thursday service at the Episcopal Church last week. It was described as a beautiful and moving experience. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8785,
+    "completion_tokens": 46,
+    "total_tokens": 8831
+  },
+  "judge_usage": {
+    "prompt_tokens": 231,
+    "completion_tokens": 1,
+    "total_tokens": 232
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/gpt4_b5700ca0/retrieval.jsonl"
+}

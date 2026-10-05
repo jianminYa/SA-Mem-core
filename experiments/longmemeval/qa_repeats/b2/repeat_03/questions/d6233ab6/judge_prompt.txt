@@ -1,0 +1,23 @@
+I will give you a question, a rubric for desired personalized response, and a response from a model. Please answer yes if the response satisfies the desired response. Otherwise, answer no. The model does not need to reflect all the points in the rubric. The response is correct as long as it recalls and utilizes the user's personal information correctly.
+
+Question: I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?
+
+Rubric: The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.
+
+Model Response: Attending your high school reunion can be a wonderful opportunity to reconnect with old friends and reminisce about shared experiences. Given your nostalgic feelings and the positive memories you have from high school, such as being part of the debate team and taking advanced placement courses, it sounds like it could be a meaningful experience for you.
+
+Here are a few reasons why attending might be a good idea:
+
+1. **Reconnect with Friends**: You mentioned feeling nostalgic, which suggests you might enjoy catching up with friends like Rachel and Emily. Reunions can be a great way to rekindle those friendships.
+
+2. **Share Your Journey**: You can share your experiences since high school, including your decision to major in economics. It can be fulfilling to reflect on how far you've come and to hear about others' journeys as well.
+
+3. **Create New Memories**: While you may have fond memories of high school, attending the reunion can create new ones. It’s a chance to celebrate your past while also enjoying the present.
+
+4. **Networking Opportunities**: Reunions can also provide networking opportunities, especially if you’re looking to connect with people in your field of interest or explore career opportunities.
+
+5. **Closure and Reflection**: If you have unresolved feelings about your high school years, attending the reunion can provide a sense of closure and allow you to reflect on your growth since then.
+
+If you decide to go, consider reaching out to a few friends beforehand to make plans to meet up at the reunion. This can help ease any anxiety and ensure you have familiar faces to connect with. Ultimately, if you feel excited about the idea, it’s likely worth attending!
+
+Is the model response correct? Answer yes or no only.

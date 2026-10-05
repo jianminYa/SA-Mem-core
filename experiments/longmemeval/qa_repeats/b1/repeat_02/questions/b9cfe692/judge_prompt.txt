@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: How long did I take to finish 'The Seven Husbands of Evelyn Hugo' and 'The Nightingale' combined?
+
+Correct Answer: 5.5 weeks
+
+Model Response: Chapters in books can vary widely in length, but they typically range from about 1,500 to 5,000 words. Some chapters may be shorter, around 1,000 words, especially in fast-paced novels or thrillers, while others can be much longer, particularly in literary fiction or epic narratives. Ultimately, the length of a chapter often depends on the author's style, the pacing of the story, and the structure of the book.
+
+Is the model response correct? Answer yes or no only.

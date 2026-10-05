@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 1,
+  "question_id": "gpt4_d9af6064",
+  "question_type": "temporal-reasoning",
+  "question": "Which device did I set up first, the smart thermostat or the new router?",
+  "gold": "new router",
+  "hypothesis": "Based on the memories provided, you set up the new router on January 15th, and you set up the smart thermostat on February 10th. Therefore, you set up the new router first.",
+  "judge_response": "yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7942,
+    "completion_tokens": 41,
+    "total_tokens": 7983
+  },
+  "judge_usage": {
+    "prompt_tokens": 231,
+    "completion_tokens": 1,
+    "total_tokens": 232
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/gpt4_d9af6064/retrieval.jsonl"
+}

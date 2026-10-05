@@ -1,0 +1,17 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: How many months passed between the completion of my undergraduate degree and the submission of my master's thesis?
+
+Correct Answer: 6 months
+
+Model Response: To determine how many months passed between the completion of your undergraduate degree and the submission of your master's thesis, we need to establish two key dates:
+
+1. **Completion of your undergraduate degree**: Based on the information provided, it appears that your undergraduate degree was completed before the date of the tribunal findings mentioned in your memories, which is 20 October 2010. However, the exact date of completion is not specified in the memories.
+
+2. **Submission of your master's thesis**: The date of submission is not explicitly mentioned in the memories either.
+
+Since we do not have the specific dates for the completion of your undergraduate degree and the submission of your master's thesis, I cannot calculate the exact number of months that passed between these two events.
+
+If you can provide the specific dates for both the completion of your undergraduate degree and the submission of your master's thesis, I would be happy to help you calculate the number of months that passed between them.
+
+Is the model response correct? Answer yes or no only.

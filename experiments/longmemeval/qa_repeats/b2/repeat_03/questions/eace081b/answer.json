@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "eace081b",
+  "question_type": "knowledge-update",
+  "question": "Where am I planning to stay for my birthday trip to Hawaii?",
+  "gold": "Oahu",
+  "hypothesis": "Based on your previous memories, you are planning to stay on **Oahu** for your birthday trip to Hawaii. You mentioned that you would be snorkeling at **Hanauma Bay Nature Preserve** and **Shark's Cove**, and you also expressed interest in spending some time relaxing on a beach. Enjoy your trip and have a fantastic birthday celebration!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 9157,
+    "completion_tokens": 70,
+    "total_tokens": 9227
+  },
+  "judge_usage": {
+    "prompt_tokens": 178,
+    "completion_tokens": 2,
+    "total_tokens": 180
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/eace081b/retrieval.jsonl"
+}

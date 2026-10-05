@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "d6233ab6",
+  "question_type": "single-session-preference",
+  "question": "I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?",
+  "gold": "The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.",
+  "hypothesis": "Attending your high school reunion could be a wonderful opportunity, especially since you've been feeling nostalgic. It sounds like you have fond memories from that time, such as being part of the debate team and taking advanced placement courses in economics. Reunions can provide a chance to reconnect with old friends, share stories, and reflect on how far you've all come since those high school days.\n\nGiven your recent experiences, like planning intimate gatherings and celebrating family, it seems you value connection and shared memories. A reunion could be a great way to relive those moments and perhaps even rekindle friendships that have faded over time.\n\nIf you're feeling uncertain, consider reaching out to a few classmates beforehand to gauge their interest in attending. This might help you feel more comfortable about going. Ultimately, if the idea excites you and you think it would be a positive experience, it could be a great idea to attend your high school reunion!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 9450,
+    "completion_tokens": 183,
+    "total_tokens": 9633
+  },
+  "judge_usage": {
+    "prompt_tokens": 386,
+    "completion_tokens": 2,
+    "total_tokens": 388
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/d6233ab6/retrieval.jsonl"
+}

@@ -9,6 +9,7 @@ files, vector caches, builder logs, token streams, and trace artifacts.
 ```text
 membox/questions/<question_id>/...
 samem_2p/questions/<question_id>/...
+samem_2p_b2/questions/<question_id>/...
 ```
 
 Each question directory contains:
@@ -39,5 +40,23 @@ retrieval_full.json -> rankings[*].memory_id
 
 and use `rank`, `score`, and `session_id` alongside each ID.
 
-The uploaded bundle is approximately 366.6 MiB. The complete dataset, `.env`
-files, API keys, embedding caches, and raw logs are not included.
+The `samem_2p_b2` tree is the completed 50-question temporal-gate run. It uses
+the same normalized memory/retrieval convention, and additionally contains
+`temporal_gate.jsonl`, `retrieval_native.json`, `question_status.json`, and
+`retrieval_timings.jsonl`. The gate log records whether each block stayed on
+the original B0 temporal-tool path or used the local zero-token gate.
+
+The B2 native retrieval output stores an ordered list of block IDs but does
+not expose provider similarity values. Therefore the uploaded B2
+`retrieval_full.json` and `retrieval_top20.json` use `score: null` and state
+the score provenance explicitly; no similarity score was estimated or
+fabricated. The exact native object is preserved in `retrieval_native.json`.
+
+Repeated QA is separate from construction artifacts and is available at
+`../qa_repeats/`. It contains B0/B1/B2 × three repeats × 50 questions, with
+the final answer, QA prompt, judge prompt, and aggregate JSONL results.
+
+The original uploaded B0/MemBox bundle is approximately 366.6 MiB. The new
+B2 normalized bundle is approximately 98 MiB and the repeated-QA bundle is
+approximately 25 MiB. The complete dataset, `.env` files, API keys, embedding
+caches, launcher logs, token streams, and trace artifacts are not included.

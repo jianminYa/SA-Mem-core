@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "1b9b7252",
+  "question_type": "single-session-assistant",
+  "question": "I wanted to follow up on our previous conversation about mindfulness techniques. You mentioned some great resources for guided imagery exercises, can you remind me of the website that had free exercises like 'The Mountain Meditation' and 'The Body Scan Meditation'?",
+  "gold": "Mindful.org.",
+  "hypothesis": "The website you are looking for that has free guided imagery exercises, including \"The Mountain Meditation\" and \"The Body Scan Meditation,\" is **Mindful.org**. This site offers a variety of mindfulness resources, including guided meditations and exercises that can be very helpful for practicing mindfulness techniques. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7336,
+    "completion_tokens": 74,
+    "total_tokens": 7410
+  },
+  "judge_usage": {
+    "prompt_tokens": 233,
+    "completion_tokens": 2,
+    "total_tokens": 235
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/1b9b7252/retrieval.jsonl"
+}

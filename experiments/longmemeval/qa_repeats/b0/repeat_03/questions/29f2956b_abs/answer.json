@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "29f2956b_abs",
+  "question_type": "single-session-user",
+  "question": "How much time do I dedicate to practicing violin every day?",
+  "gold": "You did not mention this information. You mentioned practing guitar everyday, but not violin.",
+  "hypothesis": "Based on the information provided, it appears that you have not mentioned practicing the violin in any of your previous sessions. Instead, you have discussed practicing guitar for 30 minutes daily, along with various other activities and interests. Therefore, I cannot determine how much time you dedicate to practicing the violin every day, as there is no record of you practicing it. If you would like to share your current practice routine for the violin, I would be happy to help you assess it!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7922,
+    "completion_tokens": 95,
+    "total_tokens": 8017
+  },
+  "judge_usage": {
+    "prompt_tokens": 215,
+    "completion_tokens": 2,
+    "total_tokens": 217
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/29f2956b_abs/retrieval.jsonl"
+}

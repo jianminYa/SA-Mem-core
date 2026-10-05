@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "2133c1b5",
+  "question_type": "knowledge-update",
+  "question": "How long have I been living in my current apartment in Harajuku?",
+  "gold": "3 months",
+  "hypothesis": "Based on your memories, you have been living in your current apartment in Harajuku for **3 months** as of October 15, 2023. You mentioned this in your conversation on that date.",
+  "judge_response": "yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 6335,
+    "completion_tokens": 42,
+    "total_tokens": 6377
+  },
+  "judge_usage": {
+    "prompt_tokens": 153,
+    "completion_tokens": 1,
+    "total_tokens": 154
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/2133c1b5/retrieval.jsonl"
+}

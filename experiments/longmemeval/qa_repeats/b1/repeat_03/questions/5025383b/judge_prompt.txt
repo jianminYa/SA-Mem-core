@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: What are the two hobbies that led me to join online communities?
+
+Correct Answer: photography and cooking
+
+Model Response: Based on your memories, the two hobbies that led you to join online communities are **cooking** and **photography**. You expressed a keen interest in cooking techniques and recipe discussions, as well as a desire to start a photography blog to share your photos and experiences. Both hobbies have prompted you to engage with others in online communities, seeking inspiration, sharing knowledge, and connecting with like-minded individuals.
+
+Is the model response correct? Answer yes or no only.

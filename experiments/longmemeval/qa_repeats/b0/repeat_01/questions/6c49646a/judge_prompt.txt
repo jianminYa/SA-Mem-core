@@ -1,0 +1,26 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: What is the total distance I covered in my four road trips?
+
+Correct Answer: 3,000 miles
+
+Model Response: Based on the information you've provided about your road trips, here’s a summary of the distances covered:
+
+1. **Trip to Durango**: Part of your total mileage but not specified.
+2. **Weekend trip to Breckenridge**: Part of your total mileage but not specified.
+3. **Family trip to Santa Fe**: Part of your total mileage but not specified.
+4. **Recent trip to Yellowstone**: 1,200 miles over 4 days.
+5. **Trip from Denver to Aspen**: Approximately 160 miles (one way).
+
+You mentioned that you covered a total of **1,800 miles** on your recent three road trips, which includes the trips to Durango, Breckenridge, and Santa Fe. 
+
+To find the total distance covered in your four road trips, we can add the distance from your Yellowstone trip to the total from your other trips:
+
+- Total from three road trips: **1,800 miles**
+- Distance from Yellowstone trip: **1,200 miles**
+
+**Total distance covered in your four road trips = 1,800 miles + 1,200 miles = 3,000 miles.**
+
+So, you covered a total of **3,000 miles** in your four road trips.
+
+Is the model response correct? Answer yes or no only.

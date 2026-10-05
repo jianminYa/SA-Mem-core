@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "6c49646a",
+  "question_type": "multi-session",
+  "question": "What is the total distance I covered in my four road trips?",
+  "gold": "3,000 miles",
+  "hypothesis": "Based on the information you've provided about your road trips, here’s a summary of the distances covered:\n\n1. **Trip to Durango**: Part of your total mileage but not specified.\n2. **Weekend trip to Breckenridge**: Part of your total mileage but not specified.\n3. **Family trip to Santa Fe**: Part of your total mileage but not specified.\n4. **Recent trip to Yellowstone**: 1,200 miles over 4 days.\n5. **Trip from Denver to Aspen**: Approximately 160 miles (one way).\n\nYou mentioned that you covered a total of **1,800 miles** on your recent three road trips, which includes the trips to Durango, Breckenridge, and Santa Fe. \n\nTo find the total distance covered in your four road trips, we can add the distance from your Yellowstone trip to the total from your other trips:\n\n- Total from three road trips: **1,800 miles**\n- Distance from Yellowstone trip: **1,200 miles**\n\n**Total distance covered in your four road trips = 1,800 miles + 1,200 miles = 3,000 miles.**\n\nSo, you covered a total of **3,000 miles** in your four road trips.",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 10593,
+    "completion_tokens": 254,
+    "total_tokens": 10847
+  },
+  "judge_usage": {
+    "prompt_tokens": 380,
+    "completion_tokens": 2,
+    "total_tokens": 382
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/6c49646a/retrieval.jsonl"
+}

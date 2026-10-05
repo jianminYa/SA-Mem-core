@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: What type of camera lens did I purchase most recently?
+
+Correct Answer: a 70-200mm zoom lens
+
+Model Response: Based on your memories, it appears that you have not mentioned purchasing a new camera lens most recently. The last lens you discussed was the Canon EF 70-200mm f/2.8L IS III USM lens, which you expressed satisfaction with in terms of image stabilization and bokeh for your portrait and general photography work. If you have made a recent purchase that is not recorded in the memories provided, please let me know!
+
+Is the model response correct? Answer yes or no only.

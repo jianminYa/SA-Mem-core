@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "ad7109d1",
+  "question_type": "single-session-user",
+  "question": "What speed is my new internet plan?",
+  "gold": "500 Mbps",
+  "hypothesis": "Your new internet plan is 500 Mbps, which you upgraded to about three weeks ago. This speed has significantly improved your streaming experience, especially when watching movies on Netflix. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8314,
+    "completion_tokens": 50,
+    "total_tokens": 8364
+  },
+  "judge_usage": {
+    "prompt_tokens": 169,
+    "completion_tokens": 1,
+    "total_tokens": 170
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/ad7109d1/retrieval.jsonl"
+}

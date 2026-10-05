@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "80ec1f4f_abs",
+  "question_type": "multi-session",
+  "question": "How many different museums or galleries did I visit in December?",
+  "gold": "0. You did not mention visitng any museum in December",
+  "hypothesis": "Based on the memories you've shared, it appears that you visited at least one museum in December: the Natural History Museum with your niece on February 8. However, there is no specific mention of any museums or galleries you visited in December. Therefore, I cannot determine how many different museums or galleries you visited in December based on the provided information. If you have more details or memories from December, please share them, and I can help you further!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 6541,
+    "completion_tokens": 90,
+    "total_tokens": 6631
+  },
+  "judge_usage": {
+    "prompt_tokens": 206,
+    "completion_tokens": 1,
+    "total_tokens": 207
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/80ec1f4f_abs/retrieval.jsonl"
+}

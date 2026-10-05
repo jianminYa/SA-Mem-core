@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: I wanted to follow up on our previous conversation about mindfulness techniques. You mentioned some great resources for guided imagery exercises, can you remind me of the website that had free exercises like 'The Mountain Meditation' and 'The Body Scan Meditation'?
+
+Correct Answer: Mindful.org.
+
+Model Response: The website you are looking for that has free guided imagery exercises, including "The Mountain Meditation" and "The Body Scan Meditation," is **Mindful.org**. This site offers a variety of mindfulness resources, including guided meditations and exercises that can be very helpful for practicing mindfulness techniques.
+
+Is the model response correct? Answer yes or no only.

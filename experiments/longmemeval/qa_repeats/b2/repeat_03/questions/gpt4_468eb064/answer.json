@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "gpt4_468eb064",
+  "question_type": "temporal-reasoning",
+  "question": "Who did I meet with during the lunch last Tuesday?",
+  "gold": "Emma",
+  "hypothesis": "I'm sorry, but I cannot provide information about who you met with during lunch last Tuesday based on the memories provided. The only relevant detail I have is that you mentioned catching up with Emma, a freelance writer, over lunch on April 11, 2023. If you were referring to a different lunch or need more specific details, please provide additional context.",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7865,
+    "completion_tokens": 72,
+    "total_tokens": 7937
+  },
+  "judge_usage": {
+    "prompt_tokens": 256,
+    "completion_tokens": 1,
+    "total_tokens": 257
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/gpt4_468eb064/retrieval.jsonl"
+}

@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: What speed is my new internet plan?
+
+Correct Answer: 500 Mbps
+
+Model Response: Your new internet plan has a speed of **500 Mbps**. You mentioned that you upgraded to this speed about three weeks ago, and it has significantly improved your streaming experience, especially when watching movies on Netflix. If you have any more questions or need further assistance, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

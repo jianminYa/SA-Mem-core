@@ -1,0 +1,40 @@
+I will give you a question, a rubric for desired personalized response, and a response from a model. Please answer yes if the response satisfies the desired response. Otherwise, answer no. The model does not need to reflect all the points in the rubric. The response is correct as long as it recalls and utilizes the user's personal information correctly.
+
+Question: I’m a bit anxious about getting around Tokyo. Do you have any helpful tips?
+
+Rubric: The user would prefer responses that utilize their existing resources, such as their Suica card and TripIt app, to provide personalized tips for navigating Tokyo's public transportation. They might not prefer general tips or recommendations that do not take into account their prior preparations.
+
+Model Response: Navigating Tokyo can be a bit overwhelming, but with some preparation, you can make your experience much smoother. Here are some helpful tips to ease your anxiety about getting around:
+
+### 1. **Use Public Transportation:**
+   - **Trains and Subways:** Tokyo has an extensive and efficient public transportation system. The JR Yamanote Line is a circular line that connects many major districts, making it a great starting point for your travels.
+   - **Suica Card:** Since you have a Suica card, make sure to load it with enough balance. It can be used on trains, subways, and even buses, making it very convenient.
+
+### 2. **Plan Your Routes:**
+   - Use apps like Google Maps or Hyperdia to plan your routes. They provide real-time information on train schedules, platform changes, and travel times.
+   - Familiarize yourself with the station names and lines you’ll be using. Most signs are in English, but knowing the names can help you feel more confident.
+
+### 3. **Travel During Off-Peak Hours:**
+   - If possible, try to avoid traveling during rush hours (typically 7:30 AM - 9:30 AM and 5:00 PM - 7:00 PM). The trains can get very crowded during these times.
+
+### 4. **Learn Basic Japanese Phrases:**
+   - While many people in Tokyo speak some English, learning a few basic Japanese phrases can be helpful and appreciated by locals. Phrases like "Sumimasen" (Excuse me) and "Arigatou" (Thank you) can go a long way.
+
+### 5. **Stay Connected:**
+   - Consider getting a portable Wi-Fi device or a local SIM card to stay connected. This will help you navigate and access information on the go.
+
+### 6. **Ask for Help:**
+   - Don’t hesitate to ask station staff or locals for assistance if you’re unsure about directions. Most people are friendly and willing to help.
+
+### 7. **Keep Important Information Handy:**
+   - Have your hotel address written down in both English and Japanese. This can be useful if you need to show it to a taxi driver or ask for directions.
+
+### 8. **Explore on Foot:**
+   - Many neighborhoods in Tokyo are best explored on foot. Take the time to walk around and discover hidden gems, shops, and eateries.
+
+### 9. **Stay Calm and Enjoy:**
+   - It’s normal to feel a bit anxious in a new city, but try to stay calm and enjoy the experience. Tokyo is a vibrant city with so much to offer!
+
+By following these tips, you should feel more confident navigating Tokyo. Enjoy your trip! If you have any specific areas or attractions you want to know more about, feel free to ask!
+
+Is the model response correct? Answer yes or no only.

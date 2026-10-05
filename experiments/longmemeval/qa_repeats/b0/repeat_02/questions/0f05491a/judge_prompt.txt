@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: How many stars do I need to reach the gold level on my Starbucks Rewards app?
+
+Correct Answer: 120
+
+Model Response: As of your latest information, you need to earn **120 stars** within a 12-month period to reach the Gold level on your Starbucks Rewards app. Keep earning stars through purchases, app orders, and promotions to hit that target and enjoy the Gold benefits!
+
+Is the model response correct? Answer yes or no only.

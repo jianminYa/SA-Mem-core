@@ -1,0 +1,89 @@
+{
+  "systems": {
+    "b0": {
+      "repeat_results": [
+        {
+          "repeat": 1,
+          "questions": 50,
+          "correct": 32,
+          "accuracy": 0.64
+        },
+        {
+          "repeat": 2,
+          "questions": 50,
+          "correct": 30,
+          "accuracy": 0.6
+        },
+        {
+          "repeat": 3,
+          "questions": 50,
+          "correct": 31,
+          "accuracy": 0.62
+        }
+      ],
+      "mean_accuracy": 0.62,
+      "std_accuracy": 0.016329931618554536,
+      "question_answer_consistency": 0.96,
+      "questions": 50
+    },
+    "b1": {
+      "repeat_results": [
+        {
+          "repeat": 1,
+          "questions": 50,
+          "correct": 30,
+          "accuracy": 0.6
+        },
+        {
+          "repeat": 2,
+          "questions": 50,
+          "correct": 27,
+          "accuracy": 0.54
+        },
+        {
+          "repeat": 3,
+          "questions": 50,
+          "correct": 29,
+          "accuracy": 0.58
+        }
+      ],
+      "mean_accuracy": 0.5733333333333334,
+      "std_accuracy": 0.024944382578492914,
+      "question_answer_consistency": 0.92,
+      "questions": 50
+    },
+    "b2": {
+      "repeat_results": [
+        {
+          "repeat": 1,
+          "questions": 50,
+          "correct": 31,
+          "accuracy": 0.62
+        },
+        {
+          "repeat": 2,
+          "questions": 50,
+          "correct": 31,
+          "accuracy": 0.62
+        },
+        {
+          "repeat": 3,
+          "questions": 50,
+          "correct": 32,
+          "accuracy": 0.64
+        }
+      ],
+      "mean_accuracy": 0.6266666666666667,
+      "std_accuracy": 0.009428090415820642,
+      "question_answer_consistency": 0.96,
+      "questions": 50
+    }
+  },
+  "config": {
+    "model": "gpt-4o-mini",
+    "judge_model": "gpt-4o-2024-08-06",
+    "topk": 10,
+    "repeats": 3,
+    "workers": 5
+  }
+}

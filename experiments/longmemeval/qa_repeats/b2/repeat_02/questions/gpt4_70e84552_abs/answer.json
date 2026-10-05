@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 2,
+  "question_id": "gpt4_70e84552_abs",
+  "question_type": "temporal-reasoning",
+  "question": "Which task did I complete first, fixing the fence or purchasing three cows from Peter?",
+  "gold": "The information provided is not enough. You mentioned fixing the fence but did not mention purchasing cows from Peter.",
+  "hypothesis": "Based on the memories provided, you completed the task of fixing the fence before purchasing three cows from Peter. You mentioned that you fixed the broken fence on the east side of your property three weeks ago, while there was no mention of purchasing cows until later discussions about getting a new cow. Therefore, fixing the fence was the first task you completed.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 6818,
+    "completion_tokens": 69,
+    "total_tokens": 6887
+  },
+  "judge_usage": {
+    "prompt_tokens": 197,
+    "completion_tokens": 2,
+    "total_tokens": 199
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/gpt4_70e84552_abs/retrieval.jsonl"
+}

@@ -1,0 +1,22 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many different types of food delivery services have I used recently?
+
+Correct Answer: 3
+
+Model Response: Based on your recent memories, you have used the following different types of food delivery services recently:
+
+1. **Uber Eats** – mentioned multiple times as a convenience option you have relied on, especially on weekends.
+2. **Fresh Fusion** – a new food delivery service you found that offers pre-made meals.
+
+Additionally, you mentioned ordering from **Domino's Pizza** multiple times last week, which implies using Domino's delivery service.
+
+So, in total, you have used at least **three different types of food delivery services recently**:
+
+- Uber Eats
+- Fresh Fusion
+- Domino's Pizza delivery
+
+If you consider Domino's as a separate delivery service (their own delivery), then the count is three. If Domino's orders were placed through Uber Eats or Fresh Fusion, then it would be fewer. But based on the information, it appears you have used three distinct services.
+
+Is the model response correct? Answer yes or no only.

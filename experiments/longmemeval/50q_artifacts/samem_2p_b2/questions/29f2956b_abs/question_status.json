@@ -1,0 +1,21 @@
+{
+  "question_id": "29f2956b_abs",
+  "status": "complete",
+  "attempts": 1,
+  "started_at": "2026-10-04T15:49:05.700123+00:00",
+  "finished_at": "2026-10-04T16:17:13.507665+00:00",
+  "failed_calls": 0,
+  "retried_calls": 0,
+  "permanently_failed_calls": 0,
+  "validation": {
+    "complete": true,
+    "reason": "ok",
+    "failed_calls": 0,
+    "usage_gaps": 0,
+    "retried_calls": 0,
+    "construction_calls": 656,
+    "memory_units": 145,
+    "qa_failures": 0,
+    "permanently_failed_calls": 0
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "dataset": "LongMemEval-S cleaned",
+  "subset": {
+    "file": "longmemeval_s_50_seed42.json",
+    "seed": 42,
+    "questions": 50,
+    "question_ids_sha256": "663bdfccb44eb541cd0ef54761884770acf6834698874f61c5eda69149d5b697"
+  },
+  "models": {
+    "llm": "gpt-4o-mini",
+    "embedding": "text-embedding-3-small",
+    "temperature": 0.0,
+    "retrieval_candidate_top_k": 20,
+    "generation_top_k": 10
+  },
+  "qa": {
+    "systems": {
+      "b0": {
+        "repeat_results": [
+          {
+            "repeat": 1,
+            "questions": 50,
+            "correct": 32,
+            "accuracy": 0.64
+          },
+          {
+            "repeat": 2,
+            "questions": 50,
+            "correct": 30,
+            "accuracy": 0.6
+          },
+          {
+            "repeat": 3,
+            "questions": 50,
+            "correct": 31,
+            "accuracy": 0.62
+          }
+        ],
+        "mean_accuracy": 0.62,
+        "std_accuracy": 0.016329931618554536,
+        "question_answer_consistency": 0.96,
+        "questions": 50
+      },
+      "b1": {
+        "repeat_results": [
+          {
+            "repeat": 1,
+            "questions": 50,
+            "correct": 30,
+            "accuracy": 0.6
+          },
+          {
+            "repeat": 2,
+            "questions": 50,
+            "correct": 27,
+            "accuracy": 0.54
+          },
+          {
+            "repeat": 3,
+            "questions": 50,
+            "correct": 29,
+            "accuracy": 0.58
+          }
+        ],
+        "mean_accuracy": 0.5733333333333334,
+        "std_accuracy": 0.024944382578492914,
+        "question_answer_consistency": 0.92,
+        "questions": 50
+      },
+      "b2": {
+        "repeat_results": [
+          {
+            "repeat": 1,
+            "questions": 50,
+            "correct": 31,
+            "accuracy": 0.62
+          },
+          {
+            "repeat": 2,
+            "questions": 50,
+            "correct": 31,
+            "accuracy": 0.62
+          },
+          {
+            "repeat": 3,
+            "questions": 50,
+            "correct": 32,
+            "accuracy": 0.64
+          }
+        ],
+        "mean_accuracy": 0.6266666666666667,
+        "std_accuracy": 0.009428090415820642,
+        "question_answer_consistency": 0.96,
+        "questions": 50
+      }
+    },
+    "config": {
+      "model": "gpt-4o-mini",
+      "judge_model": "gpt-4o-2024-08-06",
+      "topk": 10,
+      "repeats": 3,
+      "workers": 5
+    }
+  },
+  "systems": {
+    "b0": {
+      "construction": {
+        "input_tokens": 39188476,
+        "output_tokens": 4768153,
+        "total_tokens": 43956629,
+        "calls": 35669,
+        "wall_time_sec": 107577.297619,
+        "memory_units": 6857,
+        "stage_breakdown": {
+          "split_check": {
+            "calls": 15229,
+            "input_tokens": 9455886,
+            "output_tokens": 28458,
+            "total_tokens": 9484344
+          },
+          "pass1_extract": {
+            "calls": 6857,
+            "input_tokens": 11692190,
+            "output_tokens": 806242,
+            "total_tokens": 12498432
+          },
+          "temporal_local_resolve": {
+            "calls": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "pass1_tool_followup": {
+            "calls": 6850,
+            "input_tokens": 12648636,
+            "output_tokens": 1290647,
+            "total_tokens": 13939283
+          },
+          "pass1_tool_followup_fallback": {
+            "calls": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "pass2_classify": {
+            "calls": 6733,
+            "input_tokens": 5391764,
+            "output_tokens": 2642806,
+            "total_tokens": 8034570
+          }
+        },
+        "temporal_gate": {
+          "blocks_total": 0,
+          "gate_on_count": 0,
+          "gate_off_count": 0,
+          "temporal_tool_called_count": 0,
+          "pass1_tool_followup_count": 0
+        },
+        "questions": 50
+      },
+      "retrieval": {
+        "questions": 50,
+        "hit_at_1": 0.82,
+        "hit_at_5": 0.88,
+        "hit_at_10": 0.96,
+        "hit_at_20": 0.98,
+        "hit_counts": {
+          "hit_at_1": 41,
+          "hit_at_5": 44,
+          "hit_at_10": 48,
+          "hit_at_20": 49
+        },
+        "mean_gold_rank": 2.36,
+        "median_gold_rank": 1.0,
+        "mrr": 0.8531904761904762,
+        "missing_gold_rank": 0,
+        "native_similarity_scores_available": false
+      }
+    },
+    "b1": {
+      "construction": {
+        "input_tokens": 32031233,
+        "output_tokens": 5737839,
+        "total_tokens": 37769072,
+        "calls": 33477,
+        "wall_time_sec": 104228.31341200002,
+        "memory_units": 5784,
+        "stage_breakdown": {
+          "split_check": {
+            "calls": 15235,
+            "input_tokens": 9464905,
+            "output_tokens": 28452,
+            "total_tokens": 9493357
+          },
+          "pass1_extract": {
+            "calls": 9130,
+            "input_tokens": 12318102,
+            "output_tokens": 1957157,
+            "total_tokens": 14275259
+          },
+          "temporal_local_resolve": {
+            "calls": 258,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "pass1_tool_followup": {
+            "calls": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "pass1_tool_followup_fallback": {
+            "calls": 2277,
+            "input_tokens": 4527560,
+            "output_tokens": 436742,
+            "total_tokens": 4964302
+          },
+          "pass2_classify": {
+            "calls": 6835,
+            "input_tokens": 5720666,
+            "output_tokens": 3315488,
+            "total_tokens": 9036154
+          }
+        },
+        "temporal_gate": {
+          "blocks_total": 0,
+          "gate_on_count": 0,
+          "gate_off_count": 0,
+          "temporal_tool_called_count": 0,
+          "pass1_tool_followup_count": 0
+        },
+        "questions": 50
+      },
+      "retrieval": {
+        "questions": 50,
+        "hit_at_1": 0.82,
+        "hit_at_5": 0.86,
+        "hit_at_10": 0.96,
+        "hit_at_20": 0.98,
+        "hit_counts": {
+          "hit_at_1": 41,
+          "hit_at_5": 43,
+          "hit_at_10": 48,
+          "hit_at_20": 49
+        },
+        "mean_gold_rank": 2.26,
+        "median_gold_rank": 1.0,
+        "mrr": 0.8525324675324676,
+        "missing_gold_rank": 0,
+        "native_similarity_scores_available": false
+      }
+    },
+    "b2": {
+      "construction": {
+        "input_tokens": 32702025,
+        "output_tokens": 3869880,
+        "total_tokens": 36571905,
+        "calls": 31859,
+        "wall_time_sec": 86146.16801800003,
+        "memory_units": 6848,
+        "stage_breakdown": {
+          "split_check": {
+            "calls": 15240,
+            "input_tokens": 9459192,
+            "output_tokens": 28430,
+            "total_tokens": 9487622
+          },
+          "pass1_extract": {
+            "calls": 6848,
+            "input_tokens": 11687671,
+            "output_tokens": 910875,
+            "total_tokens": 12598546
+          },
+          "temporal_local_resolve": {
+            "calls": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "pass1_tool_followup": {
+            "calls": 3167,
+            "input_tokens": 6367592,
+            "output_tokens": 605161,
+            "total_tokens": 6972753
+          },
+          "pass1_tool_followup_fallback": {
+            "calls": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "pass2_classify": {
+            "calls": 6604,
+            "input_tokens": 5187570,
+            "output_tokens": 2325414,
+            "total_tokens": 7512984
+          }
+        },
+        "temporal_gate": {
+          "blocks_total": 6848,
+          "gate_on_count": 3168,
+          "gate_off_count": 3680,
+          "temporal_tool_called_count": 3167,
+          "pass1_tool_followup_count": 3167
+        },
+        "questions": 50
+      },
+      "retrieval": {
+        "questions": 50,
+        "hit_at_1": 0.82,
+        "hit_at_5": 0.88,
+        "hit_at_10": 0.96,
+        "hit_at_20": 0.98,
+        "hit_counts": {
+          "hit_at_1": 41,
+          "hit_at_5": 44,
+          "hit_at_10": 48,
+          "hit_at_20": 49
+        },
+        "mean_gold_rank": 2.2,
+        "median_gold_rank": 1.0,
+        "mrr": 0.856014652014652,
+        "missing_gold_rank": 0,
+        "native_similarity_scores_available": false
+      }
+    }
+  },
+  "notes": [
+    "Packaging copied completed server-side artifacts; it made no API calls.",
+    "QA repeats use frozen B0/B1/B2 artifacts and are separate from construction tokens.",
+    "Judge and QA generation tokens are not included in construction totals."
+  ]
+}

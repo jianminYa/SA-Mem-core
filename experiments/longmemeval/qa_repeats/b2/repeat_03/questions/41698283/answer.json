@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "41698283",
+  "question_type": "knowledge-update",
+  "question": "What type of camera lens did I purchase most recently?",
+  "gold": "a 70-200mm zoom lens",
+  "hypothesis": "Based on your memories, it appears that you have not mentioned purchasing a new camera lens recently. The last lens you discussed was the Canon EF 70-200mm f/2.8L IS III USM lens, which you expressed satisfaction with in terms of image stabilization and bokeh for your portrait and general photography work. If you have made a recent purchase that is not recorded in the memories provided, please let me know!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7878,
+    "completion_tokens": 87,
+    "total_tokens": 7965
+  },
+  "judge_usage": {
+    "prompt_tokens": 199,
+    "completion_tokens": 2,
+    "total_tokens": 201
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/41698283/retrieval.jsonl"
+}

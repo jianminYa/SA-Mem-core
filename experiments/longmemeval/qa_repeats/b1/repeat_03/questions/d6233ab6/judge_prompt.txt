@@ -1,0 +1,21 @@
+I will give you a question, a rubric for desired personalized response, and a response from a model. Please answer yes if the response satisfies the desired response. Otherwise, answer no. The model does not need to reflect all the points in the rubric. The response is correct as long as it recalls and utilizes the user's personal information correctly.
+
+Question: I've been feeling nostalgic lately. Do you think it would be a good idea to attend my high school reunion?
+
+Rubric: The user would prefer responses that draw upon their personal experiences and memories, specifically their positive high school experiences such as being part of the debate team and taking advanced placement courses. They would prefer suggestions that highlight the potential benefits of attending the reunion, such as reconnecting with old friends and revisiting favorite subjects like history and economics. The user might not prefer generic or vague responses that do not take into account their individual experiences and interests.
+
+Model Response: Attending your high school reunion can be a wonderful opportunity to reconnect with old friends and reminisce about shared experiences. Given your recent feelings of nostalgia and your plans to host intimate gatherings with friends, it seems like you value meaningful connections and shared memories. Here are some points to consider when deciding whether to attend your reunion:
+
+1. **Nostalgia and Connection**: If you're feeling nostalgic, a reunion could be a great way to revisit those memories and see how your classmates have changed and grown. It can be comforting to reconnect with people who shared significant moments in your life.
+
+2. **Socializing**: If you enjoyed your high school experience and had good friendships, attending the reunion could be a fun way to catch up and share stories. It might also be an opportunity to meet new people who were part of your class but whom you didn't know well.
+
+3. **Personal Growth**: Reunions can be a chance to reflect on how far you've come since high school. It can be empowering to share your journey and hear about others' paths.
+
+4. **Potential Awkwardness**: Consider whether you feel comfortable in social situations with people from your past. If you think it might be awkward or stressful, weigh that against the potential benefits of attending.
+
+5. **Inviting Friends**: Just like you invited Rachel and Emily to your dinner party, you might consider reaching out to a few close friends from high school to attend the reunion with you. Having familiar faces around can make the experience more enjoyable.
+
+Ultimately, if the idea of reconnecting with old friends and sharing memories excites you, it could be a great idea to attend your high school reunion!
+
+Is the model response correct? Answer yes or no only.

@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "c18a7dc8",
+  "question_type": "multi-session",
+  "question": "How many years older am I than when I graduated from college?",
+  "gold": "7",
+  "hypothesis": "To answer your original question about how many years older you are than when you graduated from college, we need to know two key pieces of information:\n\n1. The year you graduated from college.\n2. Your current age or the current year.\n\nFrom your previous message, you mentioned that you have a Bachelor's degree in Business Administration with a concentration in Marketing from the University of California, Berkeley, which you completed at the age of 25. Since the current date is May 30, 2023, we can calculate your age based on the year you graduated.\n\nIf you graduated at 25 and the current year is 2023, we can estimate your graduation year. Assuming you graduated in 2023 minus your age at graduation (25), we can deduce:\n\n- If you graduated in 2023, you would be 25 years old.\n- If you graduated in 2022, you would be 26 years old.\n- If you graduated in 2021, you would be 27 years old.\n- If you graduated in 2020, you would be 28 years old.\n- If you graduated in 2019, you would be 29 years old.\n- If you graduated in 2018, you would be 30 years old.\n- If you graduated in 2017, you would be 31 years old.\n- If you graduated in 2016, you would be 32 years old.\n- If you graduated in 2015, you would be 33 years old.\n- If you graduated in 2014, you would be 34 years old.\n- If you graduated in 2013, you would be 35 years old.\n- If you graduated in 2012, you would be 36 years old.\n- If you graduated in 2011, you would be 37 years old.\n- If you graduated in 2010, you would be 38 years old.\n- If you graduated in 2009, you would be 39 years old.\n- If you graduated in 2008, you would be 40 years old.\n- If you graduated in 2007, you would be 41 years old.\n- If you graduated in 2006, you would be 42 years old.\n- If you graduated in 2005, you would be 43 years old.\n- If you graduated in 2004, you would be 44 years old.\n- If you graduated in 2003, you would be 45 years old.\n- If you graduated in 2002, you would be 46 years old.\n- If you graduated in 2001, you would be 47 years old.\n- If you graduated in 2000, you would be 48 years old.\n\nTo find out how many years older you are than when you graduated, simply subtract your graduation age (25) from your current age. \n\nFor example, if you are currently 30 years old, you would be 5 years older than when you graduated (30 - 25 = 5).\n\nIf you provide your current age or the year you graduated, I can give you a more precise answer!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 9196,
+    "completion_tokens": 643,
+    "total_tokens": 9839
+  },
+  "judge_usage": {
+    "prompt_tokens": 766,
+    "completion_tokens": 2,
+    "total_tokens": 768
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/c18a7dc8/retrieval.jsonl"
+}

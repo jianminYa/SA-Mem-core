@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "gpt4_21adecb5",
+  "question_type": "temporal-reasoning",
+  "question": "How many months passed between the completion of my undergraduate degree and the submission of my master's thesis?",
+  "gold": "6 months",
+  "hypothesis": "To determine how many months passed between the completion of your undergraduate degree and the submission of your master's thesis, we need to establish two key dates:\n\n1. **Completion of your undergraduate degree**: Based on the information provided, it appears that your undergraduate degree was completed before July 1, 2023. However, the exact date is not specified in the memories shared.\n\n2. **Submission of your master's thesis**: The submission date is not explicitly mentioned in the memories either.\n\nSince we do not have the specific dates for the completion of your undergraduate degree and the submission of your master's thesis, I cannot calculate the exact number of months that passed between these two events.\n\nIf you can provide the specific date of your undergraduate degree completion and the date of your master's thesis submission, I would be able to help you calculate the number of months that passed between those two dates.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 6681,
+    "completion_tokens": 175,
+    "total_tokens": 6856
+  },
+  "judge_usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 2,
+    "total_tokens": 371
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/gpt4_21adecb5/retrieval.jsonl"
+}

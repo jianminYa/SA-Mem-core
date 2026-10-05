@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "eaca4986",
+  "question_type": "single-session-assistant",
+  "question": "I'm looking back at our previous conversation where you created two sad songs for me. Can you remind me what was the chord progression for the chorus in the second song?",
+  "gold": "C D E F G A B A G F E D C",
+  "hypothesis": "In the second song I created for you, the chord progression for the chorus is as follows:\n\n**Chorus:**\n```\nG G G G A G F\nWhy did you have to go?\nG G G G A G F\nLeaving me with this sorrow\nG G G G A G F\nI'll always be missing you\nG G G G A G F\nMy heart will never be new\n```\n\nIf you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 6964,
+    "completion_tokens": 102,
+    "total_tokens": 7066
+  },
+  "judge_usage": {
+    "prompt_tokens": 256,
+    "completion_tokens": 2,
+    "total_tokens": 258
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/eaca4986/retrieval.jsonl"
+}

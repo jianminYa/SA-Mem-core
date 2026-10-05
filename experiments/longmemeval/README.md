@@ -11,9 +11,14 @@ retrieval 指标）：
 
 - [`B0_B1_PHASE1_PROGRESS_ZH.md`](B0_B1_PHASE1_PROGRESS_ZH.md)
 
-The original 50-question baseline remains the B0 reference. This branch's
-measured B2 pilot is intentionally only eight questions; it does not contain
-or start a full 50-question B2 run.
+The original 50-question baseline remains the B0 reference. This branch now
+also contains the completed 50-question B2 construction/retrieval artifacts
+and the independent three-repeat QA results for B0, B1, and B2.
+
+最新统一结果见：
+
+- [`LONGMEMEVAL_B0_B1_B2_QA_REPORT.md`](LONGMEMEVAL_B0_B1_B2_QA_REPORT.md)
+- [`LONGMEMEVAL_B0_B1_B2_QA_RESULTS.json`](LONGMEMEVAL_B0_B1_B2_QA_RESULTS.json)
 
 ## B2 temporal gate
 
@@ -65,6 +70,28 @@ session IDs, raw dialogue and embedding representation text;
 `retrieval_top20.json` and `generation_top10.json` are the candidate and QA
 context slices. The B2 run directory is intentionally not committed because
 it contains large raw per-question artifacts.
+
+本 branch 现在上传了一个去除日志、token stream、trace 和缓存后的可审计副本：
+
+```text
+50q_artifacts/samem_2p_b2/questions/<question_id>/
+├── memories.jsonl
+├── construction_calls.jsonl
+├── temporal_gate.jsonl
+├── retrieval_native.json
+├── retrieval_full.json
+├── retrieval_top20.json
+├── question_summary.jsonl
+├── question_status.json
+├── run_manifest.json
+└── retrieval_timings.jsonl
+```
+
+其中 `memories.jsonl` 是 B2 实际生成的全部 MemBlock；`retrieval_native.json`
+保留原始 SA-Mem retrieval object；`retrieval_full.json` 是按 native ranking
+展开的可读版本。当前 native SA-Mem artifact 没有保存 similarity score，
+所以规范化结果中的 `score` 为 `null`，不会伪造分数。字段和查看方式见
+[`50q_artifacts/README.md`](50q_artifacts/README.md)。
 
 ## Experiment definition
 
@@ -145,6 +172,23 @@ The report contains QA accuracy, question-type accuracy, construction token
 totals and stage breakdowns, evidence Hit@1/5/10/20, MRR, normalized token
 metrics, retry status, and representative failure cases.
 
+## B0 / B1 / B2 repeated QA
+
+三套冻结 memory/retrieval 结果各运行 3 次 QA，并保存每个 question 的实际
+答案和 prompt：
+
+```text
+qa_repeats/
+├── b0/repeat_01..03/questions/<question_id>/
+├── b1/repeat_01..03/questions/<question_id>/
+└── b2/repeat_01..03/questions/<question_id>/
+```
+
+每个 question 目录包含 `answer.json`、`answer_prompt.txt` 和
+`judge_prompt.txt`。汇总结果在 `qa_summary.json`、`qa_results.jsonl`；
+配置说明在 `qa_manifest.json`。本次 QA 补充不重新执行 memory construction，
+也不把 QA/judge token 计入 construction cost。
+
 ## Reproducibility metadata
 
 - [`longmemeval_s_50_ids.txt`](longmemeval_s_50_ids.txt): frozen question IDs.
@@ -186,6 +230,8 @@ The layout is:
 │   └── construction_calls.jsonl
 └── samem_2p/questions/<question_id>/
     └── same artifact set
+└── samem_2p_b2/questions/<question_id>/
+    └── B2 construction/retrieval audit set
 ```
 
 `memories.jsonl` records every constructed box/MemBlock for that question.

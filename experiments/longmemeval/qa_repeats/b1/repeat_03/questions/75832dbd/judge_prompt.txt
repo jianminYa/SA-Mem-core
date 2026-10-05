@@ -1,0 +1,21 @@
+I will give you a question, a rubric for desired personalized response, and a response from a model. Please answer yes if the response satisfies the desired response. Otherwise, answer no. The model does not need to reflect all the points in the rubric. The response is correct as long as it recalls and utilizes the user's personal information correctly.
+
+Question: Can you recommend some recent publications or conferences that I might find interesting?
+
+Rubric: The user would prefer suggestions related to recent research papers, articles, or conferences that focus on artificial intelligence in healthcare, particularly those that involve deep learning for medical image analysis. They would not be interested in general AI topics or those unrelated to healthcare.
+
+Model Response: atics at the University of Edinburgh will provide me with a rich intellectual environment to become an expert in the field of AI. The state-of-the-art facilities and opportunities to receive guidance from world-class researchers will be invaluable. Additionally, I look forward to connecting and collaborating with like-minded peers and researchers, potentially forming lifelong friendships.
+
+The University of Edinburgh's School of Informatics, with its focus on CISA, ANC, and IPAB, will offer me unique opportunities for personal and professional growth that may not be available elsewhere. I am eager to contribute to and learn from the vibrant academic community, and I aspire to publish papers in peer-reviewed AI conferences such as NeurIPS, CVPR, ICML, ICLR, and ICCV.
+
+I maintain a growth mindset and am committed to continuous learning. I have made several contributions to open-source software and maintain a blog to share my knowledge. My contributions on platforms like Stack Overflow have reached over 1.4 million people worldwide. As an IEEE and ACM volunteer, I have hosted and participated in numerous events, further enriching my experience in the field. My contributions in my current organization have transformed ideas into fully-fledged products used by dozens of clients. I am a verified expert in Python and PyTorch, certified by Pluralsight, and I also have experience in developing Android apps using Flutter. In my personal time, I use reinforcement learning to automate games like Asphalt, showcasing my passion for practical applications of AI.
+
+With over eight years of hands-on experience in developing AI solutions, I have a unique combination of academic background, practical experience, and perspective that I believe will make me a strong candidate for the MSc in AI program at the University of Edinburgh. My undergraduate degree in computer science has provided me with a solid foundation in programming, algorithms, and data structures.
+
+My lifelong passion for the environment drives my commitment to developing robots that can maintain environmental stability. I have focused my attention on how AI can be applied to tackle environmental challenges. For instance, I developed a deep learning model that can detect plastic waste from aerial images with an accuracy above 85%. I have also explored the use of reinforcement learning in developing algorithms for controlling autonomous vehicles that can help clean up pollution.
+
+In the MSc in AI program, I hope to further develop my skills and knowledge in areas such as robotics, computer vision, and reinforcement learning, while also exploring new areas like multi-agent autonomous systems. I am excited to work with faculty and fellow students who share my passion for using AI to address environmental challenges and to develop innovative solutions that can positively impact our planet. I believe my academic background, technical skills, and dedication to environmental sustainability make me a unique candidate for the MSc at the University of Edinburgh’s School of Informatics.
+
+Thank you for considering my application. I look forward to the opportunity to contribute to and grow within the esteemed academic community at the University of Edinburgh.
+
+Is the model response correct? Answer yes or no only.

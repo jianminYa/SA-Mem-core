@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "d596882b",
+  "question_type": "single-session-assistant",
+  "question": "I'm planning another trip to New York City and I was wondering if you could remind me of that vegan eatery you recommended last time, the one with multiple locations throughout the city?",
+  "gold": "By Chloe",
+  "hypothesis": "The vegan eatery I recommended last time is **By Chloe**. It's a popular plant-based restaurant with multiple locations throughout New York City, offering a variety of delicious vegan options, including burgers, salads, pastas, and baked goods. Enjoy your trip and your meals in NYC!",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 13891,
+    "completion_tokens": 57,
+    "total_tokens": 13948
+  },
+  "judge_usage": {
+    "prompt_tokens": 203,
+    "completion_tokens": 1,
+    "total_tokens": 204
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/d596882b/retrieval.jsonl"
+}

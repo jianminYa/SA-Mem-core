@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "15745da0",
+  "question_type": "single-session-user",
+  "question": "How long have I been collecting vintage cameras?",
+  "gold": "three months",
+  "hypothesis": "Based on your previous memory from May 21, 2023, you mentioned that you have been collecting vintage cameras for three months. Since the current date is May 30, 2023, you have been collecting vintage cameras for approximately three months and nine days.",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8240,
+    "completion_tokens": 54,
+    "total_tokens": 8294
+  },
+  "judge_usage": {
+    "prompt_tokens": 173,
+    "completion_tokens": 2,
+    "total_tokens": 175
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/15745da0/retrieval.jsonl"
+}

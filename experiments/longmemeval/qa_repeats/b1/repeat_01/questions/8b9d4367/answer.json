@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "8b9d4367",
+  "question_type": "single-session-assistant",
+  "question": "I wanted to follow up on our previous conversation about private sector businesses in Chaudhary. Can you remind me of the company that employs over 40,000 people in the rug-manufacturing industry?",
+  "gold": "Jaipur Rugs",
+  "hypothesis": "The company you are referring to that employs over 40,000 people in the rug-manufacturing industry in Chaudhary is **Jaipur Rugs**.",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 4222,
+    "completion_tokens": 32,
+    "total_tokens": 4254
+  },
+  "judge_usage": {
+    "prompt_tokens": 183,
+    "completion_tokens": 1,
+    "total_tokens": 184
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/8b9d4367/retrieval.jsonl"
+}

@@ -1,0 +1,27 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many years older am I than when I graduated from college?
+
+Correct Answer: 7
+
+Model Response: To answer your original question about how many years older you are than when you graduated from college, we need to know two key pieces of information:
+
+1. The year you graduated from college.
+2. Your current age or the current year.
+
+From your previous message, you mentioned that you graduated from college at the age of 25. Since the current date is May 30, 2023, we can calculate your age based on that information.
+
+If you graduated at 25 and the current year is 2023, we can determine your age by adding the number of years since your graduation to your age at graduation. However, you did not specify the year you graduated, so let's assume you graduated in a typical timeframe for someone who is now in their late 20s or early 30s.
+
+For example, if you graduated in 2015 (which would make you 25 at that time), you would be 33 years old in 2023. 
+
+To find out how many years older you are than when you graduated:
+- Current age: 33
+- Age at graduation: 25
+
+So, the calculation would be:
+33 (current age) - 25 (age at graduation) = 8 years older.
+
+If you provide the specific year you graduated, I can give you a more precise answer.
+
+Is the model response correct? Answer yes or no only.

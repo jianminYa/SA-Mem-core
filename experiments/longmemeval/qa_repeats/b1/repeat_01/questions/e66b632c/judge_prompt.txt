@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response contains some previous information along with an updated answer, the response should be considered as correct as long as the updated answer is the required answer.
+
+Question: What was my previous personal best time for the charity 5K run?
+
+Correct Answer: 27 minutes and 45 seconds
+
+Model Response: Your previous personal best time for the charity 5K run was **26 minutes and 30 seconds**. Congratulations on that achievement!
+
+Is the model response correct? Answer yes or no only.

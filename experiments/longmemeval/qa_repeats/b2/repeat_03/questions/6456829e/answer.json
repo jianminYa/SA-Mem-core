@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 3,
+  "question_id": "6456829e",
+  "question_type": "multi-session",
+  "question": "How many plants did I initially plant for tomatoes and cucumbers?",
+  "gold": "8",
+  "hypothesis": "Based on your previous conversations, you initially planted **5 tomato plants** and **3 cucumber plants** in your garden. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 10539,
+    "completion_tokens": 40,
+    "total_tokens": 10579
+  },
+  "judge_usage": {
+    "prompt_tokens": 163,
+    "completion_tokens": 2,
+    "total_tokens": 165
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/6456829e/retrieval.jsonl"
+}

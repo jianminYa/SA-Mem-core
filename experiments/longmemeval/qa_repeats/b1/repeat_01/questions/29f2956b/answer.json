@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "29f2956b",
+  "question_type": "single-session-user",
+  "question": "How much time do I dedicate to practicing guitar every day?",
+  "gold": "30 minutes",
+  "hypothesis": "Based on your previous memory, you mentioned that you practice guitar for **30 minutes daily**. This consistent practice has been helping you progress nicely. If you're looking to maintain or adjust that routine, it's a solid amount of time to dedicate to your guitar playing each day!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8638,
+    "completion_tokens": 54,
+    "total_tokens": 8692
+  },
+  "judge_usage": {
+    "prompt_tokens": 177,
+    "completion_tokens": 2,
+    "total_tokens": 179
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/29f2956b/retrieval.jsonl"
+}

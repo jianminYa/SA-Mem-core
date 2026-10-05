@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 1,
+  "question_id": "29f2956b_abs",
+  "question_type": "single-session-user",
+  "question": "How much time do I dedicate to practicing violin every day?",
+  "gold": "You did not mention this information. You mentioned practing guitar everyday, but not violin.",
+  "hypothesis": "Based on the information provided, you have not mentioned practicing the violin specifically. Instead, you have discussed practicing guitar for 30 minutes daily and have shown interest in various hobbies and activities, including meditation, yoga, and learning the harmonica and saxophone.\n\nIf you are looking to incorporate violin practice into your routine, you might consider starting with a similar approach to your guitar practice. For example, you could dedicate 30 minutes a day to practicing the violin, just as you do with the guitar. This consistency can help you improve over time.\n\nIf you have specific goals or a desired practice duration for the violin, please share that, and I can provide more tailored advice!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7922,
+    "completion_tokens": 135,
+    "total_tokens": 8057
+  },
+  "judge_usage": {
+    "prompt_tokens": 255,
+    "completion_tokens": 2,
+    "total_tokens": 257
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/29f2956b_abs/retrieval.jsonl"
+}

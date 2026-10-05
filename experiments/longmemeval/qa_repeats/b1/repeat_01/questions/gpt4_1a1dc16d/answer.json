@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "gpt4_1a1dc16d",
+  "question_type": "temporal-reasoning",
+  "question": "Which event happened first, the meeting with Rachel or the pride parade?",
+  "gold": "The meeting with Rachel",
+  "hypothesis": "To determine which event happened first, the meeting with Rachel or the pride parade, we need to look at the timestamps provided. The meeting with Rachel occurred on **2023/05/09 (Tue) 10:01**, while the pride parade was mentioned in the context of a reflection on diversity and inclusion after attending it, which was noted as happening on **May 1st**.\n\nSince May 1st is before May 9th, the pride parade happened first, before the meeting with Rachel.",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 4633,
+    "completion_tokens": 103,
+    "total_tokens": 4736
+  },
+  "judge_usage": {
+    "prompt_tokens": 293,
+    "completion_tokens": 2,
+    "total_tokens": 295
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/gpt4_1a1dc16d/retrieval.jsonl"
+}

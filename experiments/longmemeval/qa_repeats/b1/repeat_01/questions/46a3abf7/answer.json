@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "46a3abf7",
+  "question_type": "multi-session",
+  "question": "How many tanks do I currently have, including the one I set up for my friend's kid?",
+  "gold": "3",
+  "hypothesis": "Based on the information you've provided, you currently have **three tanks**:\n\n1. Your **5-gallon tank** where you kept your betta fish, Finley.\n2. Your **20-gallon community tank**, named \"Amazonia,\" which houses neon tetras, harlequin rasboras, and platies.\n3. The **1-gallon tank** that you set up for your friend's kid, which contains a few guppies and some plants.\n\nIf you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 10186,
+    "completion_tokens": 112,
+    "total_tokens": 10298
+  },
+  "judge_usage": {
+    "prompt_tokens": 241,
+    "completion_tokens": 2,
+    "total_tokens": 243
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/46a3abf7/retrieval.jsonl"
+}

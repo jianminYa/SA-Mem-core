@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How much time do I dedicate to practicing guitar every day?
+
+Correct Answer: 30 minutes
+
+Model Response: Based on your previous memory, you mentioned that you have been practicing guitar for **30 minutes daily**. This consistent practice has been helping you progress nicely in your guitar playing. If you're looking to maintain or adjust this routine, it's a solid amount of time to dedicate to your practice each day!
+
+Is the model response correct? Answer yes or no only.

@@ -1,0 +1,23 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. In addition, do not penalize off-by-one errors for the number of days. If the question asks for the number of days/weeks/months, etc., and the model makes off-by-one errors (e.g., predicting 19 days when the answer is 18), the model's response is still correct. 
+
+Question: How many days passed between the day I received feedback about my car's suspension and the day I tested my new suspension setup?
+
+Correct Answer: 38 days. 39 days (including the last day) is also acceptable.
+
+Model Response: To determine how many days passed between the day you received feedback about your car's suspension and the day you tested your new suspension setup, we need to identify those two dates from your memories.
+
+1. **Feedback about the car's suspension**: You mentioned receiving feedback from judges that your car's suspension was too soft on **March 17, 2023**.
+2. **Testing the new suspension setup**: You planned to test your car's new suspension setup during an open track day at VIR on **April 24, 2023**.
+
+Now, let's calculate the number of days between these two dates:
+
+- From **March 17, 2023** to **April 24, 2023** is:
+  - March 17 to March 31: 14 days (March has 31 days)
+  - April 1 to April 24: 24 days
+
+Adding these together:
+14 days (March) + 24 days (April) = **38 days**
+
+Therefore, **38 days** passed between the day you received feedback about your car's suspension and the day you tested your new suspension setup.
+
+Is the model response correct? Answer yes or no only.

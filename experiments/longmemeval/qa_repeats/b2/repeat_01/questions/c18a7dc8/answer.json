@@ -1,0 +1,25 @@
+{
+  "system": "b2",
+  "repeat": 1,
+  "question_id": "c18a7dc8",
+  "question_type": "multi-session",
+  "question": "How many years older am I than when I graduated from college?",
+  "gold": "7",
+  "hypothesis": "To answer your original question about how many years older you are than when you graduated from college, we need to know two key pieces of information:\n\n1. The year you graduated from college.\n2. Your current age or the current year.\n\nFrom your previous message, you mentioned that you graduated from college at the age of 25. Since the current date is May 30, 2023, we can calculate your age based on that information.\n\nIf you graduated at 25 and the current year is 2023, we can determine your age by adding the number of years since your graduation to your age at graduation. However, you did not specify the year you graduated, so let's assume you graduated in a typical timeframe for someone who is now in their late 20s or early 30s.\n\nFor example, if you graduated in 2015 (which would make you 25 at that time), you would be 33 years old in 2023. \n\nTo find out how many years older you are than when you graduated:\n- Current age: 33\n- Age at graduation: 25\n\nSo, the calculation would be:\n33 (current age) - 25 (age at graduation) = 8 years older.\n\nIf you provide the specific year you graduated, I can give you a more precise answer.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8983,
+    "completion_tokens": 269,
+    "total_tokens": 9252
+  },
+  "judge_usage": {
+    "prompt_tokens": 392,
+    "completion_tokens": 2,
+    "total_tokens": 394
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_gate_b2_50q_retrieval/questions/c18a7dc8/retrieval.jsonl"
+}

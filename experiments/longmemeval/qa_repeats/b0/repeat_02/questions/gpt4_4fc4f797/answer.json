@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 2,
+  "question_id": "gpt4_4fc4f797",
+  "question_type": "temporal-reasoning",
+  "question": "How many days passed between the day I received feedback about my car's suspension and the day I tested my new suspension setup?",
+  "gold": "38 days. 39 days (including the last day) is also acceptable.",
+  "hypothesis": "To determine how many days passed between the day you received feedback about your car's suspension and the day you tested your new suspension setup, we can refer to the relevant dates from your memories.\n\n1. **Feedback about the car's suspension**: You mentioned receiving feedback on **March 17, 2023**.\n2. **Testing the new suspension setup**: You planned to test your new suspension setup during an open track day at VIR on **April 24, 2023**.\n\nNow, let's calculate the number of days between these two dates:\n\n- From **March 17, 2023** to **April 24, 2023** is:\n  - March has 31 days, so from March 17 to March 31 is 14 days.\n  - Then, add the 24 days of April leading up to the 24th.\n\nSo, the total number of days is:\n- 14 days (from March) + 24 days (in April) = **38 days**.\n\nTherefore, **38 days** passed between the day you received feedback about your car's suspension and the day you tested your new suspension setup.",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 8261,
+    "completion_tokens": 236,
+    "total_tokens": 8497
+  },
+  "judge_usage": {
+    "prompt_tokens": 449,
+    "completion_tokens": 2,
+    "total_tokens": 451
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/gpt4_4fc4f797/retrieval.jsonl"
+}

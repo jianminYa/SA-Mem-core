@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 3,
+  "question_id": "5025383b",
+  "question_type": "multi-session",
+  "question": "What are the two hobbies that led me to join online communities?",
+  "gold": "photography and cooking",
+  "hypothesis": "Based on your memories, the two hobbies that led you to join online communities are **cooking** and **photography**. You expressed a keen interest in cooking techniques and recipe discussions, as well as a desire to start a photography blog to share your photos and experiences. Both hobbies have prompted you to engage with others in online communities, seeking inspiration, sharing knowledge, and connecting with like-minded individuals.",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 11139,
+    "completion_tokens": 81,
+    "total_tokens": 11220
+  },
+  "judge_usage": {
+    "prompt_tokens": 205,
+    "completion_tokens": 2,
+    "total_tokens": 207
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/5025383b/retrieval.jsonl"
+}

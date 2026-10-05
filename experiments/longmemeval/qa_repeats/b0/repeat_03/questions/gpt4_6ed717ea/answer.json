@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "gpt4_6ed717ea",
+  "question_type": "temporal-reasoning",
+  "question": "Which item did I purchase first, the dog bed for Max or the training pads for Luna?",
+  "gold": "Training pads for Luna",
+  "hypothesis": "Based on the memories provided, you purchased the training pads for Luna before you purchased the dog bed for Max. You mentioned getting the training pads about a month ago, while you got the orthopedic memory foam dog bed for Max three weeks ago. Therefore, the training pads were the first item you purchased.",
+  "judge_response": "Yes",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 7326,
+    "completion_tokens": 60,
+    "total_tokens": 7386
+  },
+  "judge_usage": {
+    "prompt_tokens": 255,
+    "completion_tokens": 1,
+    "total_tokens": 256
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/gpt4_6ed717ea/retrieval.jsonl"
+}

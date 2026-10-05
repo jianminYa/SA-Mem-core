@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 1,
+  "question_id": "dcfa8644",
+  "question_type": "temporal-reasoning",
+  "question": "How many days had passed since I bought my Adidas running shoes when I realized one of the shoelaces on my old Converse sneakers had broken?",
+  "gold": "14 days. 15 days (including the last day) is also acceptable.",
+  "hypothesis": "To answer your original question about how many days had passed since you bought your Adidas running shoes when you realized one of the shoelaces on your old Converse sneakers had broken, we need to establish a timeline based on the information provided.\n\n1. **Date of the question**: February 3, 2023.\n2. **Time of realization**: The realization about the broken shoelace occurred at 17:43 on February 3, 2023.\n3. **Assumption**: Since you did not specify the date you bought the Adidas running shoes, we cannot calculate the exact number of days that have passed without that information.\n\nIf you can provide the date when you purchased the Adidas running shoes, I can help you calculate the number of days that have passed until February 3, 2023.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 8662,
+    "completion_tokens": 166,
+    "total_tokens": 8828
+  },
+  "judge_usage": {
+    "prompt_tokens": 383,
+    "completion_tokens": 2,
+    "total_tokens": 385
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/dcfa8644/retrieval.jsonl"
+}

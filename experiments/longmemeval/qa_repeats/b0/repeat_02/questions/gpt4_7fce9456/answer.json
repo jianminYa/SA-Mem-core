@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 2,
+  "question_id": "gpt4_7fce9456",
+  "question_type": "multi-session",
+  "question": "How many properties did I view before making an offer on the townhouse in the Brookside neighborhood?",
+  "gold": "I viewed four properties before making an offer on the townhouse in the Brookside neighborhood. The reasons I didn't make an offer on them were: the kitchen of the bungalow needed serious renovation, the property in Cedar Creek was out of my budget, the noise from the highway was a deal-breaker for the 1-bedroom condo, and my offer on the 2-bedroom condo was rejected due to a higher bid.",
+  "hypothesis": "Based on the information provided, you viewed **one property** before making an offer on the townhouse in the Brookside neighborhood. You mentioned that you saw the 3-bedroom townhouse on February 22nd and put in an offer on February 25th. Additionally, you also mentioned viewing a 2-bedroom condo on February 15th, but that offer was rejected. Therefore, the townhouse was the first property you made an offer on after viewing it.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 13886,
+    "completion_tokens": 91,
+    "total_tokens": 13977
+  },
+  "judge_usage": {
+    "prompt_tokens": 299,
+    "completion_tokens": 2,
+    "total_tokens": 301
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/gpt4_7fce9456/retrieval.jsonl"
+}

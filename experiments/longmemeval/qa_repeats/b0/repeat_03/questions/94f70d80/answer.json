@@ -1,0 +1,25 @@
+{
+  "system": "b0",
+  "repeat": 3,
+  "question_id": "94f70d80",
+  "question_type": "single-session-user",
+  "question": "How long did it take me to assemble the IKEA bookshelf?",
+  "gold": "4 hours",
+  "hypothesis": "Based on your previous messages, you mentioned that you assembled the IKEA bookshelf recently and that it took you **4 hours** to complete the assembly. If you have any more questions or need further assistance, feel free to ask!",
+  "judge_response": "Yes.",
+  "correct": 1,
+  "qa_usage": {
+    "prompt_tokens": 9812,
+    "completion_tokens": 45,
+    "total_tokens": 9857
+  },
+  "judge_usage": {
+    "prompt_tokens": 168,
+    "completion_tokens": 2,
+    "total_tokens": 170
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/full_50_seed42/questions/94f70d80/retrieval.jsonl"
+}

@@ -1,0 +1,9 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: I'm planning another trip to New York City and I was wondering if you could remind me of that vegan eatery you recommended last time, the one with multiple locations throughout the city?
+
+Correct Answer: By Chloe
+
+Model Response: The vegan eatery I recommended last time is **By Chloe**. They have multiple locations throughout New York City and offer a variety of delicious plant-based options, including burgers, salads, pastas, and baked goods. Enjoy your trip and your meals in NYC!
+
+Is the model response correct? Answer yes or no only.

@@ -1,0 +1,16 @@
+I will give you a question, a correct answer, and a response from a model. Please answer yes if the response contains the correct answer. Otherwise, answer no. If the response is equivalent to the correct answer or contains all the intermediate steps to get the correct answer, you should also answer yes. If the response only contains a subset of the information required by the answer, answer no. 
+
+Question: How many days did I take social media breaks in total?
+
+Correct Answer: 17 days
+
+Model Response: Based on the memories you've shared, you took social media breaks on two occasions: a week-long break in mid-January and a 10-day break in mid-February. 
+
+To calculate the total number of days you took social media breaks:
+
+1. **Week-long break in January**: 7 days
+2. **10-day break in February**: 10 days
+
+Adding these together gives you a total of **17 days** of social media breaks.
+
+Is the model response correct? Answer yes or no only.

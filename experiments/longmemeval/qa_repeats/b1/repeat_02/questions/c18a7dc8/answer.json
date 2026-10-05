@@ -1,0 +1,25 @@
+{
+  "system": "b1",
+  "repeat": 2,
+  "question_id": "c18a7dc8",
+  "question_type": "multi-session",
+  "question": "How many years older am I than when I graduated from college?",
+  "gold": "7",
+  "hypothesis": "To answer your original question about how many years older you are than when you graduated from college, we need to know the year you graduated and your current age or the current year.\n\nFrom your previous message, you mentioned that you have a Bachelor's degree in Business Administration with a concentration in Marketing from the University of California, Berkeley, which you completed at the age of 25. Since the current date is May 30, 2023, we can calculate your age based on the year you graduated.\n\nIf you graduated at 25, we need to know the year you graduated. If you graduated in 2020 (for example), you would be 28 years old now (2023 - 2020 = 3 years since graduation, and 25 + 3 = 28).\n\nIf you provide the year you graduated, I can give you the exact number of years older you are than when you graduated.",
+  "judge_response": "No.",
+  "correct": 0,
+  "qa_usage": {
+    "prompt_tokens": 9196,
+    "completion_tokens": 184,
+    "total_tokens": 9380
+  },
+  "judge_usage": {
+    "prompt_tokens": 307,
+    "completion_tokens": 2,
+    "total_tokens": 309
+  },
+  "qa_retries": 0,
+  "judge_retries": 0,
+  "topk": 10,
+  "retrieval_source": "/workspace/SA-mem/longmemeval-baselines/runs/samem_2p/temporal_followup_b1_50q_retrieval_v2/questions/c18a7dc8/retrieval.jsonl"
+}
