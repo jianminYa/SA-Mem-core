@@ -416,7 +416,7 @@ class Config:
     OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434/v1")
 
     RAW_DATA_FILE = "/data/locomo/data/locomo10.json"
-    OUTPUT_BASE_DIR = "out"
+    OUTPUT_BASE_DIR = os.environ.get("SA_MEM_OUTPUT_BASE_DIR", "out")
     RUN_ID: str | None = "locomo"
 
     # 路径会在 apply_run_id 时按 run_id 重写
