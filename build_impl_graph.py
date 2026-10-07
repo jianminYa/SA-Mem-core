@@ -1,6 +1,9 @@
 
 import json
 import os
+import re
+import time
+from datetime import datetime
 from typing import Any, Dict, List, Tuple
 
 from sklearn.metrics.pairwise import cosine_similarity
@@ -14,6 +17,47 @@ from graph_storage import (
 )
 
 
+_RELATIVE_TEMPORAL_RE = re.compile(
+    r"(?:"
+    r"\b(?:today|yesterday|tomorrow|tonight|now|recently|lately|currently|"
+    r"presently|previously|earlier|later|soon|the\s+other\s+day)\b"
+    r"|\b(?:this|last|next|previous|prior|following|upcoming)\s+"
+    r"(?:week|weekend|month|year|decade|century|morning|afternoon|evening|"
+    r"night|day|monday|tuesday|wednesday|thursday|friday|saturday|sunday|"
+    r"quarter|season|summer|spring|fall|winter)\b"
+    r"|\b(?:past|recent)\s+(?:day|week|month|year|decade|century|"
+    r"days|weeks|months|years|decades|centuries)\b"
+    r"|\b(?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|"
+    r"a\s+few|a\s+couple|several|"
+    r"\d+)\s+(?:day|days|week|weeks|month|months|year|years)\s+"
+    r"(?:ago|from\s+now|before|later)\b"
+    r"|\b(?:in|within|by)\s+(?:a|an|one|two|three|four|five|six|seven|"
+    r"eight|nine|ten|\d+)\s+(?:day|days|week|weeks|month|months|year|years)\b"
+    r"|\b(?:earlier|later)\s+(?:today|this\s+week|this\s+month|this\s+year)\b"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def needs_temporal_tool(block_text: str) -> bool:
+    """Return whether a raw block should retain B0 temporal tool calling.
+
+    This is deliberately a high-recall lexical gate.  A false positive only
+    forfeits a possible token saving; a false negative could change temporal
+    semantics.  The function is local-only and never sends block text to an
+    LLM or changes the Pass1/Pass2 schemas.
+    """
+    return bool(_RELATIVE_TEMPORAL_RE.search(str(block_text or "")))
+
+
+def temporal_gate_decision(block_text: str) -> Tuple[bool, str]:
+    """Return the B2 gate decision and an auditable local reason."""
+    match = _RELATIVE_TEMPORAL_RE.search(str(block_text or ""))
+    if match:
+        return True, f"relative_temporal_expression:{match.group(0)}"
+    return False, "no_relative_temporal_expression_detected"
+
+
 def _mx():
     """
     Lazy import to avoid circular import:
@@ -22,6 +66,140 @@ def _mx():
     import memblock_extractor as mx  # local import by design
 
     return mx
+
+
+def _temporal_observation_date(value: Any) -> str | None:
+    """Convert LongMemEval session timestamps to the resolver's ISO date input."""
+    text = str(value or "").strip()
+    if not text:
+        return None
+    match = re.search(r"(\d{4})[/-](\d{1,2})[/-](\d{1,2})", text)
+    if not match:
+        return None
+    try:
+        return datetime(
+            int(match.group(1)), int(match.group(2)), int(match.group(3))
+        ).strftime("%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def _resolve_local_temporal_mentions(
+    *,
+    worker: Any,
+    mentions: List[str],
+    temporal_expressions: Any,
+    observation_time: Any,
+) -> Tuple[List[str], bool]:
+    """Resolve Pass-1 temporal annotations locally, with explicit fallback signals.
+
+    The helper never changes the event schema.  It only appends the resolver's
+    human-readable date annotation to the matching Pass-1 mention, which is
+    exactly the input shape consumed by the existing Pass-2 classifier.
+    """
+    if temporal_expressions in (None, []):
+        return mentions, True
+    if not isinstance(temporal_expressions, list):
+        worker._log_local_construction_stage(
+            success=False,
+            metadata={"fallback_used": True, "reason": "temporal_expressions_not_list"},
+        )
+        return mentions, False
+
+    observation_date = _temporal_observation_date(observation_time)
+    if not observation_date:
+        worker._log_local_construction_stage(
+            success=False,
+            metadata={"fallback_used": True, "reason": "invalid_observation_time"},
+        )
+        return mentions, False
+
+    resolved_mentions = list(mentions)
+    seen_indices = set()
+    for item in temporal_expressions:
+        started = time.perf_counter()
+        expression = ""
+        mention_index = None
+        try:
+            if not isinstance(item, dict):
+                raise ValueError("temporal expression entry is not an object")
+            expression = str(item.get("expression", "") or "").strip()
+            mention_index = item.get("mention_index")
+            if isinstance(mention_index, bool):
+                raise ValueError("mention_index must be an integer")
+            mention_index = int(mention_index)
+            if mention_index < 0 or mention_index >= len(resolved_mentions):
+                raise IndexError("mention_index outside mentions")
+            if mention_index in seen_indices:
+                raise ValueError("duplicate mention_index")
+            if not expression:
+                raise ValueError("empty temporal expression")
+
+            result = _mx().resolve_temporal_expression(observation_date, expression)
+            if not isinstance(result, dict) or result.get("warning"):
+                raise ValueError(str((result or {}).get("warning", "unresolved expression")))
+            resolved_expression = str(result.get("resolved_expression", "") or "").strip()
+            if not resolved_expression:
+                raise ValueError("resolver returned no resolved expression")
+
+            if resolved_expression not in resolved_mentions[mention_index]:
+                resolved_mentions[mention_index] = (
+                    f"{resolved_mentions[mention_index]} ({resolved_expression})"
+                )
+            seen_indices.add(mention_index)
+            worker._log_local_construction_stage(
+                success=True,
+                latency_sec=time.perf_counter() - started,
+                metadata={
+                    "expression": expression,
+                    "mention_index": mention_index,
+                    "resolved_expression": resolved_expression,
+                    "fallback_used": False,
+                },
+            )
+        except Exception as error:
+            worker._log_local_construction_stage(
+                success=False,
+                latency_sec=time.perf_counter() - started,
+                metadata={
+                    "expression": expression,
+                    "mention_index": mention_index,
+                    "fallback_used": True,
+                },
+                error=error,
+            )
+            return mentions, False
+    return resolved_mentions, True
+
+
+def _temporal_annotations_cover_mentions(
+    mentions: List[str], temporal_expressions: Any
+) -> bool:
+    """Require every relative expression in a mention to be explicitly mapped."""
+    if not isinstance(temporal_expressions, list):
+        return False
+    specs_by_index: Dict[int, List[str]] = {}
+    for item in temporal_expressions:
+        if not isinstance(item, dict):
+            continue
+        try:
+            index = int(item.get("mention_index"))
+        except (TypeError, ValueError):
+            continue
+        specs_by_index.setdefault(index, []).append(
+            str(item.get("expression", "") or "").strip().lower()
+        )
+    for index, mention in enumerate(mentions):
+        expressions = [x.lower() for x in _RELATIVE_TEMPORAL_RE.findall(mention)]
+        if not expressions:
+            continue
+        specs = specs_by_index.get(index, [])
+        if not specs:
+            return False
+        for expression in expressions:
+            if not any(expression in spec or spec in expression for spec in specs if spec):
+                return False
+    return True
 
 
 def _load_event_vector_cache(store: Any) -> Dict[str, List[float]]:
@@ -245,19 +423,57 @@ class TopicClusterManager:
                     )
 
         else:
-            # ✅ PASS 1: Extract mentions (strings only, no classification)
-            ps1_prompt = (
-                mx.Config.PROMPT_DIALOG_EXTRACT
-                .replace("{text}", content_str)
+            # ✅ PASS 1: Extract mentions (strings only, no classification).
+            # The default branch below is intentionally preserved.  The
+            # experimental branch makes one JSON-only call, then resolves
+            # explicitly identified relative expressions locally.
+            original_ps1_prompt = (
+                mx.Config.PROMPT_DIALOG_EXTRACT.replace("{text}", content_str)
             )
+            b2_temporal_gate = bool(
+                getattr(mx.Config, "ENABLE_TEMPORAL_GATE_B2", False)
+            )
+            local_temporal = bool(
+                getattr(mx.Config, "ENABLE_LOCAL_TEMPORAL_RESOLUTION", False)
+            ) and not b2_temporal_gate
+
+            # B2 keeps the original prompt and output schema.  Its only
+            # behavior change is the local decision to force tool_choice=none
+            # for blocks with no detected relative temporal expression.
+            gate_on = True
+            gate_reason = "b2_disabled_original_path"
+            tool_choice_override = None
+            if b2_temporal_gate:
+                gate_on, gate_reason = temporal_gate_decision(content_str)
+                tool_choice_override = None if gate_on else "none"
+
+            self.worker._temporal_gate_on = gate_on if b2_temporal_gate else None
+            self.worker._temporal_gate_reason = gate_reason if b2_temporal_gate else None
+            self.worker._temporal_tool_called = False
+            self.worker._pass1_tool_followup = False
+
+            ps1_prompt = (
+                mx.Config.PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL
+                if local_temporal
+                else mx.Config.PROMPT_DIALOG_EXTRACT
+            ).replace("{text}", content_str)
 
             ps1_raw = self.worker.chat_completion(
                 ps1_prompt,
                 note=f"{prefix}_NotePS1_Extract",
                 json_mode=True,
-                enable_functions=True,  # Enable temporal resolution function calling
+                enable_functions=(True if b2_temporal_gate else not local_temporal),
+                tool_choice_override=tool_choice_override,
                 extra={"prompt_tokens_est": self.worker.count_tokens(ps1_prompt), "stage": "build"},
             )
+
+            if b2_temporal_gate:
+                self.worker._log_temporal_gate(
+                    gate_on=gate_on,
+                    reason=gate_reason,
+                    temporal_tool_called=self.worker._temporal_tool_called,
+                    pass1_tool_followup=self.worker._pass1_tool_followup,
+                )
 
             # 🔍 [DEBUG FIX] Detect empty response and log warning
             if not ps1_raw or not str(ps1_raw).strip():
@@ -266,6 +482,9 @@ class TopicClusterManager:
                  # Verify LLM output for first few boxes
                  mx.logger.info(f"🔍 [DEBUG] Box {new_box['box_id']} Pass 1 raw output (first 500 chars): {str(ps1_raw)[:500]}...")
 
+            parsed_pass1 = False
+            temporal_expressions: Any = []
+            local_fallback = False
             try:
                 d = mx.json.loads(ps1_raw)
                 topic = str(d.get("topic", "") or "").strip()
@@ -281,11 +500,77 @@ class TopicClusterManager:
                     mentions = [str(m).strip() for m in mns if str(m).strip()]
                 else:
                     mentions = []
+                temporal_expressions = d.get("temporal_expressions", [])
+                parsed_pass1 = True
             except Exception as e:
                 # 🔍 [DEBUG FIX] Catch JSON parse failures
                 if ps1_raw and str(ps1_raw).strip():
                     mx.logger.error(f"❌ [ERROR] Box {new_box['box_id']} Pass 1 JSON parse failed: {e}. Raw: {str(ps1_raw)[:50]}")
-                pass
+                if local_temporal:
+                    local_fallback = True
+
+            if local_temporal and parsed_pass1 and not local_fallback:
+                if not _temporal_annotations_cover_mentions(mentions, temporal_expressions):
+                    local_fallback = True
+                    self.worker._log_local_construction_stage(
+                        success=False,
+                        metadata={
+                            "fallback_used": True,
+                            "reason": "unmapped_relative_expression",
+                        },
+                    )
+                else:
+                    mentions, resolved_ok = _resolve_local_temporal_mentions(
+                        worker=self.worker,
+                        mentions=mentions,
+                        temporal_expressions=temporal_expressions,
+                        observation_time=session_end_time,
+                    )
+                    if not resolved_ok:
+                        local_fallback = True
+
+            # A malformed local output or an unsupported expression must use
+            # the original tool-calling path.  The fallback is explicit in
+            # the construction log and never silently uses the resolver's
+            # warning-date fallback.
+            if local_temporal and local_fallback:
+                self.worker._log_local_construction_stage(
+                    success=False,
+                    metadata={"fallback_used": True, "reason": "original_pass1_fallback"},
+                )
+                fallback_extra = {
+                    "prompt_tokens_est": self.worker.count_tokens(original_ps1_prompt),
+                    "stage": "build",
+                    "followup_stage_override": "pass1_tool_followup_fallback",
+                }
+                ps1_raw = self.worker.chat_completion(
+                    original_ps1_prompt,
+                    note=f"{prefix}_NotePS1_Extract",
+                    json_mode=True,
+                    enable_functions=True,
+                    extra=fallback_extra,
+                )
+                try:
+                    d = mx.json.loads(ps1_raw)
+                    topic = str(d.get("topic", "") or "").strip()
+                    kws = d.get("keywords", [])
+                    if isinstance(kws, list):
+                        keywords_txt = ", ".join(
+                            [str(k).strip() for k in kws if str(k).strip()]
+                        )
+                    else:
+                        keywords_txt = str(kws).strip()
+                    mns = d.get("mentions", [])
+                    mentions = (
+                        [str(m).strip() for m in mns if str(m).strip()]
+                        if isinstance(mns, list)
+                        else []
+                    )
+                except Exception as e:
+                    if ps1_raw and str(ps1_raw).strip():
+                        mx.logger.error(
+                            f"❌ [ERROR] Box {new_box['box_id']} fallback Pass 1 JSON parse failed: {e}. Raw: {str(ps1_raw)[:50]}"
+                        )
 
             # ✅ PASS 2: Classify mentions and assign temporal metadata
             if mentions:
@@ -758,6 +1043,9 @@ class MemoryBuilder:
         for i, sample in enumerate(mx._tqdm(raw_list, total=len(raw_list), desc="BUILD haystack QA conversations")):
             user_id = user_id_start + i
             question_id = str((sample or {}).get("question_id", "") or "").strip()
+            # Sidecar-only metadata for construction token accounting.
+            self.worker._construction_user_id = user_id
+            self.worker._construction_question_id = question_id
 
             if mx._is_main_thread():
                 display_id = question_id or user_id
@@ -880,6 +1168,9 @@ class MemoryBuilder:
         prev_msgs = [f"{m['role']}: {m['text']}" for m in prev_slice]
 
         curr_msg_str = f"{msg['role']}: {msg['text']}"
+        self.worker._construction_user_id = user_id
+        self.worker._construction_session_id = session_id
+        self.worker._construction_block_id = None
         res = self.worker.check_relation(prev_msgs, curr_msg_str, note=f"U{user_id}_Overhead_Split")
 
         mx.TraceLogger.log(
@@ -933,6 +1224,9 @@ class MemoryBuilder:
             "persona_name": meta.get("persona_name", None),
         }
 
+        self.worker._construction_user_id = user_id
+        self.worker._construction_session_id = session_id
+        self.worker._construction_block_id = self.bid
         self.cluster.process_new_box(raw_box, user_id)
 
         content_text = self.cluster._get_content_str(raw_box)
