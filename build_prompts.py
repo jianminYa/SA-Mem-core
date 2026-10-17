@@ -70,6 +70,50 @@ Content to analyze:
 {text}
 """
 
+# Experimental Pass 1 variant.  The default prompt above is intentionally
+# untouched: it preserves the original function-calling baseline.  This
+# variant asks the model to identify relative expressions and map them to the
+# raw mention strings, while date arithmetic remains local and deterministic.
+PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL = """Generate a structured analysis of the provided dialog.
+
+The dialog includes a session window line: "Session window: <session_start> -> <session_end>".
+Treat session_end as the observation time.  It may also contain timestamps and
+a Persona info line.
+
+Return:
+1) 3-8 specific salient keywords;
+2) one clear core topic phrase;
+3) ALL atomic, directly grounded memory mentions as standalone sentences;
+4) a list of relative temporal expressions that occur in the extracted
+   mentions.  Do not resolve dates yourself and do not call any tool.
+
+Extraction rules:
+- Keep every mention verbatim or near-verbatim grounded in the dialog/persona.
+- Do not infer facts or merge multiple facts into one mention.
+- Include explicit traits, emotions, preferences and their stated reasons,
+  relationships, reflections, past events, future plans, and every persona
+  field as separate mentions.
+- Use the person's name when available; otherwise use User.
+- Preserve the original relative wording in the mention.
+- For each temporal expression, provide the zero-based mention_index of the
+  mention containing it and the exact expression text.  Include only explicit
+  relative expressions such as "yesterday", "last week", "last Sunday", or
+  "last month".  If there are no such expressions, return an empty list.
+
+Output valid JSON with exactly these keys:
+{
+  "keywords": ["keyword1", "keyword2"],
+  "topic": "topic phrase",
+  "mentions": ["One atomic mention sentence"],
+  "temporal_expressions": [
+    {"mention_index": 0, "expression": "last Sunday"}
+  ]
+}
+
+Content to analyze:
+{text}
+"""
+
 # MERGED: One-shot extract+classify+time. Replaces the (PASS 1 + PASS 2)
 # two-call pipeline when Config.ENABLE_MERGED_EXTRACTION is True.
 # Outputs the union of PASS 1 fields (keywords, topic) and PASS 2 fields

@@ -20,6 +20,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from build_prompts import (
     PROMPT_MSG_CONTINUATION,
     PROMPT_DIALOG_EXTRACT,
+    PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL,
     PROMPT_DIALOG_CLASSIFICATION,
     PROMPT_DIALOG_EXTRACT_MERGED,
 )
@@ -428,6 +429,9 @@ class Config:
     GENERATION_RESULT_FILE = os.path.join(OUTPUT_DIR, "generation_results.jsonl")
     GENERATION_REPORT_CSV = os.path.join(OUTPUT_DIR, "report_generation_qa.csv")
     TOKEN_LOG_FILE = os.path.join(OUTPUT_DIR, "token_stream.jsonl")
+    # Optional sidecar for phase-1 construction token accounting. This is
+    # intentionally write-only instrumentation; it is never sent to a model.
+    CONSTRUCTION_CALLS_FILE = os.environ.get("CONSTRUCTION_CALLS_FILE", "")
     BUILD_TRACE_FILE = os.path.join(OUTPUT_DIR, "trace_build_process.jsonl")
     TIME_TRACE_FILE = os.path.join(OUTPUT_DIR, "time_traces.jsonl")
     TRACE_PROMPT_LOG_FILE = os.path.join(OUTPUT_DIR, "trace_prompts.jsonl")
@@ -458,6 +462,14 @@ class Config:
         "MEMBLOCK_MERGED_EXTRACTION", "0"
     ) not in ("0", "", "false", "False")
 
+    # Experimental optimization: Pass 1 identifies relative expressions and
+    # the existing local resolver annotates them before Pass 2.  Keep this
+    # disabled by default so the original function-calling baseline remains
+    # byte-for-byte on its existing path.
+    ENABLE_LOCAL_TEMPORAL_RESOLUTION = os.environ.get(
+        "MEMBLOCK_LOCAL_TEMPORAL_RESOLUTION", "0"
+    ) not in ("0", "", "false", "False")
+
     LIMIT_CONVERSATIONS = 2
     LIMIT_SESSIONS = None  # None 表示不限制
     TOP_K_RETRIEVE = 20
@@ -482,6 +494,8 @@ class Config:
 
     LLM_MODEL = "gpt-4o-mini"
     EMBEDDING_MODEL = "text-embedding-3-small"
+    API_MAX_RETRIES = int(os.environ.get("API_MAX_RETRIES", "5"))
+    API_RETRY_BACKOFF_BASE = float(os.environ.get("API_RETRY_BACKOFF_BASE", "0.5"))
     OLLAMA_LLM_MODEL = os.environ.get("OLLAMA_LLM_MODEL", "gpt-oss:120b")
     OLLAMA_EMBEDDING_MODEL = os.environ.get("OLLAMA_EMBEDDING_MODEL", "nomic-embed-text:latest")
     OLLAMA_NUM_CTX = int(os.environ.get("OLLAMA_NUM_CTX", "0") or 0) or None
@@ -505,6 +519,7 @@ class Config:
 
     PROMPT_MSG_CONTINUATION = PROMPT_MSG_CONTINUATION
     PROMPT_DIALOG_EXTRACT = PROMPT_DIALOG_EXTRACT
+    PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL = PROMPT_DIALOG_EXTRACT_LOCAL_TEMPORAL
     PROMPT_DIALOG_CLASSIFICATION = PROMPT_DIALOG_CLASSIFICATION
     PROMPT_DIALOG_EXTRACT_MERGED = PROMPT_DIALOG_EXTRACT_MERGED
     PROMPT_TRACE_EVENT_FILTER = """You are a narrative coherence analyzer for constructing and maintaining event memory chains. Your task is to filter events from a new event list (Event List B) that are directly related to an existing event chain (Event Chain A).
@@ -992,6 +1007,11 @@ class LLMWorker:
         self.embedding_fallback_dims = 1536
         self.ollama_num_ctx = getattr(Config, "OLLAMA_NUM_CTX", None)
         self.ollama_num_predict = getattr(Config, "OLLAMA_NUM_PREDICT", None)
+        self._construction_call_index = 0
+        self._construction_question_id = None
+        self._construction_session_id = None
+        self._construction_block_id = None
+        self._last_api_retry_index = 0
 
         self.client = OpenAI(base_url=self.base_url, api_key=self.api_key)
         try:
@@ -1001,6 +1021,156 @@ class LLMWorker:
 
     def count_tokens(self, text: str) -> int:
         return len(self.encoding.encode(text or ""))
+
+    @staticmethod
+    def _construction_stage(note: str, extra: Dict[str, Any] | None, followup: bool = False) -> str | None:
+        note_s = str(note or "")
+        if extra and extra.get("stage") not in (None, "build"):
+            return None
+        if "Overhead_Split" in note_s:
+            stage = "split_check"
+        elif "NotePS1_Extract" in note_s:
+            stage = "pass1_extract"
+        elif "NotePS2_Classify" in note_s:
+            stage = "pass2_classify"
+        elif "NotePS_Merged" in note_s:
+            stage = "merged_extract"
+        elif extra and extra.get("stage") == "build":
+            stage = "construction_other"
+        else:
+            return None
+        if followup:
+            if stage == "pass1_extract" and extra:
+                override = extra.get("followup_stage_override")
+                if override:
+                    return str(override)
+            return "pass1_tool_followup" if stage == "pass1_extract" else f"{stage}_tool_followup"
+        return stage
+
+    def _log_construction_call(
+        self,
+        *,
+        note: str,
+        extra: Dict[str, Any] | None,
+        stage: str | None,
+        response: Any = None,
+        latency_sec: float = 0.0,
+        success: bool,
+        retry_index: int = 0,
+        error: Exception | None = None,
+    ) -> None:
+        path = getattr(Config, "CONSTRUCTION_CALLS_FILE", "")
+        if not path or not stage:
+            return
+        usage = getattr(response, "usage", None) if response is not None else None
+
+        def _usage_value(name: str):
+            value = getattr(usage, name, None) if usage is not None else None
+            return int(value) if value is not None else None
+
+        prompt_tokens = _usage_value("prompt_tokens")
+        completion_tokens = _usage_value("completion_tokens")
+        total_tokens = _usage_value("total_tokens")
+        cached_tokens = None
+        prompt_details = getattr(usage, "prompt_tokens_details", None) if usage is not None else None
+        if prompt_details is not None:
+            cached_tokens = getattr(prompt_details, "cached_tokens", None)
+            if cached_tokens is not None:
+                cached_tokens = int(cached_tokens)
+        self._construction_call_index += 1
+        row = {
+            "system": "samem",
+            "question_id": self._construction_question_id,
+            "user_id": getattr(self, "_construction_user_id", None),
+            "session_id": self._construction_session_id,
+            "block_id": self._construction_block_id,
+            "stage": stage,
+            "call_index": self._construction_call_index,
+            "model": self.chat_model,
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens,
+            "cached_tokens": cached_tokens,
+            "latency_sec": round(float(latency_sec), 6),
+            "success": bool(success),
+            "retry_index": int(retry_index),
+            "provider_usage_available": bool(usage is not None and prompt_tokens is not None and completion_tokens is not None),
+        }
+        if error is not None:
+            row["error_type"] = type(error).__name__
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+    def _log_local_construction_stage(
+        self,
+        *,
+        success: bool,
+        latency_sec: float = 0.0,
+        metadata: Dict[str, Any] | None = None,
+        error: Exception | None = None,
+    ) -> None:
+        """Record deterministic temporal resolution without pretending it used LLM tokens."""
+        path = getattr(Config, "CONSTRUCTION_CALLS_FILE", "")
+        if not path:
+            return
+        self._construction_call_index += 1
+        row = {
+            "system": "samem",
+            "question_id": self._construction_question_id,
+            "user_id": getattr(self, "_construction_user_id", None),
+            "session_id": self._construction_session_id,
+            "block_id": self._construction_block_id,
+            "stage": "temporal_local_resolve",
+            "call_index": self._construction_call_index,
+            "model": "local-temporal-resolver",
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cached_tokens": None,
+            "latency_sec": round(float(latency_sec), 6),
+            "success": bool(success),
+            "retry_index": 0,
+            "provider_usage_available": False,
+            "usage_source": "local_no_llm",
+        }
+        if metadata:
+            row.update(metadata)
+        if error is not None:
+            row["error_type"] = type(error).__name__
+            row["error"] = str(error)[:300]
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+    @staticmethod
+    def _is_transient_error(error: Exception) -> bool:
+        status = getattr(error, "status_code", None)
+        if status is not None:
+            try:
+                return int(status) == 429 or int(status) >= 500
+            except (TypeError, ValueError):
+                pass
+        name = type(error).__name__.lower()
+        return any(token in name for token in ("timeout", "connection", "ratelimit", "apitimeout"))
+
+    def _chat_with_retries(self, kwargs: Dict[str, Any]):
+        self._last_api_retry_index = 0
+        for retry_index in range(int(getattr(Config, "API_MAX_RETRIES", 5)) + 1):
+            try:
+                response = self.client.chat.completions.create(**kwargs)
+                self._last_api_retry_index = retry_index
+                return response
+            except Exception as error:
+                if retry_index >= int(getattr(Config, "API_MAX_RETRIES", 5)) or not self._is_transient_error(error):
+                    raise
+                delay = min(30.0, float(getattr(Config, "API_RETRY_BACKOFF_BASE", 0.5)) * (2 ** retry_index))
+                logger.warning(
+                    "Transient LLM failure (%s), retry %d/%d after %.1fs",
+                    type(error).__name__, retry_index + 1,
+                    int(getattr(Config, "API_MAX_RETRIES", 5)), delay,
+                )
+                time.sleep(delay)
 
     def _create_chat_completion(self, *, messages: List[Dict[str, str]], json_mode: bool = False, timeout: float | None = None):
         kwargs: Dict[str, Any] = {
@@ -1023,11 +1193,11 @@ class LLMWorker:
                 kwargs["extra_body"] = {"options": options}
 
         try:
-            return self.client.chat.completions.create(**kwargs)
+            return self._chat_with_retries(kwargs)
         except Exception:
             if json_mode:
                 kwargs.pop("response_format", None)
-                return self.client.chat.completions.create(**kwargs)
+                return self._chat_with_retries(kwargs)
             raise
 
     def get_embedding(self, text, note="Emb"):
@@ -1057,6 +1227,7 @@ class LLMWorker:
             extra: Extra metadata for logging
             enable_functions: Whether to enable temporal resolution function calling
         """
+        construction_stage = self._construction_stage(note, extra)
         try:
             messages = [{"role": "user", "content": prompt}]
 
@@ -1086,7 +1257,17 @@ class LLMWorker:
                 }]
                 kwargs["tool_choice"] = "auto"
 
-            resp = self.client.chat.completions.create(**kwargs)
+            call_start = time.perf_counter()
+            resp = self._chat_with_retries(kwargs)
+            self._log_construction_call(
+                note=note,
+                extra=extra,
+                stage=construction_stage,
+                response=resp,
+                latency_sec=time.perf_counter() - call_start,
+                success=True,
+                retry_index=self._last_api_retry_index,
+            )
 
             # Handle function calling
             if enable_functions and resp.choices[0].message.tool_calls:
@@ -1111,7 +1292,17 @@ class LLMWorker:
                 kwargs["messages"] = messages
                 kwargs.pop("tools", None)
                 kwargs.pop("tool_choice", None)
-                resp = self.client.chat.completions.create(**kwargs)
+                followup_start = time.perf_counter()
+                resp = self._chat_with_retries(kwargs)
+                self._log_construction_call(
+                    note=note,
+                    extra=extra,
+                    stage=self._construction_stage(note, extra, followup=True),
+                    response=resp,
+                    latency_sec=time.perf_counter() - followup_start,
+                    success=True,
+                    retry_index=self._last_api_retry_index,
+                )
 
             extra_payload = {"prompt_tokens_est": self.count_tokens(prompt)}
             if extra:
@@ -1119,6 +1310,15 @@ class LLMWorker:
             TokenAnalyzer.log_usage(resp.usage, note, extra_payload)
             return resp.choices[0].message.content.strip()
         except Exception as e:
+            self._log_construction_call(
+                note=note,
+                extra=extra,
+                stage=construction_stage,
+                latency_sec=0.0,
+                success=False,
+                retry_index=self._last_api_retry_index,
+                error=e,
+            )
             logger.warning(f"LLM call failed: {e}")
             return "{}" if json_mode else ""
 
